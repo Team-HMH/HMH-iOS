@@ -21,7 +21,6 @@
 		0B8A89B92B369F1C00688BA6 /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B82B369F1C00688BA6 /* D.swift */; };
 		0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BB2B369F2D00688BA6 /* UIView+.swift */; };
 		0B8A89BE2B369F7C00688BA6 /* E.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BD2B369F7C00688BA6 /* E.swift */; };
-		0B8A89C02B369F8800688BA6 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BF2B369F8800688BA6 /* F.swift */; };
 		0B8A89C22B369F9400688BA6 /* G.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C12B369F9400688BA6 /* G.swift */; };
 		0B8A89C42B369FA000688BA6 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C32B369FA000688BA6 /* F.swift */; };
 		0B8A89C62B369FA800688BA6 /* H.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C52B369FA800688BA6 /* H.swift */; };
@@ -44,7 +43,6 @@
 		0B8A89B82B369F1C00688BA6 /* D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
 		0B8A89BB2B369F2D00688BA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0B8A89BD2B369F7C00688BA6 /* E.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.swift; sourceTree = "<group>"; };
-		0B8A89BF2B369F8800688BA6 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		0B8A89C12B369F9400688BA6 /* G.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G.swift; sourceTree = "<group>"; };
 		0B8A89C32B369FA000688BA6 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		0B8A89C52B369FA800688BA6 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
@@ -80,6 +78,7 @@
 		0B50F9C92B369813000C5046 /* HMH_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				0B50F9D82B369815000C5046 /* Info.plist */,
 				0B67CCE32B369BB400582D54 /* Application */,
 				0B67CCE52B369BC800582D54 /* Global */,
 				0B67CCE62B369BCF00582D54 /* Network */,
@@ -173,7 +172,6 @@
 		0B8A899A2B369D2700688BA6 /* Literal */ = {
 			isa = PBXGroup;
 			children = (
-				0B8A89BF2B369F8800688BA6 /* F.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -191,7 +189,6 @@
 			children = (
 				0B8A89A02B369D7700688BA6 /* Font */,
 				0B50F9D32B369815000C5046 /* Assets.xcassets */,
-				0B50F9D82B369815000C5046 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -370,7 +367,6 @@
 				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,
 				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
-				0B8A89C02B369F8800688BA6 /* F.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 			);

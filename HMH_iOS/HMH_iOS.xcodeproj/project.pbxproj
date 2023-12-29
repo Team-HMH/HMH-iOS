@@ -40,6 +40,10 @@
 		36A3D8AE2B3AB5A1007EA272 /* KakaoSDKTalk in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8AD2B3AB5A1007EA272 /* KakaoSDKTalk */; };
 		36A3D8B02B3AB5A1007EA272 /* KakaoSDKTemplate in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8AF2B3AB5A1007EA272 /* KakaoSDKTemplate */; };
 		36A3D8B22B3AB5A1007EA272 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8B12B3AB5A1007EA272 /* KakaoSDKUser */; };
+		36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9B32B3EBBED007EA272 /* UIStackView+.swift */; };
+		36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */; };
+		36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */; };
+		36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9B92B3EBC65007EA272 /* UIButton+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,10 @@
 		0B8A89C32B369FA000688BA6 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		0B8A89C52B369FA800688BA6 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
 		36A3D8902B36CF31007EA272 /* Literal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literal.swift; sourceTree = "<group>"; };
+		36A3D9B32B3EBBED007EA272 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjust+.swift"; sourceTree = "<group>"; };
+		36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		36A3D9B92B3EBC65007EA272 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,10 @@
 			isa = PBXGroup;
 			children = (
 				0B8A89BB2B369F2D00688BA6 /* UIView+.swift */,
+				36A3D9B32B3EBBED007EA272 /* UIStackView+.swift */,
+				36A3D9B92B3EBC65007EA272 /* UIButton+.swift */,
+				36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */,
+				36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -414,6 +426,7 @@
 				0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */,
 				0B8A89C22B369F9400688BA6 /* G.swift in Sources */,
 				0B8A89BE2B369F7C00688BA6 /* E.swift in Sources */,
+				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
 				36A3D8912B36CF32007EA272 /* Literal.swift in Sources */,
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
@@ -423,8 +436,11 @@
 				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,
 				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
+				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
+				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
+				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

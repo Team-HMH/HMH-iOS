@@ -45,6 +45,7 @@
 		36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */; };
 		36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9B92B3EBC65007EA272 /* UIButton+.swift */; };
 		36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9BB2B3EBD2D007EA272 /* UIScreen+.swift */; };
+		36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9BD2B409BCC007EA272 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
 		36A3D9B92B3EBC65007EA272 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		36A3D9BB2B3EBD2D007EA272 /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
+		36A3D9BD2B409BCC007EA272 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 		0B8A899F2B369D6E00688BA6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				36A3D9BD2B409BCC007EA272 /* Color.swift */,
 				0B8A89A02B369D7700688BA6 /* Font */,
 				0B50F9D32B369815000C5046 /* Assets.xcassets */,
 			);
@@ -437,6 +440,7 @@
 				0B8A89B92B369F1C00688BA6 /* D.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,
+				36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */,
 				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,

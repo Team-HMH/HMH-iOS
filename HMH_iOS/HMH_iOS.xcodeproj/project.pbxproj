@@ -21,7 +21,6 @@
 		0B8A89B92B369F1C00688BA6 /* D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B82B369F1C00688BA6 /* D.swift */; };
 		0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BB2B369F2D00688BA6 /* UIView+.swift */; };
 		0B8A89BE2B369F7C00688BA6 /* E.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BD2B369F7C00688BA6 /* E.swift */; };
-		0B8A89C22B369F9400688BA6 /* G.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C12B369F9400688BA6 /* G.swift */; };
 		0B8A89C42B369FA000688BA6 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C32B369FA000688BA6 /* F.swift */; };
 		0B8A89C62B369FA800688BA6 /* H.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C52B369FA800688BA6 /* H.swift */; };
 		36A3D8912B36CF32007EA272 /* Literal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D8902B36CF31007EA272 /* Literal.swift */; };
@@ -46,6 +45,7 @@
 		36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9B92B3EBC65007EA272 /* UIButton+.swift */; };
 		36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9BB2B3EBD2D007EA272 /* UIScreen+.swift */; };
 		36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9BD2B409BCC007EA272 /* Color.swift */; };
+		36A3D9C02B409CBD007EA272 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D9BF2B409CBD007EA272 /* Font.swift */; };
 		36A3D9CA2B409D35007EA272 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36A3D9C12B409D34007EA272 /* Pretendard-Black.otf */; };
 		36A3D9CB2B409D35007EA272 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36A3D9C22B409D34007EA272 /* Pretendard-Light.otf */; };
 		36A3D9CC2B409D35007EA272 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36A3D9C32B409D34007EA272 /* Pretendard-SemiBold.otf */; };
@@ -74,7 +74,6 @@
 		0B8A89B82B369F1C00688BA6 /* D.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = D.swift; sourceTree = "<group>"; };
 		0B8A89BB2B369F2D00688BA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0B8A89BD2B369F7C00688BA6 /* E.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.swift; sourceTree = "<group>"; };
-		0B8A89C12B369F9400688BA6 /* G.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G.swift; sourceTree = "<group>"; };
 		0B8A89C32B369FA000688BA6 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		0B8A89C52B369FA800688BA6 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
 		36A3D8902B36CF31007EA272 /* Literal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literal.swift; sourceTree = "<group>"; };
@@ -84,6 +83,7 @@
 		36A3D9B92B3EBC65007EA272 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		36A3D9BB2B3EBD2D007EA272 /* UIScreen+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+.swift"; sourceTree = "<group>"; };
 		36A3D9BD2B409BCC007EA272 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		36A3D9BF2B409CBD007EA272 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		36A3D9C12B409D34007EA272 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		36A3D9C22B409D34007EA272 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		36A3D9C32B409D34007EA272 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
@@ -256,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				36A3D9BD2B409BCC007EA272 /* Color.swift */,
+				36A3D9BF2B409CBD007EA272 /* Font.swift */,
 				0B8A89A02B369D7700688BA6 /* Font */,
 				0B50F9D32B369815000C5046 /* Assets.xcassets */,
 			);
@@ -265,7 +266,7 @@
 		0B8A89A02B369D7700688BA6 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				0B8A89C12B369F9400688BA6 /* G.swift */,
+				36A3D9C12B409D34007EA272 /* Pretendard-Black.otf */,
 				36A3D9C82B409D35007EA272 /* Pretendard-Bold.otf */,
 				36A3D9C52B409D35007EA272 /* Pretendard-ExtraBold.otf */,
 				36A3D9C72B409D35007EA272 /* Pretendard-ExtraLight.otf */,
@@ -465,7 +466,7 @@
 				0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */,
 				0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */,
 				0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */,
-				0B8A89C22B369F9400688BA6 /* G.swift in Sources */,
+				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				0B8A89BE2B369F7C00688BA6 /* E.swift in Sources */,
 				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
 				36A3D8912B36CF32007EA272 /* Literal.swift in Sources */,

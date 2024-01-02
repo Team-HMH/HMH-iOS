@@ -36,8 +36,8 @@ final class HMHNavigationBar: UIView {
     }
     
     private let titleLabel = UILabel().then {
-        $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        $0.textColor = .white
+        $0.font = UIFont.iosText3Semibold18
         $0.isHidden = true
     }
     
@@ -101,7 +101,6 @@ final class HMHNavigationBar: UIView {
         }
     }
 }
-
 
 extension HMHNavigationBar {
     @objc private func backArrowButtonTapped() {

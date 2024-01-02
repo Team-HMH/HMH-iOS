@@ -31,6 +31,7 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChanllengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */; };
+		174AF49E2B447E8600450D07 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49D2B447E8600450D07 /* TabBarController.swift */; };
 		36A3D8912B36CF32007EA272 /* Literal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D8902B36CF31007EA272 /* Literal.swift */; };
 		36A3D8942B3AB57B007EA272 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8932B3AB57B007EA272 /* SnapKit */; };
 		36A3D8962B3AB57B007EA272 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8952B3AB57B007EA272 /* SnapKit-Dynamic */; };
@@ -92,6 +93,7 @@
 		174AF4972B447CF100450D07 /* ChanllengeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeModels.swift; sourceTree = "<group>"; };
 		174AF4992B447CFB00450D07 /* ChanllengeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViews.swift; sourceTree = "<group>"; };
 		174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViewController.swift; sourceTree = "<group>"; };
+		174AF49D2B447E8600450D07 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		36A3D8902B36CF31007EA272 /* Literal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literal.swift; sourceTree = "<group>"; };
 		36A3D9B32B3EBBED007EA272 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjust+.swift"; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 		174AF4362B43DB2000450D07 /* CustomTabbar */ = {
 			isa = PBXGroup;
 			children = (
+				174AF49D2B447E8600450D07 /* TabBarController.swift */,
 			);
 			path = CustomTabbar;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
+				174AF49E2B447E8600450D07 /* TabBarController.swift in Sources */,
 				0B8A89B92B369F1C00688BA6 /* D.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,

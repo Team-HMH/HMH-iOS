@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
+		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
 		0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CC2B369813000C5046 /* SceneDelegate.swift */; };
 		0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CE2B369813000C5046 /* HomeViewController.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
+		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B50F9C72B369813000C5046 /* HMH_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMH_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B50F9CA2B369813000C5046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B50F9CC2B369813000C5046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,7 +261,7 @@
 		0B8A899A2B369D2700688BA6 /* Literal */ = {
 			isa = PBXGroup;
 			children = (
-				36A3D8902B36CF31007EA272 /* Literal.swift */,
+				0B2C2D3A2B443BE90023CCFA /* Image.swift */,
 			);
 			path = Literal;
 			sourceTree = "<group>";
@@ -333,6 +337,7 @@
 		0B8A89A62B369DDB00688BA6 /* UIComponets */ = {
 			isa = PBXGroup;
 			children = (
+				0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */,
 			);
 			path = UIComponets;
 			sourceTree = "<group>";
@@ -585,12 +590,12 @@
 				174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */,
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
 				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
-				36A3D8912B36CF32007EA272 /* Literal.swift in Sources */,
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
 				174AF49E2B447E8600450D07 /* TabBarController.swift in Sources */,
+				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,
 				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,
@@ -605,6 +610,7 @@
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
+				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

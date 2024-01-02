@@ -17,21 +17,19 @@ final class HMHNavigationBar: UIView {
         case logo
     }
     
-    private weak var viewController: UIViewController?
-    private let type: NavigationBarType
+    private var type: NavigationBarType = .normal
     
     private lazy var backArrowButton = UIButton().then {
         $0.setImage(ImageLiterals.NavigationBar.icArrowLeft, for: .normal)
-        $0.addTarget(self, action: #selector(backArrowButtonTapped), for: .touchUpInside)
         $0.isHidden = true
     }
     
-    private lazy var pointImageView = UIImageView().then {
+    private lazy var pointButton = UIButton().then {
         $0.backgroundColor = .blue
         $0.isHidden = true
     }
     
-    private lazy var logoImageView = UIImageView().then {
+    private let logoImageView = UIImageView().then {
         $0.backgroundColor = .blue
     }
     
@@ -41,18 +39,17 @@ final class HMHNavigationBar: UIView {
         $0.isHidden = true
     }
     
-    init(_ viewController: UIViewController, leftItem type: NavigationBarType, isBackButton: Bool, isTitleLabel: Bool, isPointImage: Bool, titleText: String? = nil) {
-        self.viewController = viewController
-        self.type = type
+    init(leftItem type: NavigationBarType, isBackButton: Bool, isTitleLabel: Bool, isPointImage: Bool, titleText: String? = nil) {
         super.init(frame: .zero)
-        self.backgroundColor = .black
+        self.type = type
         
         backArrowButton.isHidden = !isBackButton
         titleLabel.isHidden = !isTitleLabel
-        pointImageView.isHidden = !isPointImage
+        pointButton.isHidden = !isPointImage
         titleLabel.text = titleText
         
         setUI()
+        addTarget()
     }
     
     required init?(coder: NSCoder) {
@@ -67,7 +64,7 @@ final class HMHNavigationBar: UIView {
     private func setHierarchy() {
         switch type {
         case .normal:
-            self.addSubviews(backArrowButton, titleLabel, pointImageView)
+            self.addSubviews(backArrowButton, titleLabel, pointButton)
             
         case .logo:
             self.addSubviews(logoImageView)
@@ -78,33 +75,51 @@ final class HMHNavigationBar: UIView {
         switch type {
         case .normal:
             backArrowButton.snp.makeConstraints {
-                $0.top.equalToSuperview().offset(20)
-                $0.leading.equalToSuperview().inset(20)
-                $0.size.equalTo(24)
+                $0.centerY.equalToSuperview()
+                $0.leading.equalToSuperview().inset(20.adjusted)
+                $0.size.equalTo(24.adjusted)
             }
             
             titleLabel.snp.makeConstraints {
-                $0.centerX.centerY.equalToSuperview()
+                $0.center.equalToSuperview()
             }
             
-            pointImageView.snp.makeConstraints {
-                $0.top.equalToSuperview().offset(20)
-                $0.trailing.equalToSuperview().inset(20)
-                $0.size.equalTo(24)
+            pointButton.snp.makeConstraints {
+                $0.centerY.equalToSuperview()
+                $0.trailing.equalToSuperview().inset(20.adjusted)
+                $0.size.equalTo(24.adjusted)
             }
             
         case .logo:
             logoImageView.snp.makeConstraints {
-                $0.top.equalToSuperview().offset(20)
-                $0.leading.equalToSuperview().inset(20)
-                $0.size.equalTo(24)
+                $0.centerY.equalToSuperview()
+                $0.leading.equalToSuperview().inset(20.adjusted)
+                $0.size.equalTo(24.adjusted)
             }
         }
     }
-}
-
-extension HMHNavigationBar {
+    
+    private func addTarget() {
+        backArrowButton.addTarget(self, action: #selector(backArrowButtonTapped), for: .touchUpInside)
+    }
+    
+    
     @objc private func backArrowButtonTapped() {
-        self.viewController?.navigationController?.popViewController(animated: true)
+        guard let navigationController = findViewController()?.navigationController else {
+            return
+        }
+        navigationController.popViewController(animated: true)
+    }
+    
+    private func findViewController() -> UIViewController? {
+        var responder: UIResponder? = self
+        while responder != nil {
+            if let viewController = responder as? UIViewController {
+                return viewController
+            }
+            responder = responder?.next
+        }
+        return nil
     }
 }
+

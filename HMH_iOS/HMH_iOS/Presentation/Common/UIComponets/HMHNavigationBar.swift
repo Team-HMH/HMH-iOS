@@ -21,7 +21,7 @@ final class HMHNavigationBar: UIView {
     private let type: NavigationBarType
     
     private lazy var backArrowButton = UIButton().then {
-        $0.backgroundColor = .blue
+        $0.setImage(ImageLiterals.NavigationBar.icArrowLeft, for: .normal)
         $0.addTarget(self, action: #selector(backArrowButtonTapped), for: .touchUpInside)
         $0.isHidden = true
     }
@@ -45,6 +45,7 @@ final class HMHNavigationBar: UIView {
         self.viewController = viewController
         self.type = type
         super.init(frame: .zero)
+        self.backgroundColor = .black
         
         backArrowButton.isHidden = !isBackButton
         titleLabel.isHidden = !isTitleLabel

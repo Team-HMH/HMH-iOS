@@ -27,6 +27,10 @@
 		174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF48F2B447B3C00450D07 /* MyPageModels.swift */; };
 		174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4912B447B4600450D07 /* MyPageViews.swift */; };
 		174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4932B447B5500450D07 /* MyPageViewController.swift */; };
+		174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4952B447CE700450D07 /* ChanllengeCells.swift */; };
+		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
+		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
+		174AF49C2B447D0700450D07 /* ChanllengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */; };
 		36A3D8912B36CF32007EA272 /* Literal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A3D8902B36CF31007EA272 /* Literal.swift */; };
 		36A3D8942B3AB57B007EA272 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8932B3AB57B007EA272 /* SnapKit */; };
 		36A3D8962B3AB57B007EA272 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8952B3AB57B007EA272 /* SnapKit-Dynamic */; };
@@ -84,6 +88,10 @@
 		174AF48F2B447B3C00450D07 /* MyPageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageModels.swift; sourceTree = "<group>"; };
 		174AF4912B447B4600450D07 /* MyPageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViews.swift; sourceTree = "<group>"; };
 		174AF4932B447B5500450D07 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		174AF4952B447CE700450D07 /* ChanllengeCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeCells.swift; sourceTree = "<group>"; };
+		174AF4972B447CF100450D07 /* ChanllengeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeModels.swift; sourceTree = "<group>"; };
+		174AF4992B447CFB00450D07 /* ChanllengeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViews.swift; sourceTree = "<group>"; };
+		174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViewController.swift; sourceTree = "<group>"; };
 		36A3D8902B36CF31007EA272 /* Literal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Literal.swift; sourceTree = "<group>"; };
 		36A3D9B32B3EBBED007EA272 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjust+.swift"; sourceTree = "<group>"; };
@@ -405,6 +413,7 @@
 		174AF4852B447AC500450D07 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -412,6 +421,7 @@
 		174AF4862B447AD800450D07 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				174AF4992B447CFB00450D07 /* ChanllengeViews.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -419,6 +429,7 @@
 		174AF4872B447ADF00450D07 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				174AF4972B447CF100450D07 /* ChanllengeModels.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -426,6 +437,7 @@
 		174AF4882B447AE600450D07 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				174AF4952B447CE700450D07 /* ChanllengeCells.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -569,12 +581,14 @@
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */,
 				0B8A89BE2B369F7C00688BA6 /* E.swift in Sources */,
+				174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */,
 				174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */,
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
 				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
 				36A3D8912B36CF32007EA272 /* Literal.swift in Sources */,
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
+				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
 				0B8A89B92B369F1C00688BA6 /* D.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
@@ -582,11 +596,13 @@
 				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,
 				36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */,
 				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
+				174AF49C2B447D0700450D07 /* ChanllengeViewController.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
+				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
 			);

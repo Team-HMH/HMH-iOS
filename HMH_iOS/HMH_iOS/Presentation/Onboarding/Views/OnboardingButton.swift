@@ -24,7 +24,7 @@ final class OnboardingButton: UIButton {
         $0.font = UIFont.iosText4Semibold16
     }
     
-    init(leftItem type: OnboardingButtonType, buttonText: String) {
+    init(buttonStatus type: OnboardingButtonType, buttonText: String) {
         super.init(frame: .zero)
         self.type = type
         buttonTitleLabel.text = buttonText

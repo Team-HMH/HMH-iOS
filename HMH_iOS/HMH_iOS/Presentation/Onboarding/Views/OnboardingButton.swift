@@ -20,8 +20,8 @@ final class OnboardingButton: UIButton {
     private var type: OnboardingButtonType = .disabled
     
     private let buttonTitleLabel = UILabel().then {
-        $0.textColor = UIColor.whiteText
-        $0.font = UIFont.iosText4Semibold16
+        $0.textColor = .whiteText
+        $0.font = .iosText4Semibold16
     }
     
     init(buttonStatus type: OnboardingButtonType, buttonText: String) {
@@ -64,11 +64,11 @@ final class OnboardingButton: UIButton {
         switch type {
         case .enable:
             self.do {
-                $0.backgroundColor = UIColor.bluePurpleButton
+                $0.backgroundColor = .bluePurpleButton
             }
         case .disabled:
             self.do {
-                $0.backgroundColor = UIColor.gray5
+                $0.backgroundColor = .gray5
             }
         }
     }

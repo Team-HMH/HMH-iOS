@@ -17,15 +17,24 @@ final class HMHSelectButton: UIButton {
         case disabled
     }
     
-    private var type: HMHSelectButtonType = .disabled
+    @frozen
+    enum CheckType {
+        case solitary
+        case multiple
+    }
+    
+    private var selctButtonType: HMHSelectButtonType = .disabled
+    private var checkType: CheckType = .solitary
+    private var isChecked: Bool = false
     
     private let buttonContentLabel = UILabel().then {
         $0.font = UIFont.iosText5Medium16
     }
     
-    init(leftItem type: HMHSelectButtonType, buttonText: String) {
+    init(buttonType: HMHSelectButtonType, checkType:CheckType, buttonText: String) {
         super.init(frame: .zero)
-        self.type = type
+        self.selctButtonType = buttonType
+        self.checkType = checkType
         buttonContentLabel.text = buttonText
         
         configureButton()
@@ -65,7 +74,7 @@ final class HMHSelectButton: UIButton {
             $0.makeCornerRound(radius: 6.adjustedHeight)
             $0.layer.cornerCurve = .continuous
         }
-        switch type {
+        switch selctButtonType {
         case .enable:
             self.do {
                 $0.isEnabled = true
@@ -87,23 +96,36 @@ final class HMHSelectButton: UIButton {
         }
     }
     
-    private func setSelected() {
-        self.backgroundColor = .bluePurpleActive
-        self.makeBorder(width: 1.5, color: .bluePurpleLine)
+    private func updateStyle() {
+        if isChecked {
+            backgroundColor = .bluePurpleActive
+            makeBorder(width: 1.5, color: .bluePurpleLine)
+        } else {
+            backgroundColor = UIColor.gray6
+            layer.borderColor = UIColor.clear.cgColor
+        }
+    }
+    
+    private func setChecked(_ checked: Bool) {
+        isChecked = checked
+        updateStyle()
     }
     
     @objc private func onboardingButtonTapped() {
-        guard !isSelected else { return }
-        
-        superview?.subviews.forEach { subview in
-            if let button = subview as? HMHSelectButton, button != self {
-                button.isSelected = false
-                button.backgroundColor = UIColor.gray6
-                button.layer.borderColor = UIColor.clear.cgColor
+        switch checkType {
+        case .solitary:
+            guard !isChecked else { return }
+            
+            superview?.subviews.forEach { subview in
+                if let button = subview as? HMHSelectButton, button != self {
+                    button.setChecked(false)
+                }
             }
+            
+            setChecked(true)
+            
+        case .multiple:
+            setChecked(!isChecked)
         }
-
-        isSelected = true
-        setSelected()
     }
 }

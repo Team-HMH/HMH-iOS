@@ -17,12 +17,11 @@ final class OnboardingButton: UIButton {
         case disabled
     }
     
-    private var type: OnboardingButtonType = .enable
+    private var type: OnboardingButtonType = .disabled
     
     private let buttonTitleLabel = UILabel().then {
-        $0.textColor = .white
-        $0.font = UIFont.iosText3Semibold18
-        $0.isHidden = true
+        $0.textColor = UIColor.whiteText
+        $0.font = UIFont.iosText4Semibold16
     }
     
     init(leftItem type: OnboardingButtonType, buttonText: String) {
@@ -48,6 +47,10 @@ final class OnboardingButton: UIButton {
     }
     
     private func setConstraints() {
+        self.snp.makeConstraints {
+            $0.height.equalTo(52.adjusted)
+        }
+        
         buttonTitleLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
         }
@@ -61,13 +64,12 @@ final class OnboardingButton: UIButton {
         switch type {
         case .enable:
             self.do {
-                $0.backgroundColor = .purple
+                $0.backgroundColor = UIColor.bluePurpleButton
             }
         case .disabled:
             self.do {
-                $0.backgroundColor = .gray
+                $0.backgroundColor = UIColor.gray5
             }
         }
     }
-
 }

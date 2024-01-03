@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
+		0B2C2D3F2B4559E10023CCFA /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
 		0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CC2B369813000C5046 /* SceneDelegate.swift */; };
 		0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CE2B369813000C5046 /* HomeViewController.swift */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
 		0B50F9C72B369813000C5046 /* HMH_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMH_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B50F9CA2B369813000C5046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B50F9CC2B369813000C5046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2C2D3C2B4559AE0023CCFA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0B2C2D3D2B4559C90023CCFA /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0B2C2D3D2B4559C90023CCFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0B50F9BE2B369813000C5046 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +202,7 @@
 		0B67CCE72B369BE300582D54 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0B2C2D3C2B4559AE0023CCFA /* Onboarding */,
 				0B8A89A72B369DE600688BA6 /* Home */,
 				0B8A89A52B369DD500688BA6 /* Common */,
 			);
@@ -472,6 +491,7 @@
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
 				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
+				0B2C2D3F2B4559E10023CCFA /* OnboardingButton.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,

@@ -29,6 +29,7 @@ final class HMHSelectButton: UIButton {
         buttonContentLabel.text = buttonText
         
         configureButton()
+        addTarget()
         setUI()
     }
     
@@ -53,6 +54,10 @@ final class HMHSelectButton: UIButton {
         buttonContentLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
         }
+    }
+    
+    private func addTarget() {
+        self.addTarget(self, action: #selector(onboardingButtonTapped), for: .touchUpInside)
     }
     
     private func configureButton() {
@@ -80,5 +85,25 @@ final class HMHSelectButton: UIButton {
                 $0.textColor = UIColor.gray4
             }
         }
+    }
+    
+    private func setSelected() {
+        self.backgroundColor = .bluePurpleActive
+        self.makeBorder(width: 1.5, color: .bluePurpleLine)
+    }
+    
+    @objc private func onboardingButtonTapped() {
+        guard !isSelected else { return }
+        
+        superview?.subviews.forEach { subview in
+            if let button = subview as? HMHSelectButton, button != self {
+                button.isSelected = false
+                button.backgroundColor = UIColor.gray6
+                button.layer.borderColor = UIColor.clear.cgColor
+            }
+        }
+
+        isSelected = true
+        setSelected()
     }
 }

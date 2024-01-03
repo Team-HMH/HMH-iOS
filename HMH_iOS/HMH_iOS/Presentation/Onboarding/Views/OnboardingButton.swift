@@ -64,10 +64,12 @@ final class OnboardingButton: UIButton {
         switch type {
         case .enable:
             self.do {
+                $0.isEnabled = true
                 $0.backgroundColor = .bluePurpleButton
             }
         case .disabled:
             self.do {
+                $0.isEnabled = false
                 $0.backgroundColor = .gray5
             }
         }

@@ -31,6 +31,8 @@
 		3666C86B2B45F4B200564874 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C86A2B45F4B200564874 /* TotalActivityReport.swift */; };
 		3666C86D2B45F4B200564874 /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C86C2B45F4B200564874 /* TotalActivityView.swift */; };
 		3666C8722B45F4B200564874 /* DeviceReport.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 3666C8662B45F4B200564874 /* DeviceReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8792B45F4F900564874 /* SelectedBlocker.swift */; };
+		3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */; };
 		36A3D8942B3AB57B007EA272 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8932B3AB57B007EA272 /* SnapKit */; };
 		36A3D8962B3AB57B007EA272 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8952B3AB57B007EA272 /* SnapKit-Dynamic */; };
 		36A3D8992B3AB58A007EA272 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8982B3AB58A007EA272 /* Then */; };
@@ -138,6 +140,8 @@
 		3666C86E2B45F4B200564874 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3666C86F2B45F4B200564874 /* DeviceReport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceReport.entitlements; sourceTree = "<group>"; };
 		3666C8772B45F4C600564874 /* HMH_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HMH_iOS.entitlements; sourceTree = "<group>"; };
+		3666C8792B45F4F900564874 /* SelectedBlocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBlocker.swift; sourceTree = "<group>"; };
+		3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockingApplicationModel.swift; sourceTree = "<group>"; };
 		36A3D9B32B3EBBED007EA272 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjust+.swift"; sourceTree = "<group>"; };
 		36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
@@ -305,6 +309,7 @@
 		0B8A89982B369CF800688BA6 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				3666C8782B45F4D900564874 /* AppBlock */,
 				0B8A89992B369D0B00688BA6 /* Base */,
 			);
 			path = SupportingFiles;
@@ -474,6 +479,15 @@
 			path = DeviceReport;
 			sourceTree = "<group>";
 		};
+		3666C8782B45F4D900564874 /* AppBlock */ = {
+			isa = PBXGroup;
+			children = (
+				3666C8792B45F4F900564874 /* SelectedBlocker.swift */,
+				3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */,
+			);
+			path = AppBlock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -638,6 +652,7 @@
 				0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */,
 				0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */,
 				0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */,
+				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				0B8A89BE2B369F7C00688BA6 /* E.swift in Sources */,
 				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
@@ -656,6 +671,7 @@
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
+				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

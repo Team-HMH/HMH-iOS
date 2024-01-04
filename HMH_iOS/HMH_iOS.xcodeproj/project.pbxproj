@@ -125,12 +125,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B2B0E8D2B467D3400B830AF /* Challenge */ = {
+		0B2B0E8D2B467D3400B830AF /* CreateChallenge */ = {
 			isa = PBXGroup;
 			children = (
 				0B2B0E902B469CE900B830AF /* Views */,
 			);
-			path = Challenge;
+			path = CreateChallenge;
 			sourceTree = "<group>";
 		};
 		0B2B0E902B469CE900B830AF /* Views */ = {
@@ -205,7 +205,7 @@
 		0B67CCE72B369BE300582D54 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				0B2B0E8D2B467D3400B830AF /* Challenge */,
+				0B2B0E8D2B467D3400B830AF /* CreateChallenge */,
 				0B8A89A72B369DE600688BA6 /* Home */,
 				0B8A89A52B369DD500688BA6 /* Common */,
 			);

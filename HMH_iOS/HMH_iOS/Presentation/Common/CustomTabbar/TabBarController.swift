@@ -19,18 +19,17 @@ final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setTabBar()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         setTabBarHeight()
     }
     
     private func setUI() {
         setHierarchy()
         setConstraints()
-        setTabBar()
     }
     
     private func setHierarchy() {

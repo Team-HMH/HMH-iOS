@@ -68,21 +68,21 @@ final class TabBarController: UITabBarController {
     private func setTabBar() {
         let challenge = makeTabBar(
             viewController: ChanllengeViewController(),
-            title: "챌린지",
+            title: StringLiteral.TabBar.challengeTitle,
             tabBarImg: ImageLiterals.TabBar.icChallenge,
             tabBarSelectedImg: ImageLiterals.TabBar.icChallengeSelected,
             renderingMode: .alwaysOriginal
         )
         let home = makeTabBar(
             viewController: HomeViewController(),
-            title: "홈",
+            title: StringLiteral.TabBar.homeTitle,
             tabBarImg: ImageLiterals.TabBar.icHome,
             tabBarSelectedImg: ImageLiterals.TabBar.icHomeSelected,
             renderingMode: .alwaysOriginal
         )
         let myPage = makeTabBar(
             viewController: MyPageViewController(),
-            title: "마이페이지",
+            title: StringLiteral.TabBar.myPageTitle,
             tabBarImg: ImageLiterals.TabBar.icMyPage,
             tabBarSelectedImg: ImageLiterals.TabBar.icMyPageSelected,
             renderingMode: .alwaysOriginal
@@ -92,12 +92,13 @@ final class TabBarController: UITabBarController {
         self.setViewControllers(tabs, animated: false)
         tabBar.isTranslucent = false
         
+        tabBar.unselectedItemTintColor = .gray2
         let normalAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.iosDetail2Medium12,
+            .font: UIFont.iosDetail4Medium12,
             .foregroundColor: UIColor.gray2
         ]
         let selectedAttributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.iosDetail2Medium12,
+            .font: UIFont.iosDetail3Semibold12,
             .foregroundColor: UIColor.whiteBtn
         ]
         

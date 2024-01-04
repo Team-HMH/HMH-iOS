@@ -30,7 +30,6 @@ extension UIView {
         layer.borderColor = color.cgColor
     }
     
-    // 토스트 메세지
     func showToast(message: String, at: CGFloat = 17) {
         let toastLabel = UILabel()
         toastLabel.backgroundColor = .gray8

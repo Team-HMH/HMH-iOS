@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
+		0B2C2D3F2B4559E10023CCFA /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */; };
+		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
 		0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CC2B369813000C5046 /* SceneDelegate.swift */; };
 		0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CE2B369813000C5046 /* HomeViewController.swift */; };
@@ -60,6 +62,8 @@
 /* Begin PBXFileReference section */
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
+		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
 		0B50F9C72B369813000C5046 /* HMH_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMH_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B50F9CA2B369813000C5046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B50F9CC2B369813000C5046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2C2D3C2B4559AE0023CCFA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0B2C2D3D2B4559C90023CCFA /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		0B2C2D3D2B4559C90023CCFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0B50F9BE2B369813000C5046 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +204,7 @@
 		0B67CCE72B369BE300582D54 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0B2C2D3C2B4559AE0023CCFA /* Onboarding */,
 				0B8A89A72B369DE600688BA6 /* Home */,
 				0B8A89A52B369DD500688BA6 /* Common */,
 			);
@@ -315,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */,
+				0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */,
 			);
 			path = UIComponets;
 			sourceTree = "<group>";
@@ -464,6 +486,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */,
+				0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */,
 				0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */,
 				0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */,
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
@@ -472,6 +495,7 @@
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
 				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
+				0B2C2D3F2B4559E10023CCFA /* OnboardingButton.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,

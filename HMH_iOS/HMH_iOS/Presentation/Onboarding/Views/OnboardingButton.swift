@@ -13,7 +13,7 @@ import Then
 final class OnboardingButton: UIButton {
     @frozen
     enum OnboardingButtonType {
-        case enable
+        case enabled
         case disabled
     }
     
@@ -61,16 +61,13 @@ final class OnboardingButton: UIButton {
         self.layer.cornerCurve = .continuous
         
         switch type {
-        case .enable:
-            self.do {
-                $0.isEnabled = true
-                $0.backgroundColor = .bluePurpleButton
-            }
+        case .enabled:
+            self.isEnabled = true
+            self.backgroundColor = .bluePurpleButton
+            
         case .disabled:
-            self.do {
-                $0.isEnabled = false
-                $0.backgroundColor = .gray5
-            }
+            self.isEnabled = false
+            self.backgroundColor = .gray5
         }
     }
 }

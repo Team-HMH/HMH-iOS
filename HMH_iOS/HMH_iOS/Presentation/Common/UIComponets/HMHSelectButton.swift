@@ -68,23 +68,14 @@ final class HMHSelectButton: UIButton {
         
         switch selectButtonType {
         case .solitary,.multiple:
-            self.do {
-                $0.isEnabled = true
-                $0.backgroundColor = .gray6
-            }
+            self.isEnabled = true
+            self.backgroundColor = .gray6
+            buttonContentLabel.textColor = .whiteText
             
-            buttonContentLabel.do {
-                $0.textColor = .whiteText
-            }
         case .disabled:
-            self.do {
-                $0.isEnabled = false
-                $0.backgroundColor = .gray7
-            }
-            
-            buttonContentLabel.do {
-                $0.textColor = .gray4
-            }
+            self.isEnabled = false
+            self.backgroundColor = .gray7
+            buttonContentLabel.textColor = .gray4
         }
     }
     

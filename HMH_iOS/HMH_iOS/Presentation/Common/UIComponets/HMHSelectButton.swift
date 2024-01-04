@@ -13,28 +13,21 @@ import Then
 final class HMHSelectButton: UIButton {
     @frozen
     enum HMHSelectButtonType {
-        case enable
+        case solitary
+        case multiple
         case disabled
     }
     
-    @frozen
-    enum CheckType {
-        case solitary
-        case multiple
-    }
-    
-    private var selctButtonType: HMHSelectButtonType = .disabled
-    private var checkType: CheckType = .solitary
+    private var selectButtonType: HMHSelectButtonType = .disabled
     private var isChecked: Bool = false
     
     private let buttonContentLabel = UILabel().then {
         $0.font = UIFont.iosText5Medium16
     }
     
-    init(buttonType: HMHSelectButtonType, checkType:CheckType, buttonText: String) {
+    init(buttonType: HMHSelectButtonType, buttonText: String) {
         super.init(frame: .zero)
-        self.selctButtonType = buttonType
-        self.checkType = checkType
+        self.selectButtonType = buttonType
         buttonContentLabel.text = buttonText
         
         configureButton()
@@ -70,28 +63,27 @@ final class HMHSelectButton: UIButton {
     }
     
     private func configureButton() {
-        self.do {
-            $0.makeCornerRound(radius: 6.adjustedHeight)
-            $0.layer.cornerCurve = .continuous
-        }
-        switch selctButtonType {
-        case .enable:
+        self.makeCornerRound(radius: 6.adjustedHeight)
+        self.layer.cornerCurve = .continuous
+        
+        switch selectButtonType {
+        case .solitary,.multiple:
             self.do {
                 $0.isEnabled = true
-                $0.backgroundColor = UIColor.gray6
+                $0.backgroundColor = .gray6
             }
             
             buttonContentLabel.do {
-                $0.textColor = UIColor.whiteText
+                $0.textColor = .whiteText
             }
         case .disabled:
             self.do {
                 $0.isEnabled = false
-                $0.backgroundColor = UIColor.gray7
+                $0.backgroundColor = .gray7
             }
             
             buttonContentLabel.do {
-                $0.textColor = UIColor.gray4
+                $0.textColor = .gray4
             }
         }
     }
@@ -101,7 +93,7 @@ final class HMHSelectButton: UIButton {
             backgroundColor = .bluePurpleActive
             makeBorder(width: 1.5, color: .bluePurpleLine)
         } else {
-            backgroundColor = UIColor.gray6
+            backgroundColor = .gray6
             layer.borderColor = UIColor.clear.cgColor
         }
     }
@@ -112,7 +104,7 @@ final class HMHSelectButton: UIButton {
     }
     
     @objc private func onboardingButtonTapped() {
-        switch checkType {
+        switch selectButtonType {
         case .solitary:
             guard !isChecked else { return }
             
@@ -126,6 +118,9 @@ final class HMHSelectButton: UIButton {
             
         case .multiple:
             setChecked(!isChecked)
+            
+        case .disabled:
+            return
         }
     }
 }

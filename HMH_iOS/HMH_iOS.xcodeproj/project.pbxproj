@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
+		0B2B0E8F2B467EAE00B830AF /* TotalTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0E8E2B467EAE00B830AF /* TotalTimePickerView.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
 		0B2C2D3F2B4559E10023CCFA /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */; };
 		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
@@ -122,6 +123,7 @@
 
 /* Begin PBXFileReference section */
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
+		0B2B0E8E2B467EAE00B830AF /* TotalTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTimePickerView.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
 		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
@@ -237,6 +239,22 @@
 			isa = PBXGroup;
 			children = (
 				0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B2B0E8D2B467D3400B830AF /* Challange */ = {
+			isa = PBXGroup;
+			children = (
+				0B2B0E902B469CE900B830AF /* Views */,
+				0B2B0E8E2B467EAE00B830AF /* TotalTimePickerView.swift */,
+			);
+			path = Challange;
+			sourceTree = "<group>";
+		};
+		0B2B0E902B469CE900B830AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -827,6 +845,7 @@
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
+				0B2B0E8F2B467EAE00B830AF /* TotalTimePickerView.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,

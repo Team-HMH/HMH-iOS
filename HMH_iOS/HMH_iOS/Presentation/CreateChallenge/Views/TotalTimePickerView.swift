@@ -1,5 +1,5 @@
 //
-//  SpecificTimePickerView.swift
+//  TotalTimePickerView.swift
 //  HMH_iOS
 //
 //  Created by Seonwoo Kim on 1/4/24.
@@ -10,20 +10,13 @@ import UIKit
 import SnapKit
 import Then
 
-final class SpecificTimePickerView: UIPickerView {
-    private let hours: [String] = ["0", "1"]
-    private let minutes: [String] = Array(0...59).map { String($0) }
+final class TotalTimePickerView: UIPickerView {
+    private let hours: [String] = ["1", "2", "3", "4", "5", "6"]
     
-    private let hourLabel = UILabel().then {
+    private let titleLabel = UILabel().then {
         $0.textColor = .gray2
         $0.font = .iosText2Medium20
         $0.text = "시간"
-    }
-    
-    private let minuteLabel = UILabel().then {
-        $0.textColor = .gray2
-        $0.font = .iosText2Medium20
-        $0.text = "분"
     }
     
     override init(frame: CGRect) {
@@ -43,18 +36,13 @@ final class SpecificTimePickerView: UIPickerView {
     }
     
     private func setHierarchy() {
-        self.addSubviews(hourLabel, minuteLabel)
+        self.addSubview(titleLabel)
     }
     
     private func setConstraints() {
-        hourLabel.snp.makeConstraints {
+        titleLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().inset(122)
-        }
-        
-        minuteLabel.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(50)
+            $0.trailing.equalToSuperview().inset(124.adjusted)
         }
     }
     
@@ -65,25 +53,17 @@ final class SpecificTimePickerView: UIPickerView {
     }
 }
 
-extension SpecificTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource{
+extension TotalTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource{
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 2
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if component == 0 {
-            return hours.count
-        } else {
-            return minutes.count
-        }
+        return hours.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if component == 0 {
-            return hours[row]
-        } else {
-            return minutes[row]
-        }
+        return hours[row]
     }
     
     var selectedRow: Int {
@@ -98,12 +78,7 @@ extension SpecificTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource{
         var color = UIColor.gray3
         var font = UIFont.iosText1Medium22
         
-        if component == 0 && row == pickerView.selectedRow(inComponent: 0) {
-            color = UIColor.whiteText
-            font = UIFont.iosText1Medium22
-        }
-        
-        if component == 1 && row == pickerView.selectedRow(inComponent: 1) {
+        if row == selectedRow {
             color = UIColor.whiteText
             font = UIFont.iosText1Medium22
         }
@@ -113,16 +88,10 @@ extension SpecificTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource{
             NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): font
         ]
         
-        if component == 0 {
-            return NSAttributedString(string: hours[row], attributes: attributes)
-        } else {
-            return NSAttributedString(string: minutes[row], attributes: attributes)
-        }
+        return NSAttributedString(string: hours[row], attributes: attributes)
     }
     
-    
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 53
-    } 
+        return 53.adjusted
+    }
 }
-

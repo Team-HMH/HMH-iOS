@@ -250,7 +250,7 @@
 			children = (
 				0B2B0E902B469CE900B830AF /* Views */,
 			);
-			path = Challenge;
+			path = CreateChallenge;
 			sourceTree = "<group>";
 		};
 		0B2B0E902B469CE900B830AF /* Views */ = {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
+		0B2B0E8F2B467EAE00B830AF /* TotalTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0E8E2B467EAE00B830AF /* TotalTimePickerView.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
 		0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CC2B369813000C5046 /* SceneDelegate.swift */; };
@@ -59,6 +60,7 @@
 
 /* Begin PBXFileReference section */
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
+		0B2B0E8E2B467EAE00B830AF /* TotalTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTimePickerView.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B50F9C72B369813000C5046 /* HMH_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMH_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B50F9CA2B369813000C5046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2B0E8D2B467D3400B830AF /* Challange */ = {
+			isa = PBXGroup;
+			children = (
+				0B2B0E902B469CE900B830AF /* Views */,
+				0B2B0E8E2B467EAE00B830AF /* TotalTimePickerView.swift */,
+			);
+			path = Challange;
+			sourceTree = "<group>";
+		};
+		0B2B0E902B469CE900B830AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0B50F9BE2B369813000C5046 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +202,7 @@
 		0B67CCE72B369BE300582D54 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0B2B0E8D2B467D3400B830AF /* Challange */,
 				0B8A89A72B369DE600688BA6 /* Home */,
 				0B8A89A52B369DD500688BA6 /* Common */,
 			);
@@ -482,6 +501,7 @@
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
+				0B2B0E8F2B467EAE00B830AF /* TotalTimePickerView.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,

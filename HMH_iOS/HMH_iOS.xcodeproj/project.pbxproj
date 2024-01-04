@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
-		0B2C2D3F2B4559E10023CCFA /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */; };
 		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
 		0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CC2B369813000C5046 /* SceneDelegate.swift */; };
@@ -23,7 +22,6 @@
 		0B8A89B52B369F0100688BA6 /* B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B42B369F0100688BA6 /* B.swift */; };
 		0B8A89B72B369F1100688BA6 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B62B369F1100688BA6 /* C.swift */; };
 		0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BB2B369F2D00688BA6 /* UIView+.swift */; };
-		0B8A89BE2B369F7C00688BA6 /* E.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BD2B369F7C00688BA6 /* E.swift */; };
 		0B8A89C42B369FA000688BA6 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C32B369FA000688BA6 /* F.swift */; };
 		0B8A89C62B369FA800688BA6 /* H.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C52B369FA800688BA6 /* H.swift */; };
 		174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF48D2B447B1F00450D07 /* MyPageCells.swift */; };
@@ -34,7 +32,6 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChanllengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */; };
-		174AF49E2B447E8600450D07 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49D2B447E8600450D07 /* TabBarController.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
 		3666C8552B45F47600564874 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3666C8542B45F47600564874 /* DeviceActivity.framework */; };
 		3666C8582B45F47600564874 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */; };
@@ -45,6 +42,9 @@
 		3666C8722B45F4B200564874 /* DeviceReport.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 3666C8662B45F4B200564874 /* DeviceReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8792B45F4F900564874 /* SelectedBlocker.swift */; };
 		3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */; };
+		3666C88B2B471B0D00564874 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88A2B471B0D00564874 /* String.swift */; };
+		3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88C2B471B1D00564874 /* UIImage+.swift */; };
+		3666C88F2B471C5800564874 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88E2B471C5800564874 /* TabBarController.swift */; };
 		36A3D8942B3AB57B007EA272 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8932B3AB57B007EA272 /* SnapKit */; };
 		36A3D8962B3AB57B007EA272 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8952B3AB57B007EA272 /* SnapKit-Dynamic */; };
 		36A3D8992B3AB58A007EA272 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8982B3AB58A007EA272 /* Then */; };
@@ -139,7 +139,6 @@
 		0B8A89B42B369F0100688BA6 /* B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.swift; sourceTree = "<group>"; };
 		0B8A89B62B369F1100688BA6 /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		0B8A89BB2B369F2D00688BA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
-		0B8A89BD2B369F7C00688BA6 /* E.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E.swift; sourceTree = "<group>"; };
 		0B8A89C32B369FA000688BA6 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		0B8A89C52B369FA800688BA6 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
 		174AF48D2B447B1F00450D07 /* MyPageCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCells.swift; sourceTree = "<group>"; };
@@ -150,7 +149,6 @@
 		174AF4972B447CF100450D07 /* ChanllengeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeModels.swift; sourceTree = "<group>"; };
 		174AF4992B447CFB00450D07 /* ChanllengeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViews.swift; sourceTree = "<group>"; };
 		174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViewController.swift; sourceTree = "<group>"; };
-		174AF49D2B447E8600450D07 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHAppSelectButtonView.swift; sourceTree = "<group>"; };
 		3666C8522B45F47600564874 /* DeviceMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3666C8542B45F47600564874 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
@@ -166,6 +164,9 @@
 		3666C8772B45F4C600564874 /* HMH_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HMH_iOS.entitlements; sourceTree = "<group>"; };
 		3666C8792B45F4F900564874 /* SelectedBlocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBlocker.swift; sourceTree = "<group>"; };
 		3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockingApplicationModel.swift; sourceTree = "<group>"; };
+		3666C88A2B471B0D00564874 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		3666C88C2B471B1D00564874 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		3666C88E2B471C5800564874 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		36A3D9B32B3EBBED007EA272 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjust+.swift"; sourceTree = "<group>"; };
 		36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
@@ -328,6 +329,7 @@
 				36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */,
 				36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */,
 				36A3D9BB2B3EBD2D007EA272 /* UIScreen+.swift */,
+				3666C88C2B471B1D00564874 /* UIImage+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -377,7 +379,7 @@
 		0B8A899B2B369D2F00688BA6 /* String */ = {
 			isa = PBXGroup;
 			children = (
-				0B8A89BD2B369F7C00688BA6 /* E.swift */,
+				3666C88A2B471B0D00564874 /* String.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -498,7 +500,7 @@
 		174AF4362B43DB2000450D07 /* CustomTabbar */ = {
 			isa = PBXGroup;
 			children = (
-				174AF49D2B447E8600450D07 /* TabBarController.swift */,
+				3666C88E2B471C5800564874 /* TabBarController.swift */,
 			);
 			path = CustomTabbar;
 			sourceTree = "<group>";
@@ -804,7 +806,6 @@
 				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */,
-				0B8A89BE2B369F7C00688BA6 /* E.swift in Sources */,
 				174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */,
 				174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */,
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
@@ -829,6 +830,9 @@
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
+				3666C88F2B471C5800564874 /* TabBarController.swift in Sources */,
+				3666C88B2B471B0D00564874 /* String.swift in Sources */,
+				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,
 			);

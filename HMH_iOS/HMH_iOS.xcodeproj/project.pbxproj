@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
-		0B2B0E8F2B467EAE00B830AF /* TotalTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0E8E2B467EAE00B830AF /* TotalTimePickerView.swift */; };
-		0B2B0E922B469E0400B830AF /* SpecificTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0E912B469E0400B830AF /* SpecificTimePickerView.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
-		0B2C2D3F2B4559E10023CCFA /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */; };
 		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
 		0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CC2B369813000C5046 /* SceneDelegate.swift */; };
@@ -36,7 +33,6 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChanllengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */; };
-		174AF49E2B447E8600450D07 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49D2B447E8600450D07 /* TabBarController.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
 		3666C8552B45F47600564874 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3666C8542B45F47600564874 /* DeviceActivity.framework */; };
 		3666C8582B45F47600564874 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */; };
@@ -47,6 +43,8 @@
 		3666C8722B45F4B200564874 /* DeviceReport.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 3666C8662B45F4B200564874 /* DeviceReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8792B45F4F900564874 /* SelectedBlocker.swift */; };
 		3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */; };
+		3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8862B47110800564874 /* SpecificTimePickerView.swift */; };
+		3666C8892B47110800564874 /* TotalTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8872B47110800564874 /* TotalTimePickerView.swift */; };
 		36A3D8942B3AB57B007EA272 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8932B3AB57B007EA272 /* SnapKit */; };
 		36A3D8962B3AB57B007EA272 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8952B3AB57B007EA272 /* SnapKit-Dynamic */; };
 		36A3D8992B3AB58A007EA272 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8982B3AB58A007EA272 /* Then */; };
@@ -124,8 +122,6 @@
 
 /* Begin PBXFileReference section */
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
-		0B2B0E8E2B467EAE00B830AF /* TotalTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalTimePickerView.swift; sourceTree = "<group>"; };
-		0B2B0E912B469E0400B830AF /* SpecificTimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificTimePickerView.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
 		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
@@ -170,6 +166,8 @@
 		3666C8772B45F4C600564874 /* HMH_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HMH_iOS.entitlements; sourceTree = "<group>"; };
 		3666C8792B45F4F900564874 /* SelectedBlocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBlocker.swift; sourceTree = "<group>"; };
 		3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockingApplicationModel.swift; sourceTree = "<group>"; };
+		3666C8862B47110800564874 /* SpecificTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTimePickerView.swift; sourceTree = "<group>"; };
+		3666C8872B47110800564874 /* TotalTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalTimePickerView.swift; sourceTree = "<group>"; };
 		36A3D9B32B3EBBED007EA272 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjust+.swift"; sourceTree = "<group>"; };
 		36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
@@ -245,23 +243,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		0B2B0E8D2B467D3400B830AF /* Challange */ = {
-			isa = PBXGroup;
-			children = (
-				0B2B0E902B469CE900B830AF /* Views */,
-			);
-			path = CreateChallenge;
-			sourceTree = "<group>";
-		};
-		0B2B0E902B469CE900B830AF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0B2B0E8E2B467EAE00B830AF /* TotalTimePickerView.swift */,
-				0B2B0E912B469E0400B830AF /* SpecificTimePickerView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		0B50F9BE2B369813000C5046 = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +312,7 @@
 		0B67CCE72B369BE300582D54 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				3666C8842B47110800564874 /* CreateChallenge */,
 				174AF4842B447AB500450D07 /* MyPage */,
 				174AF4832B447A7A00450D07 /* Challenge */,
 				0B2C2D3C2B4559AE0023CCFA /* Onboarding */,
@@ -657,6 +639,23 @@
 			path = AppBlock;
 			sourceTree = "<group>";
 		};
+		3666C8842B47110800564874 /* CreateChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				3666C8852B47110800564874 /* Views */,
+			);
+			path = CreateChallenge;
+			sourceTree = "<group>";
+		};
+		3666C8852B47110800564874 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3666C8862B47110800564874 /* SpecificTimePickerView.swift */,
+				3666C8872B47110800564874 /* TotalTimePickerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -832,11 +831,13 @@
 				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
+				3666C8892B47110800564874 /* TotalTimePickerView.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
+				3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,
 				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,
 				36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */,
@@ -848,9 +849,7 @@
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
-				0B2B0E8F2B467EAE00B830AF /* TotalTimePickerView.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
-				0B2B0E922B469E0400B830AF /* SpecificTimePickerView.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,

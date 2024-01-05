@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct AppModel {
+    let appIcon: String
+    let appName: String
+    let appUseTime: Int
+}

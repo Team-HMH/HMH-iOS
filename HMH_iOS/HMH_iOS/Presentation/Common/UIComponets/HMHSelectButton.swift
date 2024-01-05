@@ -81,7 +81,7 @@ final class HMHSelectButton: UIButton {
     
     private func updateStyle() {
         if isChecked {
-            backgroundColor = .bluePurpleActive
+            backgroundColor = .bluePurpleButton
             makeBorder(width: 1.5, color: .bluePurpleLine)
         } else {
             backgroundColor = .gray6

@@ -13,4 +13,10 @@ enum StringLiteral {
         static var homeTitle = "홈"
         static var myPageTitle = "마이페이지"
     }
+    
+    enum AlertButton {
+        static let confirm = "확인"
+        static let cancel = "취소"
+        static let close = "닫기"
+    }
 }

@@ -52,6 +52,10 @@
 		3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88C2B471B1D00564874 /* UIImage+.swift */; };
 		3666C88F2B471C5800564874 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88E2B471C5800564874 /* TabBarController.swift */; };
 		3666C89B2B48516500564874 /* ChallengeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C89A2B48516500564874 /* ChallengeView.swift */; };
+		3666C89F2B485C8F00564874 /* DateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C89E2B485C8F00564874 /* DateCollectionViewCell.swift */; };
+		3666C8A12B485CC800564874 /* TitleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8A02B485CC800564874 /* TitleCollectionReusableView.swift */; };
+		3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8A22B4861A200564874 /* AppListCollectionViewCell.swift */; };
+		3666C8A52B48644A00564874 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8A42B48644A00564874 /* AppModel.swift */; };
 		36A3D8942B3AB57B007EA272 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8932B3AB57B007EA272 /* SnapKit */; };
 		36A3D8962B3AB57B007EA272 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8952B3AB57B007EA272 /* SnapKit-Dynamic */; };
 		36A3D8992B3AB58A007EA272 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8982B3AB58A007EA272 /* Then */; };
@@ -181,6 +185,10 @@
 		3666C88C2B471B1D00564874 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		3666C88E2B471C5800564874 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3666C89A2B48516500564874 /* ChallengeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeView.swift; sourceTree = "<group>"; };
+		3666C89E2B485C8F00564874 /* DateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCollectionViewCell.swift; sourceTree = "<group>"; };
+		3666C8A02B485CC800564874 /* TitleCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionReusableView.swift; sourceTree = "<group>"; };
+		3666C8A22B4861A200564874 /* AppListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCell.swift; sourceTree = "<group>"; };
+		3666C8A42B48644A00564874 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		36A3D9B32B3EBBED007EA272 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjust+.swift"; sourceTree = "<group>"; };
 		36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
@@ -565,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				174AF4972B447CF100450D07 /* ChanllengeModels.swift */,
+				3666C8A42B48644A00564874 /* AppModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -572,7 +581,10 @@
 		174AF4882B447AE600450D07 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				3666C89D2B485C6700564874 /* HeaderFooterView */,
 				174AF4952B447CE700450D07 /* ChanllengeCells.swift */,
+				3666C89E2B485C8F00564874 /* DateCollectionViewCell.swift */,
+				3666C8A22B4861A200564874 /* AppListCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -671,6 +683,14 @@
 				3666C8872B47110800564874 /* TotalTimePickerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3666C89D2B485C6700564874 /* HeaderFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				3666C8A02B485CC800564874 /* TitleCollectionReusableView.swift */,
+			);
+			path = HeaderFooterView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -834,16 +854,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3666C8A12B485CC800564874 /* TitleCollectionReusableView.swift in Sources */,
 				0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */,
 				0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */,
 				0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */,
 				0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */,
+				3666C89F2B485C8F00564874 /* DateCollectionViewCell.swift in Sources */,
 				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
 				0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */,
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */,
 				174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */,
 				174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */,
+				3666C8A52B48644A00564874 /* AppModel.swift in Sources */,
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
 				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
@@ -853,6 +876,7 @@
 				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
+				3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,

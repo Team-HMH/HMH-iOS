@@ -24,6 +24,7 @@ final class TotalTimePickerView: UIPickerView {
         
         setUI()
         configurePickerView()
+        setDelegate()
     }
     
     required init?(coder: NSCoder) {
@@ -46,22 +47,17 @@ final class TotalTimePickerView: UIPickerView {
         }
     }
     
-    private func configurePickerView() {
-        self.backgroundColor = .clear
+    private func setDelegate() {
         self.delegate = self
         self.dataSource = self
     }
+    
+    private func configurePickerView() {
+        self.backgroundColor = .clear
+    }
 }
 
-extension TotalTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource{
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return hours.count
-    }
-    
+extension TotalTimePickerView: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return hours[row]
     }
@@ -92,6 +88,18 @@ extension TotalTimePickerView: UIPickerViewDelegate, UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 53.adjusted
+        return 53.adjustedHeight
     }
 }
+
+extension TotalTimePickerView: UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return hours.count
+    }
+}
+
+

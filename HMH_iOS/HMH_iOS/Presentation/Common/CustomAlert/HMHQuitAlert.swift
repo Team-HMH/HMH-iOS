@@ -11,6 +11,8 @@ import SnapKit
 import Then
 
 final class HMHQuitAlert: UIView {
+    weak var delegate: AlertDelegate?
+    
     private let titleLabel = UILabel().then {
         $0.text = StringLiteral.AlertTitle.quit
         $0.textColor = .whiteText
@@ -37,6 +39,7 @@ final class HMHQuitAlert: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setAddTarget()
         configureView()
         setUI()
     }
@@ -71,16 +74,23 @@ final class HMHQuitAlert: UIView {
         }
     }
     
+    private func setAddTarget() {
+        leftButton.addTarget(self, action: #selector(exitButtonTapped), for: .touchUpInside)
+        rightButton.addTarget(self, action: #selector(quitButtonTapped), for: .touchUpInside)
+    }
+    
     private func configureView() {
         self.do {
             $0.makeCornerRound(radius: 10.adjusted)
             $0.backgroundColor = .gray7
         }
-        
-        self.snp.makeConstraints {
-            $0.height.equalTo(203.adjusted)
-            $0.width.equalTo(293.adjusted)
-        }
     }
     
+    @objc func exitButtonTapped() {
+        delegate?.alertDismissTapped()
+    }
+    
+    @objc func quitButtonTapped() {
+        delegate?.enabledButtonTapped()
+    }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ChanllengeViewController: UIViewController {
+final class ChallengeViewController: UIViewController {
     
     
     private let navigationBar = HMHNavigationBar(leftItem: .normal,
@@ -48,9 +48,9 @@ final class ChanllengeViewController: UIViewController {
     }
 }
 
-extension ChanllengeViewController: UICollectionViewDelegate {}
+extension ChallengeViewController: UICollectionViewDelegate {}
 
-extension ChanllengeViewController: UIScrollViewDelegate {
+extension ChallengeViewController: UIScrollViewDelegate {
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
             UIView.animate(withDuration: 0.3, animations: {

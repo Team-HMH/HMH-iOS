@@ -13,7 +13,7 @@ import Then
 final class ChallengeView: UIView {
     
     private let goalTime: Int = 3
-    private var days: Int = 14
+    private var days: Int = 7
     private let appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
                                        AppModel(appIcon: "", appName: "Youtube", appUseTime: "1시간")]
     

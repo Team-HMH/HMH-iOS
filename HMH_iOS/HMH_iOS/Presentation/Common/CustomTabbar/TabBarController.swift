@@ -67,7 +67,7 @@ final class TabBarController: UITabBarController {
     
     private func setTabBar() {
         let challenge = makeTabBar(
-            viewController: ChanllengeViewController(),
+            viewController: ChallengeViewController(),
             title: StringLiteral.TabBar.challengeTitle,
             tabBarImg: ImageLiterals.TabBar.icChallenge,
             tabBarSelectedImg: ImageLiterals.TabBar.icChallengeSelected,

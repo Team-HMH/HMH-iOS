@@ -24,10 +24,8 @@
 		0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BB2B369F2D00688BA6 /* UIView+.swift */; };
 		0B8A89C42B369FA000688BA6 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C32B369FA000688BA6 /* F.swift */; };
 		0B8A89C62B369FA800688BA6 /* H.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C52B369FA800688BA6 /* H.swift */; };
-
-		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
 		0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */; };
-
+		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
 		174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF48D2B447B1F00450D07 /* MyPageCells.swift */; };
 		174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF48F2B447B3C00450D07 /* MyPageModels.swift */; };
 		174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4912B447B4600450D07 /* MyPageViews.swift */; };
@@ -35,7 +33,7 @@
 		174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4952B447CE700450D07 /* ChanllengeCells.swift */; };
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
-		174AF49C2B447D0700450D07 /* ChanllengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */; };
+		174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChallengeViewController.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
 		3666C8552B45F47600564874 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3666C8542B45F47600564874 /* DeviceActivity.framework */; };
 		3666C8582B45F47600564874 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */; };
@@ -154,10 +152,8 @@
 		0B8A89BB2B369F2D00688BA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0B8A89C32B369FA000688BA6 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		0B8A89C52B369FA800688BA6 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
-
-		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
 		0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressView.swift; sourceTree = "<group>"; };
-
+		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
 		174AF48D2B447B1F00450D07 /* MyPageCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCells.swift; sourceTree = "<group>"; };
 		174AF48F2B447B3C00450D07 /* MyPageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageModels.swift; sourceTree = "<group>"; };
 		174AF4912B447B4600450D07 /* MyPageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViews.swift; sourceTree = "<group>"; };
@@ -165,7 +161,7 @@
 		174AF4952B447CE700450D07 /* ChanllengeCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeCells.swift; sourceTree = "<group>"; };
 		174AF4972B447CF100450D07 /* ChanllengeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeModels.swift; sourceTree = "<group>"; };
 		174AF4992B447CFB00450D07 /* ChanllengeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViews.swift; sourceTree = "<group>"; };
-		174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViewController.swift; sourceTree = "<group>"; };
+		174AF49B2B447D0700450D07 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHAppSelectButtonView.swift; sourceTree = "<group>"; };
 		3666C8522B45F47600564874 /* DeviceMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3666C8542B45F47600564874 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
@@ -559,7 +555,7 @@
 		174AF4852B447AC500450D07 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				174AF49B2B447D0700450D07 /* ChanllengeViewController.swift */,
+				174AF49B2B447D0700450D07 /* ChallengeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -890,7 +886,7 @@
 				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,
 				36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */,
 				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
-				174AF49C2B447D0700450D07 /* ChanllengeViewController.swift in Sources */,
+				174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,

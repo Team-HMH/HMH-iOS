@@ -33,6 +33,7 @@ final class OnboardingSwipeView: UIView {
         setUI()
         setDelegate()
         startAutoScroll()
+        setImageView()
     }
     
     deinit {
@@ -50,7 +51,6 @@ final class OnboardingSwipeView: UIView {
     private func setUI() {
         setHierarchy()
         setConstraints()
-        setImageView()
     }
     
     private func setHierarchy() {
@@ -85,8 +85,6 @@ final class OnboardingSwipeView: UIView {
                 $0.leading.equalTo(scrollView.snp.leading).offset(375.adjusted * CGFloat(i))
             }
         }
-        
-        scrollView.contentSize = CGSize(width: (375 * 3).adjustedWidth, height: frame.height)
     }
     
     private func startAutoScroll() {

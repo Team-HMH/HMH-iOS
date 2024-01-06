@@ -13,7 +13,7 @@ class AppListCollectionViewCell: UICollectionViewCell {
     
     let appImageView = UIImageView().then {
         $0.backgroundColor = .blue
-        $0.makeCornerRound(radius: 8)
+        $0.makeCornerRound(radius: 8.adjusted)
     }
     
     let appNameLabel = UILabel().then {
@@ -47,25 +47,25 @@ class AppListCollectionViewCell: UICollectionViewCell {
     private func setViewHierarchy() {
         self.backgroundColor = .clear
         contentView.backgroundColor = .gray7
-        contentView.makeCornerRound(radius: 6)
+        contentView.makeCornerRound(radius: 6.adjusted)
         contentView.addSubviews(appImageView, appNameLabel, timeLabel)
     }
     
     private func setConstraints() {
         
         appImageView.snp.makeConstraints {
-            $0.size.equalTo(40)
-            $0.leading.equalToSuperview().offset(17)
+            $0.size.equalTo(40.adjusted)
+            $0.leading.equalToSuperview().offset(17.adjustedWidth)
             $0.centerY.equalToSuperview()
         }
         
         appNameLabel.snp.makeConstraints {
-            $0.leading.equalTo(appImageView.snp.trailing).offset(14)
+            $0.leading.equalTo(appImageView.snp.trailing).offset(14.adjustedWidth)
             $0.centerY.equalToSuperview()
         }
         
         timeLabel.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(27)
+            $0.trailing.equalToSuperview().inset(27.adjustedWidth)
             $0.centerY.equalToSuperview()
         }
         

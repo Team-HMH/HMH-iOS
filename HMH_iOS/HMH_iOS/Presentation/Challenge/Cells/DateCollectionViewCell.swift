@@ -21,7 +21,7 @@ class DateCollectionViewCell: UICollectionViewCell {
     
     let imageView = UIImageView().then {
         $0.backgroundColor = .background
-        $0.makeCornerRound(radius: 8)
+        $0.makeCornerRound(radius: 8.adjusted)
     }
     
     override init(frame: CGRect) {
@@ -48,9 +48,9 @@ class DateCollectionViewCell: UICollectionViewCell {
         }
         
         imageView.snp.makeConstraints {
-            $0.top.equalTo(dateLabel.snp.bottom).offset(6)
+            $0.top.equalTo(dateLabel.snp.bottom).offset(6.adjustedHeight)
             $0.centerX.equalToSuperview()
-            $0.size.equalTo(40)
+            $0.size.equalTo(40.adjusted)
         }
     }
     

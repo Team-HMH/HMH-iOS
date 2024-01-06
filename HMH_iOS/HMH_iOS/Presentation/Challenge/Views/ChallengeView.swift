@@ -126,12 +126,12 @@ extension ChallengeView: UICollectionViewDataSource {
 
 extension ChallengeView {
     func createDateLayout() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(40),
-                                              heightDimension: .absolute(63))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(40.adjustedWidth),
+                                              heightDimension: .absolute(63.adjustedHeight))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                               heightDimension: .estimated(63))
+                                               heightDimension: .estimated(63.adjustedHeight))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        repeatingSubitem: item,
                                                        count: 7)
@@ -140,8 +140,8 @@ extension ChallengeView {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPagingCentered
-        section.interGroupSpacing = 19
-        section.contentInsets = .init(top: 0, leading: 0, bottom: 35, trailing:0)
+        section.interGroupSpacing = 19.adjustedHeight
+        section.contentInsets = .init(top: 0, leading: 0, bottom: 35.adjustedHeight, trailing:0)
         
         
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(145.adjustedHeight))
@@ -166,9 +166,9 @@ extension ChallengeView {
     
     func createAppListLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                              heightDimension: .absolute(68))
+                                              heightDimension: .absolute(68.adjustedHeight))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20.adjustedWidth, bottom: 0, trailing: 20.adjustedWidth)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                heightDimension: .fractionalHeight(0.5))

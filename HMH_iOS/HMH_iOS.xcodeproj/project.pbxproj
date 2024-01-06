@@ -87,6 +87,8 @@
 		36A3D9D02B409D35007EA272 /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36A3D9C72B409D35007EA272 /* Pretendard-ExtraLight.otf */; };
 		36A3D9D12B409D35007EA272 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36A3D9C82B409D35007EA272 /* Pretendard-Bold.otf */; };
 		36A3D9D22B409D35007EA272 /* Pretendard-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 36A3D9C92B409D35007EA272 /* Pretendard-Thin.otf */; };
+		36E05FE42B487911005B633E /* GrayBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05FE32B487911005B633E /* GrayBackgroundView.swift */; };
+		36E05FE62B48825A005B633E /* AppCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E05FE52B48825A005B633E /* AppCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +207,8 @@
 		36A3D9C72B409D35007EA272 /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		36A3D9C82B409D35007EA272 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		36A3D9C92B409D35007EA272 /* Pretendard-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Thin.otf"; sourceTree = "<group>"; };
+		36E05FE32B487911005B633E /* GrayBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrayBackgroundView.swift; sourceTree = "<group>"; };
+		36E05FE52B48825A005B633E /* AppCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -689,6 +693,8 @@
 			isa = PBXGroup;
 			children = (
 				3666C8A02B485CC800564874 /* TitleCollectionReusableView.swift */,
+				36E05FE32B487911005B633E /* GrayBackgroundView.swift */,
+				36E05FE52B48825A005B633E /* AppCollectionReusableView.swift */,
 			);
 			path = HeaderFooterView;
 			sourceTree = "<group>";
@@ -855,6 +861,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3666C8A12B485CC800564874 /* TitleCollectionReusableView.swift in Sources */,
+				36E05FE42B487911005B633E /* GrayBackgroundView.swift in Sources */,
 				0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */,
 				0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */,
 				0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */,
@@ -894,6 +901,7 @@
 				0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
 				3666C88F2B471C5800564874 /* TabBarController.swift in Sources */,
+				36E05FE62B48825A005B633E /* AppCollectionReusableView.swift in Sources */,
 				3666C88B2B471B0D00564874 /* String.swift in Sources */,
 				3666C89B2B48516500564874 /* ChallengeView.swift in Sources */,
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,

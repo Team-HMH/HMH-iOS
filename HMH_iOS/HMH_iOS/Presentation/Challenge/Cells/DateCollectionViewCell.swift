@@ -15,12 +15,12 @@ class DateCollectionViewCell: UICollectionViewCell {
     
     let dateLabel = UILabel().then {
         $0.text = "1"
-        $0.textColor = .white
-        $0.font = .systemFont(ofSize: 14, weight: .medium)
+        $0.textColor = .gray2
+        $0.font = .iosText6Medium14
     }
     
     let imageView = UIImageView().then {
-        $0.backgroundColor = .gray
+        $0.backgroundColor = .background
         $0.makeCornerRound(radius: 8)
     }
     
@@ -52,5 +52,10 @@ class DateCollectionViewCell: UICollectionViewCell {
             $0.centerX.equalToSuperview()
             $0.size.equalTo(40)
         }
+    }
+    
+    func configureCell(date: String, image: UIImage = UIImage()){
+        dateLabel.text = date
+        imageView.image = image
     }
 }

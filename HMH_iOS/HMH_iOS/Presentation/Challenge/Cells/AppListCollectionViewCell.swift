@@ -18,14 +18,14 @@ class AppListCollectionViewCell: UICollectionViewCell {
     
     let appIconLabel = UILabel().then {
         $0.text = "instagram"
-        $0.textColor = .systemGray4
-        $0.font = .systemFont(ofSize: 14)
+        $0.textColor = .gray2
+        $0.font = .iosText6Medium14
     }
     
     let timeLabel = UILabel().then {
         $0.text = "1시간 30분"
-        $0.textColor = .white
-        $0.font = .systemFont(ofSize: 16)
+        $0.textColor = .whiteText
+        $0.font = .iosText4Semibold16
     }
     
     override init(frame: CGRect) {
@@ -39,7 +39,6 @@ class AppListCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20))
     }
     
     private func setUI(){
@@ -49,9 +48,9 @@ class AppListCollectionViewCell: UICollectionViewCell {
     
     private func setViewHierarchy() {
         self.backgroundColor = .clear
-        contentView.backgroundColor = .systemGray
+        contentView.backgroundColor = .gray7
         contentView.makeCornerRound(radius: 6)
-        contentView.addSubviews(backView,appImageView, appIconLabel, timeLabel)
+        contentView.addSubviews(appImageView, appIconLabel, timeLabel)
     }
     
     private func setConstraints() {

@@ -126,12 +126,12 @@ extension ChallengeView: UICollectionViewDataSource {
 
 extension ChallengeView {
     func createDateLayout() -> NSCollectionLayoutSection {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(40.adjustedWidth),
-                                              heightDimension: .absolute(63.adjustedHeight))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(40),
+                                              heightDimension: .absolute(63))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                               heightDimension: .estimated(63.adjustedHeight))
+                                               heightDimension: .estimated(63))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                        repeatingSubitem: item,
                                                        count: 7)
@@ -140,8 +140,8 @@ extension ChallengeView {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPagingCentered
-        section.interGroupSpacing = 19.adjustedHeight
-        section.contentInsets = .init(top: 0, leading: 0, bottom: 35.adjustedHeight, trailing:0)
+        section.interGroupSpacing = 19
+        section.contentInsets = .init(top: 0, leading: 0, bottom: 35, trailing:0)
         
         
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(145.adjustedHeight))
@@ -156,8 +156,7 @@ extension ChallengeView {
         section.decorationItems = [sectionBackgroundDecoration]
         
         let layout = UICollectionViewCompositionalLayout(section: section)
-        layout.register(GrayBackgroundView.self, 
-                        forDecorationViewOfKind: StringLiteral.Challenge.Idetifier.backgroundViewId)
+        layout.register(GrayBackgroundView.self, forDecorationViewOfKind: StringLiteral.Challenge.Idetifier.backgroundViewId)
         
         section.orthogonalScrollingBehavior = .none
         
@@ -166,9 +165,9 @@ extension ChallengeView {
     
     func createAppListLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                              heightDimension: .absolute(68.adjustedHeight))
+                                              heightDimension: .absolute(68))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20.adjustedWidth, bottom: 0, trailing: 20.adjustedWidth)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                heightDimension: .fractionalHeight(0.5))

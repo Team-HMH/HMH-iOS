@@ -54,7 +54,6 @@ final class ChallengeView: UIView {
     }
     
     func setConstraints() {
-        
         challengeCollectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
@@ -74,6 +73,7 @@ final class ChallengeView: UIView {
 }
 
 extension ChallengeView: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section{
         case 0:
@@ -125,6 +125,7 @@ extension ChallengeView: UICollectionViewDataSource {
 
 
 extension ChallengeView {
+    
     func createDateLayout() -> NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(40),
                                               heightDimension: .absolute(63))

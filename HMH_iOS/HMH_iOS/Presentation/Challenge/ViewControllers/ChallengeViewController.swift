@@ -51,6 +51,7 @@ final class ChallengeViewController: UIViewController {
 extension ChallengeViewController: UICollectionViewDelegate {}
 
 extension ChallengeViewController: UIScrollViewDelegate {
+    
     func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
         if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
             UIView.animate(withDuration: 0.3, animations: {
@@ -62,6 +63,4 @@ extension ChallengeViewController: UIScrollViewDelegate {
             })
         }
     }
-    
-        
 }

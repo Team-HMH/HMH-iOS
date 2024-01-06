@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
+		0B2B0E9C2B47D57E00B830AF /* OnboardingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2B0E9B2B47D57E00B830AF /* OnboardingProgressView.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
 		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
@@ -122,6 +123,7 @@
 
 /* Begin PBXFileReference section */
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
+		0B2B0E9B2B47D57E00B830AF /* OnboardingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardingProgressView.swift; path = ../../../../../../../../Downloads/OnboardingProgressView.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
 		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
@@ -238,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */,
+				0B2B0E9B2B47D57E00B830AF /* OnboardingProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -835,6 +838,7 @@
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
+				0B2B0E9C2B47D57E00B830AF /* OnboardingProgressView.swift in Sources */,
 				3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,
 				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,

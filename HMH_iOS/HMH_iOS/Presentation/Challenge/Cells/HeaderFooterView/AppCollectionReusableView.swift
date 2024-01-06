@@ -13,14 +13,15 @@ class AppCollectionReusableView: UICollectionReusableView {
     
     let titleLabel = UILabel().then {
         $0.text = "앱 잠금"
-        $0.font = .systemFont(ofSize: 16, weight: .medium)
-        $0.textColor = .white
+        $0.font = .iosText5Medium16
+        $0.textColor = .gray1
+        $0.setTextWithLineHeight(text: $0.text, lineHeight: 24)
     }
     
     let deleteButton = UIButton().then {
         $0.setTitle("삭제", for: .normal)
-        $0.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
-        $0.setTitleColor(.blue, for: .normal)
+        $0.titleLabel?.font = .iosText4Semibold16
+        $0.setTitleColor(.bluePurpleText, for: .normal)
     }
     
     override init(frame: CGRect) {
@@ -42,12 +43,12 @@ class AppCollectionReusableView: UICollectionReusableView {
     
     private func setConstraints() {
         titleLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(20)
-            $0.bottom.equalToSuperview().inset(7)
+            $0.leading.equalToSuperview().offset(20.adjustedWidth)
+            $0.bottom.equalToSuperview().inset(17.adjustedHeight)
         }
         
         deleteButton.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(20)
+            $0.trailing.equalToSuperview().inset(20.adjustedWidth)
             $0.centerY.equalTo(titleLabel.snp.centerY)
         }
     }

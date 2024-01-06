@@ -42,14 +42,14 @@ class TitleCollectionReusableView: UICollectionReusableView {
     }
     
     private func setConstraints() {
-        subTitleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(80)
-            $0.leading.equalToSuperview().offset(30)
+        titleLabel.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(29.adjustedWidth)
+            $0.bottom.equalToSuperview().inset(26.adjusted)
         }
         
-        titleLabel.snp.makeConstraints {
-            $0.top.equalTo(subTitleLabel.snp.bottom).offset(9)
-            $0.leading.equalToSuperview().offset(30)
+        subTitleLabel.snp.makeConstraints {
+            $0.leading.equalTo(titleLabel)
+            $0.bottom.equalTo(titleLabel.snp.top).offset(-9.adjusted)
         }
     }
     

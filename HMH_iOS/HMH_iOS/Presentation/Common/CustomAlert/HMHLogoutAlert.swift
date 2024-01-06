@@ -48,7 +48,7 @@ final class HMHLogoutAlert: UIView {
     
     private func setConstraints() {
         titleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(39.adjusted)
+            $0.top.equalToSuperview().inset(50.adjusted)
             $0.horizontalEdges.equalToSuperview()
         }
         
@@ -62,6 +62,11 @@ final class HMHLogoutAlert: UIView {
         self.do {
             $0.makeCornerRound(radius: 10.adjusted)
             $0.backgroundColor = .gray7
+        }
+        
+        self.snp.makeConstraints {
+            $0.height.equalTo(177.adjusted)
+            $0.width.equalTo(293.adjusted)
         }
     }
     

@@ -11,10 +11,14 @@ import SnapKit
 import Then
 
 final class OnboardingSwipeView: UIView {
+    private var timer: Timer?
+    private var currentPage: Int = 0
+    
     let scrollView = UIScrollView().then {
         $0.isPagingEnabled = true
         $0.showsHorizontalScrollIndicator = false
         $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.contentSize = CGSize(width: (375 * 3).adjustedWidth, height: 380.adjustedHeight)
     }
     
     let pageControl = UIPageControl().then {
@@ -28,6 +32,11 @@ final class OnboardingSwipeView: UIView {
         
         setUI()
         setDelegate()
+        startAutoScroll()
+    }
+    
+    deinit {
+        stopAutoScroll()
     }
     
     required init?(coder: NSCoder) {
@@ -51,7 +60,7 @@ final class OnboardingSwipeView: UIView {
     private func setConstraints() {
         scrollView.snp.makeConstraints {
             $0.width.equalToSuperview()
-            $0.height.equalTo(380)
+            $0.height.equalTo(380.adjustedHeight)
         }
         
         pageControl.snp.makeConstraints {
@@ -72,20 +81,33 @@ final class OnboardingSwipeView: UIView {
             
             pageView.snp.makeConstraints {
                 $0.top.equalTo(scrollView.snp.top)
-                $0.width.equalTo(375)
-                $0.height.equalTo(scrollView.snp.height)
-                $0.leading.equalTo(scrollView.snp.leading).offset(375 * CGFloat(i))
+                $0.size.equalToSuperview()
+                $0.leading.equalTo(scrollView.snp.leading).offset(375.adjusted * CGFloat(i))
             }
         }
         
-        scrollView.contentSize = CGSize(width: 375 * 3, height: frame.height)
+        scrollView.contentSize = CGSize(width: (375 * 3).adjustedWidth, height: frame.height)
+    }
+    
+    private func startAutoScroll() {
+        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(nextPage), userInfo: nil, repeats: true)
+    }
+    
+    private func stopAutoScroll() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    @objc private func nextPage() {
+        currentPage = (currentPage + 1) % 3
+        scrollView.setContentOffset(CGPoint(x: (scrollView.frame.width.adjusted * CGFloat(currentPage)), y: 0), animated: true)
+        pageControl.currentPage = currentPage
     }
 }
 
 extension OnboardingSwipeView: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let currentPage = Int(scrollView.contentOffset.x / scrollView.frame.width)
-        
+        currentPage = Int(scrollView.contentOffset.x.adjusted / scrollView.frame.width.adjusted)
         pageControl.currentPage = currentPage
     }
 }

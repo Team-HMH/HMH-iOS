@@ -7,6 +7,9 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class GrayBackgroundView: UICollectionReusableView {
     private let grayBackgroundView = UIView().then {
         $0.backgroundColor = .gray7

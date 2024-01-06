@@ -7,6 +7,9 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class AppListCollectionViewCell: UICollectionViewCell {
     
     static let identifer = "AppListCollectionViewCell"

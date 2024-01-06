@@ -7,6 +7,9 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class TitleCollectionReusableView: UICollectionReusableView {
     
     static let identifier = "TitleCollectionReusableView"

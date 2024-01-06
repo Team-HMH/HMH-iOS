@@ -7,6 +7,9 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class AppCollectionReusableView: UICollectionReusableView {
     
     static let identifier = "AppCollectionReusableView"

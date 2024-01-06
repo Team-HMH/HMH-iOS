@@ -14,7 +14,8 @@ final class ChallengeView: UIView {
     
     private let goalTime: Int = 3
     private var days: Int = 14
-    private let AppList: [AppModel] = []
+    private let appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
+                                       AppModel(appIcon: "", appName: "Youtube", appUseTime: "1시간")]
     
     lazy var challengeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .background
@@ -78,7 +79,7 @@ extension ChallengeView: UICollectionViewDataSource {
         case 0:
             return days
         case 1:
-            return 3
+            return appList.count
         default:
             return 0
         }
@@ -98,7 +99,11 @@ extension ChallengeView: UICollectionViewDataSource {
             cell.configureCell(date: "\(1 + indexPath.item)")
             return cell
         case 1:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppListCollectionViewCell.identifer, for: indexPath)
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppListCollectionViewCell.identifer, for: indexPath)
+                    as? AppListCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.configureCell(appName: appList[indexPath.item].appName, appTime: appList[indexPath.item].appUseTime)
             return cell
         default:
             return UICollectionViewCell()

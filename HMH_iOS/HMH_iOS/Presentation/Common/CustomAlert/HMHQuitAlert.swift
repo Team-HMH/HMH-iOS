@@ -25,6 +25,7 @@ final class HMHQuitAlert: UIView {
         $0.textColor = .whiteText
         $0.font = .iosDetail1Regular14
         $0.textAlignment = .center
+        $0.setTextWithLineHeight(text: StringLiteral.AlertDescription.quit, lineHeight: 21)
         $0.numberOfLines = .zero
     }
     

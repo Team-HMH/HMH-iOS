@@ -23,12 +23,13 @@
 		0B8A89B72B369F1100688BA6 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B62B369F1100688BA6 /* C.swift */; };
 		0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BB2B369F2D00688BA6 /* UIView+.swift */; };
 		0B8A89C42B369FA000688BA6 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C32B369FA000688BA6 /* F.swift */; };
-		0B8A89C62B369FA800688BA6 /* H.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C52B369FA800688BA6 /* H.swift */; };
-
-		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
 		0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */; };
-
+		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
 		17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F7E2B485E150089A551 /* CustomAlertButton.swift */; };
+		17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F822B486BEC0089A551 /* AlertViewController.swift */; };
+		17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */; };
+		17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F862B49853C0089A551 /* HMHQuitAlert.swift */; };
+		17314F892B49A8B60089A551 /* AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F882B49A8B60089A551 /* AlertDelegate.swift */; };
 		174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF48D2B447B1F00450D07 /* MyPageCells.swift */; };
 		174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF48F2B447B3C00450D07 /* MyPageModels.swift */; };
 		174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4912B447B4600450D07 /* MyPageViews.swift */; };
@@ -147,12 +148,13 @@
 		0B8A89B62B369F1100688BA6 /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		0B8A89BB2B369F2D00688BA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0B8A89C32B369FA000688BA6 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
-		0B8A89C52B369FA800688BA6 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
-
-		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
 		0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressView.swift; sourceTree = "<group>"; };
-
+		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
 		17314F7E2B485E150089A551 /* CustomAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertButton.swift; sourceTree = "<group>"; };
+		17314F822B486BEC0089A551 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHLogoutAlert.swift; sourceTree = "<group>"; };
+		17314F862B49853C0089A551 /* HMHQuitAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHQuitAlert.swift; sourceTree = "<group>"; };
+		17314F882B49A8B60089A551 /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
 		174AF48D2B447B1F00450D07 /* MyPageCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCells.swift; sourceTree = "<group>"; };
 		174AF48F2B447B3C00450D07 /* MyPageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageModels.swift; sourceTree = "<group>"; };
 		174AF4912B447B4600450D07 /* MyPageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViews.swift; sourceTree = "<group>"; };
@@ -363,7 +365,7 @@
 		0B8A89972B369CF100688BA6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				0B8A89C52B369FA800688BA6 /* H.swift */,
+				17314F882B49A8B60089A551 /* AlertDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -519,6 +521,9 @@
 			isa = PBXGroup;
 			children = (
 				17314F7E2B485E150089A551 /* CustomAlertButton.swift */,
+				17314F822B486BEC0089A551 /* AlertViewController.swift */,
+				17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */,
+				17314F862B49853C0089A551 /* HMHQuitAlert.swift */,
 			);
 			path = CustomAlert;
 			sourceTree = "<group>";
@@ -858,22 +863,25 @@
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
 				3666C8892B47110800564874 /* TotalTimePickerView.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
+				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
 				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
+				17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,
-				0B8A89C62B369FA800688BA6 /* H.swift in Sources */,
 				36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */,
 				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
 				174AF49C2B447D0700450D07 /* ChanllengeViewController.swift in Sources */,
+				17314F892B49A8B60089A551 /* AlertDelegate.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
+				17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 				0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */,
 				17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */,

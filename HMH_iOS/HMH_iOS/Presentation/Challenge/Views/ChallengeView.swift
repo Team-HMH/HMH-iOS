@@ -12,9 +12,27 @@ import Then
 
 final class ChallengeView: UIView {
     
+    private let goalTime: Int = 3
+    private var days: Int = 14
+    private let AppList: [AppModel] = []
+    
+    lazy var challengeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+        $0.backgroundColor = .background
+        $0.collectionViewLayout = createLayout()
+        
+        $0.register(DateCollectionViewCell.self, forCellWithReuseIdentifier: DateCollectionViewCell.identifer)
+        $0.register(AppListCollectionViewCell.self, forCellWithReuseIdentifier: AppListCollectionViewCell.identifer)
+        
+        $0.register(TitleCollectionReusableView.self, forSupplementaryViewOfKind: "TitleSectionHeader", withReuseIdentifier: TitleCollectionReusableView.identifier)
+        $0.register(AppCollectionReusableView.self, forSupplementaryViewOfKind: "AppSectionHeader", withReuseIdentifier: AppCollectionReusableView.identifier)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         setUI()
+        configureView()
+        configreCollectionView()
         addTarget()
     }
     
@@ -28,14 +46,153 @@ final class ChallengeView: UIView {
     }
     
     func setHierarchy() {
+        self.addSubviews(challengeCollectionView)
         
     }
     
     func setConstraints() {
         
+        challengeCollectionView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+    }
+    
+    func configureView() {
+        self.backgroundColor = .background
+    }
+    
+    func configreCollectionView() {
+        challengeCollectionView.dataSource = self
     }
     
     func addTarget() {
         
+    }
+}
+
+extension ChallengeView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch section{
+        case 0:
+            return days
+        case 1:
+            return 3
+        default:
+            return 0
+        }
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch indexPath.section {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DateCollectionViewCell.identifer, for: indexPath)
+                    as? DateCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.configureCell(date: "\(1 + indexPath.item)")
+            return cell
+        case 1:
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppListCollectionViewCell.identifer, for: indexPath)
+            return cell
+        default:
+            return UICollectionViewCell()
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if kind == "TitleSectionHeader" {
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: "TitleSectionHeader", withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView else { return UICollectionReusableView() }
+            return header
+        } else if kind == "AppSectionHeader" {
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: "AppSectionHeader", withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView else { return UICollectionReusableView() }
+            return header
+        } else {
+            return UICollectionReusableView()
+        }
+    }
+}
+
+
+extension ChallengeView {
+    func createDateLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .absolute(40),
+                                              heightDimension: .absolute(63))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
+                                               heightDimension: .estimated(63))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                       repeatingSubitem: item,
+                                                       count: 7)
+        group.interItemSpacing = .fixed(7)
+        group.contentInsets = .init(top: 0, leading: 27.adjustedWidth, bottom: 0, trailing: 27.adjustedWidth)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .groupPagingCentered
+        section.interGroupSpacing = 19
+        section.contentInsets = .init(top: 0, leading: 0, bottom: 35, trailing:0)
+        
+        
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(145.adjustedHeight))
+        
+        let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
+                                                                        elementKind: "TitleSectionHeader",
+                                                                        alignment: .topLeading)
+        section.boundarySupplementaryItems = [headerElement]
+        
+        // Background
+        let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: "macapickBackground")
+        section.decorationItems = [sectionBackgroundDecoration]
+        
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        layout.register(GrayBackgroundView.self, forDecorationViewOfKind: "macapickBackground")
+        
+        section.orthogonalScrollingBehavior = .none
+        
+        return section
+    }
+    
+    func createAppListLayout() -> NSCollectionLayoutSection {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), 
+                                              heightDimension: .absolute(68))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
+        
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), 
+                                               heightDimension: .fractionalHeight(0.5))
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        group.interItemSpacing = .fixed(7)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        
+        let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), 
+                                                heightDimension: .absolute(64.adjustedHeight))
+        let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
+                                                                        elementKind:"AppSectionHeader",
+                                                                        alignment: .topLeading)
+        section.boundarySupplementaryItems = [headerElement]
+        section.orthogonalScrollingBehavior = .none
+        
+        return section
+    }
+    
+    private func createLayout() -> UICollectionViewLayout {
+        let layout = UICollectionViewCompositionalLayout { [weak self] (sectionIndex, environment) -> NSCollectionLayoutSection? in
+            switch sectionIndex {
+            case 0: return self?.createDateLayout()
+            case 1: return self?.createAppListLayout()
+            default: return nil
+            }
+        }
+        
+        // Register decoration view
+        layout.register(GrayBackgroundView.self,
+                        forDecorationViewOfKind: "macapickBackground")
+        
+        return layout
     }
 }

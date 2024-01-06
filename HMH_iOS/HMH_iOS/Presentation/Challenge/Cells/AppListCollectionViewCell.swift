@@ -16,14 +16,12 @@ class AppListCollectionViewCell: UICollectionViewCell {
         $0.makeCornerRound(radius: 8)
     }
     
-    let appIconLabel = UILabel().then {
-        $0.text = "instagram"
+    let appNameLabel = UILabel().then {
         $0.textColor = .gray2
         $0.font = .iosText6Medium14
     }
     
     let timeLabel = UILabel().then {
-        $0.text = "1시간 30분"
         $0.textColor = .whiteText
         $0.font = .iosText4Semibold16
     }
@@ -50,7 +48,7 @@ class AppListCollectionViewCell: UICollectionViewCell {
         self.backgroundColor = .clear
         contentView.backgroundColor = .gray7
         contentView.makeCornerRound(radius: 6)
-        contentView.addSubviews(appImageView, appIconLabel, timeLabel)
+        contentView.addSubviews(appImageView, appNameLabel, timeLabel)
     }
     
     private func setConstraints() {
@@ -61,7 +59,7 @@ class AppListCollectionViewCell: UICollectionViewCell {
             $0.centerY.equalToSuperview()
         }
         
-        appIconLabel.snp.makeConstraints {
+        appNameLabel.snp.makeConstraints {
             $0.leading.equalTo(appImageView.snp.trailing).offset(14)
             $0.centerY.equalToSuperview()
         }
@@ -72,5 +70,10 @@ class AppListCollectionViewCell: UICollectionViewCell {
         }
         
     }
-
+    
+    func configureCell(appName: String, appIconImage: UIImage = UIImage(), appTime: String){
+        self.appNameLabel.text = appName
+        self.appImageView.image = appIconImage
+        self.timeLabel.text = appTime
+    }
 }

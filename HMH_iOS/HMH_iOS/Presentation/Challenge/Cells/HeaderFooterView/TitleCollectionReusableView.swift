@@ -12,13 +12,13 @@ class TitleCollectionReusableView: UICollectionReusableView {
     static let identifier = "TitleCollectionReusableView"
     
     private let subTitleLabel = UILabel().then {
-        $0.text = "목표 이용시간"
+        $0.text = StringLiteral.Challenge.Date.dateHeaderSubTitle
         $0.font = .iosText5Medium16
         $0.textColor = .gray1
     }
     
     private let titleLabel = UILabel().then {
-        $0.text = "3시간"
+        $0.text = StringLiteral.Challenge.Date.dateHeaderTitle
         $0.font = .iosTitle1Semibold32
         $0.textColor = .whiteText
     }

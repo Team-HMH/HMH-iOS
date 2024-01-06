@@ -14,7 +14,7 @@ final class ChanllengeViewController: UIViewController {
                                                  isBackButton: false,
                                                  isTitleLabel: true,
                                                  isPointImage: true,
-                                                 titleText: "나의 챌린지")
+                                                 titleText: StringLiteral.Challenge.NavigationBarTitle)
     private let challengeView = ChallengeView()
     
     override func loadView() {

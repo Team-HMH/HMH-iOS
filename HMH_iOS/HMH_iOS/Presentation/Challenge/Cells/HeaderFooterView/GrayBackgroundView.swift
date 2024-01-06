@@ -9,14 +9,24 @@ import UIKit
 
 class GrayBackgroundView: UICollectionReusableView {
     private let grayBackgroundView = UIView().then {
-        $0.backgroundColor = .gray7 //UIColor(red: 246, green: 247, blue: 251)
+        $0.backgroundColor = .gray7
     }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .clear
-        addSubview(grayBackgroundView)
-
+        setUI()
+    }
+    
+    private func setUI(){
+        setViewHierarchy()
+        setConstraints()
+    }
+    
+    private func setViewHierarchy() {
+        self.addSubview(grayBackgroundView)
+    }
+    
+    private func setConstraints() {
         grayBackgroundView.snp.makeConstraints {
             $0.leading.trailing.bottom.equalToSuperview()
             $0.top.equalToSuperview().offset(-100)

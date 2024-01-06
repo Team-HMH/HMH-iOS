@@ -23,8 +23,10 @@ final class ChallengeView: UIView {
         $0.register(DateCollectionViewCell.self, forCellWithReuseIdentifier: DateCollectionViewCell.identifer)
         $0.register(AppListCollectionViewCell.self, forCellWithReuseIdentifier: AppListCollectionViewCell.identifer)
         
-        $0.register(TitleCollectionReusableView.self, forSupplementaryViewOfKind: "TitleSectionHeader", withReuseIdentifier: TitleCollectionReusableView.identifier)
-        $0.register(AppCollectionReusableView.self, forSupplementaryViewOfKind: "AppSectionHeader", withReuseIdentifier: AppCollectionReusableView.identifier)
+        $0.register(TitleCollectionReusableView.self, forSupplementaryViewOfKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, 
+                    withReuseIdentifier: TitleCollectionReusableView.identifier)
+        $0.register(AppCollectionReusableView.self, forSupplementaryViewOfKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, 
+                    withReuseIdentifier: AppCollectionReusableView.identifier)
     }
     
     override init(frame: CGRect) {
@@ -104,11 +106,11 @@ extension ChallengeView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if kind == "TitleSectionHeader" {
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: "TitleSectionHeader", withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView else { return UICollectionReusableView() }
+        if kind == StringLiteral.Challenge.Idetifier.titleHeaderViewId {
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView else { return UICollectionReusableView() }
             return header
-        } else if kind == "AppSectionHeader" {
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: "AppSectionHeader", withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView else { return UICollectionReusableView() }
+        } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView else { return UICollectionReusableView() }
             return header
         } else {
             return UICollectionReusableView()
@@ -140,16 +142,17 @@ extension ChallengeView {
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(145.adjustedHeight))
         
         let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
-                                                                        elementKind: "TitleSectionHeader",
+                                                                        elementKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId,
                                                                         alignment: .topLeading)
         section.boundarySupplementaryItems = [headerElement]
         
         // Background
-        let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: "macapickBackground")
+        let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: StringLiteral.Challenge.Idetifier.backgroundViewId)
         section.decorationItems = [sectionBackgroundDecoration]
         
         let layout = UICollectionViewCompositionalLayout(section: section)
-        layout.register(GrayBackgroundView.self, forDecorationViewOfKind: "macapickBackground")
+        layout.register(GrayBackgroundView.self, 
+                        forDecorationViewOfKind: StringLiteral.Challenge.Idetifier.backgroundViewId)
         
         section.orthogonalScrollingBehavior = .none
         
@@ -172,7 +175,7 @@ extension ChallengeView {
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), 
                                                 heightDimension: .absolute(64.adjustedHeight))
         let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
-                                                                        elementKind:"AppSectionHeader",
+                                                                        elementKind:StringLiteral.Challenge.Idetifier.appListHeaderViewId,
                                                                         alignment: .topLeading)
         section.boundarySupplementaryItems = [headerElement]
         section.orthogonalScrollingBehavior = .none
@@ -191,7 +194,7 @@ extension ChallengeView {
         
         // Register decoration view
         layout.register(GrayBackgroundView.self,
-                        forDecorationViewOfKind: "macapickBackground")
+                        forDecorationViewOfKind: StringLiteral.Challenge.Idetifier.backgroundViewId)
         
         return layout
     }

@@ -29,6 +29,11 @@ final class HMHNavigationBar: UIView {
         $0.isHidden = true
     }
     
+    private let pointImageView = UIImageView().then {
+        $0.image = ImageLiterals.NavigationBar.icPoint
+        $0.tintColor = .gray3
+    }
+    
     private let logoImageView = UIImageView().then {
         $0.backgroundColor = .blue
     }
@@ -67,7 +72,7 @@ final class HMHNavigationBar: UIView {
         switch type {
         case .normal:
             self.addSubviews(backArrowButton, titleLabel, pointButton)
-            
+            pointButton.addSubview(pointImageView)
         case .logo:
             self.addSubviews(logoImageView)
         }
@@ -95,6 +100,10 @@ final class HMHNavigationBar: UIView {
                 $0.size.equalTo(24.adjusted)
             }
             
+            pointImageView.snp.makeConstraints {
+                $0.edges.equalToSuperview()
+            }
+            
         case .logo:
             logoImageView.snp.makeConstraints {
                 $0.centerY.equalToSuperview()
@@ -109,7 +118,7 @@ final class HMHNavigationBar: UIView {
     }
     
     private func configureNavigationBar() {
-        self.backgroundColor = isGray ? .gray3 : .background
+        self.backgroundColor = isGray ? .gray7 : .background
     }
     
     @objc private func backArrowButtonTapped() {

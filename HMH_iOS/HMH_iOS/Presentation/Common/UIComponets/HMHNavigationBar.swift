@@ -18,6 +18,7 @@ final class HMHNavigationBar: UIView {
     }
     
     private var type: NavigationBarType = .normal
+    private var isGray: Bool = false
     
     private lazy var backArrowButton = UIButton().then {
         $0.setImage(ImageLiterals.NavigationBar.icArrowLeft, for: .normal)
@@ -25,7 +26,6 @@ final class HMHNavigationBar: UIView {
     }
     
     private lazy var pointButton = UIButton().then {
-        $0.backgroundColor = .blue
         $0.isHidden = true
     }
     
@@ -39,17 +39,19 @@ final class HMHNavigationBar: UIView {
         $0.isHidden = true
     }
     
-    init(leftItem type: NavigationBarType, isBackButton: Bool, isTitleLabel: Bool, isPointImage: Bool, titleText: String? = nil) {
+    init(leftItem type: NavigationBarType, isBackButton: Bool, isTitleLabel: Bool, isPointImage: Bool, isBackGroundGray: Bool, titleText: String? = nil) {
         super.init(frame: .zero)
         self.type = type
         
         backArrowButton.isHidden = !isBackButton
         titleLabel.isHidden = !isTitleLabel
         pointButton.isHidden = !isPointImage
+        isGray = isBackGroundGray
         titleLabel.text = titleText
         
         setUI()
         addTarget()
+        configureNavigationBar()
     }
     
     required init?(coder: NSCoder) {
@@ -72,6 +74,9 @@ final class HMHNavigationBar: UIView {
     }
     
     private func setConstraints() {
+        self.snp.makeConstraints {
+            $0.height.equalTo(63.adjustedHeight)
+        }
         switch type {
         case .normal:
             backArrowButton.snp.makeConstraints {
@@ -103,6 +108,9 @@ final class HMHNavigationBar: UIView {
         backArrowButton.addTarget(self, action: #selector(backArrowButtonTapped), for: .touchUpInside)
     }
     
+    private func configureNavigationBar() {
+        self.backgroundColor = isGray ? .gray3 : .background
+    }
     
     @objc private func backArrowButtonTapped() {
         guard let navigationController = findViewController()?.navigationController else {

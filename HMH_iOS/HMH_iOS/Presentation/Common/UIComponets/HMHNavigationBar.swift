@@ -44,7 +44,12 @@ final class HMHNavigationBar: UIView {
         $0.isHidden = true
     }
     
-    init(leftItem type: NavigationBarType, isBackButton: Bool, isTitleLabel: Bool, isPointImage: Bool, isBackGroundGray: Bool, titleText: String? = nil) {
+    init(leftItem type: NavigationBarType,
+         isBackButton: Bool,
+         isTitleLabel: Bool,
+         isPointImage: Bool,
+         isBackGroundGray: Bool,
+         titleText: String? = nil) {
         super.init(frame: .zero)
         self.type = type
         

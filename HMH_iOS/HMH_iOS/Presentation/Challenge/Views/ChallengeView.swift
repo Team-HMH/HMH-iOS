@@ -20,14 +20,6 @@ final class ChallengeView: UIView {
     lazy var challengeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .background
         $0.collectionViewLayout = createLayout()
-        
-        $0.register(DateCollectionViewCell.self, forCellWithReuseIdentifier: DateCollectionViewCell.identifer)
-        $0.register(AppListCollectionViewCell.self, forCellWithReuseIdentifier: AppListCollectionViewCell.identifer)
-        
-        $0.register(TitleCollectionReusableView.self, forSupplementaryViewOfKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, 
-                    withReuseIdentifier: TitleCollectionReusableView.identifier)
-        $0.register(AppCollectionReusableView.self, forSupplementaryViewOfKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, 
-                    withReuseIdentifier: AppCollectionReusableView.identifier)
     }
     
     override init(frame: CGRect) {
@@ -59,6 +51,20 @@ final class ChallengeView: UIView {
         }
     }
     
+    func setRegister() {
+        
+        challengeCollectionView.register(DateCollectionViewCell.self, forCellWithReuseIdentifier: DateCollectionViewCell.identifer)
+        challengeCollectionView.register(AppListCollectionViewCell.self, 
+                                         forCellWithReuseIdentifier: AppListCollectionViewCell.identifer)
+        
+        challengeCollectionView.register(TitleCollectionReusableView.self, 
+                                         forSupplementaryViewOfKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId,
+                                         withReuseIdentifier: TitleCollectionReusableView.identifier)
+        challengeCollectionView.register(AppCollectionReusableView.self, 
+                                         forSupplementaryViewOfKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId,
+                                         withReuseIdentifier: AppCollectionReusableView.identifier)
+    }
+    
     func configureView() {
         self.backgroundColor = .background
     }
@@ -67,9 +73,7 @@ final class ChallengeView: UIView {
         challengeCollectionView.dataSource = self
     }
     
-    func addTarget() {
-        
-    }
+    func addTarget() {}
 }
 
 extension ChallengeView: UICollectionViewDataSource {
@@ -112,10 +116,12 @@ extension ChallengeView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == StringLiteral.Challenge.Idetifier.titleHeaderViewId {
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView else { return UICollectionReusableView() }
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView 
+            else { return UICollectionReusableView() }
             return header
         } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView else { return UICollectionReusableView() }
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView 
+            else { return UICollectionReusableView() }
             return header
         } else {
             return UICollectionReusableView()
@@ -152,7 +158,6 @@ extension ChallengeView {
                                                                         alignment: .topLeading)
         section.boundarySupplementaryItems = [headerElement]
         
-        // Background
         let sectionBackgroundDecoration = NSCollectionLayoutDecorationItem.background(elementKind: StringLiteral.Challenge.Idetifier.backgroundViewId)
         section.decorationItems = [sectionBackgroundDecoration]
         
@@ -197,7 +202,6 @@ extension ChallengeView {
             }
         }
         
-        // Register decoration view
         layout.register(GrayBackgroundView.self,
                         forDecorationViewOfKind: StringLiteral.Challenge.Idetifier.backgroundViewId)
         

@@ -12,7 +12,6 @@ import Then
 
 final class ChallengeViewController: UIViewController {
     
-    
     private let navigationBar = HMHNavigationBar(leftItem: .normal,
                                                  isBackButton: false,
                                                  isTitleLabel: true,
@@ -27,7 +26,6 @@ final class ChallengeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        setDelegate()
     }
     
     private func setUI(){
@@ -46,24 +44,4 @@ final class ChallengeViewController: UIViewController {
         }
     }
     
-    private func setDelegate(){
-        challengeView.challengeCollectionView.delegate = self
-    }
-}
-
-extension ChallengeViewController: UICollectionViewDelegate {}
-
-extension ChallengeViewController: UIScrollViewDelegate {
-    
-    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
-        if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.navigationBar.alpha = 0
-            })
-        } else {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.navigationBar.alpha = 1
-            })
-        }
-    }
 }

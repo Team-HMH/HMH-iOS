@@ -11,15 +11,15 @@ import SnapKit
 import Then
 
 class DateCollectionViewCell: UICollectionViewCell {
+    
     static let identifer = "DateCollectionViewCell"
     
-    let dateLabel = UILabel().then {
-        $0.text = "1"
+    private let dateLabel = UILabel().then {
         $0.textColor = .gray2
         $0.font = .iosText6Medium14
     }
     
-    let imageView = UIImageView().then {
+    private let imageView = UIImageView().then {
         $0.backgroundColor = .background
         $0.makeCornerRound(radius: 8.adjusted)
     }
@@ -33,11 +33,11 @@ class DateCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     private func setUI(){
-        setViewHierarchy()
+        setHierarchy()
         setConstraints()
     }
     
-    private func setViewHierarchy() {
+    private func setHierarchy() {
         contentView.addSubviews(dateLabel, imageView)
     }
     

@@ -70,7 +70,7 @@ final class HMHQuitAlert: UIView {
         }
         
         buttonStackView.snp.makeConstraints {
-            $0.horizontalEdges.equalToSuperview().inset(20.adjusted)
+            $0.horizontalEdges.equalToSuperview().inset(20.adjustedWidth)
             $0.bottom.equalToSuperview().inset(19.adjusted)
         }
     }

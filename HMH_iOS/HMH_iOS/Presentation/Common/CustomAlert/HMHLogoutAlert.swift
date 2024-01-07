@@ -56,7 +56,7 @@ final class HMHLogoutAlert: UIView {
         }
         
         buttonStackView.snp.makeConstraints {
-            $0.horizontalEdges.equalToSuperview().inset(20)
+            $0.horizontalEdges.equalToSuperview().inset(20.adjustedWidth)
             $0.bottom.equalToSuperview().inset(19.adjusted)
         }
     }

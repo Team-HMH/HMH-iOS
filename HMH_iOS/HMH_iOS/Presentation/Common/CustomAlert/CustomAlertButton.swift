@@ -16,6 +16,7 @@ final class CustomAlertButton: UIButton {
         case disabled
         case enabled
     }
+    
     private var alertButtonType: HMHAlertButtonType = .disabled
     private let buttonTitleLabel = UILabel().then {
         $0.textColor = .whiteText
@@ -46,7 +47,7 @@ final class CustomAlertButton: UIButton {
     
     private func setConstraints() {
         self.snp.makeConstraints {
-            $0.height.equalTo(44)
+            $0.height.equalTo(44.adjustedHeight)
         }
         
         buttonTitleLabel.snp.makeConstraints {
@@ -55,7 +56,7 @@ final class CustomAlertButton: UIButton {
     }
     
     private func configureButton() {
-        self.layer.cornerRadius = 6
+        self.layer.cornerRadius = 6.adjusted
         self.layer.masksToBounds = true
         
         switch alertButtonType {

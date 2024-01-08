@@ -28,6 +28,7 @@ enum StringLiteral {
             static var titleHeaderViewId = "TitleSectionHeader"
             static var appListHeaderViewId = "AppSectionHeader"
             static var backgroundViewId = "GrayBackground"
+            static var appAddFooterViewID = "appAddFooter"
         }
     }
     enum AlertButton {

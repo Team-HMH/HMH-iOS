@@ -65,15 +65,10 @@ final class TabBarController: UITabBarController {
     
     private func setTabBarHeight() {
         let safeAreaHeight = view.safeAreaInsets.bottom.adjustedHeight
-        if UIScreen.main.isLongerThan812pt {
-            let tabBarHeight: CGFloat = 52.0.adjusted
-            tabBar.frame.size.height = tabBarHeight + safeAreaHeight
-            tabBar.frame.origin.y = view.frame.height - tabBarHeight - safeAreaHeight
-        } else {
-            let tabBarHeight: CGFloat = 58.0.adjusted
-            tabBar.frame.size.height = tabBarHeight + safeAreaHeight
-            tabBar.frame.origin.y = view.frame.height - tabBarHeight - safeAreaHeight
-        }
+        let tabBarHeight: CGFloat = UIScreen.main.isLongerThan812pt ? 52.0.adjusted : 58.0.adjusted
+        tabBar.frame.size.height = tabBarHeight + safeAreaHeight
+        tabBar.frame.origin.y = view.frame.height - tabBarHeight - safeAreaHeight
+
     }
     
     private func setTabBar() {

@@ -12,7 +12,7 @@ import Then
 final class TabBarController: UITabBarController {
     private let tabBarView = UIView().then {
         $0.backgroundColor = .gray7
-        $0.makeCornerRound(radius: 8)
+        $0.makeCornerRound(radius: 8.adjusted)
         $0.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
@@ -40,7 +40,12 @@ final class TabBarController: UITabBarController {
         tabBarView.snp.makeConstraints {
             $0.bottom.equalToSuperview()
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(100)
+            
+            if UIScreen.main.isLongerThan812pt {
+                $0.height.equalTo(100.adjusted)
+            } else {
+                $0.height.equalTo(64)
+            }
         }
     }
     
@@ -59,10 +64,11 @@ final class TabBarController: UITabBarController {
     }
     
     private func setTabBarHeight() {
-        let safeAreaHeight = view.safeAreaInsets.bottom
-        let tabBarHeight: CGFloat = 58.0
+        let safeAreaHeight = view.safeAreaInsets.bottom.adjustedHeight
+        let tabBarHeight: CGFloat = UIScreen.main.isLongerThan812pt ? 52.0.adjusted : 58.0.adjusted
         tabBar.frame.size.height = tabBarHeight + safeAreaHeight
         tabBar.frame.origin.y = view.frame.height - tabBarHeight - safeAreaHeight
+
     }
     
     private func setTabBar() {
@@ -105,7 +111,11 @@ final class TabBarController: UITabBarController {
         tabs.forEach { tabBarItem in
             tabBarItem.tabBarItem.setTitleTextAttributes(normalAttributes, for: .normal)
             tabBarItem.tabBarItem.setTitleTextAttributes(selectedAttributes, for: .selected)
-            tabBarItem.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -2)
+            if UIScreen.main.isLongerThan812pt {
+                tabBarItem.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -3.adjusted)
+            } else {
+                tabBarItem.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -1.adjusted)
+            }
         }
     }
 }

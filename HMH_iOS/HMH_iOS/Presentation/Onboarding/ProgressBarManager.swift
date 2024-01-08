@@ -5,7 +5,6 @@
 //  Created by Seonwoo Kim on 1/8/24.
 //
 
-import Foundation
 import UIKit
 
 class ProgressBarManager {

@@ -84,36 +84,73 @@ final class HMHNavigationBar: UIView {
     }
     
     private func setConstraints() {
-        self.snp.makeConstraints {
-            $0.height.equalTo(63.adjustedHeight)
-        }
-        switch type {
-        case .normal:
-            backArrowButton.snp.makeConstraints {
-                $0.centerY.equalToSuperview()
-                $0.leading.equalToSuperview().inset(20.adjusted)
-                $0.size.equalTo(24.adjusted)
+        //SE이외의 기기 일때
+        if UIScreen.main.isLongerThan812pt {
+            self.snp.makeConstraints {
+                $0.height.equalTo(113.adjusted)
             }
-            
-            titleLabel.snp.makeConstraints {
-                $0.center.equalToSuperview()
+            switch type {
+            case .normal:
+                backArrowButton.snp.makeConstraints {
+                    $0.centerY.equalTo(titleLabel)
+                    $0.leading.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
+                
+                titleLabel.snp.makeConstraints {
+                    $0.top.equalToSuperview().offset(68.adjusted)
+                    $0.centerX.equalToSuperview()
+                }
+                
+                pointButton.snp.makeConstraints {
+                    $0.centerY.equalTo(titleLabel)
+                    $0.trailing.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
+                
+                pointImageView.snp.makeConstraints {
+                    $0.edges.equalToSuperview()
+                }
+                
+            case .logo:
+                logoImageView.snp.makeConstraints {
+                    $0.centerY.equalToSuperview().offset(50.adjusted)
+                    $0.leading.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
             }
-            
-            pointButton.snp.makeConstraints {
-                $0.centerY.equalToSuperview()
-                $0.trailing.equalToSuperview().inset(20.adjusted)
-                $0.size.equalTo(24.adjusted)
+        } else {
+            self.snp.makeConstraints {
+                $0.height.equalTo(83.adjusted)
             }
-            
-            pointImageView.snp.makeConstraints {
-                $0.edges.equalToSuperview()
-            }
-            
-        case .logo:
-            logoImageView.snp.makeConstraints {
-                $0.centerY.equalToSuperview()
-                $0.leading.equalToSuperview().inset(20.adjusted)
-                $0.size.equalTo(24.adjusted)
+            switch type {
+            case .normal:
+                backArrowButton.snp.makeConstraints {
+                    $0.centerY.equalTo(titleLabel)
+                    $0.leading.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
+                
+                titleLabel.snp.makeConstraints {
+                    $0.centerX.equalToSuperview()
+                    $0.bottom.equalToSuperview().offset(-18.adjusted)
+                }
+                
+                pointButton.snp.makeConstraints {
+                    $0.centerY.equalTo(titleLabel)
+                    $0.trailing.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
+                
+                pointImageView.snp.makeConstraints {
+                    $0.edges.equalToSuperview()
+                }
+            case .logo:
+                logoImageView.snp.makeConstraints {
+                    $0.centerY.equalToSuperview().offset(50.adjusted)
+                    $0.leading.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
             }
         }
     }

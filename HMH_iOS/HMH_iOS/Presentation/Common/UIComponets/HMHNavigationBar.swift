@@ -18,6 +18,7 @@ final class HMHNavigationBar: UIView {
     }
     
     private var type: NavigationBarType = .normal
+    private var isGray: Bool = false
     
     private lazy var backArrowButton = UIButton().then {
         $0.setImage(ImageLiterals.NavigationBar.icArrowLeft, for: .normal)
@@ -25,8 +26,12 @@ final class HMHNavigationBar: UIView {
     }
     
     private lazy var pointButton = UIButton().then {
-        $0.backgroundColor = .blue
         $0.isHidden = true
+    }
+    
+    private let pointImageView = UIImageView().then {
+        $0.image = ImageLiterals.NavigationBar.icPoint
+        $0.tintColor = .gray3
     }
     
     private let logoImageView = UIImageView().then {
@@ -39,17 +44,24 @@ final class HMHNavigationBar: UIView {
         $0.isHidden = true
     }
     
-    init(leftItem type: NavigationBarType, isBackButton: Bool, isTitleLabel: Bool, isPointImage: Bool, titleText: String? = nil) {
+    init(leftItem type: NavigationBarType,
+         isBackButton: Bool,
+         isTitleLabel: Bool,
+         isPointImage: Bool,
+         isBackGroundGray: Bool,
+         titleText: String? = nil) {
         super.init(frame: .zero)
         self.type = type
         
         backArrowButton.isHidden = !isBackButton
         titleLabel.isHidden = !isTitleLabel
         pointButton.isHidden = !isPointImage
+        isGray = isBackGroundGray
         titleLabel.text = titleText
         
         setUI()
         addTarget()
+        configureNavigationBar()
     }
     
     required init?(coder: NSCoder) {
@@ -65,36 +77,80 @@ final class HMHNavigationBar: UIView {
         switch type {
         case .normal:
             self.addSubviews(backArrowButton, titleLabel, pointButton)
-            
+            pointButton.addSubview(pointImageView)
         case .logo:
             self.addSubviews(logoImageView)
         }
     }
     
     private func setConstraints() {
-        switch type {
-        case .normal:
-            backArrowButton.snp.makeConstraints {
-                $0.centerY.equalToSuperview()
-                $0.leading.equalToSuperview().inset(20.adjusted)
-                $0.size.equalTo(24.adjusted)
+        //SE이외의 기기 일때
+        if UIScreen.main.isLongerThan812pt {
+            self.snp.makeConstraints {
+                $0.height.equalTo(113.adjusted)
             }
-            
-            titleLabel.snp.makeConstraints {
-                $0.center.equalToSuperview()
+            switch type {
+            case .normal:
+                backArrowButton.snp.makeConstraints {
+                    $0.centerY.equalTo(titleLabel)
+                    $0.leading.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
+                
+                titleLabel.snp.makeConstraints {
+                    $0.top.equalToSuperview().offset(68.adjusted)
+                    $0.centerX.equalToSuperview()
+                }
+                
+                pointButton.snp.makeConstraints {
+                    $0.centerY.equalTo(titleLabel)
+                    $0.trailing.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
+                
+                pointImageView.snp.makeConstraints {
+                    $0.edges.equalToSuperview()
+                }
+                
+            case .logo:
+                logoImageView.snp.makeConstraints {
+                    $0.centerY.equalToSuperview().offset(50.adjusted)
+                    $0.leading.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
             }
-            
-            pointButton.snp.makeConstraints {
-                $0.centerY.equalToSuperview()
-                $0.trailing.equalToSuperview().inset(20.adjusted)
-                $0.size.equalTo(24.adjusted)
+        } else {
+            self.snp.makeConstraints {
+                $0.height.equalTo(83.adjusted)
             }
-            
-        case .logo:
-            logoImageView.snp.makeConstraints {
-                $0.centerY.equalToSuperview()
-                $0.leading.equalToSuperview().inset(20.adjusted)
-                $0.size.equalTo(24.adjusted)
+            switch type {
+            case .normal:
+                backArrowButton.snp.makeConstraints {
+                    $0.centerY.equalTo(titleLabel)
+                    $0.leading.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
+                
+                titleLabel.snp.makeConstraints {
+                    $0.centerX.equalToSuperview()
+                    $0.bottom.equalToSuperview().offset(-18.adjusted)
+                }
+                
+                pointButton.snp.makeConstraints {
+                    $0.centerY.equalTo(titleLabel)
+                    $0.trailing.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
+                
+                pointImageView.snp.makeConstraints {
+                    $0.edges.equalToSuperview()
+                }
+            case .logo:
+                logoImageView.snp.makeConstraints {
+                    $0.centerY.equalToSuperview().offset(50.adjusted)
+                    $0.leading.equalToSuperview().inset(20.adjusted)
+                    $0.size.equalTo(24.adjusted)
+                }
             }
         }
     }
@@ -103,6 +159,9 @@ final class HMHNavigationBar: UIView {
         backArrowButton.addTarget(self, action: #selector(backArrowButtonTapped), for: .touchUpInside)
     }
     
+    private func configureNavigationBar() {
+        self.backgroundColor = isGray ? .gray7 : .background
+    }
     
     @objc private func backArrowButtonTapped() {
         guard let navigationController = findViewController()?.navigationController else {

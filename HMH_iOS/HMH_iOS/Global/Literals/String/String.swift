@@ -32,6 +32,9 @@ enum StringLiteral {
     }
     
     enum myPage {
+        static var point = "보유 포인트"
+        static var badge = "배지 컬랙션"
+        
         static var journey = "지금까지의 여정"
         static var store = "상점"
         

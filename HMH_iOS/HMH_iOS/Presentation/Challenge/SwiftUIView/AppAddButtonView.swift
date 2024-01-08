@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct AppAddButtonView: View {
+    
+    @EnvironmentObject var model: BlockingApplicationModel
+    @State var isPresented = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color(uiColor: .clear)
+            RoundedRectangle(cornerRadius: 6)
+                .fill(Color(uiColor: .gray8))
+            Button(action: { isPresented.toggle() }) {
+                Image(uiImage: ImageLiterals.Challenge.icPlus)
+            }
+            .frame(width: 335, height: 68)
+            .familyActivityPicker(isPresented: $isPresented, selection: $model.newSelection)
+        }
+        .background(Color(.clear))
     }
 }
 

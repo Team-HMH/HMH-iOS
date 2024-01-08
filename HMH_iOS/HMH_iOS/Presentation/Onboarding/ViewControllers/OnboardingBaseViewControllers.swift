@@ -17,9 +17,10 @@ protocol HomeViewPushDelegate: AnyObject {
 class OnboardingBaseViewController: UIViewController {
     weak var delegate: HomeViewPushDelegate?
     
-    let navigationBar = HMHNavigationBar(leftItem: .normal, isBackButton: true, isTitleLabel: false, isPointImage: false)
+    var nextButtonText: String = StringLiteral.OnboardingButton.next
+    let navigationBar = HMHNavigationBar(leftItem: .normal, isBackButton: true, isTitleLabel: false, isPointImage: false, isBackGroundGray: false)
     let progressBar = ProgressBarManager.shared.progressBarView
-    let nextButton = OnboardingButton(buttonStatus: .enabled, buttonText: "완료")
+    lazy var nextButton = OnboardingButton(buttonStatus: .enabled, buttonText: nextButtonText)
     var step = 0
     
     override func viewWillAppear(_ animated: Bool) {

@@ -10,7 +10,7 @@ import UIKit
 enum ImageLiterals {
     enum NavigationBar {
         static var icArrowLeft: UIImage { .load(named: "ic_back")}
-        static var icPoint: UIImage { .load(named: "ios_point")}
+        static var icPoint: UIImage { .load(named: "ios_point_ic")}
     }
     
     enum TabBar {

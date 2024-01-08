@@ -18,18 +18,17 @@ class OnboardingBaseViewController: UIViewController {
     weak var delegate: HomeViewPushDelegate?
     
     let navigationBar = HMHNavigationBar(leftItem: .normal, isBackButton: true, isTitleLabel: false, isPointImage: false)
-    let progressBar = OnboardingProgressView(progressAmount: 2)
-    private let nextButton = OnboardingButton(buttonStatus: .enabled, buttonText: "완료")
+    let progressBar = ProgressBarManager.shared.progressBarView
+    let nextButton = OnboardingButton(buttonStatus: .enabled, buttonText: "완료")
+    var step = 0
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         self.navigationController?.navigationBar.isHidden = true
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        progressBar.setProgressBar()
+        setUI()
+        setTarget()
+        ProgressBarManager.shared.updateProgress(for: self, step: step)
     }
     
     override func viewDidLoad() {
@@ -44,8 +43,9 @@ class OnboardingBaseViewController: UIViewController {
     }
     
     func setHierarchy() {
-        view.addSubviews(navigationBar, progressBar, nextButton)
+        view.addSubviews(navigationBar, nextButton, progressBar)
     }
+
     func setConstraints() {
         navigationBar.snp.makeConstraints {
             $0.top.trailing.leading.equalToSuperview()

@@ -21,5 +21,9 @@ enum ImageLiterals {
         static var icMyPage: UIImage { .load(named: "mypageDisabled") }
         static var icMyPageSelected: UIImage { .load(named: "mypageEnabled") }
     }
+    
+    enum Challenge {
+        static var icPlus: UIImage { .load(named: "Minus_XL") }
+    }
 }
 

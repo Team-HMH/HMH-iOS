@@ -13,12 +13,12 @@ enum ImageLiterals {
     }
     
     enum TabBar {
-        static var icChallenge: UIImage { .load(named: "first_default") }
-        static var icChallengeSelected: UIImage { .load(named: "first_active") }
-        static var icHome: UIImage { .load(named: "second_default") }
-        static var icHomeSelected: UIImage { .load(named: "second_active") }
-        static var icMyPage: UIImage { .load(named: "third_default") }
-        static var icMyPageSelected: UIImage { .load(named: "third_active") }
+        static var icChallenge: UIImage { .load(named: "challengeDisabled") }
+        static var icChallengeSelected: UIImage { .load(named: "challengEnabled") }
+        static var icHome: UIImage { .load(named: "homeDisabled") }
+        static var icHomeSelected: UIImage { .load(named: "homeEnabled") }
+        static var icMyPage: UIImage { .load(named: "mypageDisabled") }
+        static var icMyPageSelected: UIImage { .load(named: "mypageEnabled") }
     }
 }
 

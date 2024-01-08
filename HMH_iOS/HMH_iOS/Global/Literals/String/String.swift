@@ -30,6 +30,18 @@ enum StringLiteral {
             static var backgroundViewId = "GrayBackground"
         }
     }
+    
+    enum myPage {
+        static var journey = "지금까지의 여정"
+        static var store = "상점"
+        
+        static var TOS = "이용약관"
+        static var privacyPolicy = "개인정보처리방침"
+        
+        static var logout = "로그아웃"
+        static var quit = "회원탈퇴"
+    }
+    
     enum AlertButton {
         static let confirm = "확인"
         static let cancel = "취소"

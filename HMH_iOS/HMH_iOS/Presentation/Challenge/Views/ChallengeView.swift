@@ -20,6 +20,7 @@ final class ChallengeView: UIView {
     lazy var challengeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .background
         $0.collectionViewLayout = createLayout()
+        $0.contentInset = .init(top: 0, left: 0, bottom: 20, right: 0)
     }
     
     override init(frame: CGRect) {
@@ -53,17 +54,19 @@ final class ChallengeView: UIView {
     }
     
     func setRegister() {
-        
         challengeCollectionView.register(DateCollectionViewCell.self, forCellWithReuseIdentifier: DateCollectionViewCell.identifer)
-        challengeCollectionView.register(AppListCollectionViewCell.self, 
+        challengeCollectionView.register(AppListCollectionViewCell.self,
                                          forCellWithReuseIdentifier: AppListCollectionViewCell.identifer)
         
-        challengeCollectionView.register(TitleCollectionReusableView.self, 
+        challengeCollectionView.register(TitleCollectionReusableView.self,
                                          forSupplementaryViewOfKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId,
                                          withReuseIdentifier: TitleCollectionReusableView.identifier)
-        challengeCollectionView.register(AppCollectionReusableView.self, 
+        challengeCollectionView.register(AppCollectionReusableView.self,
                                          forSupplementaryViewOfKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId,
                                          withReuseIdentifier: AppCollectionReusableView.identifier)
+        challengeCollectionView.register(AppAddCollectionReusableView.self,
+                                         forSupplementaryViewOfKind: StringLiteral.Challenge.Idetifier.appAddFooterViewID,
+                                         withReuseIdentifier: AppAddCollectionReusableView.identifier)
     }
     
     func configureView() {
@@ -117,13 +120,17 @@ extension ChallengeView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if kind == StringLiteral.Challenge.Idetifier.titleHeaderViewId {
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView 
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView
             else { return UICollectionReusableView() }
             return header
         } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView 
+            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView
             else { return UICollectionReusableView() }
             return header
+        } else if kind == StringLiteral.Challenge.Idetifier.appAddFooterViewID {
+            guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appAddFooterViewID, withReuseIdentifier: AppAddCollectionReusableView.identifier, for: indexPath) as? AppAddCollectionReusableView
+            else { return UICollectionReusableView() }
+            return footer
         } else {
             return UICollectionReusableView()
         }
@@ -177,18 +184,25 @@ extension ChallengeView {
         item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20)
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                               heightDimension: .fractionalHeight(0.5))
+                                               heightDimension: .absolute(CGFloat((68 + 7) * appList.count)))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         group.interItemSpacing = .fixed(7)
         
         let section = NSCollectionLayoutSection(group: group)
         
         let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                heightDimension: .absolute(64.adjustedHeight))
+                                                heightDimension: .absolute(64))
         let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
                                                                         elementKind:StringLiteral.Challenge.Idetifier.appListHeaderViewId,
                                                                         alignment: .topLeading)
-        section.boundarySupplementaryItems = [headerElement]
+        
+        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                heightDimension: .absolute(68))
+        let footerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize,
+                                                                        elementKind:StringLiteral.Challenge.Idetifier.appAddFooterViewID,
+                                                                        alignment: .bottomLeading)
+        
+        section.boundarySupplementaryItems = [headerElement, footerElement]
         section.orthogonalScrollingBehavior = .none
         
         return section

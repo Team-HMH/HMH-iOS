@@ -21,5 +21,12 @@ enum ImageLiterals {
         static var icMyPage: UIImage { .load(named: "mypageDisabled") }
         static var icMyPageSelected: UIImage { .load(named: "mypageEnabled") }
     }
+    
+    enum myPage {
+        static var icBadge: UIImage { .load(named: "ios_badge_ic_disabled")}
+        static var icJourney: UIImage { .load(named: "ios_journey_ic")}
+        static var icStore: UIImage { .load(named: "ios_store_ic")}
+        static var icArrowRight: UIImage { .load(named: "chevron_right")}
+    }
 }
 

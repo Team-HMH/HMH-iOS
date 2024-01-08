@@ -11,11 +11,18 @@ import SnapKit
 import Then
 
 final class OnboardingProgressView: UIProgressView {
-    private var progressAmount: Int = 0
+    var progressAmount: Int = 0 {
+        didSet {
+            if oldValue > progressAmount {
+                removeProgressBar()
+            } else {
+                addProgressBar()
+            }
+        }
+    }
     
-    init(progressAmount: Int) {
+    init() {
         super.init(frame: .zero)
-        self.progressAmount = progressAmount
         
         configureProgressView()
         setConstraints()
@@ -27,7 +34,7 @@ final class OnboardingProgressView: UIProgressView {
     
     private func setConstraints() {
         self.snp.makeConstraints {
-            $0.height.equalTo(4.adjustedHeight)
+            $0.height.equalTo(4.adjusted)
         }
     }
     
@@ -38,14 +45,29 @@ final class OnboardingProgressView: UIProgressView {
         }
     }
     
-    func setProgressBar() {
-        self.setProgress(Float(self.progressAmount - 1) / 6.0, animated: false)
-        
+    private func addProgressBar() {
+        let startValue = Float(max(0, self.progressAmount - 1)) / 6.0
+        let endValue = Float(self.progressAmount) / 6.0
+
+        self.setProgress(startValue, animated: false)
+
         DispatchQueue.main.async() {
             UIView.animate(withDuration: 0.5, delay: 0, options: [.beginFromCurrentState, .allowUserInteraction], animations: { [unowned self] in
-                self.setProgress(Float(self.progressAmount) / 6.0, animated: true)
+                self.setProgress(endValue, animated: true)
+            })
+        }
+    }
+    
+    private func removeProgressBar() {
+        let startValue = Float(min(6, self.progressAmount + 1)) / 6.0
+        let endValue = Float(self.progressAmount) / 6.0
+
+        self.setProgress(startValue, animated: false)
+
+        DispatchQueue.main.async() {
+            UIView.animate(withDuration: 0.5, delay: 0, options: [.beginFromCurrentState, .allowUserInteraction], animations: { [unowned self] in
+                self.setProgress(endValue, animated: true)
             })
         }
     }
 }
-

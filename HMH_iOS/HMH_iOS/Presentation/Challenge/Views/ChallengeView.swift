@@ -26,6 +26,7 @@ final class ChallengeView: UIView {
         super.init(frame: frame)
         
         setUI()
+        setRegister()
         configureView()
         configreCollectionView()
         addTarget()

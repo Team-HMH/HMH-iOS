@@ -164,7 +164,8 @@ extension ChallengeView {
                 section.contentInsets = .init(top: 0, leading: 0, bottom: 35, trailing:0)
                 
                 
-                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(145.adjustedHeight))
+                let headerHeight = UIScreen().isLongerThan812pt ? 145 : 165
+                let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(CGFloat(headerHeight)))
                 
                 let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
                                                                                 elementKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId,

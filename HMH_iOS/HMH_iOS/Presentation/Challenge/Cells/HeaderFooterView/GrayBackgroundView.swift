@@ -33,7 +33,7 @@ final class GrayBackgroundView: UICollectionReusableView {
     private func setConstraints() {
         grayBackgroundView.snp.makeConstraints {
             $0.leading.trailing.bottom.equalToSuperview()
-            $0.top.equalToSuperview().offset(-100)
+            $0.top.equalToSuperview().offset(-200)
         }
     }
 

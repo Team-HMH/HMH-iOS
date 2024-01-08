@@ -17,6 +17,7 @@
 		0B50F9D72B369815000C5046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B50F9D52B369815000C5046 /* LaunchScreen.storyboard */; };
 		0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78174D2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift */; };
 		0B7817502B4BD9F10078E925 /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78174F2B4BD9F10078E925 /* OnboardingButton.swift */; };
+		0B7817522B4BE0280078E925 /* ProgressBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7817512B4BE0280078E925 /* ProgressBarManager.swift */; };
 		0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */; };
 		0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89AE2B369E4300688BA6 /* HomeModel.swift */; };
 		0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B02B369E4C00688BA6 /* HomeView.swift */; };
@@ -150,6 +151,7 @@
 		0B50F9D82B369815000C5046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B78174D2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBaseViewControllers.swift; sourceTree = "<group>"; };
 		0B78174F2B4BD9F10078E925 /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
+		0B7817512B4BE0280078E925 /* ProgressBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarManager.swift; sourceTree = "<group>"; };
 		0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		0B8A89AE2B369E4300688BA6 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0B8A89B02B369E4C00688BA6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				0B78174C2B4BD9450078E925 /* ViewControllers */,
 				0B2C2D3D2B4559C90023CCFA /* Views */,
+				0B7817512B4BE0280078E925 /* ProgressBarManager.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -905,6 +908,7 @@
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
 				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
+				0B7817522B4BE0280078E925 /* ProgressBarManager.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
 				3666C8892B47110800564874 /* TotalTimePickerView.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,

@@ -10,18 +10,18 @@ import UIKit
 import SnapKit
 import Then
 
-class AppCollectionReusableView: UICollectionReusableView {
+final class AppCollectionReusableView: UICollectionReusableView {
     
     static let identifier = "AppCollectionReusableView"
     
-    let titleLabel = UILabel().then {
+    private let titleLabel = UILabel().then {
         $0.text = StringLiteral.Challenge.AppList.appListHeaderTitle
         $0.font = .iosText5Medium16
         $0.textColor = .gray1
         $0.setTextWithLineHeight(text: $0.text, lineHeight: 24)
     }
     
-    let deleteButton = UIButton().then {
+    private let deleteButton = UIButton().then {
         $0.setTitle(StringLiteral.Challenge.AppList.appListHeaderButtonText,
                     for: .normal)
         $0.titleLabel?.font = .iosText4Semibold16

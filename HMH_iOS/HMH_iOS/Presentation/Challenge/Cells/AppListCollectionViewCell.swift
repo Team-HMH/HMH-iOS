@@ -10,21 +10,21 @@ import UIKit
 import SnapKit
 import Then
 
-class AppListCollectionViewCell: UICollectionViewCell {
+final class AppListCollectionViewCell: UICollectionViewCell {
     
     static let identifer = "AppListCollectionViewCell"
     
-    let appImageView = UIImageView().then {
+    private let appImageView = UIImageView().then {
         $0.backgroundColor = .blue
         $0.makeCornerRound(radius: 8.adjusted)
     }
     
-    let appNameLabel = UILabel().then {
+    private let appNameLabel = UILabel().then {
         $0.textColor = .gray2
         $0.font = .iosText6Medium14
     }
     
-    let timeLabel = UILabel().then {
+    private let timeLabel = UILabel().then {
         $0.textColor = .whiteText
         $0.font = .iosText4Semibold16
     }
@@ -43,19 +43,15 @@ class AppListCollectionViewCell: UICollectionViewCell {
     }
     
     private func setUI(){
-        setViewHierarchy()
+        setHierarchy()
         setConstraints()
     }
     
-    private func setViewHierarchy() {
-        self.backgroundColor = .clear
-        contentView.backgroundColor = .gray7
-        contentView.makeCornerRound(radius: 6.adjusted)
+    private func setHierarchy() {
         contentView.addSubviews(appImageView, appNameLabel, timeLabel)
     }
     
     private func setConstraints() {
-        
         appImageView.snp.makeConstraints {
             $0.size.equalTo(40.adjusted)
             $0.leading.equalToSuperview().offset(17.adjustedWidth)
@@ -72,6 +68,12 @@ class AppListCollectionViewCell: UICollectionViewCell {
             $0.centerY.equalToSuperview()
         }
         
+    }
+    
+    func configureContentView() {
+        self.backgroundColor = .clear
+        contentView.backgroundColor = .gray7
+        contentView.makeCornerRound(radius: 6.adjusted)
     }
     
     func configureCell(appName: String, appIconImage: UIImage = UIImage(), appTime: String){

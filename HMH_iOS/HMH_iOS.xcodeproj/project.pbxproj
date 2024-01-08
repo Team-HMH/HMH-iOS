@@ -264,9 +264,9 @@
 		0B2C2D3C2B4559AE0023CCFA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0B7817512B4BE0280078E925 /* ProgressBarManager.swift */,
 				0B78174C2B4BD9450078E925 /* ViewControllers */,
 				0B2C2D3D2B4559C90023CCFA /* Views */,
-				0B7817512B4BE0280078E925 /* ProgressBarManager.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";

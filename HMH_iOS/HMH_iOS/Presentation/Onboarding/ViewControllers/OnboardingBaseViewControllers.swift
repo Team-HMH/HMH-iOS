@@ -28,7 +28,7 @@ class OnboardingBaseViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         setUI()
         setTarget()
-        ProgressBarManager.shared.updateProgress(for: self, step: step)
+        ProgressBarManager.shared.updateProgress(step: step)
     }
     
     override func viewDidLoad() {
@@ -45,21 +45,21 @@ class OnboardingBaseViewController: UIViewController {
     func setHierarchy() {
         view.addSubviews(navigationBar, nextButton, progressBar)
     }
-
+    
     func setConstraints() {
         navigationBar.snp.makeConstraints {
             $0.top.trailing.leading.equalToSuperview()
-            $0.height.equalTo(113)
+            $0.height.equalTo(113.adjustedHeight)
         }
         
         progressBar.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom)
-            $0.trailing.leading.equalToSuperview().inset(20)
+            $0.trailing.leading.equalToSuperview().inset(20.adjusted)
         }
         
         nextButton.snp.makeConstraints {
-            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-21)
-            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-21.adjusted)
+            $0.leading.trailing.equalToSuperview().inset(20.adjusted)
         }
     }
     
@@ -68,9 +68,8 @@ class OnboardingBaseViewController: UIViewController {
     }
     
     @objc
-        func onTapButton() {
-            print("taptaptap")
-            self.delegate?.didTapButton()
+    func onTapButton() {
+        self.delegate?.didTapButton()
     }
 }
 

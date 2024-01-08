@@ -14,7 +14,7 @@ class ProgressBarManager {
     
     var progress: Int = 0
     
-    func updateProgress(for viewController: UIViewController, step: Int) {
+    func updateProgress(step: Int) {
         progressBarView.progressAmount = step
     }
     

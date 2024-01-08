@@ -48,9 +48,9 @@ final class OnboardingProgressView: UIProgressView {
     private func addProgressBar() {
         let startValue = Float(max(0, self.progressAmount - 1)) / 6.0
         let endValue = Float(self.progressAmount) / 6.0
-
+        
         self.setProgress(startValue, animated: false)
-
+        
         DispatchQueue.main.async() {
             UIView.animate(withDuration: 0.5, delay: 0, options: [.beginFromCurrentState, .allowUserInteraction], animations: { [unowned self] in
                 self.setProgress(endValue, animated: true)
@@ -61,9 +61,9 @@ final class OnboardingProgressView: UIProgressView {
     private func removeProgressBar() {
         let startValue = Float(min(6, self.progressAmount + 1)) / 6.0
         let endValue = Float(self.progressAmount) / 6.0
-
+        
         self.setProgress(startValue, animated: false)
-
+        
         DispatchQueue.main.async() {
             UIView.animate(withDuration: 0.5, delay: 0, options: [.beginFromCurrentState, .allowUserInteraction], animations: { [unowned self] in
                 self.setProgress(endValue, animated: true)

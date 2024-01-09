@@ -31,12 +31,11 @@ class OnboardingBaseViewController: UIViewController {
     var nextButtonText: String = StringLiteral.OnboardingButton.next
     var mainTitleText: String = ""
     var subTitleText: String = ""
-    let navigationBar = HMHNavigationBar(leftItem: .normal,
+    let navigationBar = HMHNavigationBar(leftItem: .normal, 
                                          isBackButton: true,
                                          isTitleLabel: false,
-                                         isPointImage: true,
-                                         isBackGroundGray: false,
-                                         titleText: "마이페이지")
+                                         isPointImage: false,
+                                         isBackGroundGray: false)
     let progressBar = ProgressBarManager.shared.progressBarView
     lazy var nextButton = OnboardingButton(buttonStatus: .enabled)
     var step = 0

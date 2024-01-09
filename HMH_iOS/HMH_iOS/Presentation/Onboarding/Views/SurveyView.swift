@@ -34,7 +34,6 @@ final class SurveyView: UIView {
         
         setAddTarget()
         setUI()
-        setButtonType(buttonType: buttonType)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -58,7 +57,6 @@ final class SurveyView: UIView {
     private func setConstraints() {
         buttonStackView.snp.makeConstraints {
             $0.edges.equalToSuperview()
-            $0.height.equalTo(275.adjusted)
         }
     }
     

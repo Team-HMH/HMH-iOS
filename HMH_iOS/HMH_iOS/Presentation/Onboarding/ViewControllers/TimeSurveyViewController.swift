@@ -18,10 +18,12 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
         view.backgroundColor = .background
         nextButtonText = StringLiteral.OnboardingButton.next
         nextButton.setButtonText(buttonTitle: nextButtonText)
-        surveyView.firstButton.setButtonText(buttonTitle: StringLiteral.AlertButton.cancel)
-        surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.AlertButton.cancel)
-        surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.AlertButton.cancel)
-        surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.AlertButton.cancel)
+        surveyView.firstButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.firstSelect)
+        surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.secondSelect)
+        surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.thirdSelect)
+        surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.fourthSelect)
+        mainTitleText = StringLiteral.OnboardigMain.TimeSurvey
+
         self.delegate = self
         step = 1
         setUI()

@@ -92,7 +92,7 @@ final class HMHNavigationBar: UIView {
             switch type {
             case .normal:
                 backArrowButton.snp.makeConstraints {
-                    $0.centerY.equalTo(titleLabel)
+                    $0.bottom.equalToSuperview().offset(-19.adjusted)
                     $0.leading.equalToSuperview().inset(20.adjusted)
                     $0.size.equalTo(24.adjusted)
                 }
@@ -103,7 +103,7 @@ final class HMHNavigationBar: UIView {
                 }
                 
                 pointButton.snp.makeConstraints {
-                    $0.centerY.equalTo(titleLabel)
+                    $0.bottom.equalToSuperview().offset(-19.adjusted)
                     $0.trailing.equalToSuperview().inset(20.adjusted)
                     $0.size.equalTo(24.adjusted)
                 }
@@ -126,7 +126,7 @@ final class HMHNavigationBar: UIView {
             switch type {
             case .normal:
                 backArrowButton.snp.makeConstraints {
-                    $0.centerY.equalTo(titleLabel)
+                    $0.bottom.equalToSuperview().offset(-19.adjusted)
                     $0.leading.equalToSuperview().inset(20.adjusted)
                     $0.size.equalTo(24.adjusted)
                 }
@@ -137,7 +137,7 @@ final class HMHNavigationBar: UIView {
                 }
                 
                 pointButton.snp.makeConstraints {
-                    $0.centerY.equalTo(titleLabel)
+                    $0.bottom.equalToSuperview().offset(-19.adjusted)
                     $0.trailing.equalToSuperview().inset(20.adjusted)
                     $0.size.equalTo(24.adjusted)
                 }
@@ -167,7 +167,7 @@ final class HMHNavigationBar: UIView {
         guard let navigationController = findViewController()?.navigationController else {
             return
         }
-        navigationController.popViewController(animated: true)
+        navigationController.popViewController(animated: false)
     }
     
     private func findViewController() -> UIViewController? {

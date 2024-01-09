@@ -31,7 +31,9 @@ final class AppListCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         setUI()
+        configureContentView()
     }
     
     required init?(coder: NSCoder) {

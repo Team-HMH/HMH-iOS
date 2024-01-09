@@ -56,7 +56,7 @@ enum StringLiteral {
     }
     
     enum OnboardigMain {
-        static let TimeSurvey = "하루 평균 휴대폰을\n얼마나 사용하나요?"
+        static let timeSurvey = "하루 평균 휴대폰을\n얼마나 사용하나요?"
         static let problemSurvey = "휴대폰을 사용할 때\n어떤 문제를 겪고 있나요?"
     }
     

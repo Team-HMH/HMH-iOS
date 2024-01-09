@@ -26,11 +26,11 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
     }
     
     private func setUI(){
-        setViewHierarchy()
+        setHierarchy()
         setConstraints()
     }
     
-    private func setViewHierarchy() {
+    private func setHierarchy() {
         view.addSubview(surveyView)
     }
     
@@ -53,7 +53,7 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
     private func configureSurveyView() {
         nextButtonText = StringLiteral.OnboardingButton.next
         nextButton.setButtonText(buttonTitle: nextButtonText)
-        mainTitleText = StringLiteral.OnboardigMain.TimeSurvey
+        mainTitleText = StringLiteral.OnboardigMain.timeSurvey
         surveyView.firstButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.firstSelect)
         surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.secondSelect)
         surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.thirdSelect)

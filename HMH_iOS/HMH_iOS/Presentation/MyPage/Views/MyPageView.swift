@@ -44,6 +44,7 @@ final class MyPageView: UIView {
     private func setRegister() {
         myPageCollectionView.register(UserPointHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: UserPointHeaderView.identifier)
         myPageCollectionView.register(MypageCollectionViewCell.self, forCellWithReuseIdentifier: MypageCollectionViewCell.identifier)
+        myPageCollectionView.register(InfoHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: InfoHeaderView.identifier)
         myPageCollectionView.register(LogoutAndQuitFooterView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: LogoutAndQuitFooterView.identifier)
     }
     
@@ -132,7 +133,14 @@ extension MyPageView: UICollectionViewDelegateFlowLayout {
                 return headerView
             }
         case 1:
-            if kind == UICollectionView.elementKindSectionFooter {
+            if kind == UICollectionView.elementKindSectionHeader {
+                guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: InfoHeaderView.identifier, for: indexPath) as? InfoHeaderView else {
+                    return UICollectionReusableView()
+                }
+                return headerView
+            }
+            
+            else if kind == UICollectionView.elementKindSectionFooter {
                 guard let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LogoutAndQuitFooterView.identifier, for: indexPath) as? LogoutAndQuitFooterView else {
                     return UICollectionReusableView()
                 }
@@ -147,6 +155,8 @@ extension MyPageView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section == 0 {
             return .init(width: UIScreen.main.bounds.width, height: 205.adjusted)
+        } else if section == 1 {
+            return .init(width: UIScreen.main.bounds.width, height: 66.adjusted)
         } else {
             return .zero
         }

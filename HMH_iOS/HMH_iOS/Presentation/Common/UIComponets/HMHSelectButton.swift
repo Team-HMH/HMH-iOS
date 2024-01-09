@@ -21,14 +21,13 @@ final class HMHSelectButton: UIButton {
     private var selectButtonType: HMHSelectButtonType = .disabled
     private var isChecked: Bool = false
     
-    private let buttonContentLabel = UILabel().then {
+    var buttonContentLabel = UILabel().then {
         $0.font = UIFont.iosText5Medium16
     }
     
-    init(buttonType: HMHSelectButtonType, buttonText: String) {
+    init(buttonType: HMHSelectButtonType) {
         super.init(frame: .zero)
         self.selectButtonType = buttonType
-        buttonContentLabel.text = buttonText
         
         configureButton()
         addTarget()
@@ -81,7 +80,7 @@ final class HMHSelectButton: UIButton {
     
     private func updateStyle() {
         if isChecked {
-            backgroundColor = .bluePurpleButton
+            backgroundColor = .bluePurpleOpacity22
             makeBorder(width: 1.5, color: .bluePurpleLine)
         } else {
             backgroundColor = .gray6
@@ -108,10 +107,18 @@ final class HMHSelectButton: UIButton {
             setChecked(true)
             
         case .multiple:
-            setChecked(!isChecked)
+            let selectedCount = (superview?.subviews.compactMap { ($0 as? HMHSelectButton)?.isChecked } ?? []).filter { $0 }.count
+            
+            if selectedCount < 2 || isChecked {
+                setChecked(!isChecked)
+            }
             
         case .disabled:
             return
         }
+    }
+    
+    func setButtonText(buttonTitle: String) {
+        buttonContentLabel.text = buttonTitle
     }
 }

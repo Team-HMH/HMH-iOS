@@ -31,6 +31,35 @@ final class UserPointHeaderView: UICollectionReusableView {
         $0.textColor = .whiteText
     }
     
+    private let pointBadgeView = UIView().then {
+        $0.backgroundColor = .gray6
+        $0.makeCornerRound(radius: 7.adjusted)
+    }
+    
+    private let lineView = UIView().then {
+        $0.backgroundColor = .gray4
+    }
+    
+    private let myPointButton = MyPointButton()
+//    private let myBadgeButton = MyBadgeButton()
+    
+    private let myBadgeButtonStackView = UIStackView().then {
+        $0.alignment = .center
+        $0.axis = .vertical
+        $0.spacing = 8
+    }
+    
+    private let badgeLabel = UILabel().then {
+        $0.font = .iosText6Medium14
+        $0.text = StringLiteral.myPage.badge
+        $0.textColor = .gray2
+    }
+    
+    private let badgeImageView = UIImageView().then {
+        $0.image = ImageLiterals.myPage.icBadge
+        $0.contentMode = .scaleAspectFit
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUI()
@@ -47,8 +76,10 @@ final class UserPointHeaderView: UICollectionReusableView {
     }
     
     func setHierarchy() {
-        self.addSubviews(userStackView)
+        self.addSubviews(userStackView, pointBadgeView)
         userStackView.addArrangeSubViews([userprofilView, userLabel])
+        pointBadgeView.addSubviews(myPointButton, lineView, myBadgeButtonStackView)
+        myBadgeButtonStackView.addArrangeSubViews([badgeLabel, badgeImageView])
         
     }
     
@@ -59,8 +90,32 @@ final class UserPointHeaderView: UICollectionReusableView {
         }
         
         userprofilView.snp.makeConstraints {
-            $0.size.equalTo(54)
+            $0.size.equalTo(54.adjusted)
         }
+        
+        pointBadgeView.snp.makeConstraints {
+            $0.top.equalTo(userStackView.snp.bottom).offset(25.adjusted)
+            $0.bottom.equalToSuperview().inset(21.adjusted)
+            $0.horizontalEdges.equalToSuperview().inset(20.adjustedWidth)
+        }
+        
+        myPointButton.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.leading.equalToSuperview().inset(12.adjusted)
+        }
+        
+        lineView.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.width.equalTo(1.adjusted)
+            $0.height.equalTo(57.adjusted)
+        }
+        
+        myBadgeButtonStackView.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.width.equalTo(145.adjusted)
+            $0.trailing.equalToSuperview().offset(-12.adjusted)
+        }
+        
     }
     
     private func configureView() {

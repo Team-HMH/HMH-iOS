@@ -11,3 +11,9 @@ struct UserModel {
     let userName: String
     let point: Int
 }
+
+extension UserModel {
+    static func dummy() -> UserModel {
+        return UserModel(userName: "여민서", point: 3000)
+    }
+}

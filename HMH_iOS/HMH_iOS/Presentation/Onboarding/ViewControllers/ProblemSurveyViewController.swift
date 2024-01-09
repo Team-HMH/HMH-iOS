@@ -64,7 +64,7 @@ final class ProblemSurveyViewController: OnboardingBaseViewController {
 
 extension ProblemSurveyViewController: NextViewPushDelegate {
     func didTapButton() {
-        let nextViewController = TimeSurveyViewController()
+        let nextViewController = SelectPeriodController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
     }
 }

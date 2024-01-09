@@ -17,10 +17,24 @@ protocol HomeViewPushDelegate: AnyObject {
 class OnboardingBaseViewController: UIViewController {
     weak var delegate: HomeViewPushDelegate?
     
+    private let mainTitleLabel = UILabel().then {
+        $0.textColor = .whiteText
+        $0.font = .iosTitle1Semibold22
+        $0.text = StringLiteral.OnboardingButton.next
+    }
+    private let subTitleLabel = UILabel().then {
+        $0.textColor = .gray2
+        $0.font = .iosText6Medium14
+        $0.text = StringLiteral.OnboardingButton.next
+    }
     var nextButtonText: String = StringLiteral.OnboardingButton.next
-    let navigationBar = HMHNavigationBar(leftItem: .normal, isBackButton: true, isTitleLabel: false, isPointImage: false, isBackGroundGray: false)
+    let navigationBar = HMHNavigationBar(leftItem: .normal, 
+                                         isBackButton: true,
+                                         isTitleLabel: false,
+                                         isPointImage: false,
+                                         isBackGroundGray: false)
     let progressBar = ProgressBarManager.shared.progressBarView
-    lazy var nextButton = OnboardingButton(buttonStatus: .enabled, buttonText: nextButtonText)
+    lazy var nextButton = OnboardingButton(buttonStatus: .enabled)
     var step = 0
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,10 +55,11 @@ class OnboardingBaseViewController: UIViewController {
     private func setUI() {
         setHierarchy()
         setConstraints()
+        mainTitleLabel.text = nextButtonText
     }
     
     private func setHierarchy() {
-        view.addSubviews(navigationBar, nextButton, progressBar)
+        view.addSubviews(navigationBar, nextButton, progressBar, mainTitleLabel, subTitleLabel)
     }
     
     private func setConstraints() {
@@ -62,10 +77,25 @@ class OnboardingBaseViewController: UIViewController {
             $0.bottom.equalTo(view.safeAreaLayoutGuide).offset(-21.adjusted)
             $0.leading.trailing.equalToSuperview().inset(20.adjusted)
         }
+        
+        mainTitleLabel.snp.makeConstraints {
+            $0.top.equalTo(progressBar.snp.bottom).offset(34)
+            $0.leading.equalTo(progressBar)
+        }
+        
+        subTitleLabel.snp.makeConstraints {
+            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(4)
+            $0.leading.equalTo(progressBar)
+            
+        }
     }
     
     private func setTarget() {
         nextButton.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
+    }
+    
+    private func updateButtonText() {
+        
     }
     
     @objc

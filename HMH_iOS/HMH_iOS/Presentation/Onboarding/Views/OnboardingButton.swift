@@ -24,10 +24,9 @@ final class OnboardingButton: UIButton {
         $0.font = .iosText4Semibold16
     }
 
-    init(buttonStatus type: OnboardingButtonType, buttonText: String) {
+    init(buttonStatus type: OnboardingButtonType) {
         super.init(frame: .zero)
         self.type = type
-        buttonTitleLabel.text = buttonText
 
         configureButton()
         setUI()
@@ -69,6 +68,10 @@ final class OnboardingButton: UIButton {
             self.isEnabled = false
             self.backgroundColor = .gray5
         }
+    }
+    
+    func setButtonText(buttonTitle: String) {
+        buttonTitleLabel.text = buttonTitle
     }
 }
 

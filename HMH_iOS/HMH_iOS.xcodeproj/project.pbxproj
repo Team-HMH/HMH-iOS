@@ -29,6 +29,7 @@
 		0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B12B4CE908007E3F9C /* SurveyView.swift */; };
 		0BA193B42B4D089C007E3F9C /* TimeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */; };
 		0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */; };
+		0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B82B4D4097007E3F9C /* SignInModel.swift */; };
 		0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */; };
 		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
 		17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F7E2B485E150089A551 /* CustomAlertButton.swift */; };
@@ -167,6 +168,7 @@
 		0BA193B12B4CE908007E3F9C /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSurveyViewController.swift; sourceTree = "<group>"; };
 		0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSurveyViewController.swift; sourceTree = "<group>"; };
+		0BA193B82B4D4097007E3F9C /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressView.swift; sourceTree = "<group>"; };
 		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
 		17314F7E2B485E150089A551 /* CustomAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertButton.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 		0B2C2D3C2B4559AE0023CCFA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0BA193B72B4D4086007E3F9C /* Models */,
 				0B7817512B4BE0280078E925 /* ProgressBarManager.swift */,
 				0B78174C2B4BD9450078E925 /* ViewControllers */,
 				0B2C2D3D2B4559C90023CCFA /* Views */,
@@ -555,6 +558,14 @@
 				0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		0BA193B72B4D4086007E3F9C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0BA193B82B4D4097007E3F9C /* SignInModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		17314F7D2B485DCF0089A551 /* CustomAlert */ = {
@@ -940,6 +951,7 @@
 				17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
 				3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */,
+				0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,

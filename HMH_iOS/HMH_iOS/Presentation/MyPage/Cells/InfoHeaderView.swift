@@ -41,7 +41,7 @@ final class InfoHeaderView: UICollectionReusableView {
     
     private func setConstraints() {
         infoLabel.snp.makeConstraints {
-            $0.bottom.equalToSuperview().offset(-11.adjusted)
+            $0.bottom.equalToSuperview().inset(13.adjusted)
             $0.leading.equalToSuperview().inset(20)
         }
     }

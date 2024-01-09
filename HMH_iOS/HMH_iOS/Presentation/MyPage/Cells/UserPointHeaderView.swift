@@ -16,7 +16,7 @@ final class UserPointHeaderView: UICollectionReusableView {
     
     private let userStackView = UIStackView().then {
         $0.axis = .horizontal
-        $0.spacing = 15
+        $0.spacing = 15.adjusted
         $0.alignment = .center
     }
     
@@ -41,7 +41,7 @@ final class UserPointHeaderView: UICollectionReusableView {
     
     private let myPointButtonStackView = UIStackView().then {
         $0.alignment = .center
-        $0.spacing = 9
+        $0.spacing = 8.adjusted
         $0.axis = .vertical
     }
     
@@ -72,7 +72,7 @@ final class UserPointHeaderView: UICollectionReusableView {
     private let myBadgeButtonStackView = UIStackView().then {
         $0.alignment = .center
         $0.axis = .vertical
-        $0.spacing = 8
+        $0.spacing = 8.adjusted
     }
     
     private let badgeLabel = UILabel().then {
@@ -123,7 +123,7 @@ final class UserPointHeaderView: UICollectionReusableView {
         
         pointBadgeView.snp.makeConstraints {
             $0.top.equalTo(userStackView.snp.bottom).offset(25.adjusted)
-            $0.bottom.equalToSuperview().inset(21.adjusted)
+            $0.bottom.equalToSuperview().inset(22.adjusted)
             $0.horizontalEdges.equalToSuperview().inset(20.adjustedWidth)
         }
         
@@ -135,7 +135,7 @@ final class UserPointHeaderView: UICollectionReusableView {
         
         lineView.snp.makeConstraints {
             $0.center.equalToSuperview()
-            $0.width.equalTo(1.adjusted)
+            $0.width.equalTo(1)
             $0.height.equalTo(57.adjusted)
         }
         

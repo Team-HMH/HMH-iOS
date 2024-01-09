@@ -16,7 +16,7 @@ final class MypageCollectionViewCell: UICollectionViewCell {
     
     private let imageAndLabelStackView = UIStackView().then {
         $0.axis = .horizontal
-        $0.spacing = 15
+        $0.spacing = 15.adjusted
         $0.alignment = .center
     }
     
@@ -53,12 +53,12 @@ final class MypageCollectionViewCell: UICollectionViewCell {
     private func setConstraints() {
         imageAndLabelStackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview().inset(20)
+            $0.leading.equalToSuperview().inset(20.adjusted)
         }
         
         myPageCellNextPageImageView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(20)
+            $0.trailing.equalToSuperview().inset(20.adjusted)
         }
     }
     

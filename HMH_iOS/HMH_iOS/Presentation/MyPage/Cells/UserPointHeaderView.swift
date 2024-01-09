@@ -40,9 +40,37 @@ final class UserPointHeaderView: UICollectionReusableView {
         $0.backgroundColor = .gray4
     }
     
-    private let myPointButton = MyPointButton()
-//    private let myBadgeButton = MyBadgeButton()
+    private let myPointButtonStackView = UIStackView().then {
+        $0.alignment = .center
+        $0.spacing = 9
+        $0.axis = .vertical
+    }
     
+    private let myPointLabel = UILabel().then {
+        $0.font = .iosText6Medium14
+        $0.text = StringLiteral.myPage.point
+        $0.textColor = .whiteText
+    }
+    
+    private let pointStackView = UIStackView().then {
+        $0.axis = .horizontal
+        $0.spacing = 15
+        $0.alignment = .center
+    }
+    
+    private let pointLabel = UILabel().then {
+        $0.font = .iosTitle4Semibold20
+        $0.textColor = .gray2
+        $0.text = "P"
+    }
+    
+    private let countPointLabel = UILabel().then {
+        $0.font = .iosTitle4Semibold20
+        $0.textColor = .whiteText
+        $0.textAlignment = .right
+        $0.text = "0"
+    }
+   
     private let myBadgeButtonStackView = UIStackView().then {
         $0.alignment = .center
         $0.axis = .vertical
@@ -78,7 +106,9 @@ final class UserPointHeaderView: UICollectionReusableView {
     func setHierarchy() {
         self.addSubviews(userStackView, pointBadgeView)
         userStackView.addArrangeSubViews([userprofilView, userLabel])
-        pointBadgeView.addSubviews(myPointButton, lineView, myBadgeButtonStackView)
+        pointBadgeView.addSubviews(myPointButtonStackView, lineView, myBadgeButtonStackView)
+        myPointButtonStackView.addArrangeSubViews([myPointLabel, pointStackView])
+        pointStackView.addArrangeSubViews([countPointLabel, pointLabel])
         myBadgeButtonStackView.addArrangeSubViews([badgeLabel, badgeImageView])
         
     }
@@ -99,8 +129,9 @@ final class UserPointHeaderView: UICollectionReusableView {
             $0.horizontalEdges.equalToSuperview().inset(20.adjustedWidth)
         }
         
-        myPointButton.snp.makeConstraints {
+        myPointButtonStackView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
+            $0.width.equalTo(142.adjusted)
             $0.leading.equalToSuperview().inset(12.adjusted)
         }
         

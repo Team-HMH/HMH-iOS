@@ -54,7 +54,7 @@ final class UserPointHeaderView: UICollectionReusableView {
     
     private let pointStackView = UIStackView().then {
         $0.axis = .horizontal
-        $0.spacing = 15
+        $0.spacing = 7
         $0.alignment = .center
     }
     

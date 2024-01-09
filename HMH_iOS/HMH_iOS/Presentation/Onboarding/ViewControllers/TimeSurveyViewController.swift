@@ -15,15 +15,10 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .background
-        nextButtonText = StringLiteral.OnboardingButton.next
-        nextButton.setButtonText(buttonTitle: nextButtonText)
-        mainTitleText = StringLiteral.OnboardigMain.TimeSurvey
-
-        self.delegate = self
-        step = 1
         setUI()
         configureSurveyView()
+        setDelegate()
+        setTimeSurvey()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,7 +41,19 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
         }
     }
     
+    private func setDelegate() {
+        self.delegate = self
+    }
+    
+    private func setTimeSurvey() {
+        view.backgroundColor = .background
+        step = 1
+    }
+    
     private func configureSurveyView() {
+        nextButtonText = StringLiteral.OnboardingButton.next
+        nextButton.setButtonText(buttonTitle: nextButtonText)
+        mainTitleText = StringLiteral.OnboardigMain.TimeSurvey
         surveyView.firstButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.firstSelect)
         surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.secondSelect)
         surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.thirdSelect)
@@ -54,9 +61,9 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
     }
 }
 
-extension TimeSurveyViewController: HomeViewPushDelegate {
+extension TimeSurveyViewController: NextViewPushDelegate {
     func didTapButton() {
-        let placeViewController = ProblemSurveyViewController()
-        self.navigationController?.pushViewController(placeViewController, animated: false)
+        let nextViewController = ProblemSurveyViewController()
+        self.navigationController?.pushViewController(nextViewController, animated: false)
     }
 }

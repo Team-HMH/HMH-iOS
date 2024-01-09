@@ -15,16 +15,10 @@ final class ProblemSurveyViewController: OnboardingBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .background
-        nextButtonText = StringLiteral.OnboardingButton.next
-        nextButton.setButtonText(buttonTitle: nextButtonText)
-        mainTitleText = StringLiteral.OnboardigMain.problemSurvey
-        subTitleText = StringLiteral.OnboardigSub.problemSurvey
-        
-        self.delegate = self
-        step = 2
+        setDelegate()
         setUI()
         configureSurveyView()
+        setProblemSurvey()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,19 +41,31 @@ final class ProblemSurveyViewController: OnboardingBaseViewController {
         }
     }
     
+    private func setDelegate() {
+        self.delegate = self
+    }
+    
+    private func setProblemSurvey() {
+        view.backgroundColor = .background
+        step = 2
+    }
+    
     private func configureSurveyView() {
+        nextButtonText = StringLiteral.OnboardingButton.next
+        nextButton.setButtonText(buttonTitle: nextButtonText)
+        mainTitleText = StringLiteral.OnboardigMain.problemSurvey
+        subTitleText = StringLiteral.OnboardigSub.problemSurvey
         surveyView.firstButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.firstSelect)
         surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.secondSelect)
         surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.thirdSelect)
         surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.fourthSelect)
     }
-    
 }
 
-extension ProblemSurveyViewController: HomeViewPushDelegate {
+extension ProblemSurveyViewController: NextViewPushDelegate {
     func didTapButton() {
-        let placeViewController = TimeSurveyViewController()
-        self.navigationController?.pushViewController(placeViewController, animated: false)
+        let nextViewController = TimeSurveyViewController()
+        self.navigationController?.pushViewController(nextViewController, animated: false)
     }
 }
 

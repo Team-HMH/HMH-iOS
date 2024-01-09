@@ -10,12 +10,12 @@ import UIKit
 import SnapKit
 import Then
 
-protocol HomeViewPushDelegate: AnyObject {
+protocol NextViewPushDelegate: AnyObject {
     func didTapButton()
 }
 
 class OnboardingBaseViewController: UIViewController {
-    weak var delegate: HomeViewPushDelegate?
+    weak var delegate: NextViewPushDelegate?
     
     let mainTitleLabel = UILabel().then {
         $0.textColor = .whiteText
@@ -32,11 +32,11 @@ class OnboardingBaseViewController: UIViewController {
     var mainTitleText: String = ""
     var subTitleText: String = ""
     let navigationBar = HMHNavigationBar(leftItem: .normal,
-                                                 isBackButton: true,
-                                                 isTitleLabel: false,
-                                                 isPointImage: true,
-                                                 isBackGroundGray: false,
-                                                 titleText: "마이페이지")
+                                         isBackButton: true,
+                                         isTitleLabel: false,
+                                         isPointImage: true,
+                                         isBackGroundGray: false,
+                                         titleText: "마이페이지")
     let progressBar = ProgressBarManager.shared.progressBarView
     lazy var nextButton = OnboardingButton(buttonStatus: .enabled)
     var step = 0

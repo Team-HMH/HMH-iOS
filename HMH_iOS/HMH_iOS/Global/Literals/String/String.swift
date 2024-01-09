@@ -24,6 +24,12 @@ enum StringLiteral {
             static var appListHeaderTitle = "앱 잠금"
             static var appListHeaderButtonText = "삭제"
         }
+        
+        enum GoalTime {
+            static var titleText = "선택한 앱의 목표 이용 시간을\n설정해 주세요"
+            static var subTitleText = "목표 이용 시간은 최대 1시간 59분까지\n설정할 수 있어요"
+        }
+        
         enum Idetifier {
             static var titleHeaderViewId = "TitleSectionHeader"
             static var appListHeaderViewId = "AppSectionHeader"

@@ -54,7 +54,6 @@ final class MyPageView: UIView {
     }
 }
 
-
 extension MyPageView: UICollectionViewDelegate {}
 
 extension MyPageView: UICollectionViewDataSource {
@@ -105,7 +104,7 @@ extension MyPageView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         default:
-            let itemWidthOrHeight: CGFloat = 60
+            let itemWidthOrHeight: CGFloat = 58
             return CGSize(width: collectionView.frame.width.adjustedWidth, height: itemWidthOrHeight.adjustedHeight)
         }
     }
@@ -130,6 +129,7 @@ extension MyPageView: UICollectionViewDelegateFlowLayout {
                 guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: UserPointHeaderView.identifier, for: indexPath) as? UserPointHeaderView else {
                     return UICollectionReusableView()
                 }
+                headerView.bindData(model: UserModel.dummy())
                 return headerView
             }
         case 1:

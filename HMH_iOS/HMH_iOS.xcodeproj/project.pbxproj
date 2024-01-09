@@ -32,6 +32,8 @@
 		0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B82B4D4097007E3F9C /* SignInModel.swift */; };
 		0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */; };
 		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
+		0BD98DB92B4D671600E35188 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD98DB82B4D671600E35188 /* SplashViewController.swift */; };
+		0BD98DBE2B4D6AB700E35188 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD98DBD2B4D6AB700E35188 /* LoginViewController.swift */; };
 		17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F7E2B485E150089A551 /* CustomAlertButton.swift */; };
 		17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F822B486BEC0089A551 /* AlertViewController.swift */; };
 		17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */; };
@@ -171,6 +173,8 @@
 		0BA193B82B4D4097007E3F9C /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressView.swift; sourceTree = "<group>"; };
 		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
+		0BD98DB82B4D671600E35188 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0BD98DBD2B4D6AB700E35188 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		17314F7E2B485E150089A551 /* CustomAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertButton.swift; sourceTree = "<group>"; };
 		17314F822B486BEC0089A551 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHLogoutAlert.swift; sourceTree = "<group>"; };
@@ -362,6 +366,8 @@
 		0B67CCE72B369BE300582D54 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0BD98DBA2B4D6A5A00E35188 /* Login */,
+				0BD98DB72B4D670200E35188 /* Splash */,
 				3666C8842B47110800564874 /* CreateChallenge */,
 				174AF4842B447AB500450D07 /* MyPage */,
 				174AF4832B447A7A00450D07 /* Challenge */,
@@ -566,6 +572,38 @@
 				0BA193B82B4D4097007E3F9C /* SignInModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0BD98DB72B4D670200E35188 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				0BD98DBB2B4D6A6D00E35188 /* ViewControllers */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		0BD98DBA2B4D6A5A00E35188 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0BD98DBC2B4D6A8800E35188 /* ViewControllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0BD98DBB2B4D6A6D00E35188 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BD98DB82B4D671600E35188 /* SplashViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0BD98DBC2B4D6A8800E35188 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BD98DBD2B4D6AB700E35188 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		17314F7D2B485DCF0089A551 /* CustomAlert */ = {
@@ -958,6 +996,8 @@
 				36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */,
 				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
 				174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */,
+				0BD98DB92B4D671600E35188 /* SplashViewController.swift in Sources */,
+				0BD98DBE2B4D6AB700E35188 /* LoginViewController.swift in Sources */,
 				17314F892B49A8B60089A551 /* AlertDelegate.swift in Sources */,
 				0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,

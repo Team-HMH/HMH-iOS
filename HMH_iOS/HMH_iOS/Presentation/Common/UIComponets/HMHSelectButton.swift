@@ -107,7 +107,11 @@ final class HMHSelectButton: UIButton {
             setChecked(true)
             
         case .multiple:
-            setChecked(!isChecked)
+            let selectedCount = (superview?.subviews.compactMap { ($0 as? HMHSelectButton)?.isChecked } ?? []).filter { $0 }.count
+            
+            if selectedCount < 2 || isChecked {
+                setChecked(!isChecked)
+            }
             
         case .disabled:
             return

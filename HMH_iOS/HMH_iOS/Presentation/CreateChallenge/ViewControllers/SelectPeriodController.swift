@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 final class SelectPeriodController: OnboardingBaseViewController {
-    private let surveyView = SurveyView(buttonType: .solitary)
+    private let surveyView = SurveyView(firstButtonType: .solitary, secondButtonType: .solitary, thirdButtonType: .disabled, fourthButtonType: .disabled)
     
     override func viewDidLoad() {
         super.viewDidLoad()

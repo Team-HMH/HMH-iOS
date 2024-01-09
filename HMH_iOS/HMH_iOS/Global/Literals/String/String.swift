@@ -76,11 +76,17 @@ enum StringLiteral {
         static let timeSurvey = "하루 평균 휴대폰을\n얼마나 사용하나요?"
         static let problemSurvey = "휴대폰을 사용할 때\n어떤 문제를 겪고 있나요?"
         static let selectPeriod = "챌린지 기간을 선택해 주세요"
+        static let selectTotalTime = "총 목표 이용 시간을\n설정해 주세요"
+        static let approvePermision = "스크린타임 권한 허용이 필요해요"
+        static let appSelect = "중독에서 탈출하고 싶은\n앱을 선택해 주세요"
     }
     
     enum OnboardigSub {
         static let problemSurvey = "해당 문항은 최대 2개까지 선택할 수 있어요"
         static let selectPeriod = "첫 챌린지로 가볍게 도전하기 좋은 7일을 추천해요"
+        static let selectTotalTime = "목표 이용 시간은 최대 6시간까지 설정할 수 있어요"
+        static let approvePermision = "언제든지 설정에서 스크린타임 권한을\n변경할 수 있어요"
+        static let appSelect = "목표 이용 시간이 지나면 앱이 잠겨요\n선택하고 싶은 앱은 언제든지 추가할 수 있어요"
     }
     
     enum TimeSurveySelect {

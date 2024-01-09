@@ -11,6 +11,7 @@
 		0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CEA2B4D9D9100AEC582 /* SelectTotalTimeController.swift */; };
 		0B000CED2B4D9DA800AEC582 /* ApprovePermisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */; };
 		0B000CEF2B4D9DBF00AEC582 /* AppChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CEE2B4D9DBF00AEC582 /* AppChoiceController.swift */; };
+		0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */; };
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
 		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
@@ -161,6 +162,7 @@
 		0B000CEA2B4D9D9100AEC582 /* SelectTotalTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTotalTimeController.swift; sourceTree = "<group>"; };
 		0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovePermisionController.swift; sourceTree = "<group>"; };
 		0B000CEE2B4D9DBF00AEC582 /* AppChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChoiceController.swift; sourceTree = "<group>"; };
+		0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectViewController.swift; sourceTree = "<group>"; };
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 				0B000CEA2B4D9D9100AEC582 /* SelectTotalTimeController.swift */,
 				0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */,
 				0B000CEE2B4D9DBF00AEC582 /* AppChoiceController.swift */,
+				0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1065,6 +1068,7 @@
 				0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */,
 				364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */,
 				17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */,
+				0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
 				3666C88F2B471C5800564874 /* TabBarController.swift in Sources */,
 				36E05FE62B48825A005B633E /* AppCollectionReusableView.swift in Sources */,

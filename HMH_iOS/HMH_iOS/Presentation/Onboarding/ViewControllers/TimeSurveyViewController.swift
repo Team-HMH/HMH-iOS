@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 final class TimeSurveyViewController: OnboardingBaseViewController {
-    private let surveyView = SurveyView(buttonType: .solitary)
+    private let surveyView = SurveyView(firstButtonType: .solitary, secondButtonType: .solitary, thirdButtonType: .solitary, fourthButtonType: .solitary)
     
     override func viewDidLoad() {
         super.viewDidLoad()

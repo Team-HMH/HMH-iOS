@@ -11,8 +11,7 @@ import SnapKit
 import Then
 
 final class SelectTotalTimeController: OnboardingBaseViewController {
-    private let surveyView = SurveyView(buttonType: .solitary)
-    
+    private let pickerView = TotalTimePickerView()
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -31,11 +30,11 @@ final class SelectTotalTimeController: OnboardingBaseViewController {
     }
     
     private func setHierarchy() {
-        view.addSubview(surveyView)
+        view.addSubview(pickerView)
     }
     
     private func setConstraints() {
-        surveyView.snp.makeConstraints {
+        pickerView.snp.makeConstraints {
             $0.top.equalTo(mainTitleLabel.snp.bottom).offset(94.adjustedHeight)
             $0.leading.trailing.equalTo(progressBar)
         }
@@ -53,12 +52,8 @@ final class SelectTotalTimeController: OnboardingBaseViewController {
     private func configureSurveyView() {
         nextButtonText = StringLiteral.OnboardingButton.next
         nextButton.setButtonText(buttonTitle: nextButtonText)
-        mainTitleText = StringLiteral.OnboardigMain.selectPeriod
-        subTitleText = StringLiteral.OnboardigSub.selectPeriod
-        surveyView.firstButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.firstSelect)
-        surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.secondSelect)
-        surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.thirdSelect)
-        surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.fourthSelect)
+        mainTitleText = StringLiteral.OnboardigMain.selectTotalTime
+        subTitleText = StringLiteral.OnboardigSub.selectTotalTime
     }
 }
 

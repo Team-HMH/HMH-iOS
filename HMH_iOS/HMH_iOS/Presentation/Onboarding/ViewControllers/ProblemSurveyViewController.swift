@@ -11,8 +11,7 @@ import SnapKit
 import Then
 
 final class ProblemSurveyViewController: OnboardingBaseViewController {
-    private let surveyView = SurveyView(buttonType: .multiple)
-    
+    private let surveyView = SurveyView(firstButtonType: .multiple, secondButtonType: .multiple, thirdButtonType: .multiple, fourthButtonType: .multiple)
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegate()

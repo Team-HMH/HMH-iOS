@@ -21,12 +21,13 @@ class OnboardingBaseViewController: UIViewController {
         $0.textColor = .whiteText
         $0.font = .iosTitle1Semibold22
         $0.text = StringLiteral.OnboardingButton.next
-        $0.numberOfLines = 2
+        $0.setTextWithLineHeightLeft(text: $0.text, lineHeight: 33)
     }
     private let subTitleLabel = UILabel().then {
         $0.textColor = .gray2
         $0.font = .iosText6Medium14
         $0.text = StringLiteral.OnboardingButton.next
+        $0.setTextWithLineHeightLeft(text: $0.text, lineHeight: 21)
     }
     var nextButtonText: String = StringLiteral.OnboardingButton.next
     var mainTitleText: String = ""
@@ -87,7 +88,7 @@ class OnboardingBaseViewController: UIViewController {
         }
         
         subTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(4.adjusted)
+            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(7.adjusted)
             $0.leading.equalTo(progressBar)
             
         }

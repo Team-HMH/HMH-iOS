@@ -28,8 +28,8 @@ class OnboardingBaseViewController: UIViewController {
         $0.text = StringLiteral.OnboardingButton.next
     }
     var nextButtonText: String = StringLiteral.OnboardingButton.next
-    var mainTitleText: String = StringLiteral.OnboardingButton.next
-    var subTitleText: String = StringLiteral.OnboardingButton.next
+    var mainTitleText: String = ""
+    var subTitleText: String = ""
     let navigationBar = HMHNavigationBar(leftItem: .normal,
                                                  isBackButton: true,
                                                  isTitleLabel: false,

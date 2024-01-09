@@ -14,7 +14,6 @@ final class MyPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        configureView()
     }
     
     private func setUI() {
@@ -36,9 +35,5 @@ final class MyPageViewController: UIViewController {
             $0.top.equalTo(navigationBar.snp.bottom)
             $0.bottom.horizontalEdges.equalToSuperview()
         }
-    }
-    
-    private func configureView() {
-        view.backgroundColor = .gray8
     }
 }

@@ -58,6 +58,11 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
         surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.secondSelect)
         surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.thirdSelect)
         surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.fourthSelect)
+        
+        surveyView.firstButton.delegate = self
+        surveyView.secondButton.delegate = self
+        surveyView.thirdButton.delegate = self
+        surveyView.fourthButton.delegate = self
     }
 }
 
@@ -65,5 +70,12 @@ extension TimeSurveyViewController: NextViewPushDelegate {
     func didTapButton() {
         let nextViewController = ProblemSurveyViewController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
+    }
+}
+
+extension TimeSurveyViewController: HMHSelectButtonDelegate {
+    func updateAvailability(isEnabled: Bool) {
+        print("taptap")
+        updateNextButtonStatus(buttonStatus: isEnabled)
     }
 }

@@ -58,6 +58,11 @@ final class ProblemSurveyViewController: OnboardingBaseViewController {
         surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.secondSelect)
         surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.thirdSelect)
         surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.fourthSelect)
+        
+        surveyView.firstButton.delegate = self
+        surveyView.secondButton.delegate = self
+        surveyView.thirdButton.delegate = self
+        surveyView.fourthButton.delegate = self
     }
 }
 
@@ -68,3 +73,9 @@ extension ProblemSurveyViewController: NextViewPushDelegate {
     }
 }
 
+extension ProblemSurveyViewController: HMHSelectButtonDelegate {
+    func updateAvailability(isEnabled: Bool) {
+        print("taptap")
+        updateNextButtonStatus(buttonStatus: isEnabled)
+    }
+}

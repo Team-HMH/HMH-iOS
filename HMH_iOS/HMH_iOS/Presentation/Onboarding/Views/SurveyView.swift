@@ -20,17 +20,21 @@ final class SurveyView: UIView {
     var secondButtonText: String = ""
     var thirdButtonText: String = ""
     var fourthButtonText: String = ""
+    var buttonType: HMHSelectButton.HMHSelectButtonType = .solitary
     
-    lazy var firstButton = HMHSelectButton(buttonType: .solitary)
-    lazy var secondButton = HMHSelectButton(buttonType: .solitary)
-    lazy var thirdButton = HMHSelectButton(buttonType: .solitary)
-    lazy var fourthButton = HMHSelectButton(buttonType: .solitary)
+    lazy var firstButton = HMHSelectButton(buttonType: buttonType)
+    lazy var secondButton = HMHSelectButton(buttonType: buttonType)
+    lazy var thirdButton = HMHSelectButton(buttonType: buttonType)
+    lazy var fourthButton = HMHSelectButton(buttonType: buttonType)
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    
+    init(buttonType: HMHSelectButton.HMHSelectButtonType) {
+        super.init(frame: .zero)
+        self.buttonType = buttonType
+        
         setAddTarget()
-        configureView()
         setUI()
+        setButtonType(buttonType: buttonType)
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -61,6 +65,7 @@ final class SurveyView: UIView {
     private func setAddTarget() {
     }
     
-    private func configureView() {
+    func setButtonType(buttonType: HMHSelectButton.HMHSelectButtonType) {
+        self.buttonType = buttonType
     }
 }

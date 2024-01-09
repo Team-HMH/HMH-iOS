@@ -11,23 +11,20 @@ import SnapKit
 import Then
 
 final class ProblemSurveyViewController: OnboardingBaseViewController {
-    private let surveyView = SurveyView()
+    private let surveyView = SurveyView(buttonType: .multiple)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .background
         nextButtonText = StringLiteral.OnboardingButton.next
         nextButton.setButtonText(buttonTitle: nextButtonText)
-        surveyView.firstButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.firstSelect)
-        surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.secondSelect)
-        surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.thirdSelect)
-        surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.fourthSelect)
         mainTitleText = StringLiteral.OnboardigMain.problemSurvey
         subTitleText = StringLiteral.OnboardigSub.problemSurvey
-
+        
         self.delegate = self
         step = 2
         setUI()
+        configureSurveyView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +46,14 @@ final class ProblemSurveyViewController: OnboardingBaseViewController {
             $0.leading.trailing.equalTo(progressBar)
         }
     }
+    
+    private func configureSurveyView() {
+        surveyView.firstButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.firstSelect)
+        surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.secondSelect)
+        surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.thirdSelect)
+        surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.fourthSelect)
+    }
+    
 }
 
 extension ProblemSurveyViewController: HomeViewPushDelegate {

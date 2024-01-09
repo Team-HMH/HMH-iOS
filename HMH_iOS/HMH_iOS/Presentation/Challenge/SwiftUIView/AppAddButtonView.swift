@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import UIKit
+import FamilyControls
 
 struct AppAddButtonView: View {
     

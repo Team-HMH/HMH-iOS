@@ -27,6 +27,8 @@
 		0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BB2B369F2D00688BA6 /* UIView+.swift */; };
 		0B8A89C42B369FA000688BA6 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C32B369FA000688BA6 /* F.swift */; };
 		0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B12B4CE908007E3F9C /* SurveyView.swift */; };
+		0BA193B42B4D089C007E3F9C /* TimeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */; };
+		0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */; };
 		0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */; };
 		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
 		17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F7E2B485E150089A551 /* CustomAlertButton.swift */; };
@@ -163,6 +165,8 @@
 		0B8A89BB2B369F2D00688BA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0B8A89C32B369FA000688BA6 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		0BA193B12B4CE908007E3F9C /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
+		0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSurveyViewController.swift; sourceTree = "<group>"; };
+		0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSurveyViewController.swift; sourceTree = "<group>"; };
 		0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressView.swift; sourceTree = "<group>"; };
 		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
 		17314F7E2B485E150089A551 /* CustomAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertButton.swift; sourceTree = "<group>"; };
@@ -369,6 +373,8 @@
 			isa = PBXGroup;
 			children = (
 				0B78174D2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift */,
+				0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */,
+				0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -920,6 +926,7 @@
 				174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */,
 				3666C8A52B48644A00564874 /* AppModel.swift in Sources */,
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
+				0BA193B42B4D089C007E3F9C /* TimeSurveyViewController.swift in Sources */,
 				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
 				0B7817522B4BE0280078E925 /* ProgressBarManager.swift in Sources */,
@@ -927,6 +934,7 @@
 				3666C8892B47110800564874 /* TotalTimePickerView.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
+				0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */,
 				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */,

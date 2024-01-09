@@ -54,4 +54,13 @@ enum StringLiteral {
         static let complete = "완료"
         static let confirm = "확인"
     }
+    
+    enum OnboardigMain {
+        static let TimeSurvey = "하루 평균 휴대폰을 얼마나 사용하나요?"
+        static let problemSurvey = "휴대폰을 사용할 때 어떤 문제를 겪고 있나요?"
+    }
+    
+    enum OnboardigSub {
+        static let problemSurvey = "해당 문항은 최대 2개까지 선택할 수 있어요"
+    }
 }

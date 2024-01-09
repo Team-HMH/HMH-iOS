@@ -21,6 +21,7 @@ class OnboardingBaseViewController: UIViewController {
         $0.textColor = .whiteText
         $0.font = .iosTitle1Semibold22
         $0.text = StringLiteral.OnboardingButton.next
+        $0.numberOfLines = 2
     }
     private let subTitleLabel = UILabel().then {
         $0.textColor = .gray2

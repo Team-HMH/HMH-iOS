@@ -5,11 +5,16 @@
 //  Created by 김보연 on 1/3/24.
 //
 import UIKit
+import SwiftUI
+import FamilyControls
 
 import SnapKit
 import Then
 
 final class TabBarController: UITabBarController {
+    
+    private let authorizationCenter = AuthorizationCenter.shared
+    
     private let tabBarView = UIView().then {
         $0.backgroundColor = .gray7
         $0.makeCornerRound(radius: 8.adjusted)
@@ -20,6 +25,11 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         setUI()
         setTabBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        requestAuthorization()
     }
     
     override func viewDidLayoutSubviews() {
@@ -115,6 +125,20 @@ final class TabBarController: UITabBarController {
                 tabBarItem.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -3.adjusted)
             } else {
                 tabBarItem.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -1.adjusted)
+            }
+        }
+    }
+    
+    private func requestAuthorization() {
+        if authorizationCenter.authorizationStatus == .approved {
+            print("ScreenTime 권한 허용 완료")
+        } else {
+            Task {
+                do {
+                    try await authorizationCenter.requestAuthorization(for: .individual)
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
         }
     }

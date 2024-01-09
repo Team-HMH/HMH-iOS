@@ -43,11 +43,11 @@ class OnboardingBaseViewController: UIViewController {
         setConstraints()
     }
     
-    func setHierarchy() {
+    private func setHierarchy() {
         view.addSubviews(navigationBar, nextButton, progressBar)
     }
     
-    func setConstraints() {
+    private func setConstraints() {
         navigationBar.snp.makeConstraints {
             $0.top.trailing.leading.equalToSuperview()
             $0.height.equalTo(113.adjustedHeight)
@@ -64,7 +64,7 @@ class OnboardingBaseViewController: UIViewController {
         }
     }
     
-    func setTarget() {
+    private func setTarget() {
         nextButton.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
     }
     

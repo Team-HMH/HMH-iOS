@@ -57,7 +57,7 @@ final class OnboardingButton: UIButton {
     }
 
     private func configureButton() {
-        self.makeCornerRound(radius: 6.adjustedHeight)
+        self.makeCornerRound(radius: 6.adjusted)
         self.layer.cornerCurve = .continuous
 
         switch type {

@@ -10,7 +10,7 @@ import UIKit
 enum ImageLiterals {
     enum NavigationBar {
         static var icArrowLeft: UIImage { .load(named: "ic_back")}
-        static var icPoint: UIImage { .load(named: "ios_point")}
+        static var icPoint: UIImage { .load(named: "ios_point_ic")}
     }
     
     enum TabBar {
@@ -22,6 +22,12 @@ enum ImageLiterals {
         static var icMyPageSelected: UIImage { .load(named: "mypageEnabled") }
     }
     
+    enum myPage {
+        static var icBadge: UIImage { .load(named: "ios_badge_ic_disabled")}
+        static var icJourney: UIImage { .load(named: "ios_journey_ic")}
+        static var icStore: UIImage { .load(named: "ios_store_ic")}
+        static var icArrowRight: UIImage { .load(named: "chevron_right")}
+
     enum Challenge {
         static var icPlus: UIImage { .load(named: "Minus_XL") }
     }

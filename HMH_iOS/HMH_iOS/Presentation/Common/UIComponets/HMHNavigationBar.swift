@@ -167,7 +167,7 @@ final class HMHNavigationBar: UIView {
         guard let navigationController = findViewController()?.navigationController else {
             return
         }
-        navigationController.popViewController(animated: true)
+        navigationController.popViewController(animated: false)
     }
     
     private func findViewController() -> UIViewController? {

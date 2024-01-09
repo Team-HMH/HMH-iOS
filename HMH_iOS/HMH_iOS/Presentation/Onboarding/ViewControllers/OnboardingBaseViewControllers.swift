@@ -17,7 +17,7 @@ protocol HomeViewPushDelegate: AnyObject {
 class OnboardingBaseViewController: UIViewController {
     weak var delegate: HomeViewPushDelegate?
     
-    private let mainTitleLabel = UILabel().then {
+    let mainTitleLabel = UILabel().then {
         $0.textColor = .whiteText
         $0.font = .iosTitle1Semibold22
         $0.text = StringLiteral.OnboardingButton.next
@@ -28,11 +28,14 @@ class OnboardingBaseViewController: UIViewController {
         $0.text = StringLiteral.OnboardingButton.next
     }
     var nextButtonText: String = StringLiteral.OnboardingButton.next
-    let navigationBar = HMHNavigationBar(leftItem: .normal, 
-                                         isBackButton: true,
-                                         isTitleLabel: false,
-                                         isPointImage: false,
-                                         isBackGroundGray: false)
+    var mainTitleText: String = StringLiteral.OnboardingButton.next
+    var subTitleText: String = StringLiteral.OnboardingButton.next
+    let navigationBar = HMHNavigationBar(leftItem: .normal,
+                                                 isBackButton: true,
+                                                 isTitleLabel: false,
+                                                 isPointImage: true,
+                                                 isBackGroundGray: false,
+                                                 titleText: "마이페이지")
     let progressBar = ProgressBarManager.shared.progressBarView
     lazy var nextButton = OnboardingButton(buttonStatus: .enabled)
     var step = 0
@@ -55,7 +58,8 @@ class OnboardingBaseViewController: UIViewController {
     private func setUI() {
         setHierarchy()
         setConstraints()
-        mainTitleLabel.text = nextButtonText
+        mainTitleLabel.text = mainTitleText
+        subTitleLabel.text = subTitleText
     }
     
     private func setHierarchy() {
@@ -65,7 +69,6 @@ class OnboardingBaseViewController: UIViewController {
     private func setConstraints() {
         navigationBar.snp.makeConstraints {
             $0.top.trailing.leading.equalToSuperview()
-            $0.height.equalTo(113.adjustedHeight)
         }
         
         progressBar.snp.makeConstraints {
@@ -79,12 +82,12 @@ class OnboardingBaseViewController: UIViewController {
         }
         
         mainTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(progressBar.snp.bottom).offset(34)
+            $0.top.equalTo(progressBar.snp.bottom).offset(34.adjusted)
             $0.leading.equalTo(progressBar)
         }
         
         subTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(4)
+            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(4.adjusted)
             $0.leading.equalTo(progressBar)
             
         }
@@ -92,10 +95,6 @@ class OnboardingBaseViewController: UIViewController {
     
     private func setTarget() {
         nextButton.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
-    }
-    
-    private func updateButtonText() {
-        
     }
     
     @objc

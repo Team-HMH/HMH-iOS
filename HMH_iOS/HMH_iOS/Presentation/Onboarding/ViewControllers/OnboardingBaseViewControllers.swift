@@ -16,7 +16,6 @@ protocol NextViewPushDelegate: AnyObject {
 
 class OnboardingBaseViewController: UIViewController {
     weak var delegate: NextViewPushDelegate?
-    
     let mainTitleLabel = UILabel().then {
         $0.textColor = .whiteText
         $0.font = .iosTitle1Semibold22
@@ -32,13 +31,13 @@ class OnboardingBaseViewController: UIViewController {
     var nextButtonText: String = StringLiteral.OnboardingButton.next
     var mainTitleText: String = ""
     var subTitleText: String = ""
-    let navigationBar = HMHNavigationBar(leftItem: .normal, 
+    let navigationBar = HMHNavigationBar(leftItem: .normal,
                                          isBackButton: true,
                                          isTitleLabel: false,
                                          isPointImage: false,
                                          isBackGroundGray: false)
     let progressBar = ProgressBarManager.shared.progressBarView
-    lazy var nextButton = OnboardingButton(buttonStatus: .enabled)
+    lazy var nextButton = OnboardingButton(buttonStatus: .disabled)
     var step = 0
     
     override func viewWillAppear(_ animated: Bool) {
@@ -101,6 +100,16 @@ class OnboardingBaseViewController: UIViewController {
     @objc
     func onTapButton() {
         self.delegate?.didTapButton()
+    }
+    
+    func updateNextButtonStatus(buttonStatus: Bool) {
+        if buttonStatus {
+            self.nextButton.backgroundColor = .bluePurpleButton
+            self.nextButton.isEnabled = true
+        } else {
+            self.nextButton.backgroundColor = .gray4
+            self.nextButton.isEnabled = false
+        }
     }
 }
 

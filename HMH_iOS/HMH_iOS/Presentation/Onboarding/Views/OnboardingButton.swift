@@ -17,7 +17,7 @@ final class OnboardingButton: UIButton {
         case disabled
     }
 
-    private var type: OnboardingButtonType = .disabled
+    var type: OnboardingButtonType = .disabled
 
     private let buttonTitleLabel = UILabel().then {
         $0.textColor = .whiteText

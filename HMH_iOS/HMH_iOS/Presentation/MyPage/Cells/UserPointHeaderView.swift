@@ -27,7 +27,6 @@ final class UserPointHeaderView: UICollectionReusableView {
     
     private let userLabel = UILabel().then {
         $0.font = .iosTitle4Semibold20
-        $0.text = "여민서"
         $0.textColor = .whiteText
     }
     
@@ -68,9 +67,8 @@ final class UserPointHeaderView: UICollectionReusableView {
         $0.font = .iosTitle4Semibold20
         $0.textColor = .whiteText
         $0.textAlignment = .right
-        $0.text = "0"
     }
-   
+    
     private let myBadgeButtonStackView = UIStackView().then {
         $0.alignment = .center
         $0.axis = .vertical
@@ -151,5 +149,15 @@ final class UserPointHeaderView: UICollectionReusableView {
     
     private func configureView() {
         self.backgroundColor = .background
+    }
+}
+
+extension UserPointHeaderView {
+    func bindData(model: UserModel) {
+        let numberFormatter: NumberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        let userPoint: String = numberFormatter.string(for: model.point) ?? "0"
+        self.userLabel.text = model.userName
+        self.countPointLabel.text = "\(userPoint)"
     }
 }

@@ -64,7 +64,6 @@
 		3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8A22B4861A200564874 /* AppListCollectionViewCell.swift */; };
 		3666C8A52B48644A00564874 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8A42B48644A00564874 /* AppModel.swift */; };
 		36A3D8942B3AB57B007EA272 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8932B3AB57B007EA272 /* SnapKit */; };
-		36A3D8962B3AB57B007EA272 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8952B3AB57B007EA272 /* SnapKit-Dynamic */; };
 		36A3D8992B3AB58A007EA272 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8982B3AB58A007EA272 /* Then */; };
 		36A3D89C2B3AB5A1007EA272 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D89B2B3AB5A1007EA272 /* KakaoSDK */; };
 		36A3D89E2B3AB5A1007EA272 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D89D2B3AB5A1007EA272 /* KakaoSDKAuth */; };
@@ -240,7 +239,6 @@
 				36A3D8B22B3AB5A1007EA272 /* KakaoSDKUser in Frameworks */,
 				36A3D8A02B3AB5A1007EA272 /* KakaoSDKCert in Frameworks */,
 				36A3D8B02B3AB5A1007EA272 /* KakaoSDKTemplate in Frameworks */,
-				36A3D8962B3AB57B007EA272 /* SnapKit-Dynamic in Frameworks */,
 				36A3D89E2B3AB5A1007EA272 /* KakaoSDKAuth in Frameworks */,
 				36A3D8A82B3AB5A1007EA272 /* KakaoSDKFriendCore in Frameworks */,
 				36A3D8A22B3AB5A1007EA272 /* KakaoSDKCertCore in Frameworks */,
@@ -766,7 +764,6 @@
 			name = HMH_iOS;
 			packageProductDependencies = (
 				36A3D8932B3AB57B007EA272 /* SnapKit */,
-				36A3D8952B3AB57B007EA272 /* SnapKit-Dynamic */,
 				36A3D8982B3AB58A007EA272 /* Then */,
 				36A3D89B2B3AB5A1007EA272 /* KakaoSDK */,
 				36A3D89D2B3AB5A1007EA272 /* KakaoSDKAuth */,
@@ -1375,11 +1372,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 36A3D8922B3AB57B007EA272 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		36A3D8952B3AB57B007EA272 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 36A3D8922B3AB57B007EA272 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 		36A3D8982B3AB58A007EA272 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;

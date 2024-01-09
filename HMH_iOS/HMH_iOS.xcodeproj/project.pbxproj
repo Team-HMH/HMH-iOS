@@ -15,6 +15,9 @@
 		0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CE2B369813000C5046 /* HomeViewController.swift */; };
 		0B50F9D42B369815000C5046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B50F9D32B369815000C5046 /* Assets.xcassets */; };
 		0B50F9D72B369815000C5046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B50F9D52B369815000C5046 /* LaunchScreen.storyboard */; };
+		0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78174D2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift */; };
+		0B7817502B4BD9F10078E925 /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B78174F2B4BD9F10078E925 /* OnboardingButton.swift */; };
+		0B7817522B4BE0280078E925 /* ProgressBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7817512B4BE0280078E925 /* ProgressBarManager.swift */; };
 		0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */; };
 		0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89AE2B369E4300688BA6 /* HomeModel.swift */; };
 		0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B02B369E4C00688BA6 /* HomeView.swift */; };
@@ -140,7 +143,6 @@
 /* Begin PBXFileReference section */
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
-		0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
 		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
 		0B50F9C72B369813000C5046 /* HMH_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMH_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B50F9CA2B369813000C5046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,9 @@
 		0B50F9D32B369815000C5046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B50F9D62B369815000C5046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B50F9D82B369815000C5046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B78174D2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBaseViewControllers.swift; sourceTree = "<group>"; };
+		0B78174F2B4BD9F10078E925 /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
+		0B7817512B4BE0280078E925 /* ProgressBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarManager.swift; sourceTree = "<group>"; };
 		0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		0B8A89AE2B369E4300688BA6 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0B8A89B02B369E4C00688BA6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -263,6 +268,8 @@
 		0B2C2D3C2B4559AE0023CCFA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				0B7817512B4BE0280078E925 /* ProgressBarManager.swift */,
+				0B78174C2B4BD9450078E925 /* ViewControllers */,
 				0B2C2D3D2B4559C90023CCFA /* Views */,
 			);
 			path = Onboarding;
@@ -271,9 +278,9 @@
 		0B2C2D3D2B4559C90023CCFA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0B2C2D3E2B4559E10023CCFA /* OnboardingButton.swift */,
 				0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */,
 				0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */,
+				0B78174F2B4BD9F10078E925 /* OnboardingButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -355,6 +362,14 @@
 				0B8A89A52B369DD500688BA6 /* Common */,
 			);
 			path = Presentation;
+			sourceTree = "<group>";
+		};
+		0B78174C2B4BD9450078E925 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B78174D2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		0B8A89952B369CD900688BA6 /* Extension */ = {
@@ -907,6 +922,7 @@
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
 				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
+				0B7817522B4BE0280078E925 /* ProgressBarManager.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
 				3666C8892B47110800564874 /* TotalTimePickerView.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
@@ -923,9 +939,11 @@
 				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
 				174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */,
 				17314F892B49A8B60089A551 /* AlertDelegate.swift in Sources */,
+				0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
+				0B7817502B4BD9F10078E925 /* OnboardingButton.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
 				364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */,

@@ -41,6 +41,8 @@ enum StringLiteral {
         static var TOS = "이용약관"
         static var privacyPolicy = "개인정보처리방침"
         
+        static var info = "정보"
+        
         static var logout = "로그아웃"
         static var quit = "회원탈퇴"
     }

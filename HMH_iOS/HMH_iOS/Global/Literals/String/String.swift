@@ -28,6 +28,7 @@ enum StringLiteral {
             static var titleHeaderViewId = "TitleSectionHeader"
             static var appListHeaderViewId = "AppSectionHeader"
             static var backgroundViewId = "GrayBackground"
+            static var appAddFooterViewID = "appAddFooter"
         }
     }
     enum AlertButton {
@@ -43,5 +44,14 @@ enum StringLiteral {
     
     enum AlertDescription {
         static let quit = "회원탈퇴 후 유저의 정보는 30일 동안 임시보관 후 영구 삭제됩니다."
+    }
+    
+    enum OnboardingButton {
+        static let next = "다음"
+        static let permission = "권한 허용하러 가기"
+        static let selectApp = "앱 선택하기"
+        static let selectComplete = "선택 완료"
+        static let complete = "완료"
+        static let confirm = "확인"
     }
 }

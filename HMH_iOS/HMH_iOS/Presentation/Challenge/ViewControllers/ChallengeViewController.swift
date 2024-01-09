@@ -16,6 +16,7 @@ final class ChallengeViewController: UIViewController {
                                                  isBackButton: false,
                                                  isTitleLabel: true,
                                                  isPointImage: true,
+                                                 isBackGroundGray: true,
                                                  titleText: StringLiteral.Challenge.NavigationBarTitle)
     private let challengeView = ChallengeView()
     
@@ -39,8 +40,7 @@ final class ChallengeViewController: UIViewController {
     
     private func setConstraints() {
         navigationBar.snp.makeConstraints {
-            $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-            $0.height.equalTo(63.adjustedHeight)
+            $0.top.leading.trailing.equalToSuperview()
         }
     }
     

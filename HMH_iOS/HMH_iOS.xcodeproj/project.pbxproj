@@ -107,6 +107,8 @@
 		36E531BE2B4C78A900B4BBE3 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531BD2B4C78A900B4BBE3 /* ShieldConfigurationExtension.swift */; };
 		36E531C32B4C78A900B4BBE3 /* ShiledConfig.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 36E531B82B4C78A900B4BBE3 /* ShiledConfig.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		36E531C92B4C798100B4BBE3 /* MyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531C82B4C798100B4BBE3 /* MyStore.swift */; };
+		36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */; };
+		36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -264,6 +266,8 @@
 		36E531BF2B4C78A900B4BBE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36E531C02B4C78A900B4BBE3 /* ShiledConfig.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiledConfig.entitlements; sourceTree = "<group>"; };
 		36E531C82B4C798100B4BBE3 /* MyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStore.swift; sourceTree = "<group>"; };
+		36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectViewController.swift; sourceTree = "<group>"; };
+		36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -671,6 +675,7 @@
 			isa = PBXGroup;
 			children = (
 				174AF49B2B447D0700450D07 /* ChallengeViewController.swift */,
+				36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -680,6 +685,7 @@
 			children = (
 				174AF4992B447CFB00450D07 /* ChanllengeViews.swift */,
 				3666C89A2B48516500564874 /* ChallengeView.swift */,
+				36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1120,10 +1126,12 @@
 				17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
 				3666C88F2B471C5800564874 /* TabBarController.swift in Sources */,
+				36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */,
 				36E531C92B4C798100B4BBE3 /* MyStore.swift in Sources */,
 				36E05FE62B48825A005B633E /* AppCollectionReusableView.swift in Sources */,
 				3666C88B2B471B0D00564874 /* String.swift in Sources */,
 				3666C89B2B48516500564874 /* ChallengeView.swift in Sources */,
+				36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */,
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,

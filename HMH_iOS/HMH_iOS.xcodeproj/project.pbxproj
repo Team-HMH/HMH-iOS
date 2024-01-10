@@ -38,6 +38,7 @@
 		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
 		0BD98DB92B4D671600E35188 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD98DB82B4D671600E35188 /* SplashViewController.swift */; };
 		0BD98DBE2B4D6AB700E35188 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD98DBD2B4D6AB700E35188 /* LoginViewController.swift */; };
+		0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD2FB32B4EE71900C6327F /* SignInCompleteViewController.swift */; };
 		17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F7E2B485E150089A551 /* CustomAlertButton.swift */; };
 		17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F822B486BEC0089A551 /* AlertViewController.swift */; };
 		17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */; };
@@ -190,6 +191,7 @@
 		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
 		0BD98DB82B4D671600E35188 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		0BD98DBD2B4D6AB700E35188 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0BFD2FB32B4EE71900C6327F /* SignInCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCompleteViewController.swift; sourceTree = "<group>"; };
 		17314F7E2B485E150089A551 /* CustomAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertButton.swift; sourceTree = "<group>"; };
 		17314F822B486BEC0089A551 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHLogoutAlert.swift; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				0B78174D2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift */,
 				0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */,
 				0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */,
+				0BFD2FB32B4EE71900C6327F /* SignInCompleteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1050,6 +1053,7 @@
 				17314FAF2B4D3E1C0089A551 /* LogoutAndQuitFooterView.swift in Sources */,
 				0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
+				0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
 				0B7817502B4BD9F10078E925 /* OnboardingButton.swift in Sources */,

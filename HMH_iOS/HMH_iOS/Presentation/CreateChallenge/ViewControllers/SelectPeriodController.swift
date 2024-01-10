@@ -1,8 +1,8 @@
 //
-//  TimeSurveyViewController.swift
+//  SelectPeriodController.swift
 //  HMH_iOS
 //
-//  Created by Seonwoo Kim on 1/9/24.
+//  Created by Seonwoo Kim on 1/10/24.
 //
 
 import UIKit
@@ -10,8 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
-final class TimeSurveyViewController: OnboardingBaseViewController {
-    private let surveyView = SurveyView(firstButtonType: .solitary, secondButtonType: .solitary, thirdButtonType: .solitary, fourthButtonType: .solitary)
+final class SelectPeriodController: OnboardingBaseViewController {
+    private let surveyView = SurveyView(firstButtonType: .solitary, secondButtonType: .solitary, thirdButtonType: .disabled, fourthButtonType: .disabled)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,17 +47,18 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
     
     private func setTimeSurvey() {
         view.backgroundColor = .background
-        step = 1
+        step = 3
     }
     
     private func configureSurveyView() {
         nextButtonText = StringLiteral.OnboardingButton.next
         nextButton.setButtonText(buttonTitle: nextButtonText)
-        mainTitleText = StringLiteral.OnboardigMain.timeSurvey
-        surveyView.firstButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.firstSelect)
-        surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.secondSelect)
-        surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.thirdSelect)
-        surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.fourthSelect)
+        mainTitleText = StringLiteral.OnboardigMain.selectPeriod
+        subTitleText = StringLiteral.OnboardigSub.selectPeriod
+        surveyView.firstButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.firstSelect)
+        surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.secondSelect)
+        surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.thirdSelect)
+        surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.fourthSelect)
         
         surveyView.firstButton.delegate = self
         surveyView.secondButton.delegate = self
@@ -66,14 +67,14 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
     }
 }
 
-extension TimeSurveyViewController: NextViewPushDelegate {
+extension SelectPeriodController: NextViewPushDelegate {
     func didTapButton() {
-        let nextViewController = ProblemSurveyViewController()
+        let nextViewController = SelectTotalTimeController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
     }
 }
 
-extension TimeSurveyViewController: HMHSelectButtonDelegate {
+extension SelectPeriodController: HMHSelectButtonDelegate {
     func updateAvailability(isEnabled: Bool) {
         nextButton.updateStatus(isEnabled: isEnabled)
     }

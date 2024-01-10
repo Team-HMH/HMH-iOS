@@ -17,7 +17,7 @@ final class OnboardingButton: UIButton {
         case disabled
     }
 
-    private var type: OnboardingButtonType = .disabled
+    var type: OnboardingButtonType = .disabled
 
     private let buttonTitleLabel = UILabel().then {
         $0.textColor = .whiteText
@@ -72,6 +72,16 @@ final class OnboardingButton: UIButton {
     
     func setButtonText(buttonTitle: String) {
         buttonTitleLabel.text = buttonTitle
+    }
+    
+    func updateStatus(isEnabled: Bool) {
+        if isEnabled {
+            self.isEnabled = true
+            self.backgroundColor = .bluePurpleButton
+        } else {
+            self.isEnabled = false
+            self.backgroundColor = .gray5
+        }
     }
 }
 

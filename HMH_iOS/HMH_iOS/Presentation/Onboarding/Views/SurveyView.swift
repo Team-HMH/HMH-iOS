@@ -20,17 +20,25 @@ final class SurveyView: UIView {
     var secondButtonText: String = ""
     var thirdButtonText: String = ""
     var fourthButtonText: String = ""
-    var buttonType: HMHSelectButton.HMHSelectButtonType = .solitary
+    var firstButtonType: HMHSelectButton.HMHSelectButtonType = .solitary
+    var secondButtonType: HMHSelectButton.HMHSelectButtonType = .solitary
+    var thirdButtonType: HMHSelectButton.HMHSelectButtonType = .solitary
+    var fourthButtonType: HMHSelectButton.HMHSelectButtonType = .solitary
     
-    lazy var firstButton = HMHSelectButton(buttonType: buttonType)
-    lazy var secondButton = HMHSelectButton(buttonType: buttonType)
-    lazy var thirdButton = HMHSelectButton(buttonType: buttonType)
-    lazy var fourthButton = HMHSelectButton(buttonType: buttonType)
+    lazy var firstButton = HMHSelectButton(buttonType: firstButtonType)
+    lazy var secondButton = HMHSelectButton(buttonType: secondButtonType)
+    lazy var thirdButton = HMHSelectButton(buttonType: thirdButtonType)
+    lazy var fourthButton = HMHSelectButton(buttonType: fourthButtonType)
     
-    
-    init(buttonType: HMHSelectButton.HMHSelectButtonType) {
+    init(firstButtonType: HMHSelectButton.HMHSelectButtonType,
+         secondButtonType: HMHSelectButton.HMHSelectButtonType,
+         thirdButtonType: HMHSelectButton.HMHSelectButtonType,
+         fourthButtonType: HMHSelectButton.HMHSelectButtonType) {
         super.init(frame: .zero)
-        self.buttonType = buttonType
+        self.firstButtonType = firstButtonType
+        self.secondButtonType = secondButtonType
+        self.thirdButtonType = thirdButtonType
+        self.fourthButtonType = fourthButtonType
         
         setAddTarget()
         setUI()
@@ -61,9 +69,5 @@ final class SurveyView: UIView {
     }
     
     private func setAddTarget() {
-    }
-    
-    func setButtonType(buttonType: HMHSelectButton.HMHSelectButtonType) {
-        self.buttonType = buttonType
     }
 }

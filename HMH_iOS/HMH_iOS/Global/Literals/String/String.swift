@@ -85,7 +85,7 @@ enum StringLiteral {
         static let problemSurvey = "해당 문항은 최대 2개까지 선택할 수 있어요"
         static let selectPeriod = "첫 챌린지로 가볍게 도전하기 좋은 7일을 추천해요"
         static let selectTotalTime = "목표 이용 시간은 최대 6시간까지 설정할 수 있어요"
-        static let approvePermision = "언제든지 설정에서 스크린타임 권한을\n변경할 수 있어요"
+        static let approvePermision = "언제든지 설정에서 스크린타임과 알림\n권한을 변경할 수 있어요"
         static let appSelect = "목표 이용 시간이 지나면 앱이 잠겨요\n선택하고 싶은 앱은 언제든지 추가할 수 있어요"
     }
     

@@ -39,6 +39,13 @@
 		17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */; };
 		17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F862B49853C0089A551 /* HMHQuitAlert.swift */; };
 		17314F892B49A8B60089A551 /* AlertDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F882B49A8B60089A551 /* AlertDelegate.swift */; };
+		17314F972B4C42130089A551 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F962B4C42130089A551 /* MyPageView.swift */; };
+		17314F9B2B4C485B0089A551 /* UserPointHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F9A2B4C485B0089A551 /* UserPointHeaderView.swift */; };
+		17314F9D2B4C554D0089A551 /* MypageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F9C2B4C554D0089A551 /* MypageCollectionViewCell.swift */; };
+		17314FAF2B4D3E1C0089A551 /* LogoutAndQuitFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314FAE2B4D3E1C0089A551 /* LogoutAndQuitFooterView.swift */; };
+		17314FB12B4D50380089A551 /* InfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314FB02B4D50380089A551 /* InfoHeaderView.swift */; };
+		17314FB32B4D68950089A551 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314FB22B4D68950089A551 /* UserModel.swift */; };
+		17314FB72B4D93D30089A551 /* StoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314FB62B4D93D30089A551 /* StoreCollectionViewCell.swift */; };
 		174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF48D2B447B1F00450D07 /* MyPageCells.swift */; };
 		174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF48F2B447B3C00450D07 /* MyPageModels.swift */; };
 		174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4912B447B4600450D07 /* MyPageViews.swift */; };
@@ -180,6 +187,13 @@
 		17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHLogoutAlert.swift; sourceTree = "<group>"; };
 		17314F862B49853C0089A551 /* HMHQuitAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHQuitAlert.swift; sourceTree = "<group>"; };
 		17314F882B49A8B60089A551 /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
+		17314F962B4C42130089A551 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		17314F9A2B4C485B0089A551 /* UserPointHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPointHeaderView.swift; sourceTree = "<group>"; };
+		17314F9C2B4C554D0089A551 /* MypageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageCollectionViewCell.swift; sourceTree = "<group>"; };
+		17314FAE2B4D3E1C0089A551 /* LogoutAndQuitFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutAndQuitFooterView.swift; sourceTree = "<group>"; };
+		17314FB02B4D50380089A551 /* InfoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHeaderView.swift; sourceTree = "<group>"; };
+		17314FB22B4D68950089A551 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		17314FB62B4D93D30089A551 /* StoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCollectionViewCell.swift; sourceTree = "<group>"; };
 		174AF48D2B447B1F00450D07 /* MyPageCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageCells.swift; sourceTree = "<group>"; };
 		174AF48F2B447B3C00450D07 /* MyPageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageModels.swift; sourceTree = "<group>"; };
 		174AF4912B447B4600450D07 /* MyPageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViews.swift; sourceTree = "<group>"; };
@@ -697,6 +711,7 @@
 			isa = PBXGroup;
 			children = (
 				174AF4912B447B4600450D07 /* MyPageViews.swift */,
+				17314F962B4C42130089A551 /* MyPageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -705,6 +720,7 @@
 			isa = PBXGroup;
 			children = (
 				174AF48F2B447B3C00450D07 /* MyPageModels.swift */,
+				17314FB22B4D68950089A551 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -713,6 +729,11 @@
 			isa = PBXGroup;
 			children = (
 				174AF48D2B447B1F00450D07 /* MyPageCells.swift */,
+				17314F9A2B4C485B0089A551 /* UserPointHeaderView.swift */,
+				17314F9C2B4C554D0089A551 /* MypageCollectionViewCell.swift */,
+				17314FAE2B4D3E1C0089A551 /* LogoutAndQuitFooterView.swift */,
+				17314FB02B4D50380089A551 /* InfoHeaderView.swift */,
+				17314FB62B4D93D30089A551 /* StoreCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -969,6 +990,7 @@
 				3666C89F2B485C8F00564874 /* DateCollectionViewCell.swift in Sources */,
 				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
 				0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */,
+				17314F9B2B4C485B0089A551 /* UserPointHeaderView.swift in Sources */,
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */,
 				174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */,
@@ -992,13 +1014,17 @@
 				0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */,
+				17314FB72B4D93D30089A551 /* StoreCollectionViewCell.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,
 				36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */,
+				17314FB12B4D50380089A551 /* InfoHeaderView.swift in Sources */,
 				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
 				174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */,
 				0BD98DB92B4D671600E35188 /* SplashViewController.swift in Sources */,
 				0BD98DBE2B4D6AB700E35188 /* LoginViewController.swift in Sources */,
+				17314FB32B4D68950089A551 /* UserModel.swift in Sources */,
 				17314F892B49A8B60089A551 /* AlertDelegate.swift in Sources */,
+				17314FAF2B4D3E1C0089A551 /* LogoutAndQuitFooterView.swift in Sources */,
 				0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
@@ -1009,7 +1035,9 @@
 				364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
 				17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */,
+				17314F9D2B4C554D0089A551 /* MypageCollectionViewCell.swift in Sources */,
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
+				17314F972B4C42130089A551 /* MyPageView.swift in Sources */,
 				0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */,
 				364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */,
 				17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */,

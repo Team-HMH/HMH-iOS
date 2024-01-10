@@ -59,6 +59,7 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChallengeViewController.swift */; };
+		364923752B4F555F00BF7ACA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 364923742B4F555F00BF7ACA /* Lottie */; };
 		364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E702B4BC9780015729C /* AppAddButtonView.swift */; };
 		364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
@@ -269,6 +270,7 @@
 				36A3D8A62B3AB5A1007EA272 /* KakaoSDKFriend in Frameworks */,
 				36A3D89C2B3AB5A1007EA272 /* KakaoSDK in Frameworks */,
 				36A3D8AA2B3AB5A1007EA272 /* KakaoSDKNavi in Frameworks */,
+				364923752B4F555F00BF7ACA /* Lottie in Frameworks */,
 				36A3D8AC2B3AB5A1007EA272 /* KakaoSDKShare in Frameworks */,
 				36A3D8992B3AB58A007EA272 /* Then in Frameworks */,
 				36A3D8AE2B3AB5A1007EA272 /* KakaoSDKTalk in Frameworks */,
@@ -879,6 +881,7 @@
 				36A3D8AD2B3AB5A1007EA272 /* KakaoSDKTalk */,
 				36A3D8AF2B3AB5A1007EA272 /* KakaoSDKTemplate */,
 				36A3D8B12B3AB5A1007EA272 /* KakaoSDKUser */,
+				364923742B4F555F00BF7ACA /* Lottie */,
 			);
 			productName = HMH_iOS;
 			productReference = 0B50F9C72B369813000C5046 /* HMH_iOS.app */;
@@ -952,6 +955,7 @@
 				36A3D8922B3AB57B007EA272 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				36A3D8972B3AB58A007EA272 /* XCRemoteSwiftPackageReference "Then" */,
 				36A3D89A2B3AB5A1007EA272 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				364923732B4F555F00BF7ACA /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 0B50F9C82B369813000C5046 /* Products */;
 			projectDirPath = "";
@@ -1461,6 +1465,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		364923732B4F555F00BF7ACA /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.4;
+			};
+		};
 		36A3D8922B3AB57B007EA272 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -1488,6 +1500,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		364923742B4F555F00BF7ACA /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 364923732B4F555F00BF7ACA /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		36A3D8932B3AB57B007EA272 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 36A3D8922B3AB57B007EA272 /* XCRemoteSwiftPackageReference "SnapKit" */;

@@ -79,6 +79,7 @@ enum StringLiteral {
         static let selectTotalTime = "총 목표 이용 시간을\n설정해 주세요"
         static let approvePermision = "스크린타임 권한 허용이 필요해요"
         static let appSelect = "중독에서 탈출하고 싶은\n앱을 선택해 주세요"
+        static let signInComplete = "회원가입 완료"
     }
     
     enum OnboardigSub {
@@ -87,6 +88,7 @@ enum StringLiteral {
         static let selectTotalTime = "목표 이용 시간은 최대 6시간까지 설정할 수 있어요"
         static let approvePermision = "언제든지 설정에서 스크린타임 권한을\n변경할 수 있어요"
         static let appSelect = "목표 이용 시간이 지나면 앱이 잠겨요\n선택하고 싶은 앱은 언제든지 추가할 수 있어요"
+        static let signInComplete = "이제 하면함에서 블랙홀 탈출을 위한\n여정을 시작해 볼까요?"
     }
     
     enum TimeSurveySelect {

@@ -12,6 +12,12 @@ import Then
 
 final class SelectTotalTimeController: OnboardingBaseViewController {
     private let pickerView = TotalTimePickerView()
+    private let titleLabel = UILabel().then {
+        $0.textColor = .gray2
+        $0.font = .iosText2Medium20
+        $0.text = "시간"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -30,13 +36,19 @@ final class SelectTotalTimeController: OnboardingBaseViewController {
     }
     
     private func setHierarchy() {
-        view.addSubview(pickerView)
+        view.addSubviews(pickerView,titleLabel)
     }
     
     private func setConstraints() {
+        titleLabel.snp.makeConstraints {
+            $0.top.equalTo(navigationBar.snp.bottom).offset(271.adjusted)
+            $0.leading.equalTo(pickerView.snp.trailing).inset(-12.adjusted)
+        }
+        
         pickerView.snp.makeConstraints {
-            $0.top.equalTo(mainTitleLabel.snp.bottom).offset(94.adjustedHeight)
-            $0.leading.trailing.equalTo(progressBar)
+            $0.leading.equalToSuperview().inset(137.adjusted)
+            $0.width.equalTo(65.adjusted)
+            $0.centerY.equalTo(titleLabel.snp.centerY)
         }
     }
     

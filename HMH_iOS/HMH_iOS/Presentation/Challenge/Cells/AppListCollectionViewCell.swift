@@ -13,6 +13,15 @@ import Then
 final class AppListCollectionViewCell: UICollectionViewCell {
     
     static let identifer = "AppListCollectionViewCell"
+    var isSelectedCell = false {
+        didSet {
+            if isSelectedCell {
+                contentView.makeBorder(width: 1.3, color: .gray5)
+            } else {
+                contentView.makeBorder(width: 0, color: .clear)
+            }
+        }
+    }
     
     private let appImageView = UIImageView().then {
         $0.backgroundColor = .blue
@@ -38,6 +47,11 @@ final class AppListCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.makeBorder(width: 0, color: .gray5)
     }
     
     override func layoutSubviews() {

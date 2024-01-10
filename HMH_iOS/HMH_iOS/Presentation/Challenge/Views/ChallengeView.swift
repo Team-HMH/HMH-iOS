@@ -16,6 +16,11 @@ final class ChallengeView: UIView {
     private var days: Int = 7
     private var appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
                                        AppModel(appIcon: "", appName: "Youtube", appUseTime: "1시간")]
+    private var isDeleteMode: Bool = false {
+        didSet {
+            challengeCollectionView.reloadData()
+        }
+    }
     
     lazy var challengeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .background
@@ -77,7 +82,9 @@ final class ChallengeView: UIView {
     }
     
     @objc private func deleteButtonTapped() {
-        
+        isDeleteMode.toggle()
+        print(isDeleteMode)
+        challengeCollectionView.reloadData()
     }
 }
 
@@ -112,6 +119,16 @@ extension ChallengeView: UICollectionViewDataSource {
                     as? AppListCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            if isDeleteMode {
+                if indexPath.item == 0 {
+                    cell.isSelectedCell = true
+                }
+                else {
+                    cell.isSelectedCell = false
+                }
+            } else {
+                cell.isSelectedCell = false
+            }
             cell.configureCell(appName: appList[indexPath.item].appName, appTime: appList[indexPath.item].appUseTime)
             return cell
         default:
@@ -127,6 +144,7 @@ extension ChallengeView: UICollectionViewDataSource {
         } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {
             if let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView {
                 header.deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+                header.isDeleteMode = isDeleteMode
                 return header
             }
             else { return UICollectionReusableView() }

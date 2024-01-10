@@ -14,7 +14,7 @@ final class ChallengeView: UIView {
     
     private let goalTime: Int = 3
     private var days: Int = 7
-    private let appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
+    private var appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
                                        AppModel(appIcon: "", appName: "Youtube", appUseTime: "1시간")]
     
     lazy var challengeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
@@ -30,7 +30,6 @@ final class ChallengeView: UIView {
         setRegister()
         configureView()
         configreCollectionView()
-        addTarget()
     }
     
     required init?(coder: NSCoder) {
@@ -77,7 +76,10 @@ final class ChallengeView: UIView {
         challengeCollectionView.dataSource = self
     }
     
-    func addTarget() {}
+    @objc private func deleteButtonTapped() {
+        
+    }
+}
 }
 
 extension ChallengeView: UICollectionViewDataSource {
@@ -124,9 +126,12 @@ extension ChallengeView: UICollectionViewDataSource {
             else { return UICollectionReusableView() }
             return header
         } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView
+            if let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView {
+                header.deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+                return header
+            }
             else { return UICollectionReusableView() }
-            return header
+            
         } else if kind == StringLiteral.Challenge.Idetifier.appAddFooterViewID {
             guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appAddFooterViewID, withReuseIdentifier: AppAddCollectionReusableView.identifier, for: indexPath) as? AppAddCollectionReusableView
             else { return UICollectionReusableView() }

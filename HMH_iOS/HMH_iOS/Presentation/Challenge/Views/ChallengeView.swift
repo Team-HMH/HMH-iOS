@@ -80,7 +80,6 @@ final class ChallengeView: UIView {
         
     }
 }
-}
 
 extension ChallengeView: UICollectionViewDataSource {
     

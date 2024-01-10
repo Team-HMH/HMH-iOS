@@ -19,38 +19,15 @@ final class TotalTimePickerView: UIPickerView {
     
     private let hours: [String] = ["1", "2", "3", "4", "5", "6"]
     
-    private let titleLabel = UILabel().then {
-        $0.textColor = .gray2
-        $0.font = .iosText2Medium20
-        $0.text = "시간"
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        setUI()
+         
         configurePickerView()
         setDelegate()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setUI() {
-        setHierarchy()
-        setConstraints()
-    }
-    
-    private func setHierarchy() {
-        self.addSubview(titleLabel)
-    }
-    
-    private func setConstraints() {
-        titleLabel.snp.makeConstraints {
-            $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(110.adjusted)
-        }
     }
     
     private func setDelegate() {
@@ -75,6 +52,7 @@ extension TotalTimePickerView: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.reloadComponent(component)
         self.totalTimePickerDelegate?.updateAvailability()
+        print(hours[row])
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {

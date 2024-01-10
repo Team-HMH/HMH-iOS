@@ -10,7 +10,13 @@ import UIKit
 import SnapKit
 import Then
 
+protocol TotalTimePickerDelegate: AnyObject {
+    func updateAvailability()
+}
+
 final class TotalTimePickerView: UIPickerView {
+    weak var totalTimePickerDelegate: TotalTimePickerDelegate?
+    
     private let hours: [String] = ["1", "2", "3", "4", "5", "6"]
     
     private let titleLabel = UILabel().then {
@@ -43,7 +49,7 @@ final class TotalTimePickerView: UIPickerView {
     private func setConstraints() {
         titleLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().inset(124.adjusted)
+            $0.trailing.equalToSuperview().inset(110.adjusted)
         }
     }
     
@@ -68,6 +74,7 @@ extension TotalTimePickerView: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.reloadComponent(component)
+        self.totalTimePickerDelegate?.updateAvailability()
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {

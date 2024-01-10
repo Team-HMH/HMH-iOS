@@ -42,6 +42,7 @@ final class SelectTotalTimeController: OnboardingBaseViewController {
     
     private func setDelegate() {
         self.delegate = self
+        pickerView.totalTimePickerDelegate = self
     }
     
     private func setTimeSurvey() {
@@ -63,3 +64,10 @@ extension SelectTotalTimeController: NextViewPushDelegate {
         self.navigationController?.pushViewController(nextViewController, animated: false)
     }
 }
+
+extension SelectTotalTimeController: TotalTimePickerDelegate {
+    func updateAvailability() {
+        nextButton.updateStatus(isEnabled: true)
+    }
+}
+

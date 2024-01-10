@@ -16,7 +16,7 @@ final class ChallengeView: UIView {
     private var days: Int = 7
     private var appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
                                        AppModel(appIcon: "", appName: "Youtube", appUseTime: "1시간")]
-    private var isDeleteMode: Bool = false {
+    var isDeleteMode: Bool = false {
         didSet {
             challengeCollectionView.reloadData()
         }

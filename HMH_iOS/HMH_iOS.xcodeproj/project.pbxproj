@@ -82,8 +82,7 @@
 		3666C8722B45F4B200564874 /* DeviceReport.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 3666C8662B45F4B200564874 /* DeviceReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8792B45F4F900564874 /* SelectedBlocker.swift */; };
 		3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */; };
-		3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8862B47110800564874 /* SpecificTimePickerView.swift */; };
-		3666C8892B47110800564874 /* TotalTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8872B47110800564874 /* TotalTimePickerView.swift */; };
+		3666C8892B47110800564874 /* HMHTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8872B47110800564874 /* HMHTimePickerView.swift */; };
 		3666C88B2B471B0D00564874 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88A2B471B0D00564874 /* String.swift */; };
 		3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88C2B471B1D00564874 /* UIImage+.swift */; };
 		3666C88F2B471C5800564874 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88E2B471C5800564874 /* TabBarController.swift */; };
@@ -251,8 +250,7 @@
 		3666C8772B45F4C600564874 /* HMH_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HMH_iOS.entitlements; sourceTree = "<group>"; };
 		3666C8792B45F4F900564874 /* SelectedBlocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBlocker.swift; sourceTree = "<group>"; };
 		3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockingApplicationModel.swift; sourceTree = "<group>"; };
-		3666C8862B47110800564874 /* SpecificTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTimePickerView.swift; sourceTree = "<group>"; };
-		3666C8872B47110800564874 /* TotalTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalTimePickerView.swift; sourceTree = "<group>"; };
+		3666C8872B47110800564874 /* HMHTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMHTimePickerView.swift; sourceTree = "<group>"; };
 		3666C88A2B471B0D00564874 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3666C88C2B471B1D00564874 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		3666C88E2B471C5800564874 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -885,8 +883,7 @@
 		3666C8852B47110800564874 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3666C8862B47110800564874 /* SpecificTimePickerView.swift */,
-				3666C8872B47110800564874 /* TotalTimePickerView.swift */,
+				3666C8872B47110800564874 /* HMHTimePickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1088,7 +1085,7 @@
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
 				0B7817522B4BE0280078E925 /* ProgressBarManager.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
-				3666C8892B47110800564874 /* TotalTimePickerView.swift in Sources */,
+				3666C8892B47110800564874 /* HMHTimePickerView.swift in Sources */,
 				0B000CE92B4D9D6E00AEC582 /* SelectPeriodController.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */,
@@ -1103,7 +1100,6 @@
 				364923822B4FD68000BF7ACA /* APIConstants.swift in Sources */,
 				0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
-				3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */,
 				17314FB72B4D93D30089A551 /* StoreCollectionViewCell.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,
 				364923992B505A3A00BF7ACA /* AuthInterceptor.swift in Sources */,

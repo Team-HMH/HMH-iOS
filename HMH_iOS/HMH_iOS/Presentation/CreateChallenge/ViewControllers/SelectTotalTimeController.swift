@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 final class SelectTotalTimeController: OnboardingBaseViewController {
-    private let pickerView = TotalTimePickerView()
+    private let pickerView = HMHTimePickerView(type: .totalTime)
     private let titleLabel = UILabel().then {
         $0.textColor = .gray2
         $0.font = .iosText2Medium20
@@ -41,13 +41,13 @@ final class SelectTotalTimeController: OnboardingBaseViewController {
     
     private func setConstraints() {
         titleLabel.snp.makeConstraints {
-            $0.top.equalTo(navigationBar.snp.bottom).offset(271.adjusted)
-            $0.leading.equalTo(pickerView.snp.trailing).inset(-12.adjusted)
+            $0.top.equalTo(progressBar.snp.bottom).offset(281.adjusted)
+            $0.leading.equalTo(pickerView.snp.trailing).inset(-2.adjusted)
         }
         
         pickerView.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(137.adjusted)
-            $0.width.equalTo(65.adjusted)
+            $0.leading.equalTo(progressBar.snp.leading).inset(106.adjusted)
+            $0.width.equalTo(67.adjusted)
             $0.centerY.equalTo(titleLabel.snp.centerY)
         }
     }
@@ -77,7 +77,7 @@ extension SelectTotalTimeController: NextViewPushDelegate {
     }
 }
 
-extension SelectTotalTimeController: TotalTimePickerDelegate {
+extension SelectTotalTimeController: TimePickerDelegate {
     func updateAvailability() {
         nextButton.updateStatus(isEnabled: true)
     }

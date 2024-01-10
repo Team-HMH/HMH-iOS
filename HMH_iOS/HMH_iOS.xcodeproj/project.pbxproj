@@ -59,6 +59,7 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChallengeViewController.swift */; };
+		364923652B4F4FB800BF7ACA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923642B4F4FB800BF7ACA /* Config.swift */; };
 		364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E702B4BC9780015729C /* AppAddButtonView.swift */; };
 		364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
@@ -212,6 +213,8 @@
 		174AF4972B447CF100450D07 /* ChanllengeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeModels.swift; sourceTree = "<group>"; };
 		174AF4992B447CFB00450D07 /* ChanllengeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViews.swift; sourceTree = "<group>"; };
 		174AF49B2B447D0700450D07 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		364C4E702B4BC9780015729C /* AppAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddButtonView.swift; sourceTree = "<group>"; };
 		364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddCollectionReusableView.swift; sourceTree = "<group>"; };
 		3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHAppSelectButtonView.swift; sourceTree = "<group>"; };
@@ -356,6 +359,7 @@
 		0B50F9C92B369813000C5046 /* HMH_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				364923612B4F4E7D00BF7ACA /* Config.xcconfig */,
 				3666C8772B45F4C600564874 /* HMH_iOS.entitlements */,
 				0B50F9D82B369815000C5046 /* Info.plist */,
 				0B67CCE32B369BB400582D54 /* Application */,
@@ -394,6 +398,7 @@
 				0B8A89A22B369DB600688BA6 /* Base */,
 				0B8A89A32B369DBE00688BA6 /* DataModel */,
 				0B8A89A42B369DCA00688BA6 /* Service */,
+				364923642B4F4FB800BF7ACA /* Config.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -1066,6 +1071,7 @@
 				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 				17314F972B4C42130089A551 /* MyPageView.swift in Sources */,
 				0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */,
+				364923652B4F4FB800BF7ACA /* Config.swift in Sources */,
 				364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */,
 				17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */,
 				0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */,
@@ -1128,6 +1134,7 @@
 /* Begin XCBuildConfiguration section */
 		0B50F9D92B369815000C5046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1191,6 +1198,7 @@
 		};
 		0B50F9DA2B369815000C5046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1247,6 +1255,7 @@
 		};
 		0B50F9DC2B369815000C5046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1278,6 +1287,7 @@
 		};
 		0B50F9DD2B369815000C5046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1309,6 +1319,7 @@
 		};
 		3666C85F2B45F47600564874 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DeviceMonitor/DeviceMonitor.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1337,6 +1348,7 @@
 		};
 		3666C8602B45F47600564874 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DeviceMonitor/DeviceMonitor.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1365,6 +1377,7 @@
 		};
 		3666C8742B45F4B200564874 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DeviceReport/DeviceReport.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1393,6 +1406,7 @@
 		};
 		3666C8752B45F4B200564874 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DeviceReport/DeviceReport.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";

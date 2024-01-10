@@ -25,7 +25,6 @@
 		0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */; };
 		0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89AE2B369E4300688BA6 /* HomeModel.swift */; };
 		0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B02B369E4C00688BA6 /* HomeView.swift */; };
-		0B8A89B32B369EF700688BA6 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B22B369EF700688BA6 /* A.swift */; };
 		0B8A89B52B369F0100688BA6 /* B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B42B369F0100688BA6 /* B.swift */; };
 		0B8A89B72B369F1100688BA6 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B62B369F1100688BA6 /* C.swift */; };
 		0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BB2B369F2D00688BA6 /* UIView+.swift */; };
@@ -185,7 +184,6 @@
 		0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		0B8A89AE2B369E4300688BA6 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0B8A89B02B369E4C00688BA6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		0B8A89B22B369EF700688BA6 /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
 		0B8A89B42B369F0100688BA6 /* B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.swift; sourceTree = "<group>"; };
 		0B8A89B62B369F1100688BA6 /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		0B8A89BB2B369F2D00688BA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
@@ -221,6 +219,11 @@
 		174AF49B2B447D0700450D07 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		364923672B4F513600BF7ACA /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		3649236B2B4F517900BF7ACA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		3649236D2B4F519E00BF7ACA /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
+		3649236F2B4F524D00BF7ACA /* MoyaLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggerPlugin.swift; sourceTree = "<group>"; };
+		364923712B4F527200BF7ACA /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		364C4E702B4BC9780015729C /* AppAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddButtonView.swift; sourceTree = "<group>"; };
 		364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddCollectionReusableView.swift; sourceTree = "<group>"; };
 		3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHAppSelectButtonView.swift; sourceTree = "<group>"; };
@@ -530,7 +533,11 @@
 		0B8A89A22B369DB600688BA6 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				0B8A89B22B369EF700688BA6 /* A.swift */,
+				364923672B4F513600BF7ACA /* BaseTargetType.swift */,
+				3649236D2B4F519E00BF7ACA /* StatusCode.swift */,
+				3649236B2B4F517900BF7ACA /* NetworkError.swift */,
+				3649236F2B4F524D00BF7ACA /* MoyaLoggerPlugin.swift */,
+				364923712B4F527200BF7ACA /* NetworkResult.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1028,6 +1035,7 @@
 				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
 				0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */,
 				17314F9B2B4C485B0089A551 /* UserPointHeaderView.swift in Sources */,
+				364923702B4F524D00BF7ACA /* MoyaLoggerPlugin.swift in Sources */,
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */,
 				174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */,
@@ -1071,17 +1079,19 @@
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
 				0B7817502B4BD9F10078E925 /* OnboardingButton.swift in Sources */,
+				364923722B4F527200BF7ACA /* NetworkResult.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
 				364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */,
+				3649236E2B4F519E00BF7ACA /* StatusCode.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
 				17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */,
 				17314F9D2B4C554D0089A551 /* MypageCollectionViewCell.swift in Sources */,
-				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 				17314F972B4C42130089A551 /* MyPageView.swift in Sources */,
 				0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */,
 				364923652B4F4FB800BF7ACA /* Config.swift in Sources */,
 				364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */,
+				3649236C2B4F517900BF7ACA /* NetworkError.swift in Sources */,
 				17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */,
 				0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
@@ -1089,6 +1099,7 @@
 				36E05FE62B48825A005B633E /* AppCollectionReusableView.swift in Sources */,
 				3666C88B2B471B0D00564874 /* String.swift in Sources */,
 				3666C89B2B48516500564874 /* ChallengeView.swift in Sources */,
+				364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */,
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,

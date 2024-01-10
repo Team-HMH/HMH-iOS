@@ -10,7 +10,6 @@
 		0B000CE92B4D9D6E00AEC582 /* SelectPeriodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CE82B4D9D6E00AEC582 /* SelectPeriodController.swift */; };
 		0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CEA2B4D9D9100AEC582 /* SelectTotalTimeController.swift */; };
 		0B000CED2B4D9DA800AEC582 /* ApprovePermisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */; };
-		0B000CEF2B4D9DBF00AEC582 /* AppChoiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CEE2B4D9DBF00AEC582 /* AppChoiceController.swift */; };
 		0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */; };
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
@@ -161,7 +160,6 @@
 		0B000CE82B4D9D6E00AEC582 /* SelectPeriodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodController.swift; sourceTree = "<group>"; };
 		0B000CEA2B4D9D9100AEC582 /* SelectTotalTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTotalTimeController.swift; sourceTree = "<group>"; };
 		0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovePermisionController.swift; sourceTree = "<group>"; };
-		0B000CEE2B4D9DBF00AEC582 /* AppChoiceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChoiceController.swift; sourceTree = "<group>"; };
 		0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectViewController.swift; sourceTree = "<group>"; };
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -305,7 +303,6 @@
 				0B000CE82B4D9D6E00AEC582 /* SelectPeriodController.swift */,
 				0B000CEA2B4D9D9100AEC582 /* SelectTotalTimeController.swift */,
 				0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */,
-				0B000CEE2B4D9DBF00AEC582 /* AppChoiceController.swift */,
 				0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */,
 			);
 			path = ViewControllers;
@@ -1008,7 +1005,6 @@
 				36E05FE42B487911005B633E /* GrayBackgroundView.swift in Sources */,
 				0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */,
 				0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */,
-				0B000CEF2B4D9DBF00AEC582 /* AppChoiceController.swift in Sources */,
 				0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */,
 				0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */,
 				3666C89F2B485C8F00564874 /* DateCollectionViewCell.swift in Sources */,

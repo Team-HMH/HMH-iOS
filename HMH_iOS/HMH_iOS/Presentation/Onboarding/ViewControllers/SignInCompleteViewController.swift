@@ -11,19 +11,20 @@ import SnapKit
 import Then
 
 final class SignInCompleteViewController: OnboardingBaseViewController {
-    private let SignInMainLabel = UILabel().then {
+    
+    private let signInMainLabel = UILabel().then {
         $0.textColor = .whiteText
         $0.font = .iosTitle3Semibold22
         $0.text = StringLiteral.OnboardigMain.signInComplete
     }
-    private let SignInSubLabel = UILabel().then {
+    private let signInSubLabel = UILabel().then {
         $0.textColor = .gray2
         $0.font = .iosText6Medium14
         $0.text = StringLiteral.OnboardigSub.signInComplete
         $0.setTextWithLineHeight(text: $0.text, lineHeight: 21)
     }
     
-    private let SignInImageView = UIImageView().then {
+    private let signInImageView = UIImageView().then {
         $0.image = ImageLiterals.myPage.icBadge
         $0.contentMode = .scaleAspectFit
     }
@@ -41,24 +42,24 @@ final class SignInCompleteViewController: OnboardingBaseViewController {
     }
     
     private func setHierarchy() {
-        view.addSubviews(SignInMainLabel,SignInSubLabel,SignInImageView)
+        view.addSubviews(signInMainLabel,signInSubLabel,signInImageView)
     }
     
     private func setConstraints() {
-        SignInImageView.snp.makeConstraints {
+        signInImageView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom).offset(126.adjustedHeight)
             $0.size.equalTo(150.adjusted)
             $0.centerX.equalToSuperview()
         }
         
-        SignInMainLabel.snp.makeConstraints {
+        signInMainLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(SignInImageView.snp.bottom).offset(27.adjustedHeight)
+            $0.top.equalTo(signInImageView.snp.bottom).offset(27.adjustedHeight)
         }
         
-        SignInSubLabel.snp.makeConstraints {
+        signInSubLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
-            $0.top.equalTo(SignInMainLabel.snp.bottom).offset(8.adjustedHeight)
+            $0.top.equalTo(signInMainLabel.snp.bottom).offset(8.adjustedHeight)
         }
     }
     

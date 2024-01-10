@@ -147,7 +147,6 @@ extension ChallengeView: UICollectionViewDataSource {
                 return header
             }
             else { return UICollectionReusableView() }
-            
         } else if kind == StringLiteral.Challenge.Idetifier.appAddFooterViewID {
             guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appAddFooterViewID, withReuseIdentifier: AppAddCollectionReusableView.identifier, for: indexPath) as? AppAddCollectionReusableView
             else { return UICollectionReusableView() }

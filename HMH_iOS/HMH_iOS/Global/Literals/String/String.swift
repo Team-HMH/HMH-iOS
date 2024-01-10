@@ -14,6 +14,12 @@ enum StringLiteral {
         static var myPageTitle = "마이페이지"
     }
     
+    enum Home {
+        static var blackHoleState = "블랙홀에 빠지지 않고\n우주를 유지해 보아요"
+        
+        static var totalGoalUsingTime = "총 목표 이용 시간"
+    }
+    
     enum Challenge {
         static var NavigationBarTitle = "나의 챌린지"
         enum Date {

@@ -4,6 +4,8 @@
 챌린지와 특정 앱 스크린타임 제한 기능을 이용해 건강한 디지털 습관을 형성해주는 서비스입니다.
 
 ## 🍎 HMH-iOS Team
+![아요햄](https://github.com/Team-HMH/HMH-iOS/assets/68178395/3a51e265-723b-48a1-b91a-baed208f73e4)
+
 | 👑 이지희 | 김선우 | 김보연 |
 | :--------: | :--------: | :--------: |
 |<img src ="https://github.com/Team-HMH/HMH-iOS/assets/68178395/e606e81f-1630-46b7-9c71-11f57590e9d7" width = "200px"/> | <img src = "https://github.com/Team-HMH/HMH-iOS/assets/68178395/5e4be2af-2d9d-4719-ba2d-055d33ecb5de" width = "200px"/> | <img src="https://github.com/Team-HMH/HMH-iOS/assets/68178395/d0ccdb03-e737-4d51-9999-50c63d155e79" width = "200px"/> |

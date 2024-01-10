@@ -59,6 +59,11 @@ final class SelectPeriodController: OnboardingBaseViewController {
         surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.secondSelect)
         surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.thirdSelect)
         surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.fourthSelect)
+        
+        surveyView.firstButton.delegate = self
+        surveyView.secondButton.delegate = self
+        surveyView.thirdButton.delegate = self
+        surveyView.fourthButton.delegate = self
     }
 }
 
@@ -66,5 +71,11 @@ extension SelectPeriodController: NextViewPushDelegate {
     func didTapButton() {
         let nextViewController = SelectTotalTimeController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
+    }
+}
+
+extension SelectPeriodController: HMHSelectButtonDelegate {
+    func updateAvailability(isEnabled: Bool) {
+        nextButton.updateStatus(isEnabled: isEnabled)
     }
 }

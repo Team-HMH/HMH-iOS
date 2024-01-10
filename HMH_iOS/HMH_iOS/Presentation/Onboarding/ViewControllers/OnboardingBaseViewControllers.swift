@@ -18,7 +18,7 @@ class OnboardingBaseViewController: UIViewController {
     weak var delegate: NextViewPushDelegate?
     let mainTitleLabel = UILabel().then {
         $0.textColor = .whiteText
-        $0.font = .iosTitle1Semibold22
+        $0.font = .iosTitle3Semibold22
         $0.text = StringLiteral.OnboardingButton.next
         $0.setTextWithLineHeightLeft(text: $0.text, lineHeight: 33)
     }
@@ -100,16 +100,6 @@ class OnboardingBaseViewController: UIViewController {
     @objc
     func onTapButton() {
         self.delegate?.didTapButton()
-    }
-    
-    func updateNextButtonStatus(buttonStatus: Bool) {
-        if buttonStatus {
-            self.nextButton.backgroundColor = .bluePurpleButton
-            self.nextButton.isEnabled = true
-        } else {
-            self.nextButton.backgroundColor = .gray4
-            self.nextButton.isEnabled = false
-        }
     }
 }
 

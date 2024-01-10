@@ -75,7 +75,6 @@ extension TimeSurveyViewController: NextViewPushDelegate {
 
 extension TimeSurveyViewController: HMHSelectButtonDelegate {
     func updateAvailability(isEnabled: Bool) {
-        print("taptap")
-        updateNextButtonStatus(buttonStatus: isEnabled)
+        nextButton.updateStatus(isEnabled: isEnabled)
     }
 }

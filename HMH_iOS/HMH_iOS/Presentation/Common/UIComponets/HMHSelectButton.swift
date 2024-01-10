@@ -4,14 +4,15 @@
 //
 //  Created by Seonwoo Kim on 1/3/24.
 //
-protocol HMHSelectButtonDelegate: AnyObject {
-    func updateAvailability(isEnabled: Bool)
-}
 
 import UIKit
 
 import SnapKit
 import Then
+
+protocol HMHSelectButtonDelegate: AnyObject {
+    func updateAvailability(isEnabled: Bool)
+}
 
 final class HMHSelectButton: UIButton {
     weak var delegate: HMHSelectButtonDelegate?
@@ -134,12 +135,9 @@ final class HMHSelectButton: UIButton {
         } else {
             updateAvailability(status: true)
         }
-
     }
     
-    @objc
     func updateAvailability(status: Bool) {
         self.delegate?.updateAvailability(isEnabled: status)
-        print("tap")
     }
 }

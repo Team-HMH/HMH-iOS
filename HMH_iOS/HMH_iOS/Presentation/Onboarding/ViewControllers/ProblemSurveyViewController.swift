@@ -11,7 +11,11 @@ import SnapKit
 import Then
 
 final class ProblemSurveyViewController: OnboardingBaseViewController {
-    private let surveyView = SurveyView(firstButtonType: .multiple, secondButtonType: .multiple, thirdButtonType: .multiple, fourthButtonType: .multiple)
+    private let surveyView = SurveyView(firstButtonType: .multiple, 
+                                        secondButtonType: .multiple,
+                                        thirdButtonType: .multiple,
+                                        fourthButtonType: .multiple)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelegate()
@@ -75,7 +79,6 @@ extension ProblemSurveyViewController: NextViewPushDelegate {
 
 extension ProblemSurveyViewController: HMHSelectButtonDelegate {
     func updateAvailability(isEnabled: Bool) {
-        print("taptap")
-        updateNextButtonStatus(buttonStatus: isEnabled)
+        nextButton.updateStatus(isEnabled: isEnabled)
     }
 }

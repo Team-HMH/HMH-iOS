@@ -8,8 +8,6 @@
 import Foundation
 import Moya
 
-
-
 protocol BaseTargetType: TargetType {}
 
 typealias Parameters = [String: String]

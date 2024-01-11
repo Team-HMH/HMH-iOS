@@ -8,24 +8,30 @@
 import Foundation
 import Moya
 
+
+
 protocol BaseTargetType: TargetType {}
 
+typealias Parameters = [String: String]
+
 extension BaseTargetType {
+    
     var baseURL: URL {
-        return URL(string: Config.baseURL)!
+        guard let baseURL = URL(string: Config.baseURL) else {
+            print("🚨🚨BASEURL ERROR🚨🚨")
+            fatalError()
+        }
+        return baseURL
     }
-
-    var headers: [String: String]? {
-        return [
-            "Content-Type": "application/json",
-            "Authorization": "Bearer "
-        ]
+    
+    var headers: Parameters? {
+        return APIConstants.hasTokenHeader
     }
-
+    
     var sampleData: Data {
         return Data()
     }
-
+    
     var validationType: ValidationType {
         return .successCodes
     }

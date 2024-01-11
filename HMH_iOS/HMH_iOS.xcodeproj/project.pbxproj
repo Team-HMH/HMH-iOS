@@ -25,8 +25,6 @@
 		0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */; };
 		0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89AE2B369E4300688BA6 /* HomeModel.swift */; };
 		0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B02B369E4C00688BA6 /* HomeView.swift */; };
-		0B8A89B52B369F0100688BA6 /* B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B42B369F0100688BA6 /* B.swift */; };
-		0B8A89B72B369F1100688BA6 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B62B369F1100688BA6 /* C.swift */; };
 		0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BB2B369F2D00688BA6 /* UIView+.swift */; };
 		0B8A89C42B369FA000688BA6 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C32B369FA000688BA6 /* F.swift */; };
 		0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B12B4CE908007E3F9C /* SurveyView.swift */; };
@@ -61,10 +59,17 @@
 		364923652B4F4FB800BF7ACA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923642B4F4FB800BF7ACA /* Config.swift */; };
 		364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923672B4F513600BF7ACA /* BaseTargetType.swift */; };
 		3649236A2B4F514A00BF7ACA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 364923692B4F514A00BF7ACA /* Moya */; };
-		3649236C2B4F517900BF7ACA /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649236B2B4F517900BF7ACA /* NetworkError.swift */; };
-		3649236E2B4F519E00BF7ACA /* StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649236D2B4F519E00BF7ACA /* StatusCode.swift */; };
 		364923702B4F524D00BF7ACA /* MoyaLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649236F2B4F524D00BF7ACA /* MoyaLoggerPlugin.swift */; };
 		364923722B4F527200BF7ACA /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923712B4F527200BF7ACA /* NetworkResult.swift */; };
+		364923792B4FC8E800BF7ACA /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923782B4FC8E800BF7ACA /* BaseModel.swift */; };
+		3649237D2B4FC9CD00BF7ACA /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649237C2B4FC9CD00BF7ACA /* NetworkRequest.swift */; };
+		364923822B4FD68000BF7ACA /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923812B4FD68000BF7ACA /* APIConstants.swift */; };
+		364923862B4FDCBD00BF7ACA /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923852B4FDCBD00BF7ACA /* NetworkProvider.swift */; };
+		364923932B50397100BF7ACA /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923922B50397100BF7ACA /* NetworkHelper.swift */; };
+		364923992B505A3A00BF7ACA /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923982B505A3A00BF7ACA /* AuthInterceptor.swift */; };
+		3649239B2B505B2600BF7ACA /* Providers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649239A2B505B2600BF7ACA /* Providers.swift */; };
+		3649239D2B505CED00BF7ACA /* ChallengeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649239C2B505CED00BF7ACA /* ChallengeRouter.swift */; };
+		364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */; };
 		364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E702B4BC9780015729C /* AppAddButtonView.swift */; };
 		364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
@@ -184,8 +189,6 @@
 		0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		0B8A89AE2B369E4300688BA6 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0B8A89B02B369E4C00688BA6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		0B8A89B42B369F0100688BA6 /* B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.swift; sourceTree = "<group>"; };
-		0B8A89B62B369F1100688BA6 /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		0B8A89BB2B369F2D00688BA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0B8A89C32B369FA000688BA6 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		0BA193B12B4CE908007E3F9C /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
@@ -220,10 +223,17 @@
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		364923672B4F513600BF7ACA /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
-		3649236B2B4F517900BF7ACA /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		3649236D2B4F519E00BF7ACA /* StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCode.swift; sourceTree = "<group>"; };
 		3649236F2B4F524D00BF7ACA /* MoyaLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggerPlugin.swift; sourceTree = "<group>"; };
 		364923712B4F527200BF7ACA /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		364923782B4FC8E800BF7ACA /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		3649237C2B4FC9CD00BF7ACA /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		364923812B4FD68000BF7ACA /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		364923852B4FDCBD00BF7ACA /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		364923922B50397100BF7ACA /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		364923982B505A3A00BF7ACA /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
+		3649239A2B505B2600BF7ACA /* Providers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers.swift; sourceTree = "<group>"; };
+		3649239C2B505CED00BF7ACA /* ChallengeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRouter.swift; sourceTree = "<group>"; };
+		3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeRequestDTO.swift; sourceTree = "<group>"; };
 		364C4E702B4BC9780015729C /* AppAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddButtonView.swift; sourceTree = "<group>"; };
 		364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddCollectionReusableView.swift; sourceTree = "<group>"; };
 		3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHAppSelectButtonView.swift; sourceTree = "<group>"; };
@@ -406,9 +416,10 @@
 			isa = PBXGroup;
 			children = (
 				0B8A89A22B369DB600688BA6 /* Base */,
-				0B8A89A32B369DBE00688BA6 /* DataModel */,
+				364923962B50547F00BF7ACA /* Foundation */,
+				364923972B5054AE00BF7ACA /* Router */,
+				0B8A89A32B369DBE00688BA6 /* DTO */,
 				0B8A89A42B369DCA00688BA6 /* Service */,
-				364923642B4F4FB800BF7ACA /* Config.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -533,27 +544,26 @@
 		0B8A89A22B369DB600688BA6 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				364923982B505A3A00BF7ACA /* AuthInterceptor.swift */,
+				364923852B4FDCBD00BF7ACA /* NetworkProvider.swift */,
 				364923672B4F513600BF7ACA /* BaseTargetType.swift */,
-				3649236D2B4F519E00BF7ACA /* StatusCode.swift */,
-				3649236B2B4F517900BF7ACA /* NetworkError.swift */,
-				3649236F2B4F524D00BF7ACA /* MoyaLoggerPlugin.swift */,
-				364923712B4F527200BF7ACA /* NetworkResult.swift */,
+				364923782B4FC8E800BF7ACA /* BaseModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		0B8A89A32B369DBE00688BA6 /* DataModel */ = {
+		0B8A89A32B369DBE00688BA6 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				0B8A89B42B369F0100688BA6 /* B.swift */,
+				3649239E2B505F0600BF7ACA /* ChallengeModel */,
 			);
-			path = DataModel;
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		0B8A89A42B369DCA00688BA6 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				0B8A89B62B369F1100688BA6 /* C.swift */,
+				3649239A2B505B2600BF7ACA /* Providers.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -777,6 +787,35 @@
 				17314FB62B4D93D30089A551 /* StoreCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		364923962B50547F00BF7ACA /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				364923642B4F4FB800BF7ACA /* Config.swift */,
+				364923812B4FD68000BF7ACA /* APIConstants.swift */,
+				364923922B50397100BF7ACA /* NetworkHelper.swift */,
+				3649236F2B4F524D00BF7ACA /* MoyaLoggerPlugin.swift */,
+				364923712B4F527200BF7ACA /* NetworkResult.swift */,
+				3649237C2B4FC9CD00BF7ACA /* NetworkRequest.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		364923972B5054AE00BF7ACA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3649239C2B505CED00BF7ACA /* ChallengeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3649239E2B505F0600BF7ACA /* ChallengeModel */ = {
+			isa = PBXGroup;
+			children = (
+				3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */,
+			);
+			path = ChallengeModel;
 			sourceTree = "<group>";
 		};
 		364C4E6F2B4BC95E0015729C /* SwiftUIView */ = {
@@ -1035,10 +1074,12 @@
 				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
 				0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */,
 				17314F9B2B4C485B0089A551 /* UserPointHeaderView.swift in Sources */,
+				364923862B4FDCBD00BF7ACA /* NetworkProvider.swift in Sources */,
 				364923702B4F524D00BF7ACA /* MoyaLoggerPlugin.swift in Sources */,
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */,
 				174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */,
+				364923932B50397100BF7ACA /* NetworkHelper.swift in Sources */,
 				174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */,
 				3666C8A52B48644A00564874 /* AppModel.swift in Sources */,
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
@@ -1052,21 +1093,22 @@
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */,
 				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
+				364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */,
 				0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */,
 				0B000CED2B4D9DA800AEC582 /* ApprovePermisionController.swift in Sources */,
-				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
 				3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */,
+				364923822B4FD68000BF7ACA /* APIConstants.swift in Sources */,
 				0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */,
 				17314FB72B4D93D30089A551 /* StoreCollectionViewCell.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,
+				364923992B505A3A00BF7ACA /* AuthInterceptor.swift in Sources */,
 				36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */,
 				17314FB12B4D50380089A551 /* InfoHeaderView.swift in Sources */,
-				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
 				174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */,
 				0BD98DB92B4D671600E35188 /* SplashViewController.swift in Sources */,
 				0BD98DBE2B4D6AB700E35188 /* LoginViewController.swift in Sources */,
@@ -1074,16 +1116,19 @@
 				17314F892B49A8B60089A551 /* AlertDelegate.swift in Sources */,
 				17314FAF2B4D3E1C0089A551 /* LogoutAndQuitFooterView.swift in Sources */,
 				0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */,
+				3649237D2B4FC9CD00BF7ACA /* NetworkRequest.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
 				0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */,
+				3649239B2B505B2600BF7ACA /* Providers.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
 				0B7817502B4BD9F10078E925 /* OnboardingButton.swift in Sources */,
+				364923792B4FC8E800BF7ACA /* BaseModel.swift in Sources */,
 				364923722B4F527200BF7ACA /* NetworkResult.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
+				3649239D2B505CED00BF7ACA /* ChallengeRouter.swift in Sources */,
 				364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */,
-				3649236E2B4F519E00BF7ACA /* StatusCode.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
 				17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */,
 				17314F9D2B4C554D0089A551 /* MypageCollectionViewCell.swift in Sources */,
@@ -1091,7 +1136,6 @@
 				0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */,
 				364923652B4F4FB800BF7ACA /* Config.swift in Sources */,
 				364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */,
-				3649236C2B4F517900BF7ACA /* NetworkError.swift in Sources */,
 				17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */,
 				0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,

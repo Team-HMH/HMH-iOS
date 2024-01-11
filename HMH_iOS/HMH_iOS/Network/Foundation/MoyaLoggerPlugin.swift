@@ -14,12 +14,12 @@ final class MoyaLoggingPlugin: PluginType {
   // Request를 보낼 때 호출
   func willSend(_ request: RequestType, target: TargetType) {
     guard let httpRequest = request.request else {
-      print("--> 유효하지 않은 요청")
+      print("❌-->유효하지 않은 요청")
       return
     }
     let url = httpRequest.description
     let method = httpRequest.httpMethod ?? "unknown method"
-    var log = "----------------------------------------------------\n\n[\(method)] \(url)\n\n----------------------------------------------------\n"
+    var log = "✨✨✨✨✨✨✨✨✨✨✨✨✨✨\n\n[\(method)] \(url)\n\n✨✨✨✨✨✨✨✨✨✨✨✨✨✨\n"
     log.append("API: \(target)\n")
     if let headers = httpRequest.allHTTPHeaderFields, !headers.isEmpty {
       log.append("header: \(headers)\n")
@@ -27,7 +27,7 @@ final class MoyaLoggingPlugin: PluginType {
     if let body = httpRequest.httpBody, let bodyString = String(bytes: body, encoding: String.Encoding.utf8) {
       log.append("\(bodyString)\n")
     }
-    log.append("------------------- END \(method) --------------------------")
+    log.append("✨✨✨✨✨✨✨✨ END \(method) ✨✨✨✨✨✨✨✨")
     print(log)
   }
   // Response가 왔을 때
@@ -44,7 +44,7 @@ final class MoyaLoggingPlugin: PluginType {
     let request = response.request
     let url = request?.url?.absoluteString ?? "nil"
     let statusCode = response.statusCode
-    var log = "------------------- 네트워크 통신 성공 -------------------"
+    var log = "✅✅✅✅✅ 네트워크 통신 성공 ✅✅✅✅✅"
     log.append("\n[\(statusCode)] \(url)\n----------------------------------------------------\n")
     log.append("API: \(target)\n")
     response.response?.allHeaderFields.forEach {
@@ -53,7 +53,7 @@ final class MoyaLoggingPlugin: PluginType {
     if let reString = String(bytes: response.data, encoding: String.Encoding.utf8) {
       log.append("\(reString)\n")
     }
-    log.append("------------------- END HTTP (\(response.data.count)-byte body) -------------------")
+    log.append("✅✅✅✅✅ END HTTP (\(response.data.count)-byte body) ✅✅✅✅✅")
     print(log)
   }
     
@@ -63,9 +63,9 @@ final class MoyaLoggingPlugin: PluginType {
       return
     }
     var log = "네트워크 오류"
-    log.append("<-- \(error.errorCode) \(target)\n")
+    log.append("😭 <-- \(error.errorCode) \(target)\n")
     log.append("\(error.failureReason ?? error.errorDescription ?? "unknown error")\n")
-    log.append("<-- END HTTP")
+    log.append("😭 <-- END HTTP")
     print(log)
   }
 }

@@ -57,7 +57,11 @@ final class AppUsingProgressViewCell: UICollectionViewCell {
     lazy var appProgressBar = UIProgressView().then {
         $0.trackTintColor = .gray7
         $0.progressTintColor = .bluePurpleOpacity70
-        $0.makeCornerRound(radius: 6.adjusted)
+        $0.clipsToBounds = true
+        $0.progressViewStyle = .bar
+        $0.layer.cornerRadius = 6.adjusted
+        $0.layer.sublayers![1].masksToBounds = true
+        $0.layer.sublayers![1].cornerRadius = 6.adjusted
     }
     
     override init(frame: CGRect) {

@@ -15,13 +15,11 @@ final class BlackHoleImageCell: UICollectionViewCell {
     static let identifier = "BlackHoleImageCell"
     
     private let blackHoleImageView = UIImageView().then {
-        $0.image = ImageLiterals.TabBar.icHome
         $0.alpha = 0.1
     }
     private let homeBlackHoleStateLabel = UILabel().then {
         $0.font = .iosTitle3Semibold22
         $0.textColor = .whiteText
-        $0.setTextWithLineHeight(text: StringLiteral.Home.blackHoleState, lineHeight: 33)
         $0.numberOfLines = 2
     }
     
@@ -53,5 +51,12 @@ final class BlackHoleImageCell: UICollectionViewCell {
             $0.top.equalToSuperview().inset(23.adjusted)
             $0.leading.equalToSuperview().inset(21.adjusted)
         }
+    }
+    
+    func configureCell (image: UIImage, text: String){
+        blackHoleImageView.image = image
+        homeBlackHoleStateLabel.text = text
+        homeBlackHoleStateLabel.setTextWithLineHeight(text: text, lineHeight: 33)
+        homeBlackHoleStateLabel.textAlignment = .left
     }
 }

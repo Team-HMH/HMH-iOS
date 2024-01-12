@@ -11,9 +11,10 @@ import SnapKit
 import Then
 
 final class HMHHomeView: UIView {
-    private let homeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
+    let homeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .clear
     }
+    var progressPrecent: Double = 0
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -80,20 +81,33 @@ extension HMHHomeView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let blackholeImageCell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: BlackHoleImageCell.identifier, for: indexPath) as? BlackHoleImageCell else { return UICollectionViewCell() }
+        guard let myGoalTimeCell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: MyGoalTimeCell.identifier, for: indexPath) as? MyGoalTimeCell else { return UICollectionViewCell() }
+        guard let appUsingProgressViewCell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: AppUsingProgressViewCell.identifier, for: indexPath) as? AppUsingProgressViewCell else { return UICollectionViewCell() }
+        
+        myGoalTimeCell.bindData(data: appUsingTimeModel)
+        self.progressPrecent = Double(myGoalTimeCell.progress)
+        
         switch indexPath.section {
         case 0:
-            guard let item = homeCollectionView.dequeueReusableCell(withReuseIdentifier: BlackHoleImageCell.identifier, for: indexPath) as? BlackHoleImageCell else { return UICollectionViewCell() }
-            return item
-            
+            if progressPrecent < 0.24 {
+                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icMyPage, text: StringLiteral.Home.blackHoleFirstStep)
+            } else if progressPrecent < 0.49 {
+                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icChallengeSelected, text: StringLiteral.Home.blackHoleSecondStep)
+            } else if progressPrecent < 0.74 {
+                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icChallenge, text: StringLiteral.Home.blackHoleThridStep)
+            } else if progressPrecent < 0.99 {
+                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icHomeSelected, text: StringLiteral.Home.blackHoleFourthStep)
+            } else {
+                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icMyPageSelected, text: StringLiteral.Home.blackHoleFifthStep)
+            }
+            return blackholeImageCell
         case 1:
-            guard let item = homeCollectionView.dequeueReusableCell(withReuseIdentifier: MyGoalTimeCell.identifier, for: indexPath) as? MyGoalTimeCell else { return UICollectionViewCell() }
-            item.bindData(data: appUsingTimeModel)
-            return item
+            return myGoalTimeCell
             
         case 2:
-            guard let item = homeCollectionView.dequeueReusableCell(withReuseIdentifier: AppUsingProgressViewCell.identifier, for: indexPath) as? AppUsingProgressViewCell else { return UICollectionViewCell() }
-            item.bindData(data: appUsingTimeModel[indexPath.row])
-            return item
+            appUsingProgressViewCell.bindData(data: appUsingTimeModel[indexPath.row])
+            return appUsingProgressViewCell
         default:
             return UICollectionViewCell()
         }

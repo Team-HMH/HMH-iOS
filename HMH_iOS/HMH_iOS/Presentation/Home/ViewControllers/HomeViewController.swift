@@ -19,7 +19,6 @@ final class HomeViewController: UIViewController {
     private func setUI() {
         setHierarchy()
         setConstraints()
-        
     }
     
     private func setHierarchy() {
@@ -37,5 +36,3 @@ final class HomeViewController: UIViewController {
         }
     }
 }
-
-

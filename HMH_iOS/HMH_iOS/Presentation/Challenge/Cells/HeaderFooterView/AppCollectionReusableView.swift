@@ -14,6 +14,12 @@ final class AppCollectionReusableView: UICollectionReusableView {
     
     static let identifier = "AppCollectionReusableView"
     
+    var isDeleteMode = false {
+        didSet {
+            configureButton()
+        }
+    }
+    
     private let titleLabel = UILabel().then {
         $0.text = StringLiteral.Challenge.AppList.appListHeaderTitle
         $0.font = .iosText5Medium16
@@ -21,15 +27,11 @@ final class AppCollectionReusableView: UICollectionReusableView {
         $0.setTextWithLineHeight(text: $0.text, lineHeight: 24)
     }
     
-    private let deleteButton = UIButton().then {
-        $0.setTitle(StringLiteral.Challenge.AppList.appListHeaderButtonText,
-                    for: .normal)
-        $0.titleLabel?.font = .iosText4Semibold16
-        $0.setTitleColor(.bluePurpleText, for: .normal)
-    }
+    let deleteButton = UIButton()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        configureButton()
         setUI()
     }
     
@@ -56,4 +58,19 @@ final class AppCollectionReusableView: UICollectionReusableView {
             $0.centerY.equalTo(titleLabel.snp.centerY)
         }
     }
+    
+    private func configureButton() {
+        if isDeleteMode{
+            deleteButton.setTitle(StringLiteral.Challenge.AppList.appListCancelHeaderButtonText,
+                        for: .normal)
+            deleteButton.titleLabel?.font = .iosText4Semibold16
+            deleteButton.setTitleColor(.gray4, for: .normal)
+        } else {
+            deleteButton.setTitle(StringLiteral.Challenge.AppList.appListDeleteHeaderButtonText,
+                        for: .normal)
+            deleteButton.titleLabel?.font = .iosText4Semibold16
+            deleteButton.setTitleColor(.bluePurpleText, for: .normal)
+        }
+    }
+    
 }

@@ -22,7 +22,8 @@ enum StringLiteral {
         }
         enum AppList {
             static var appListHeaderTitle = "앱 잠금"
-            static var appListHeaderButtonText = "삭제"
+            static var appListDeleteHeaderButtonText = "삭제"
+            static var appListCancelHeaderButtonText = "취소"
         }
         enum Idetifier {
             static var titleHeaderViewId = "TitleSectionHeader"

@@ -99,13 +99,10 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
             print(UserManager.shared.getUserIdentifier)
             print(UserManager.shared.getUserName)
             if (UserManager.shared.appleUserIdentifier != nil) {
-                let nextViewController = TabBarController()
-                self.navigationController?.pushViewController(nextViewController, animated: true)
+                setRootViewController(TabBarController())
             } else {
-                let nextViewController = TimeSurveyViewController()
-                self.navigationController?.pushViewController(nextViewController, animated: true)
+                setRootViewController(TimeSurveyViewController())
             }
-    
         default:
             break
         }

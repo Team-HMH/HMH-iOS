@@ -77,13 +77,7 @@ final class SignInCompleteViewController: OnboardingBaseViewController {
 
 extension SignInCompleteViewController: NextViewPushDelegate {
     func didTapButton() {
-        let nextViewController = TabBarController()
-        let navigationController = UINavigationController(rootViewController: nextViewController)
-        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
-        guard let delegate = sceneDelegate else {
-            return
-        }
-        delegate.window?.rootViewController = navigationController
+        setRootViewController(TabBarController())
     }
 }
 

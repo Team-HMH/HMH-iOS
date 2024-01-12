@@ -9,6 +9,14 @@ import SwiftUI
 import UIKit
 import FamilyControls
 
+//class AppAddButtonViewModel: ObservableObject {
+//    @Published var newSerlection: FamilyActivitySelection
+//
+//    init(newSelection: FamilyActivitySelection) {
+//        self.newSelection = newSelection
+//    }
+//}
+
 struct AppAddButtonView: View {
     
     @EnvironmentObject var model: BlockingApplicationModel
@@ -24,6 +32,19 @@ struct AppAddButtonView: View {
             }
             .frame(width: 335, height: 68)
             .familyActivityPicker(isPresented: $isPresented, selection: $model.newSelection)
+            .onChange(of: isPresented) { oldValue, newValue in
+                if newValue == false {
+                    let mainViewController = TabBarController()
+                    let navigationController = UINavigationController(rootViewController: mainViewController)
+                    let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+                    guard let delegate = sceneDelegate else {
+                        return
+                    }
+                    delegate.window?.rootViewController = navigationController
+                    navigationController.pushViewController(GoalTimeSelectViewController(), animated: true)
+                }
+            }
+            
         }
         .background(Color(.clear))
     }
@@ -31,4 +52,5 @@ struct AppAddButtonView: View {
 
 #Preview {
     AppAddButtonView()
+        .environmentObject(BlockingApplicationModel.shared)
 }

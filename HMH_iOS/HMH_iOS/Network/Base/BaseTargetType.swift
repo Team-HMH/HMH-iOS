@@ -8,8 +8,6 @@
 import Foundation
 import Moya
 
-
-
 protocol BaseTargetType: TargetType {}
 
 typealias Parameters = [String: String]
@@ -32,7 +30,4 @@ extension BaseTargetType {
         return Data()
     }
     
-    var validationType: ValidationType {
-        return .successCodes
-    }
 }

@@ -12,4 +12,3 @@ struct BaseResponse<T: Decodable>: Decodable {
     var message: String?
     var data: T?
 }
-

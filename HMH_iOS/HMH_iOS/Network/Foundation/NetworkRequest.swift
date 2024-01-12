@@ -8,29 +8,27 @@
 import Foundation
 import Moya
 
-struct NetworkRequest {
-    let url: String
-    let httpMethod: Moya.Method
-    let body: Data?                // optional
-    let headers: [String: String]? // optional
-    
-    init(url: String,
-         httpMethod: Moya.Method,
-         requestBody: Data? = nil,
-         headers: [String: String]? = nil
-    ) {
-        self.url = url
-        self.httpMethod = httpMethod
-        self.body = requestBody
-        self.headers = headers
+struct ResponseData<Model: Codable> {
+    struct CommonResponse: Codable {
+        let result: Model
     }
-    
-    func createURLRequest(with url: URL) -> URLRequest {
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = httpMethod.rawValue
-        urlRequest.httpBody = body
-        urlRequest.allHTTPHeaderFields = headers ?? [:]
-        return urlRequest
-    }
-}
 
+    static func processResponse(_ result: Result<Response, MoyaError>) -> Result<Model?, Error> {
+        switch result {
+        case .success(let response):
+            do {
+                // status code가 200...299인 경우만 success로 체크 (아니면 예외발생)
+                _ = try response.filterSuccessfulStatusCodes()
+
+                let commonResponse = try JSONDecoder().decode(CommonResponse.self, from: response.data)
+                return .success(commonResponse.result)
+            } catch {
+                return .failure(error)
+            }
+
+        case .failure(let error):
+            return .failure(error)
+        }
+    }
+    
+}

@@ -89,7 +89,6 @@ class OnboardingBaseViewController: UIViewController {
         subTitleLabel.snp.makeConstraints {
             $0.top.equalTo(mainTitleLabel.snp.bottom).offset(7.adjusted)
             $0.leading.equalTo(progressBar)
-            
         }
     }
     

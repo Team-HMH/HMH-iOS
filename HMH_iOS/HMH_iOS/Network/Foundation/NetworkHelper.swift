@@ -35,4 +35,5 @@ struct NetworkHelper {
         default: return .networkFail
         }
     }
+    
 }

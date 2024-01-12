@@ -33,9 +33,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        
         let splashViewController = SplashViewController()
         window.rootViewController = splashViewController
+        if let navigationController = window.rootViewController as? UINavigationController {
+            navigationController.isNavigationBarHidden = true
+        }
         window.makeKeyAndVisible()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

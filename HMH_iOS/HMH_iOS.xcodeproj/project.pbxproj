@@ -12,6 +12,8 @@
 		0B000CED2B4D9DA800AEC582 /* ApprovePermisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */; };
 		0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */; };
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
+		0B17D3EB2B5104E000CFA3B7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17D3EA2B5104E000CFA3B7 /* UserManager.swift */; };
+		0B17D3ED2B5108D200CFA3B7 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17D3EC2B5108D200CFA3B7 /* UserDefaultWrapper.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
 		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
@@ -175,6 +177,8 @@
 		0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovePermisionController.swift; sourceTree = "<group>"; };
 		0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectViewController.swift; sourceTree = "<group>"; };
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
+		0B17D3EA2B5104E000CFA3B7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		0B17D3EC2B5108D200CFA3B7 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
 		0B50F9C72B369813000C5046 /* HMH_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMH_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,6 +339,15 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		0B17D3E92B5104B900CFA3B7 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				0B17D3EA2B5104E000CFA3B7 /* UserManager.swift */,
+				0B17D3EC2B5108D200CFA3B7 /* UserDefaultWrapper.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		0B2C2D3C2B4559AE0023CCFA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -486,6 +499,7 @@
 		0B8A89982B369CF800688BA6 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				0B17D3E92B5104B900CFA3B7 /* User */,
 				3666C8782B45F4D900564874 /* AppBlock */,
 				0B8A89992B369D0B00688BA6 /* Base */,
 			);
@@ -1076,6 +1090,7 @@
 				0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */,
 				3666C89F2B485C8F00564874 /* DateCollectionViewCell.swift in Sources */,
 				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
+				0B17D3ED2B5108D200CFA3B7 /* UserDefaultWrapper.swift in Sources */,
 				0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */,
 				17314F9B2B4C485B0089A551 /* UserPointHeaderView.swift in Sources */,
 				364923862B4FDCBD00BF7ACA /* NetworkProvider.swift in Sources */,
@@ -1089,6 +1104,7 @@
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
 				0BA193B42B4D089C007E3F9C /* TimeSurveyViewController.swift in Sources */,
 				36A3D9B82B3EBC3B007EA272 /* UILabel+.swift in Sources */,
+				0B17D3EB2B5104E000CFA3B7 /* UserManager.swift in Sources */,
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
 				0B7817522B4BE0280078E925 /* ProgressBarManager.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,

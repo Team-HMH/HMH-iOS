@@ -12,7 +12,7 @@ struct Providers {
   static let challengeProvider = NetworkProvider<ChallengeRouter>(withAuth: false)
 }
 
-extension MoyaProvider {
+extension NetworkProvider {
   convenience init(withAuth: Bool) {
     if withAuth {
       self.init(session: Session(interceptor: AuthInterceptor.shared),

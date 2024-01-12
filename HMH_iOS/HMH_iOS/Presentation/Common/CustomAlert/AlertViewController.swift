@@ -83,12 +83,12 @@ final class AlertViewController: UIViewController {
 
 extension AlertViewController: AlertDelegate {
     func enabledButtonTapped() {
-        dismiss(animated: false) {
-            (self.okAction ?? self.emptyActions)()
-        }
+        dismiss(animated: false)
     }
     
     func alertDismissTapped() {
-        dismiss(animated: true)
+        dismiss(animated: false) {
+            (self.okAction ?? self.emptyActions)()
+        }
     }
 }

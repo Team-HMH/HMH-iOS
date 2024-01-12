@@ -65,7 +65,7 @@ final class CustomAlertButton: UIButton {
             self.backgroundColor = .bluePurpleButton
             
         case .disabled:
-            self.isEnabled = false
+            self.isEnabled = true
             self.backgroundColor = .gray4
         }
     }

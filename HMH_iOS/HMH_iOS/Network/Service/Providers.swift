@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 struct Providers {
-  static let departureSearchingProvider = MoyaProvider<ChallengeRouter>(withAuth: false)
+  static let challengeProvider = NetworkProvider<ChallengeRouter>(withAuth: false)
 }
 
 extension MoyaProvider {

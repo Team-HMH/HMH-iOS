@@ -34,10 +34,6 @@ final class HMHNavigationBar: UIView {
         $0.tintColor = .gray3
     }
     
-    private let logoImageView = UIImageView().then {
-        $0.backgroundColor = .blue
-    }
-    
     private let titleLabel = UILabel().then {
         $0.textColor = .white
         $0.font = UIFont.iosText3Semibold18
@@ -79,7 +75,7 @@ final class HMHNavigationBar: UIView {
             self.addSubviews(backArrowButton, titleLabel, pointButton)
             pointButton.addSubview(pointImageView)
         case .logo:
-            self.addSubviews(logoImageView)
+            return
         }
     }
     
@@ -113,11 +109,7 @@ final class HMHNavigationBar: UIView {
                 }
                 
             case .logo:
-                logoImageView.snp.makeConstraints {
-                    $0.centerY.equalToSuperview().offset(50.adjusted)
-                    $0.leading.equalToSuperview().inset(20.adjusted)
-                    $0.size.equalTo(24.adjusted)
-                }
+                return
             }
         } else {
             self.snp.makeConstraints {
@@ -146,11 +138,7 @@ final class HMHNavigationBar: UIView {
                     $0.edges.equalToSuperview()
                 }
             case .logo:
-                logoImageView.snp.makeConstraints {
-                    $0.centerY.equalToSuperview().offset(50.adjusted)
-                    $0.leading.equalToSuperview().inset(20.adjusted)
-                    $0.size.equalTo(24.adjusted)
-                }
+                return
             }
         }
     }

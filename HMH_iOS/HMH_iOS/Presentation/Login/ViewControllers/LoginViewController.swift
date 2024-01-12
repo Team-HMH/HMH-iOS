@@ -59,20 +59,13 @@ extension LoginViewController {
     func handleAuthorizationAppleIDButtonPress() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
-        request.requestedScopes = [.email]
-        print(request, "👍")
+        request.requestedScopes = [.fullName]
         let authorizationController = ASAuthorizationController(authorizationRequests: [request])
         authorizationController.delegate = self
         authorizationController.presentationContextProvider = self
         authorizationController.performRequests()
     }
-    
-    @objc func appleButtonTaped() {
-        print("tap")
-    }
-    
 }
-
 
 extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizationControllerPresentationContextProviding{
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
@@ -83,62 +76,45 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
         //로그인 성공
         switch authorization.credential {
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
-            // You can create an account in your system.
             let userIdentifier = appleIDCredential.user
             let fullName = appleIDCredential.fullName
-            let email = appleIDCredential.email
             
-            UserDefaults.standard.set(userIdentifier, forKey: "userIdentifier")
             if  let authorizationCode = appleIDCredential.authorizationCode,
                 let identityToken = appleIDCredential.identityToken,
                 let authCodeString = String(data: authorizationCode, encoding: .utf8),
                 let identifyTokenString = String(data: identityToken, encoding: .utf8) {
-                print("authorizationCode: \(authorizationCode)")
-                print("identityToken: \(identityToken)")
-                print("authCodeString: \(authCodeString)")
-                print("identifyTokenString: \(identifyTokenString)")
-                print("🚨", appleIDCredential)
-                if let bundleID = Bundle.main.bundleIdentifier {
-                    UserDefaults.standard.removePersistentDomain(forName: bundleID)
+                if let unwrappedFullName = fullName, let givenName = unwrappedFullName.givenName, let familyName = unwrappedFullName.familyName {
+                    UserManager.shared.updateUserName(givenName, familyName)
+                } else {
+                    print("fullName이 없거나 givenName 또는 familyName이 없습니다.")
                 }
-                //                saveToUserDefaults("authorizationCode",keyValue: authorizationCode)
-                //                saveToUserDefaults("identityToken",keyValue: identityToken)
-                //                saveToUserDefaults(authCodeString,keyValue:"authCodeString")
-                //                saveToUserDefaults(identifyTokenString,keyValue:"identifyTokenString")
-                //                saveToUserDefaults("cool",keyValue:"userIdentifier")
-                
+                UserManager.shared.updateUserIdentifier(userIdentifier)
             }
             
-            print("useridentifier: \(userIdentifier)")
+            // 로그인이 성공 한다면
+            // 소셜 로그인 API 쏘기 403 -> 온보딩 뷰로 이동
+            // 회원 가입이 필요한지 아닌지 확인, userId가 있는지 없는지 판별
+            // 유저 메니저와 signInModel에 해당 값 저장
             
-            
-            
-            //Move to MainPage
-            //let validVC = SignValidViewController()
-            //validVC.modalPresentationStyle = .fullScreen
-            //present(validVC, animated: true, completion: nil)
-            
-        case let passwordCredential as ASPasswordCredential:
-            // Sign in using an existing iCloud Keychain credential.
-            let username = passwordCredential.user
-            let password = passwordCredential.password
-            
-            print("username: \(username)")
-            print("password: \(password)")
-            
+            print(UserManager.shared.getUserIdentifier)
+            print(UserManager.shared.getUserName)
+            if (UserManager.shared.appleUserIdentifier != nil) {
+                let nextViewController = TabBarController()
+                self.navigationController?.pushViewController(nextViewController, animated: true)
+            } else {
+                let nextViewController = TimeSurveyViewController()
+                self.navigationController?.pushViewController(nextViewController, animated: true)
+            }
+    
         default:
             break
         }
     }
-    
-    func saveToUserDefaults(_ content: String, keyValue: String) {
-        // Save the userId to UserDefaults
-        UserDefaults.standard.set(content, forKey: keyValue)
-    }
-    
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // 로그인 실패(유저의 취소도 포함)
         print("login failed - \(error.localizedDescription)")
     }
 }
+
+

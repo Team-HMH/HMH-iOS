@@ -47,7 +47,7 @@ extension UserManager {
         self.accessToken = accessToken
         self.refreshToken = refreshToken
     }
-
+    
     func updateAppleToken(_ appleToken: String) {
         self.appleToken = appleToken
     }
@@ -55,7 +55,7 @@ extension UserManager {
     func updateUserIdentifier(_ appleUserIdentifier: String) {
         self.appleUserIdentifier = appleUserIdentifier
     }
-
+    
     func updateUserName(_ givenName: String, _ familyName: String) {
         self.givenName = givenName
         self.familyName = familyName
@@ -65,11 +65,11 @@ extension UserManager {
     func updateUserId(_ userId: Int) {
         self.userId = userId
     }
-
+    
     func setUserIdForApple(userId: String) {
         self.appleUserIdentifier = appleUserIdentifier
     }
-        
+    
     func clearAll() {
         self.accessToken = nil
         self.refreshToken = nil

@@ -9,7 +9,6 @@ import Foundation
 
 @propertyWrapper
 struct UserDefaultWrapper<T> {
-    
     var wrappedValue: T? {
         get {
             return UserDefaults.standard.object(forKey: self.key) as? T

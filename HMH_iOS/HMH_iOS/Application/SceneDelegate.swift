@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             DispatchQueue.main.async{
-                showLoginViewController()
+                showTabBarViewController()
             }
         }
         

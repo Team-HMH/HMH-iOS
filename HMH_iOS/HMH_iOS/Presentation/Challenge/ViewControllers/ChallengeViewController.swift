@@ -49,7 +49,6 @@ final class ChallengeViewController: UIViewController {
     private func setDelegate() {
         challengeView.challengeCollectionView.delegate = self
     }
-    
 }
 
 extension ChallengeViewController: UICollectionViewDelegate {
@@ -67,7 +66,7 @@ extension ChallengeViewController: UICollectionViewDelegate {
             selectedIndex = [1,0]
         }
         if challengeView.isDeleteMode {
-            if let previousSelectedCell = collectionView.cellForItem(at: selectedIndex) as?  AppListCollectionViewCell {
+            if let previousSelectedCell = collectionView.cellForItem(at: selectedIndex) as? AppListCollectionViewCell {
                 previousSelectedCell.isSelectedCell = false
             }
             if let currentSelectedCell = collectionView.cellForItem(at: indexPath) as? AppListCollectionViewCell {

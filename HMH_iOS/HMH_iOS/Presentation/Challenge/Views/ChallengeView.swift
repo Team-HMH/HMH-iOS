@@ -83,7 +83,6 @@ final class ChallengeView: UIView {
     
     @objc private func deleteButtonTapped() {
         isDeleteMode.toggle()
-        challengeCollectionView.reloadData()
     }
 }
 

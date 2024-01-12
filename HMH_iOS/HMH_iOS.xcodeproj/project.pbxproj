@@ -67,6 +67,8 @@
 		3666C8A12B485CC800564874 /* TitleCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8A02B485CC800564874 /* TitleCollectionReusableView.swift */; };
 		3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8A22B4861A200564874 /* AppListCollectionViewCell.swift */; };
 		3666C8A52B48644A00564874 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8A42B48644A00564874 /* AppModel.swift */; };
+		367B42532B51DFD400B917CD /* ScreenTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B42512B51DFD400B917CD /* ScreenTime.swift */; };
+		367B42542B51DFD400B917CD /* AppSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B42522B51DFD400B917CD /* AppSelectionViewController.swift */; };
 		36A3D8942B3AB57B007EA272 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8932B3AB57B007EA272 /* SnapKit */; };
 		36A3D8992B3AB58A007EA272 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8982B3AB58A007EA272 /* Then */; };
 		36A3D89C2B3AB5A1007EA272 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D89B2B3AB5A1007EA272 /* KakaoSDK */; };
@@ -237,6 +239,8 @@
 		3666C8A02B485CC800564874 /* TitleCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionReusableView.swift; sourceTree = "<group>"; };
 		3666C8A22B4861A200564874 /* AppListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppListCollectionViewCell.swift; sourceTree = "<group>"; };
 		3666C8A42B48644A00564874 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		367B42512B51DFD400B917CD /* ScreenTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenTime.swift; sourceTree = "<group>"; };
+		367B42522B51DFD400B917CD /* AppSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSelectionViewController.swift; sourceTree = "<group>"; };
 		36A3D9B32B3EBBED007EA272 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36A3D9B52B3EBBF7007EA272 /* Adjust+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Adjust+.swift"; sourceTree = "<group>"; };
 		36A3D9B72B3EBC3B007EA272 /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
@@ -674,6 +678,8 @@
 		174AF4852B447AC500450D07 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				367B42522B51DFD400B917CD /* AppSelectionViewController.swift */,
+				367B42512B51DFD400B917CD /* ScreenTime.swift */,
 				174AF49B2B447D0700450D07 /* ChallengeViewController.swift */,
 				36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */,
 			);
@@ -1099,6 +1105,7 @@
 				0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */,
 				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
+				367B42532B51DFD400B917CD /* ScreenTime.swift in Sources */,
 				17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
 				3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */,
@@ -1132,6 +1139,7 @@
 				3666C88B2B471B0D00564874 /* String.swift in Sources */,
 				3666C89B2B48516500564874 /* ChallengeView.swift in Sources */,
 				36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */,
+				367B42542B51DFD400B917CD /* AppSelectionViewController.swift in Sources */,
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,

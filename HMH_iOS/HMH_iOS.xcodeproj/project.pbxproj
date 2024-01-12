@@ -56,6 +56,7 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChallengeViewController.swift */; };
+		363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 363863BC2B5129F2000FE5E7 /* Lottie */; };
 		364923652B4F4FB800BF7ACA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923642B4F4FB800BF7ACA /* Config.swift */; };
 		364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923672B4F513600BF7ACA /* BaseTargetType.swift */; };
 		3649236A2B4F514A00BF7ACA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 364923692B4F514A00BF7ACA /* Moya */; };
@@ -291,6 +292,7 @@
 				36A3D8AA2B3AB5A1007EA272 /* KakaoSDKNavi in Frameworks */,
 				36A3D8AC2B3AB5A1007EA272 /* KakaoSDKShare in Frameworks */,
 				36A3D8992B3AB58A007EA272 /* Then in Frameworks */,
+				363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */,
 				36A3D8AE2B3AB5A1007EA272 /* KakaoSDKTalk in Frameworks */,
 				3649236A2B4F514A00BF7ACA /* Moya in Frameworks */,
 				36A3D8B22B3AB5A1007EA272 /* KakaoSDKUser in Frameworks */,
@@ -935,6 +937,7 @@
 				36A3D8AF2B3AB5A1007EA272 /* KakaoSDKTemplate */,
 				36A3D8B12B3AB5A1007EA272 /* KakaoSDKUser */,
 				364923692B4F514A00BF7ACA /* Moya */,
+				363863BC2B5129F2000FE5E7 /* Lottie */,
 			);
 			productName = HMH_iOS;
 			productReference = 0B50F9C72B369813000C5046 /* HMH_iOS.app */;
@@ -1009,6 +1012,7 @@
 				36A3D8972B3AB58A007EA272 /* XCRemoteSwiftPackageReference "Then" */,
 				36A3D89A2B3AB5A1007EA272 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				364923662B4F510E00BF7ACA /* XCRemoteSwiftPackageReference "Moya" */,
+				363863BB2B5129F1000FE5E7 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 0B50F9C82B369813000C5046 /* Products */;
 			projectDirPath = "";
@@ -1535,6 +1539,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		363863BB2B5129F1000FE5E7 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.4;
+			};
+		};
 		364923662B4F510E00BF7ACA /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
@@ -1570,6 +1582,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		363863BC2B5129F2000FE5E7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 363863BB2B5129F1000FE5E7 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		364923692B4F514A00BF7ACA /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 364923662B4F510E00BF7ACA /* XCRemoteSwiftPackageReference "Moya" */;

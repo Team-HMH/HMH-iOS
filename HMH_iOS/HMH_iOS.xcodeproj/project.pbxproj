@@ -56,6 +56,7 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChallengeViewController.swift */; };
+		363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */; };
 		364923652B4F4FB800BF7ACA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923642B4F4FB800BF7ACA /* Config.swift */; };
 		364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923672B4F513600BF7ACA /* BaseTargetType.swift */; };
 		3649236A2B4F514A00BF7ACA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 364923692B4F514A00BF7ACA /* Moya */; };
@@ -219,6 +220,7 @@
 		174AF4972B447CF100450D07 /* ChanllengeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeModels.swift; sourceTree = "<group>"; };
 		174AF4992B447CFB00450D07 /* ChanllengeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViews.swift; sourceTree = "<group>"; };
 		174AF49B2B447D0700450D07 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		364923672B4F513600BF7ACA /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
@@ -812,6 +814,7 @@
 			isa = PBXGroup;
 			children = (
 				3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */,
+				363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */,
 			);
 			path = ChallengeModel;
 			sourceTree = "<group>";
@@ -1141,6 +1144,7 @@
 				3666C89B2B48516500564874 /* ChallengeView.swift in Sources */,
 				364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */,
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
+				363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,
 				0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */,

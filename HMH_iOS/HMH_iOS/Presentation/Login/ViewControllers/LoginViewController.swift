@@ -12,30 +12,9 @@ import Then
 import AuthenticationServices
 
 final class LoginViewController: UIViewController {
+    
+    private let swipeView = OnboardingSwipeView()
     let authorizationButton = ASAuthorizationAppleIDButton(authorizationButtonType: .signIn, authorizationButtonStyle: .white)
-    func setAppleLoginButton() {
-        authorizationButton.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
-        self.view.addSubview(authorizationButton)
-        authorizationButton.translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    @objc
-    func handleAuthorizationAppleIDButtonPress() {
-        let appleIDProvider = ASAuthorizationAppleIDProvider()
-        let request = appleIDProvider.createRequest()
-        request.requestedScopes = [.fullName, .email]
-        print(request, "👍")
-        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
-        authorizationController.delegate = self
-        authorizationController.presentationContextProvider = self
-        authorizationController.performRequests()
-    }
-    
-    @objc func appleButtonTaped() {
-        print("tap")
-    }
-    
-    let swipeView = OnboardingSwipeView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +45,32 @@ final class LoginViewController: UIViewController {
             $0.height.equalTo(480)
         }
     }
+}
+
+extension LoginViewController {
+    
+    func setAppleLoginButton() {
+        authorizationButton.addTarget(self, action: #selector(handleAuthorizationAppleIDButtonPress), for: .touchUpInside)
+        self.view.addSubview(authorizationButton)
+        authorizationButton.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
+    @objc
+    func handleAuthorizationAppleIDButtonPress() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.email]
+        print(request, "👍")
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+    
+    @objc func appleButtonTaped() {
+        print("tap")
+    }
+    
 }
 
 

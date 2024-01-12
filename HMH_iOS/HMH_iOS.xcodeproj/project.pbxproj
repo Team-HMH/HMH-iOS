@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B000CE92B4D9D6E00AEC582 /* SelectPeriodController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CE82B4D9D6E00AEC582 /* SelectPeriodController.swift */; };
+		0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CEA2B4D9D9100AEC582 /* SelectTotalTimeController.swift */; };
+		0B000CED2B4D9DA800AEC582 /* ApprovePermisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */; };
+		0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */; };
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
 		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
@@ -21,9 +25,6 @@
 		0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */; };
 		0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89AE2B369E4300688BA6 /* HomeModel.swift */; };
 		0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B02B369E4C00688BA6 /* HomeView.swift */; };
-		0B8A89B32B369EF700688BA6 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B22B369EF700688BA6 /* A.swift */; };
-		0B8A89B52B369F0100688BA6 /* B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B42B369F0100688BA6 /* B.swift */; };
-		0B8A89B72B369F1100688BA6 /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89B62B369F1100688BA6 /* C.swift */; };
 		0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89BB2B369F2D00688BA6 /* UIView+.swift */; };
 		0B8A89C42B369FA000688BA6 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8A89C32B369FA000688BA6 /* F.swift */; };
 		0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B12B4CE908007E3F9C /* SurveyView.swift */; };
@@ -32,6 +33,9 @@
 		0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B82B4D4097007E3F9C /* SignInModel.swift */; };
 		0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */; };
 		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
+		0BD98DB92B4D671600E35188 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD98DB82B4D671600E35188 /* SplashViewController.swift */; };
+		0BD98DBE2B4D6AB700E35188 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD98DBD2B4D6AB700E35188 /* LoginViewController.swift */; };
+		0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD2FB32B4EE71900C6327F /* SignInCompleteViewController.swift */; };
 		17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F7E2B485E150089A551 /* CustomAlertButton.swift */; };
 		17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F822B486BEC0089A551 /* AlertViewController.swift */; };
 		17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */; };
@@ -57,6 +61,21 @@
 		17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */; };
 		17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */; };
 		17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */; };
+		363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 363863BC2B5129F2000FE5E7 /* Lottie */; };
+		364923652B4F4FB800BF7ACA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923642B4F4FB800BF7ACA /* Config.swift */; };
+		364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923672B4F513600BF7ACA /* BaseTargetType.swift */; };
+		3649236A2B4F514A00BF7ACA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 364923692B4F514A00BF7ACA /* Moya */; };
+		364923702B4F524D00BF7ACA /* MoyaLoggerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649236F2B4F524D00BF7ACA /* MoyaLoggerPlugin.swift */; };
+		364923722B4F527200BF7ACA /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923712B4F527200BF7ACA /* NetworkResult.swift */; };
+		364923792B4FC8E800BF7ACA /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923782B4FC8E800BF7ACA /* BaseModel.swift */; };
+		3649237D2B4FC9CD00BF7ACA /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649237C2B4FC9CD00BF7ACA /* NetworkRequest.swift */; };
+		364923822B4FD68000BF7ACA /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923812B4FD68000BF7ACA /* APIConstants.swift */; };
+		364923862B4FDCBD00BF7ACA /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923852B4FDCBD00BF7ACA /* NetworkProvider.swift */; };
+		364923932B50397100BF7ACA /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923922B50397100BF7ACA /* NetworkHelper.swift */; };
+		364923992B505A3A00BF7ACA /* AuthInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923982B505A3A00BF7ACA /* AuthInterceptor.swift */; };
+		3649239B2B505B2600BF7ACA /* Providers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649239A2B505B2600BF7ACA /* Providers.swift */; };
+		3649239D2B505CED00BF7ACA /* ChallengeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649239C2B505CED00BF7ACA /* ChallengeRouter.swift */; };
+		364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */; };
 		364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E702B4BC9780015729C /* AppAddButtonView.swift */; };
 		364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
@@ -69,8 +88,7 @@
 		3666C8722B45F4B200564874 /* DeviceReport.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 3666C8662B45F4B200564874 /* DeviceReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8792B45F4F900564874 /* SelectedBlocker.swift */; };
 		3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */; };
-		3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8862B47110800564874 /* SpecificTimePickerView.swift */; };
-		3666C8892B47110800564874 /* TotalTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8872B47110800564874 /* TotalTimePickerView.swift */; };
+		3666C8892B47110800564874 /* HMHTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8872B47110800564874 /* HMHTimePickerView.swift */; };
 		3666C88B2B471B0D00564874 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88A2B471B0D00564874 /* String.swift */; };
 		3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88C2B471B1D00564874 /* UIImage+.swift */; };
 		3666C88F2B471C5800564874 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88E2B471C5800564874 /* TabBarController.swift */; };
@@ -156,6 +174,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B000CE82B4D9D6E00AEC582 /* SelectPeriodController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPeriodController.swift; sourceTree = "<group>"; };
+		0B000CEA2B4D9D9100AEC582 /* SelectTotalTimeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTotalTimeController.swift; sourceTree = "<group>"; };
+		0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovePermisionController.swift; sourceTree = "<group>"; };
+		0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectViewController.swift; sourceTree = "<group>"; };
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
@@ -172,9 +194,6 @@
 		0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		0B8A89AE2B369E4300688BA6 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0B8A89B02B369E4C00688BA6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		0B8A89B22B369EF700688BA6 /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
-		0B8A89B42B369F0100688BA6 /* B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.swift; sourceTree = "<group>"; };
-		0B8A89B62B369F1100688BA6 /* C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
 		0B8A89BB2B369F2D00688BA6 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		0B8A89C32B369FA000688BA6 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
 		0BA193B12B4CE908007E3F9C /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
@@ -183,6 +202,9 @@
 		0BA193B82B4D4097007E3F9C /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 		0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressView.swift; sourceTree = "<group>"; };
 		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
+		0BD98DB82B4D671600E35188 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		0BD98DBD2B4D6AB700E35188 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0BFD2FB32B4EE71900C6327F /* SignInCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCompleteViewController.swift; sourceTree = "<group>"; };
 		17314F7E2B485E150089A551 /* CustomAlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlertButton.swift; sourceTree = "<group>"; };
 		17314F822B486BEC0089A551 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHLogoutAlert.swift; sourceTree = "<group>"; };
@@ -208,6 +230,20 @@
 		17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingProgressViewCell.swift; sourceTree = "<group>"; };
 		17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalTimeCell.swift; sourceTree = "<group>"; };
 		17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleImageCell.swift; sourceTree = "<group>"; };
+		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		364923672B4F513600BF7ACA /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		3649236F2B4F524D00BF7ACA /* MoyaLoggerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaLoggerPlugin.swift; sourceTree = "<group>"; };
+		364923712B4F527200BF7ACA /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		364923782B4FC8E800BF7ACA /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		3649237C2B4FC9CD00BF7ACA /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		364923812B4FD68000BF7ACA /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		364923852B4FDCBD00BF7ACA /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		364923922B50397100BF7ACA /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		364923982B505A3A00BF7ACA /* AuthInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInterceptor.swift; sourceTree = "<group>"; };
+		3649239A2B505B2600BF7ACA /* Providers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Providers.swift; sourceTree = "<group>"; };
+		3649239C2B505CED00BF7ACA /* ChallengeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeRouter.swift; sourceTree = "<group>"; };
+		3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeRequestDTO.swift; sourceTree = "<group>"; };
 		364C4E702B4BC9780015729C /* AppAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddButtonView.swift; sourceTree = "<group>"; };
 		364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddCollectionReusableView.swift; sourceTree = "<group>"; };
 		3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHAppSelectButtonView.swift; sourceTree = "<group>"; };
@@ -225,8 +261,7 @@
 		3666C8772B45F4C600564874 /* HMH_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HMH_iOS.entitlements; sourceTree = "<group>"; };
 		3666C8792B45F4F900564874 /* SelectedBlocker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBlocker.swift; sourceTree = "<group>"; };
 		3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockingApplicationModel.swift; sourceTree = "<group>"; };
-		3666C8862B47110800564874 /* SpecificTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpecificTimePickerView.swift; sourceTree = "<group>"; };
-		3666C8872B47110800564874 /* TotalTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TotalTimePickerView.swift; sourceTree = "<group>"; };
+		3666C8872B47110800564874 /* HMHTimePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMHTimePickerView.swift; sourceTree = "<group>"; };
 		3666C88A2B471B0D00564874 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		3666C88C2B471B1D00564874 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		3666C88E2B471C5800564874 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -267,7 +302,9 @@
 				36A3D8AA2B3AB5A1007EA272 /* KakaoSDKNavi in Frameworks */,
 				36A3D8AC2B3AB5A1007EA272 /* KakaoSDKShare in Frameworks */,
 				36A3D8992B3AB58A007EA272 /* Then in Frameworks */,
+				363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */,
 				36A3D8AE2B3AB5A1007EA272 /* KakaoSDKTalk in Frameworks */,
+				3649236A2B4F514A00BF7ACA /* Moya in Frameworks */,
 				36A3D8B22B3AB5A1007EA272 /* KakaoSDKUser in Frameworks */,
 				36A3D8A02B3AB5A1007EA272 /* KakaoSDKCert in Frameworks */,
 				36A3D8B02B3AB5A1007EA272 /* KakaoSDKTemplate in Frameworks */,
@@ -295,6 +332,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B000CE72B4D9D4E00AEC582 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B000CE82B4D9D6E00AEC582 /* SelectPeriodController.swift */,
+				0B000CEA2B4D9D9100AEC582 /* SelectTotalTimeController.swift */,
+				0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */,
+				0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		0B2C2D3C2B4559AE0023CCFA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +389,7 @@
 		0B50F9C92B369813000C5046 /* HMH_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				364923612B4F4E7D00BF7ACA /* Config.xcconfig */,
 				3666C8772B45F4C600564874 /* HMH_iOS.entitlements */,
 				0B50F9D82B369815000C5046 /* Info.plist */,
 				0B67CCE32B369BB400582D54 /* Application */,
@@ -377,7 +426,9 @@
 			isa = PBXGroup;
 			children = (
 				0B8A89A22B369DB600688BA6 /* Base */,
-				0B8A89A32B369DBE00688BA6 /* DataModel */,
+				364923962B50547F00BF7ACA /* Foundation */,
+				364923972B5054AE00BF7ACA /* Router */,
+				0B8A89A32B369DBE00688BA6 /* DTO */,
 				0B8A89A42B369DCA00688BA6 /* Service */,
 			);
 			path = Network;
@@ -386,6 +437,8 @@
 		0B67CCE72B369BE300582D54 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0BD98DBA2B4D6A5A00E35188 /* Login */,
+				0BD98DB72B4D670200E35188 /* Splash */,
 				3666C8842B47110800564874 /* CreateChallenge */,
 				174AF4842B447AB500450D07 /* MyPage */,
 				174AF4832B447A7A00450D07 /* Challenge */,
@@ -402,6 +455,7 @@
 				0B78174D2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift */,
 				0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */,
 				0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */,
+				0BFD2FB32B4EE71900C6327F /* SignInCompleteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -500,23 +554,26 @@
 		0B8A89A22B369DB600688BA6 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				0B8A89B22B369EF700688BA6 /* A.swift */,
+				364923982B505A3A00BF7ACA /* AuthInterceptor.swift */,
+				364923852B4FDCBD00BF7ACA /* NetworkProvider.swift */,
+				364923672B4F513600BF7ACA /* BaseTargetType.swift */,
+				364923782B4FC8E800BF7ACA /* BaseModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
 		};
-		0B8A89A32B369DBE00688BA6 /* DataModel */ = {
+		0B8A89A32B369DBE00688BA6 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				0B8A89B42B369F0100688BA6 /* B.swift */,
+				3649239E2B505F0600BF7ACA /* ChallengeModel */,
 			);
-			path = DataModel;
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		0B8A89A42B369DCA00688BA6 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				0B8A89B62B369F1100688BA6 /* C.swift */,
+				3649239A2B505B2600BF7ACA /* Providers.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -595,6 +652,38 @@
 				0BA193B82B4D4097007E3F9C /* SignInModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		0BD98DB72B4D670200E35188 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				0BD98DBB2B4D6A6D00E35188 /* ViewControllers */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		0BD98DBA2B4D6A5A00E35188 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0BD98DBC2B4D6A8800E35188 /* ViewControllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0BD98DBB2B4D6A6D00E35188 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BD98DB82B4D671600E35188 /* SplashViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0BD98DBC2B4D6A8800E35188 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0BD98DBD2B4D6AB700E35188 /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		17314F7D2B485DCF0089A551 /* CustomAlert */ = {
@@ -715,6 +804,35 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		364923962B50547F00BF7ACA /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				364923642B4F4FB800BF7ACA /* Config.swift */,
+				364923812B4FD68000BF7ACA /* APIConstants.swift */,
+				364923922B50397100BF7ACA /* NetworkHelper.swift */,
+				3649236F2B4F524D00BF7ACA /* MoyaLoggerPlugin.swift */,
+				364923712B4F527200BF7ACA /* NetworkResult.swift */,
+				3649237C2B4FC9CD00BF7ACA /* NetworkRequest.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		364923972B5054AE00BF7ACA /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				3649239C2B505CED00BF7ACA /* ChallengeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3649239E2B505F0600BF7ACA /* ChallengeModel */ = {
+			isa = PBXGroup;
+			children = (
+				3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */,
+			);
+			path = ChallengeModel;
+			sourceTree = "<group>";
+		};
 		364C4E6F2B4BC95E0015729C /* SwiftUIView */ = {
 			isa = PBXGroup;
 			children = (
@@ -773,6 +891,7 @@
 		3666C8842B47110800564874 /* CreateChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				0B000CE72B4D9D4E00AEC582 /* ViewControllers */,
 				3666C8852B47110800564874 /* Views */,
 			);
 			path = CreateChallenge;
@@ -781,8 +900,7 @@
 		3666C8852B47110800564874 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3666C8862B47110800564874 /* SpecificTimePickerView.swift */,
-				3666C8872B47110800564874 /* TotalTimePickerView.swift */,
+				3666C8872B47110800564874 /* HMHTimePickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -833,6 +951,8 @@
 				36A3D8AD2B3AB5A1007EA272 /* KakaoSDKTalk */,
 				36A3D8AF2B3AB5A1007EA272 /* KakaoSDKTemplate */,
 				36A3D8B12B3AB5A1007EA272 /* KakaoSDKUser */,
+				364923692B4F514A00BF7ACA /* Moya */,
+				363863BC2B5129F2000FE5E7 /* Lottie */,
 			);
 			productName = HMH_iOS;
 			productReference = 0B50F9C72B369813000C5046 /* HMH_iOS.app */;
@@ -906,6 +1026,8 @@
 				36A3D8922B3AB57B007EA272 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				36A3D8972B3AB58A007EA272 /* XCRemoteSwiftPackageReference "Then" */,
 				36A3D89A2B3AB5A1007EA272 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				364923662B4F510E00BF7ACA /* XCRemoteSwiftPackageReference "Moya" */,
+				363863BB2B5129F1000FE5E7 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 0B50F9C82B369813000C5046 /* Products */;
 			projectDirPath = "";
@@ -968,10 +1090,13 @@
 				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
 				0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */,
 				17314F9B2B4C485B0089A551 /* UserPointHeaderView.swift in Sources */,
+				364923862B4FDCBD00BF7ACA /* NetworkProvider.swift in Sources */,
+				364923702B4F524D00BF7ACA /* MoyaLoggerPlugin.swift in Sources */,
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */,
 				174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */,
 				17CF9FBD2B4DC757000DD09C /* HMHHomeView.swift in Sources */,
+				364923932B50397100BF7ACA /* NetworkHelper.swift in Sources */,
 				174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */,
 				3666C8A52B48644A00564874 /* AppModel.swift in Sources */,
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
@@ -980,52 +1105,65 @@
 				0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */,
 				0B7817522B4BE0280078E925 /* ProgressBarManager.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
-				3666C8892B47110800564874 /* TotalTimePickerView.swift in Sources */,
+				3666C8892B47110800564874 /* HMHTimePickerView.swift in Sources */,
+				0B000CE92B4D9D6E00AEC582 /* SelectPeriodController.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */,
+				0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */,
 				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
+				364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */,
 				0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */,
-				0B8A89B72B369F1100688BA6 /* C.swift in Sources */,
+				0B000CED2B4D9DA800AEC582 /* ApprovePermisionController.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
 				17CF9FC12B4DE2B6000DD09C /* AppUsingTimeModel.swift in Sources */,
 				3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */,
+				364923822B4FD68000BF7ACA /* APIConstants.swift in Sources */,
 				0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
-				3666C8882B47110800564874 /* SpecificTimePickerView.swift in Sources */,
 				17314FB72B4D93D30089A551 /* StoreCollectionViewCell.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,
+				364923992B505A3A00BF7ACA /* AuthInterceptor.swift in Sources */,
 				36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */,
 				17314FB12B4D50380089A551 /* InfoHeaderView.swift in Sources */,
-				0B8A89B52B369F0100688BA6 /* B.swift in Sources */,
 				174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */,
+				0BD98DB92B4D671600E35188 /* SplashViewController.swift in Sources */,
+				0BD98DBE2B4D6AB700E35188 /* LoginViewController.swift in Sources */,
 				17314FB32B4D68950089A551 /* UserModel.swift in Sources */,
 				17314F892B49A8B60089A551 /* AlertDelegate.swift in Sources */,
 				17314FAF2B4D3E1C0089A551 /* LogoutAndQuitFooterView.swift in Sources */,
 				0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */,
+				3649237D2B4FC9CD00BF7ACA /* NetworkRequest.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
+				0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */,
+				3649239B2B505B2600BF7ACA /* Providers.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
 				0B7817502B4BD9F10078E925 /* OnboardingButton.swift in Sources */,
+				364923792B4FC8E800BF7ACA /* BaseModel.swift in Sources */,
+				364923722B4F527200BF7ACA /* NetworkResult.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
 				17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */,
+				3649239D2B505CED00BF7ACA /* ChallengeRouter.swift in Sources */,
 				364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
 				17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */,
 				17314F9D2B4C554D0089A551 /* MypageCollectionViewCell.swift in Sources */,
-				0B8A89B32B369EF700688BA6 /* A.swift in Sources */,
 				17314F972B4C42130089A551 /* MyPageView.swift in Sources */,
 				0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */,
+				364923652B4F4FB800BF7ACA /* Config.swift in Sources */,
 				364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */,
 				17314F7F2B485E150089A551 /* CustomAlertButton.swift in Sources */,
+				0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
 				3666C88F2B471C5800564874 /* TabBarController.swift in Sources */,
 				36E05FE62B48825A005B633E /* AppCollectionReusableView.swift in Sources */,
 				3666C88B2B471B0D00564874 /* String.swift in Sources */,
 				17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */,
 				3666C89B2B48516500564874 /* ChallengeView.swift in Sources */,
+				364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */,
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,
@@ -1080,6 +1218,7 @@
 /* Begin XCBuildConfiguration section */
 		0B50F9D92B369815000C5046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1143,6 +1282,7 @@
 		};
 		0B50F9DA2B369815000C5046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -1199,6 +1339,7 @@
 		};
 		0B50F9DC2B369815000C5046 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1230,6 +1371,7 @@
 		};
 		0B50F9DD2B369815000C5046 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1261,6 +1403,7 @@
 		};
 		3666C85F2B45F47600564874 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DeviceMonitor/DeviceMonitor.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1289,6 +1432,7 @@
 		};
 		3666C8602B45F47600564874 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DeviceMonitor/DeviceMonitor.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1317,6 +1461,7 @@
 		};
 		3666C8742B45F4B200564874 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DeviceReport/DeviceReport.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1345,6 +1490,7 @@
 		};
 		3666C8752B45F4B200564874 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DeviceReport/DeviceReport.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -1413,6 +1559,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		363863BB2B5129F1000FE5E7 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.4;
+			};
+		};
+		364923662B4F510E00BF7ACA /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
 		36A3D8922B3AB57B007EA272 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -1440,6 +1602,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		363863BC2B5129F2000FE5E7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 363863BB2B5129F1000FE5E7 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		364923692B4F514A00BF7ACA /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 364923662B4F510E00BF7ACA /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		36A3D8932B3AB57B007EA272 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 36A3D8922B3AB57B007EA272 /* XCRemoteSwiftPackageReference "SnapKit" */;

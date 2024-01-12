@@ -10,7 +10,13 @@ import UIKit
 import SnapKit
 import Then
 
+protocol HMHSelectButtonDelegate: AnyObject {
+    func updateAvailability(isEnabled: Bool)
+}
+
 final class HMHSelectButton: UIButton {
+    weak var delegate: HMHSelectButtonDelegate?
+    
     @frozen
     enum HMHSelectButtonType {
         case solitary
@@ -105,14 +111,15 @@ final class HMHSelectButton: UIButton {
             }
             
             setChecked(true)
+            setAvailability()
             
         case .multiple:
             let selectedCount = (superview?.subviews.compactMap { ($0 as? HMHSelectButton)?.isChecked } ?? []).filter { $0 }.count
             
             if selectedCount < 2 || isChecked {
                 setChecked(!isChecked)
+                setAvailability()
             }
-            
         case .disabled:
             return
         }
@@ -120,5 +127,17 @@ final class HMHSelectButton: UIButton {
     
     func setButtonText(buttonTitle: String) {
         buttonContentLabel.text = buttonTitle
+    }
+    
+    func setAvailability() {
+        if (superview?.subviews.compactMap { ($0 as? HMHSelectButton)?.isChecked } ?? []).filter { $0 }.count == 0 {
+            updateAvailability(status: false)
+        } else {
+            updateAvailability(status: true)
+        }
+    }
+    
+    func updateAvailability(status: Bool) {
+        self.delegate?.updateAvailability(isEnabled: status)
     }
 }

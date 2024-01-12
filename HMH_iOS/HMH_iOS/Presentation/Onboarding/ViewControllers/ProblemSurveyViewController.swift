@@ -11,7 +11,10 @@ import SnapKit
 import Then
 
 final class ProblemSurveyViewController: OnboardingBaseViewController {
-    private let surveyView = SurveyView(buttonType: .multiple)
+    private let surveyView = SurveyView(firstButtonType: .multiple, 
+                                        secondButtonType: .multiple,
+                                        thirdButtonType: .multiple,
+                                        fourthButtonType: .multiple)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,13 +62,23 @@ final class ProblemSurveyViewController: OnboardingBaseViewController {
         surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.secondSelect)
         surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.thirdSelect)
         surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.ProblemSurveySelect.fourthSelect)
+        
+        surveyView.firstButton.delegate = self
+        surveyView.secondButton.delegate = self
+        surveyView.thirdButton.delegate = self
+        surveyView.fourthButton.delegate = self
     }
 }
 
 extension ProblemSurveyViewController: NextViewPushDelegate {
     func didTapButton() {
-        let nextViewController = TimeSurveyViewController()
+        let nextViewController = SelectPeriodController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
     }
 }
 
+extension ProblemSurveyViewController: HMHSelectButtonDelegate {
+    func updateAvailability(isEnabled: Bool) {
+        nextButton.updateStatus(isEnabled: isEnabled)
+    }
+}

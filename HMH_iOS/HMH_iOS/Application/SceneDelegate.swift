@@ -13,12 +13,41 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-            guard let windowScene = (scene as? UIWindowScene) else { return }
-            window = UIWindow(windowScene: windowScene)
-            window?.rootViewController = UINavigationController(rootViewController: TabBarController())
-            if let navigationController = window?.rootViewController as? UINavigationController {
-                navigationController.isNavigationBarHidden = true
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        let window = UIWindow(windowScene: windowScene)
+        self.window = window
+        
+        let splashViewController = SplashViewController()
+        window.rootViewController = splashViewController
+        window.makeKeyAndVisible()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.async{
+                showTabBarViewController()
             }
-            window?.makeKeyAndVisible()
         }
+        
+        func showTabBarViewController() {
+            let tabBarViewController = TabBarController()
+            navigateTo(viewController: tabBarViewController)
+        }
+        
+        func showLoginViewController() {
+            let loginViewController = LoginViewController()
+            navigateTo(viewController: loginViewController)
+        }
+        
+        func navigateTo(viewController: UIViewController) {
+            DispatchQueue.main.async {
+                if let navigationController = self.window?.rootViewController as? UINavigationController {
+                    navigationController.pushViewController(viewController, animated: true)
+                } else {
+                    let navigationController = UINavigationController(rootViewController: viewController)
+                    self.window?.rootViewController = navigationController
+                    self.window?.makeKeyAndVisible()
+                }
+            }
+        }
+    }
 }

@@ -14,6 +14,18 @@ enum StringLiteral {
         static var myPageTitle = "마이페이지"
     }
     
+    enum Home {
+        static var blackHoleFirstStep = "\(UserModel.dummy().userName)님을 위한\n우주가 생성되었어요"
+        static var blackHoleSecondStep = "블랙홀이 다가와요\n도파민의 유혹을 이겨내요"
+        static var blackHoleThridStep = "블랙홀이 가까워졌어요\n스마트폰을 멀리해 볼까요?"
+        static var blackHoleFourthStep = "블랙홀에 빠질 수 있어요\n스마트폰을 내려놓아요"
+        static var blackHoleFifthStep = "지금부터 앱을 사용하면\n챌린지를 실패해요"
+        static var blackHoleFailure = "블랙홀에 빠졌어요\n내일은 목표를 이뤄보아요"
+        
+        static var totalGoalUsingTime = "총 목표 이용 시간"
+        static var remainedTimeUnit = "남음"
+    }
+    
     enum Challenge {
         static var NavigationBarTitle = "나의 챌린지"
         enum Date {

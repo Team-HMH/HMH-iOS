@@ -58,6 +58,11 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChallengeViewController.swift */; };
+		17CF9FBD2B4DC757000DD09C /* HMHHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FBC2B4DC757000DD09C /* HMHHomeView.swift */; };
+		17CF9FC12B4DE2B6000DD09C /* AppUsingTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC02B4DE2B6000DD09C /* AppUsingTimeModel.swift */; };
+		17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */; };
+		17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */; };
+		17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */; };
 		363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */; };
 		363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 363863BC2B5129F2000FE5E7 /* Lottie */; };
 		364923652B4F4FB800BF7ACA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923642B4F4FB800BF7ACA /* Config.swift */; };
@@ -225,6 +230,11 @@
 		174AF4972B447CF100450D07 /* ChanllengeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeModels.swift; sourceTree = "<group>"; };
 		174AF4992B447CFB00450D07 /* ChanllengeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViews.swift; sourceTree = "<group>"; };
 		174AF49B2B447D0700450D07 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		17CF9FBC2B4DC757000DD09C /* HMHHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHHomeView.swift; sourceTree = "<group>"; };
+		17CF9FC02B4DE2B6000DD09C /* AppUsingTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingTimeModel.swift; sourceTree = "<group>"; };
+		17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingProgressViewCell.swift; sourceTree = "<group>"; };
+		17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalTimeCell.swift; sourceTree = "<group>"; };
+		17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleImageCell.swift; sourceTree = "<group>"; };
 		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -627,6 +637,7 @@
 			isa = PBXGroup;
 			children = (
 				0B8A89B02B369E4C00688BA6 /* HomeView.swift */,
+				17CF9FBC2B4DC757000DD09C /* HMHHomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -635,6 +646,7 @@
 			isa = PBXGroup;
 			children = (
 				0B8A89AE2B369E4300688BA6 /* HomeModel.swift */,
+				17CF9FC02B4DE2B6000DD09C /* AppUsingTimeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -643,6 +655,9 @@
 			isa = PBXGroup;
 			children = (
 				0B8A89AC2B369E3B00688BA6 /* HomeCell.swift */,
+				17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */,
+				17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */,
+				17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1098,6 +1113,7 @@
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */,
 				174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */,
+				17CF9FBD2B4DC757000DD09C /* HMHHomeView.swift in Sources */,
 				364923932B50397100BF7ACA /* NetworkHelper.swift in Sources */,
 				174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */,
 				3666C8A52B48644A00564874 /* AppModel.swift in Sources */,
@@ -1111,6 +1127,7 @@
 				3666C8892B47110800564874 /* HMHTimePickerView.swift in Sources */,
 				0B000CE92B4D9D6E00AEC582 /* SelectPeriodController.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
+				17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */,
 				0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */,
 				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
 				364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */,
@@ -1119,6 +1136,7 @@
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
+				17CF9FC12B4DE2B6000DD09C /* AppUsingTimeModel.swift in Sources */,
 				3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */,
 				364923822B4FD68000BF7ACA /* APIConstants.swift in Sources */,
 				0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */,
@@ -1146,6 +1164,7 @@
 				364923722B4F527200BF7ACA /* NetworkResult.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
+				17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */,
 				3649239D2B505CED00BF7ACA /* ChallengeRouter.swift in Sources */,
 				364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
@@ -1161,6 +1180,7 @@
 				3666C88F2B471C5800564874 /* TabBarController.swift in Sources */,
 				36E05FE62B48825A005B633E /* AppCollectionReusableView.swift in Sources */,
 				3666C88B2B471B0D00564874 /* String.swift in Sources */,
+				17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */,
 				3666C89B2B48516500564874 /* ChallengeView.swift in Sources */,
 				364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */,
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,

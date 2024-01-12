@@ -17,7 +17,7 @@ final class AlertViewController: UIViewController {
     var okAction: (() -> Void)?
     
     private let logoutAlert = HMHLogoutAlert()
-    private let quitAlert = HMHQuitAlert()    
+    private let quitAlert = HMHQuitAlert()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,8 +83,18 @@ final class AlertViewController: UIViewController {
 
 extension AlertViewController: AlertDelegate {
     func enabledButtonTapped() {
-        dismiss(animated: false)
+        dismiss(animated: false) {
+            let loginViewController = LoginViewController()
+            
+            if let window = UIApplication.shared.windows.first {
+                let navigationController = UINavigationController(rootViewController: loginViewController)
+                navigationController.isNavigationBarHidden = true
+                window.rootViewController = navigationController
+                window.makeKeyAndVisible()
+            }
+        }
     }
+    
     
     func alertDismissTapped() {
         dismiss(animated: false) {

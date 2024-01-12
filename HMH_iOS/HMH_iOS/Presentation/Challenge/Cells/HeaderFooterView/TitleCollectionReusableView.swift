@@ -13,6 +13,7 @@ import Then
 final class TitleCollectionReusableView: UICollectionReusableView {
     
     static let identifier = "TitleCollectionReusableView"
+    var isButtonTapped = false
     
     private let subTitleLabel = UILabel().then {
         $0.text = StringLiteral.Challenge.Date.dateHeaderSubTitle
@@ -54,6 +55,15 @@ final class TitleCollectionReusableView: UICollectionReusableView {
             $0.leading.equalTo(titleLabel)
             $0.bottom.equalTo(titleLabel.snp.top).offset(-9.adjusted)
         }
+    }
+    
+    @objc func deleteButtonDidTapped() {
+        if isButtonTapped {
+            
+        } else {
+            
+        }
+        isButtonTapped.toggle()
     }
     
 }

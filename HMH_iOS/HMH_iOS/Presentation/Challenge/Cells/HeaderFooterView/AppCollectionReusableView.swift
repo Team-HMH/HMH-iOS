@@ -21,7 +21,7 @@ final class AppCollectionReusableView: UICollectionReusableView {
         $0.setTextWithLineHeight(text: $0.text, lineHeight: 24)
     }
     
-    private let deleteButton = UIButton().then {
+    let deleteButton = UIButton().then {
         $0.setTitle(StringLiteral.Challenge.AppList.appListHeaderButtonText,
                     for: .normal)
         $0.titleLabel?.font = .iosText4Semibold16

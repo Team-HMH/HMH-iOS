@@ -103,7 +103,6 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
             } else {
                 setRootViewController(TimeSurveyViewController())
             }
-    
         default:
             break
         }

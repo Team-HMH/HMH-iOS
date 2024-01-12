@@ -14,6 +14,8 @@ final class MyGoalTimeCell: UICollectionViewCell {
     
     static let identifier = "MyGoalTimeCell"
     
+    var progress: Float = 0
+    
     private let totalGoalTimeLabel = UILabel().then {
         $0.font = .iosDetail4Medium12
         $0.text = StringLiteral.Home.totalGoalUsingTime
@@ -92,8 +94,9 @@ final class MyGoalTimeCell: UICollectionViewCell {
         updateTotalUsageTime(data: data)
         
         totalProgressBar.setProgress(0, animated: false)
+        let progress = Float(self.calculateTotalUsageTime(data: data)) / Float(self.totalTime)
+        self.progress = progress
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            let progress = Float(self.calculateTotalUsageTime(data: data)) / Float(self.totalTime)
             self.totalProgressBar.setProgress(progress, animated: true)
         }
     }

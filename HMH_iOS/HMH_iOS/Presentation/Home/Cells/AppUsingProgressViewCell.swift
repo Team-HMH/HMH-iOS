@@ -52,7 +52,7 @@ final class AppUsingProgressViewCell: UICollectionViewCell {
         $0.font = .iosText6Medium14
         $0.textColor = .gray2
         $0.textAlignment = .center
-        $0.text = "남음"
+        $0.text = StringLiteral.Home.remainedTimeUnit
     }
     lazy var appProgressBar = UIProgressView().then {
         $0.trackTintColor = .gray7
@@ -89,7 +89,7 @@ final class AppUsingProgressViewCell: UICollectionViewCell {
     private func setConstraints() {
         appProgressBar.snp.makeConstraints {
             $0.height.equalTo(75.adjusted)
-            $0.horizontalEdges.equalToSuperview().inset(20)
+            $0.horizontalEdges.equalToSuperview().inset(20.adjustedWidth)
         }
         
         appStackView.snp.makeConstraints {

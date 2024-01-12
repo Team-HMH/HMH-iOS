@@ -56,7 +56,7 @@ final class BlackHoleImageCell: UICollectionViewCell {
     func configureCell (image: UIImage, text: String){
         blackHoleImageView.image = image
         homeBlackHoleStateLabel.text = text
-        homeBlackHoleStateLabel.setTextWithLineHeight(text: text, lineHeight: 33)
+        homeBlackHoleStateLabel.setTextWithLineHeight(text: text, lineHeight: 33.adjusted)
         homeBlackHoleStateLabel.textAlignment = .left
     }
 }

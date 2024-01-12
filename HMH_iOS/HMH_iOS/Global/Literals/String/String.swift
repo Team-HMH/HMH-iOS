@@ -20,10 +20,10 @@ enum StringLiteral {
         static var blackHoleThridStep = "블랙홀이 가까워졌어요\n스마트폰을 멀리해 볼까요?"
         static var blackHoleFourthStep = "블랙홀에 빠질 수 있어요\n스마트폰을 내려놓아요"
         static var blackHoleFifthStep = "지금부터 앱을 사용하면\n챌린지를 실패해요"
-        
         static var blackHoleFailure = "블랙홀에 빠졌어요\n내일은 목표를 이뤄보아요"
         
         static var totalGoalUsingTime = "총 목표 이용 시간"
+        static var remainedTimeUnit = "남음"
     }
     
     enum Challenge {

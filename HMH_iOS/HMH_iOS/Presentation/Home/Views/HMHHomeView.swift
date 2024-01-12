@@ -91,15 +91,20 @@ extension HMHHomeView: UICollectionViewDataSource {
         switch indexPath.section {
         case 0:
             if progressPrecent < 0.24 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icMyPage, text: StringLiteral.Home.blackHoleFirstStep)
+                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icMyPage,
+                                                 text: StringLiteral.Home.blackHoleFirstStep)
             } else if progressPrecent < 0.49 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icChallengeSelected, text: StringLiteral.Home.blackHoleSecondStep)
+                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icChallengeSelected,
+                                                 text: StringLiteral.Home.blackHoleSecondStep)
             } else if progressPrecent < 0.74 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icChallenge, text: StringLiteral.Home.blackHoleThridStep)
+                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icChallenge,
+                                                 text: StringLiteral.Home.blackHoleThridStep)
             } else if progressPrecent < 0.99 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icHomeSelected, text: StringLiteral.Home.blackHoleFourthStep)
+                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icHomeSelected,
+                                                 text: StringLiteral.Home.blackHoleFourthStep)
             } else {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icMyPageSelected, text: StringLiteral.Home.blackHoleFifthStep)
+                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icMyPageSelected,
+                                                 text: StringLiteral.Home.blackHoleFifthStep)
             }
             return blackholeImageCell
         case 1:

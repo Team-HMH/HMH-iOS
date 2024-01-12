@@ -22,6 +22,10 @@ enum ImageLiterals {
         static var icMyPageSelected: UIImage { .load(named: "mypageEnabled") }
     }
     
+    enum appUsed {
+        static var blackholeFail: UIImage { .load(named: "blackhole_fail")}
+    }
+    
     enum myPage {
         static var icBadge: UIImage { .load(named: "ios_badge_ic_disabled")}
         static var icJourney: UIImage { .load(named: "ios_journey_ic")}
@@ -31,5 +35,8 @@ enum ImageLiterals {
     
     enum Challenge {
         static var icPlus: UIImage { .load(named: "Minus_XL") }
+        static var icChallengeFail: UIImage { .load(named: "challenge_ic_fail") }
+        static var icChallengeSuccess: UIImage { .load(named: "challenge_ic_success")
+        }
     }
 }

@@ -18,12 +18,18 @@ final class ChallengeViewController: UIViewController {
                                                  isPointImage: true,
                                                  isBackGroundGray: true,
                                                  titleText: StringLiteral.Challenge.NavigationBarTitle)
-    private let challengeView = ChallengeView()
+    private let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
+    
     
     override func loadView() {
         self.view = challengeView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        challengeView.configreCollectionView()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()

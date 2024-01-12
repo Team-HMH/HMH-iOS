@@ -11,37 +11,29 @@ import UIKit
 import SnapKit
 import Then
 
-final class GoalTimeSelectViewController: UIViewController {
+final class GoalTimeSelectViewController: OnboardingBaseViewController {
     
-    private let navigationBar = HMHNavigationBar(leftItem: .normal,
-                                                 isBackButton: false,
-                                                 isTitleLabel: true,
-                                                 isPointImage: true,
-                                                 isBackGroundGray: false,
-                                                 titleText: "")
+    private let goalTimeView = GoalTimeSelectView()
     
     override func loadView() {
-        
+        self.view = goalTimeView
     }
     
     override func viewDidLoad() {
+        configureViewController()
+        
         super.viewDidLoad()
-        setUI()
     }
     
-    private func setUI(){
-        setViewHierarchy()
-        setConstraints()
+    private func configureViewController() {
+        mainTitleText = StringLiteral.Challenge.GoalTime.titleText
+        subTitleText = StringLiteral.Challenge.GoalTime.subTitleText
+        nextButton.setTitle("완료", for: .normal)
+        step = 6
     }
     
-    private func setViewHierarchy() {
-        view.addSubviews(navigationBar)
-    }
-    
-    private func setConstraints() {
-        navigationBar.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
-        }
+    override func onTapButton() {
+        self.navigationController?.popToRootViewController(animated: false)
     }
     
 }

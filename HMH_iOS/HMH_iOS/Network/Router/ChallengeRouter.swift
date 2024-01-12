@@ -10,10 +10,17 @@ import Foundation
 import Moya
 
 enum ChallengeRouter {
-    case createChallenge
+    case createChallenge(data: CreateChallengeRequestDTO)
 }
 
 extension ChallengeRouter: BaseTargetType {
+    private var headers: Parameters {
+        switch self {
+        case .createChallenge:
+            return APIConstants.hasTokenHeader
+        }
+    }
+    
     var path: String {
         switch self {
         case .createChallenge:
@@ -30,8 +37,8 @@ extension ChallengeRouter: BaseTargetType {
     
     var task: Moya.Task {
         switch self {
-        case .createChallenge:
-            return .requestPlain // 추후 변경 완료
+        case .createChallenge(let data):
+            return .requestJSONEncodable(data)
         }
     }
 }

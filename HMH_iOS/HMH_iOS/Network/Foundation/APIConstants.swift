@@ -12,15 +12,15 @@ struct APIConstants{
     static let contentType = "Content-Type"
     static let applicationJSON = "application/json"
     static let auth = "Authorization"
-    static let accessToken = "" // TO-DO: AccessToken
-    static let appleAccessToken = "" 
+    static let accessToken = "Bearer " // TO-DO: AccessToken
+    static let appleAccessToken = ""
     static let OS = "OS"
     static let iOS = "iOS"
 }
 
 extension APIConstants{
     static let hasSocialTokenHeader = [contentType: applicationJSON,
-                                       auth : accessToken]
+                                       auth : appleAccessToken]
     static let hasTokenHeader = [contentType: applicationJSON,
                                           OS: iOS,
                                        auth : accessToken]

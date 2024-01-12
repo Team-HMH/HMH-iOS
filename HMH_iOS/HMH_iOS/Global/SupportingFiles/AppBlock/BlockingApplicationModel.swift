@@ -5,18 +5,13 @@
 //  Created by 지희의 MAC on 1/4/24.
 //
 
-import Foundation
+import SwiftUI
 import FamilyControls
 import ManagedSettings
 
 final class BlockingApplicationModel: ObservableObject {
     static let shared = BlockingApplicationModel()
-    
-    @Published var newSelection: FamilyActivitySelection = .init() {
-        didSet {
-            updateAppList()
-        }
-    }
+    @Published var newSelection: FamilyActivitySelection = .init()
     
     @Published private(set) var appList: [String] = []
     var onModelUpdate: (() -> Void)?
@@ -28,6 +23,7 @@ final class BlockingApplicationModel: ObservableObject {
     
     init() {
         updateAppList()
+        print(appList)
     }
     
     var selectedAppsTokens: Set<ApplicationToken> {

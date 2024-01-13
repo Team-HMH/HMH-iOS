@@ -20,6 +20,7 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         setAppleLoginButton()
         setUI()
+        setLoginView()
     }
     
     private func setUI() {
@@ -44,6 +45,10 @@ final class LoginViewController: UIViewController {
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(480)
         }
+    }
+    
+    private func setLoginView() {
+        view.backgroundColor = .background
     }
 }
 

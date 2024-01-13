@@ -13,6 +13,7 @@ import Then
 final class TitleCollectionReusableView: UICollectionReusableView {
     
     static let identifier = "TitleCollectionReusableView"
+    
     var isButtonTapped = false
     
     private let subTitleLabel = UILabel().then {

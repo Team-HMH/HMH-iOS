@@ -21,11 +21,8 @@ final class ChallengeViewController: UIViewController {
 
     private let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
     
-
-    private let challengeView = ChallengeView()
     private var selectedIndex = IndexPath()
 
-    
     override func loadView() {
         self.view = challengeView
     }

@@ -18,7 +18,6 @@ final class ChallengeView: UIView {
     private var appAddButtonViewModel: BlockingApplicationModel = BlockingApplicationModel.shared
     private var cancellables: Set<AnyCancellable> = []
     
-    
     private let goalTime: Int = 3
     private var days: Int = 7
     private var appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
@@ -157,8 +156,6 @@ extension ChallengeView: UICollectionViewDataSource {
                 return header
             }
             else { return UICollectionReusableView() }
-            header.deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
-            return header
         } else if kind == StringLiteral.Challenge.Idetifier.appAddFooterViewID {
             guard let footer = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appAddFooterViewID, withReuseIdentifier: AppAddCollectionReusableView.identifier, for: indexPath) as? AppAddCollectionReusableView
             else { return UICollectionReusableView() }

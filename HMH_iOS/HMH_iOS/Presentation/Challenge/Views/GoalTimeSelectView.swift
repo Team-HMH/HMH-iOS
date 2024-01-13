@@ -26,6 +26,7 @@ class GoalTimeSelectView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     private func setUI(){
         setHierarchy()
         setConstraints()
@@ -44,7 +45,5 @@ class GoalTimeSelectView: UIView {
     
     private func configureView() {
         self.backgroundColor = .background
-        
     }
-    
 }

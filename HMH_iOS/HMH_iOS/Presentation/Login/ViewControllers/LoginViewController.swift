@@ -95,13 +95,11 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
             // 소셜 로그인 API 쏘기 403 -> 온보딩 뷰로 이동
             // 회원 가입이 필요한지 아닌지 확인, userId가 있는지 없는지 판별
             // 유저 메니저와 signInModel에 해당 값 저장
-            
-            print(UserManager.shared.getUserIdentifier)
-            print(UserManager.shared.getUserName)
             if (UserManager.shared.appleUserIdentifier != nil) {
                 setRootViewController(TabBarController())
             } else {
-                setRootViewController(TimeSurveyViewController())
+                let nextViewController = TimeSurveyViewController()
+                self.navigationController?.pushViewController(nextViewController, animated: false)
             }
         default:
             break

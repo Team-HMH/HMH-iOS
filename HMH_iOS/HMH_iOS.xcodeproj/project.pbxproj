@@ -64,6 +64,8 @@
 		17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */; };
 		17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */; };
 		17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */; };
+		360D11022B5343C6008BE85A /* requestPermision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11012B5343C6008BE85A /* requestPermision.swift */; };
+		360D11042B53465B008BE85A /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11032B53465B008BE85A /* UIApplication+.swift */; };
 		363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */; };
 		363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 363863BC2B5129F2000FE5E7 /* Lottie */; };
 		364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */; };
@@ -267,6 +269,8 @@
 		17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingProgressViewCell.swift; sourceTree = "<group>"; };
 		17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalTimeCell.swift; sourceTree = "<group>"; };
 		17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleImageCell.swift; sourceTree = "<group>"; };
+		360D11012B5343C6008BE85A /* requestPermision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestPermision.swift; sourceTree = "<group>"; };
+		360D11032B53465B008BE85A /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
 		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -556,6 +560,7 @@
 				36A3D9BB2B3EBD2D007EA272 /* UIScreen+.swift */,
 				3666C88C2B471B1D00564874 /* UIImage+.swift */,
 				0B17D3F02B51AD4B00CFA3B7 /* UIViewController+.swift */,
+				360D11032B53465B008BE85A /* UIApplication+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -981,6 +986,7 @@
 				367B42512B51DFD400B917CD /* ScreenTime.swift */,
 				3666C8792B45F4F900564874 /* SelectedBlocker.swift */,
 				3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */,
+				360D11012B5343C6008BE85A /* requestPermision.swift */,
 			);
 			path = AppBlock;
 			sourceTree = "<group>";
@@ -1325,6 +1331,7 @@
 				3649237D2B4FC9CD00BF7ACA /* NetworkRequest.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
 				0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */,
+				360D11042B53465B008BE85A /* UIApplication+.swift in Sources */,
 				3649239B2B505B2600BF7ACA /* Providers.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
@@ -1336,6 +1343,7 @@
 				17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */,
 				3649239D2B505CED00BF7ACA /* ChallengeRouter.swift in Sources */,
 				364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */,
+				360D11022B5343C6008BE85A /* requestPermision.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
 				17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */,
 				17314F9D2B4C554D0089A551 /* MypageCollectionViewCell.swift in Sources */,

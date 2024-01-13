@@ -22,7 +22,7 @@ enum ImageLiterals {
         static var icMyPageSelected: UIImage { .load(named: "mypageEnabled") }
     }
     
-    enum appUsed {
+    enum Home {
         static var blackholeFail: UIImage { .load(named: "blackhole_fail")}
     }
     
@@ -44,5 +44,9 @@ enum ImageLiterals {
     
     enum Alert {
         static var icChallengeAlert: UIImage { .load(named: "ios_challenge_alert_img") }
+    }
+    
+    enum limitTime {
+        static var icLimitTime: UIImage { .load(named: "ios_limit_time_img") }
     }
 }

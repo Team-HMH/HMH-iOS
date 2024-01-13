@@ -49,6 +49,11 @@ enum StringLiteral {
             static var backgroundViewId = "GrayBackground"
             static var appAddFooterViewID = "appAddFooter"
         }
+        
+        enum Time {
+            static var timeLabel = "시간"
+            static var minLabel = "분"
+        }
     }
     
     enum myPage {

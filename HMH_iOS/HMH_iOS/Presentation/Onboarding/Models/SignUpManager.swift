@@ -10,10 +10,10 @@ import UIKit
 class SignUpManager {
     static let shared = SignUpManager()
     
-    let averageUseTime: String = ""
-    let problem: [String] = []
-    let period: Int = 0
-    let goalTime: Int = 0
-    let appCode: String = ""
+    var averageUseTime: String = ""
+    var problem: [String] = []
+    var period: Int = 0
+    var goalTime: Int = 0
+    var appCode: String = ""
 }
 

@@ -60,8 +60,6 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
         surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.thirdSelect)
         surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.TimeSurveySelect.fourthSelect)
         
-        print(surveyView.firstButton.isChecked)
-        
         surveyView.firstButton.delegate = self
         surveyView.secondButton.delegate = self
         surveyView.thirdButton.delegate = self
@@ -73,7 +71,7 @@ extension TimeSurveyViewController: NextViewPushDelegate {
     func didTapButton() {
         let nextViewController = ProblemSurveyViewController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
-        print(selectedText, "🚨")
+        SignUpManager.shared.averageUseTime = selectedText
     }
 }
 

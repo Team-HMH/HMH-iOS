@@ -75,6 +75,7 @@ extension ProblemSurveyViewController: NextViewPushDelegate {
     func didTapButton() {
         let nextViewController = SelectPeriodController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
+        SignUpManager.shared.problem = textArray
     }
 }
 
@@ -86,7 +87,6 @@ extension ProblemSurveyViewController: HMHSelectButtonDelegate {
         } else {
             textArray.append(text)
         }
-        
         print(textArray)
     }
 }

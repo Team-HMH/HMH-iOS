@@ -66,12 +66,21 @@ final class SelectPeriodController: OnboardingBaseViewController {
         surveyView.thirdButton.delegate = self
         surveyView.fourthButton.delegate = self
     }
+    
+    func convertAndRemoveLastCharacter(_ input: String) -> Int? {
+        guard let intValue = Int(String(input.dropLast())) else {
+            return nil
+        }
+        return intValue
+    }
 }
 
 extension SelectPeriodController: NextViewPushDelegate {
     func didTapButton() {
         let nextViewController = SelectTotalTimeController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
+        SignUpManager.shared.period = convertAndRemoveLastCharacter(selectPeriod) ?? 0
+        print(SignUpManager.shared.problem)
     }
 }
 
@@ -79,6 +88,5 @@ extension SelectPeriodController: HMHSelectButtonDelegate {
     func updateAvailability(isEnabled: Bool, text: String) {
         nextButton.updateStatus(isEnabled: isEnabled)
         selectPeriod = text
-        print(text)
     }
 }

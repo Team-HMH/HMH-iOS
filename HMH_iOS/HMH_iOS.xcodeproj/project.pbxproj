@@ -59,14 +59,15 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChallengeViewController.swift */; };
-		364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */; };
 		17CF9FBD2B4DC757000DD09C /* HMHHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FBC2B4DC757000DD09C /* HMHHomeView.swift */; };
 		17CF9FC12B4DE2B6000DD09C /* AppUsingTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC02B4DE2B6000DD09C /* AppUsingTimeModel.swift */; };
 		17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */; };
 		17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */; };
 		17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */; };
+		17CF9FDE2B52F86A000DD09C /* GetUserDataResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */; };
 		363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */; };
 		363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 363863BC2B5129F2000FE5E7 /* Lottie */; };
+		364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */; };
 		364923652B4F4FB800BF7ACA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923642B4F4FB800BF7ACA /* Config.swift */; };
 		364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923672B4F513600BF7ACA /* BaseTargetType.swift */; };
 		3649236A2B4F514A00BF7ACA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 364923692B4F514A00BF7ACA /* Moya */; };
@@ -263,13 +264,14 @@
 		174AF4972B447CF100450D07 /* ChanllengeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeModels.swift; sourceTree = "<group>"; };
 		174AF4992B447CFB00450D07 /* ChanllengeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViews.swift; sourceTree = "<group>"; };
 		174AF49B2B447D0700450D07 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
-		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		17CF9FBC2B4DC757000DD09C /* HMHHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHHomeView.swift; sourceTree = "<group>"; };
 		17CF9FC02B4DE2B6000DD09C /* AppUsingTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingTimeModel.swift; sourceTree = "<group>"; };
 		17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingProgressViewCell.swift; sourceTree = "<group>"; };
 		17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalTimeCell.swift; sourceTree = "<group>"; };
 		17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleImageCell.swift; sourceTree = "<group>"; };
+		17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataResponseDTO.swift; sourceTree = "<group>"; };
 		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
+		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		364923672B4F513600BF7ACA /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
@@ -655,6 +657,7 @@
 		0B8A89A32B369DBE00688BA6 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				17CF9FDC2B52F7E5000DD09C /* MyPageModel */,
 				3649239E2B505F0600BF7ACA /* ChallengeModel */,
 			);
 			path = DTO;
@@ -898,6 +901,14 @@
 				17314FB62B4D93D30089A551 /* StoreCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		17CF9FDC2B52F7E5000DD09C /* MyPageModel */ = {
+			isa = PBXGroup;
+			children = (
+				17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */,
+			);
+			path = MyPageModel;
 			sourceTree = "<group>";
 		};
 		364923962B50547F00BF7ACA /* Foundation */ = {
@@ -1324,6 +1335,7 @@
 				17314FB32B4D68950089A551 /* UserModel.swift in Sources */,
 				17314F892B49A8B60089A551 /* AlertDelegate.swift in Sources */,
 				17314FAF2B4D3E1C0089A551 /* LogoutAndQuitFooterView.swift in Sources */,
+				17CF9FDE2B52F86A000DD09C /* GetUserDataResponseDTO.swift in Sources */,
 				0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */,
 				3649237D2B4FC9CD00BF7ACA /* NetworkRequest.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,

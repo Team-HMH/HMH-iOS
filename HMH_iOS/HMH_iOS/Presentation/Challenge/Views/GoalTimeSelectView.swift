@@ -14,8 +14,8 @@ import FamilyControls
 class GoalTimeSelectView: UIView {
     
     var screenTime = ScreenTime.shared
-    private let timePicker = HMHTimePickerView(type: .specificTime)
-    private let timeLable = UILabel().then {
+    private let hourPicker = HMHTimePickerView(type: .specificTime)
+    private let hourLabel = UILabel().then {
         $0.text = StringLiteral.Challenge.Time.timeLabel
         $0.font = .iosText2Medium20
         $0.textColor = .gray2
@@ -44,24 +44,24 @@ class GoalTimeSelectView: UIView {
     }
     
     private func setHierarchy() {
-        self.addSubviews(timePicker,timeLable,minPicker,minLable)
+        self.addSubviews(hourPicker,hourLabel,minPicker,minLable)
     }
     
     private func setConstraints() {
-        timePicker.snp.makeConstraints {
+        hourPicker.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview().offset(72.adjusted)
             $0.width.equalTo(67.adjusted)
         }
         
-        timeLable.snp.makeConstraints {
+        hourLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalTo(timePicker.snp.trailing).offset(-7.adjusted)
+            $0.leading.equalTo(hourPicker.snp.trailing).offset(-7.adjusted)
         }
         
         minPicker.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalTo(timeLable.snp.trailing).offset(23.adjusted)
+            $0.leading.equalTo(hourLabel.snp.trailing).offset(23.adjusted)
             $0.width.equalTo(67.adjusted)
         }
         

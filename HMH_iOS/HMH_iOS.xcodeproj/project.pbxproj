@@ -15,6 +15,9 @@
 		0B17D3EB2B5104E000CFA3B7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17D3EA2B5104E000CFA3B7 /* UserManager.swift */; };
 		0B17D3ED2B5108D200CFA3B7 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17D3EC2B5108D200CFA3B7 /* UserDefaultWrapper.swift */; };
 		0B17D3F12B51AD4B00CFA3B7 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17D3F02B51AD4B00CFA3B7 /* UIViewController+.swift */; };
+		0B1AE8182B53169500CF5154 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE8172B53169500CF5154 /* AuthRouter.swift */; };
+		0B1AE81B2B531A3E00CF5154 /* SocialLoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE81A2B531A3E00CF5154 /* SocialLoginRequestDTO.swift */; };
+		0B1AE81D2B531A6C00CF5154 /* SocialLoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE81C2B531A6C00CF5154 /* SocialLoginResponseDTO.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
 		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
@@ -217,6 +220,9 @@
 		0B17D3EA2B5104E000CFA3B7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		0B17D3EC2B5108D200CFA3B7 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		0B17D3F02B51AD4B00CFA3B7 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		0B1AE8172B53169500CF5154 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		0B1AE81A2B531A3E00CF5154 /* SocialLoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginRequestDTO.swift; sourceTree = "<group>"; };
+		0B1AE81C2B531A6C00CF5154 /* SocialLoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginResponseDTO.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
 		0B50F9C72B369813000C5046 /* HMH_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMH_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -424,6 +430,15 @@
 				0B17D3EC2B5108D200CFA3B7 /* UserDefaultWrapper.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		0B1AE8192B5319C900CF5154 /* AuthModel */ = {
+			isa = PBXGroup;
+			children = (
+				0B1AE81A2B531A3E00CF5154 /* SocialLoginRequestDTO.swift */,
+				0B1AE81C2B531A6C00CF5154 /* SocialLoginResponseDTO.swift */,
+			);
+			path = AuthModel;
 			sourceTree = "<group>";
 		};
 		0B2C2D3C2B4559AE0023CCFA /* Onboarding */ = {
@@ -655,6 +670,7 @@
 		0B8A89A32B369DBE00688BA6 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				0B1AE8192B5319C900CF5154 /* AuthModel */,
 				3649239E2B505F0600BF7ACA /* ChallengeModel */,
 			);
 			path = DTO;
@@ -917,6 +933,7 @@
 			isa = PBXGroup;
 			children = (
 				3649239C2B505CED00BF7ACA /* ChallengeRouter.swift */,
+				0B1AE8172B53169500CF5154 /* AuthRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1296,6 +1313,7 @@
 				0B7817522B4BE0280078E925 /* ProgressBarManager.swift in Sources */,
 				0B8A89C42B369FA000688BA6 /* F.swift in Sources */,
 				3666C8892B47110800564874 /* HMHTimePickerView.swift in Sources */,
+				0B1AE81B2B531A3E00CF5154 /* SocialLoginRequestDTO.swift in Sources */,
 				0B000CE92B4D9D6E00AEC582 /* SelectPeriodController.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */,
@@ -1306,6 +1324,7 @@
 				0B000CED2B4D9DA800AEC582 /* ApprovePermisionController.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				367B42532B51DFD400B917CD /* ScreenTime.swift in Sources */,
+				0B1AE8182B53169500CF5154 /* AuthRouter.swift in Sources */,
 				17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
 				17CF9FC12B4DE2B6000DD09C /* AppUsingTimeModel.swift in Sources */,
@@ -1353,6 +1372,7 @@
 				36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */,
 				36E531C92B4C798100B4BBE3 /* MyStore.swift in Sources */,
 				36E05FE62B48825A005B633E /* AppCollectionReusableView.swift in Sources */,
+				0B1AE81D2B531A6C00CF5154 /* SocialLoginResponseDTO.swift in Sources */,
 				3666C88B2B471B0D00564874 /* String.swift in Sources */,
 				17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */,
 				3666C89B2B48516500564874 /* ChallengeView.swift in Sources */,

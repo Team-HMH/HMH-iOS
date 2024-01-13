@@ -40,6 +40,7 @@ final class LogoutAndQuitFooterView: UICollectionReusableView {
         super.init(frame: frame)
         setUI()
         configureView()
+        setupButtons()
     }
     
     required init?(coder: NSCoder) {
@@ -70,5 +71,41 @@ final class LogoutAndQuitFooterView: UICollectionReusableView {
     
     private func configureView() {
         self.backgroundColor = .background
+    }
+    
+    private func setupButtons() {
+            logoutButton.addTarget(self, action: #selector(tap(button:)), for: .touchUpInside)
+            quitButton.addTarget(self, action: #selector(tap(button:)), for: .touchUpInside)
+            logoutButton.isUserInteractionEnabled = true
+            quitButton.isUserInteractionEnabled = true
+        }
+    
+    @objc func tap (button: UIButton) {
+        if button == logoutButton {
+            var responder: UIResponder? = self
+            while responder != nil {
+                responder = responder?.next
+                if let viewController = responder as? UIViewController {
+                    let alertController = AlertViewController()
+                    alertController.setAlertType(.HMHLogoutAlert)
+                    alertController.modalPresentationStyle = .overFullScreen
+                    viewController.present(alertController, animated: false, completion: nil)
+                    break
+                }
+            }
+        }
+        else if button == quitButton {
+            var responder: UIResponder? = self
+            while responder != nil {
+                responder = responder?.next
+                if let viewController = responder as? UIViewController {
+                    let alertController = AlertViewController()
+                    alertController.setAlertType(.HMHQuitALert)
+                    alertController.modalPresentationStyle = .overFullScreen
+                    viewController.present(alertController, animated: false, completion: nil)
+                    break
+                }
+            }
+        }
     }
 }

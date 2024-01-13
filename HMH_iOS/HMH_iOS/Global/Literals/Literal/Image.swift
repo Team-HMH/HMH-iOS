@@ -26,6 +26,20 @@ enum ImageLiterals {
         static var blackholeFail: UIImage { .load(named: "blackhole_fail")}
     }
     
+    enum Splash {
+        static var splash: UIImage { .load(named: "ios_splash")}
+    }
+    
+    enum Onboarding {
+        static var signUpComplete: UIImage { .load(named: "img_ios_signUp")}
+    }
+    
+    enum Login {
+        static var onboarigFirst: UIImage { .load(named: "img_ios_onboarding_1")}
+        static var onboarigSecond: UIImage { .load(named: "img_ios_onboarding_2")}
+        static var onboarigThird: UIImage { .load(named: "img_ios_onboarding_3")}
+    }
+    
     enum myPage {
         static var icBadge: UIImage { .load(named: "ios_badge_ic_disabled")}
         static var icJourney: UIImage { .load(named: "ios_journey_ic")}

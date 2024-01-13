@@ -25,7 +25,7 @@ final class SignInCompleteViewController: OnboardingBaseViewController {
     }
     
     private let signInImageView = UIImageView().then {
-        $0.image = ImageLiterals.myPage.icBadge
+        $0.image = ImageLiterals.Onboarding.signUpComplete
         $0.contentMode = .scaleAspectFit
     }
     

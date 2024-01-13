@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 protocol HMHSelectButtonDelegate: AnyObject {
-    func updateAvailability(isEnabled: Bool)
+    func updateAvailability(isEnabled: Bool, text: String)
 }
 
 final class HMHSelectButton: UIButton {
@@ -25,10 +25,10 @@ final class HMHSelectButton: UIButton {
     }
     
     private var selectButtonType: HMHSelectButtonType = .disabled
-    private var isChecked: Bool = false
+    var isChecked: Bool = false
     
     var buttonContentLabel = UILabel().then {
-        $0.font = UIFont.iosText5Medium16
+        $0.font = .iosText5Medium16
     }
     
     init(buttonType: HMHSelectButtonType) {
@@ -138,6 +138,9 @@ final class HMHSelectButton: UIButton {
     }
     
     func updateAvailability(status: Bool) {
-        self.delegate?.updateAvailability(isEnabled: status)
+        guard let text = buttonContentLabel.text else {
+            return
+        }
+        self.delegate?.updateAvailability(isEnabled: status, text: text)
     }
 }

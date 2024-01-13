@@ -12,6 +12,7 @@ import Then
 
 final class SelectPeriodController: OnboardingBaseViewController {
     private let surveyView = SurveyView(firstButtonType: .solitary, secondButtonType: .solitary, thirdButtonType: .disabled, fourthButtonType: .disabled)
+    private var selectPeriod = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +76,9 @@ extension SelectPeriodController: NextViewPushDelegate {
 }
 
 extension SelectPeriodController: HMHSelectButtonDelegate {
-    func updateAvailability(isEnabled: Bool) {
+    func updateAvailability(isEnabled: Bool, text: String) {
         nextButton.updateStatus(isEnabled: isEnabled)
+        selectPeriod = text
+        print(text)
     }
 }

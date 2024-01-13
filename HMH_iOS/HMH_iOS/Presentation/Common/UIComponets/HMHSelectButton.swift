@@ -28,7 +28,7 @@ final class HMHSelectButton: UIButton {
     var isChecked: Bool = false
     
     var buttonContentLabel = UILabel().then {
-        $0.font = UIFont.iosText5Medium16
+        $0.font = .iosText5Medium16
     }
     
     init(buttonType: HMHSelectButtonType) {

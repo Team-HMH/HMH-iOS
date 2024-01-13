@@ -49,6 +49,11 @@ enum StringLiteral {
             static var backgroundViewId = "GrayBackground"
             static var appAddFooterViewID = "appAddFooter"
         }
+        
+        enum Time {
+            static var timeLabel = "시간"
+            static var minLabel = "분"
+        }
     }
     
     enum myPage {
@@ -65,6 +70,9 @@ enum StringLiteral {
         
         static var logout = "로그아웃"
         static var quit = "회원탈퇴"
+        
+        static var urlArray = ["https://hmhteam.notion.site/33acb29be57245f394eb93ddb2e3b8cc",
+                               "https://www.notion.so/hmhteam/7006ac1eb36545c38ea2bdfc7e34d2cb?pvs=4"]
     }
     
     enum AlertButton {

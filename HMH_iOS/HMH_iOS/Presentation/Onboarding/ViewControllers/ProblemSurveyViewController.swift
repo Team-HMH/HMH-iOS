@@ -15,6 +15,7 @@ final class ProblemSurveyViewController: OnboardingBaseViewController {
                                         secondButtonType: .multiple,
                                         thirdButtonType: .multiple,
                                         fourthButtonType: .multiple)
+    private var textArray: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,11 +75,17 @@ extension ProblemSurveyViewController: NextViewPushDelegate {
     func didTapButton() {
         let nextViewController = SelectPeriodController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
+        SignUpManager.shared.problem = textArray
     }
 }
 
 extension ProblemSurveyViewController: HMHSelectButtonDelegate {
-    func updateAvailability(isEnabled: Bool) {
+    func updateAvailability(isEnabled: Bool, text: String) {
         nextButton.updateStatus(isEnabled: isEnabled)
+        if textArray.contains(text) {
+            textArray.removeAll(where: { $0 == text })
+        } else {
+            textArray.append(text)
+        }
     }
 }

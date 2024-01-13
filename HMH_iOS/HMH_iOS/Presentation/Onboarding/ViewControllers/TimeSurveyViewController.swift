@@ -12,6 +12,7 @@ import Then
 
 final class TimeSurveyViewController: OnboardingBaseViewController {
     private let surveyView = SurveyView(firstButtonType: .solitary, secondButtonType: .solitary, thirdButtonType: .solitary, fourthButtonType: .solitary)
+    private var selectedText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,11 +71,13 @@ extension TimeSurveyViewController: NextViewPushDelegate {
     func didTapButton() {
         let nextViewController = ProblemSurveyViewController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
+        SignUpManager.shared.averageUseTime = selectedText
     }
 }
 
 extension TimeSurveyViewController: HMHSelectButtonDelegate {
-    func updateAvailability(isEnabled: Bool) {
+    func updateAvailability(isEnabled: Bool, text: String) {
         nextButton.updateStatus(isEnabled: isEnabled)
+        selectedText = text
     }
 }

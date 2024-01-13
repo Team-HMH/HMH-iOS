@@ -33,7 +33,7 @@
 		0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B12B4CE908007E3F9C /* SurveyView.swift */; };
 		0BA193B42B4D089C007E3F9C /* TimeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */; };
 		0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */; };
-		0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B82B4D4097007E3F9C /* SignInModel.swift */; };
+		0BA193B92B4D4097007E3F9C /* SignUpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B82B4D4097007E3F9C /* SignUpManager.swift */; };
 		0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */; };
 		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
 		0BD98DB92B4D671600E35188 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD98DB82B4D671600E35188 /* SplashViewController.swift */; };
@@ -59,7 +59,6 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChallengeViewController.swift */; };
-		364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */; };
 		17CF9FBD2B4DC757000DD09C /* HMHHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FBC2B4DC757000DD09C /* HMHHomeView.swift */; };
 		17CF9FC12B4DE2B6000DD09C /* AppUsingTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC02B4DE2B6000DD09C /* AppUsingTimeModel.swift */; };
 		17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */; };
@@ -67,6 +66,7 @@
 		17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */; };
 		363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */; };
 		363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 363863BC2B5129F2000FE5E7 /* Lottie */; };
+		364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */; };
 		364923652B4F4FB800BF7ACA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923642B4F4FB800BF7ACA /* Config.swift */; };
 		364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923672B4F513600BF7ACA /* BaseTargetType.swift */; };
 		3649236A2B4F514A00BF7ACA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 364923692B4F514A00BF7ACA /* Moya */; };
@@ -237,7 +237,7 @@
 		0BA193B12B4CE908007E3F9C /* SurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyView.swift; sourceTree = "<group>"; };
 		0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSurveyViewController.swift; sourceTree = "<group>"; };
 		0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSurveyViewController.swift; sourceTree = "<group>"; };
-		0BA193B82B4D4097007E3F9C /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
+		0BA193B82B4D4097007E3F9C /* SignUpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpManager.swift; sourceTree = "<group>"; };
 		0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressView.swift; sourceTree = "<group>"; };
 		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
 		0BD98DB82B4D671600E35188 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -263,13 +263,13 @@
 		174AF4972B447CF100450D07 /* ChanllengeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeModels.swift; sourceTree = "<group>"; };
 		174AF4992B447CFB00450D07 /* ChanllengeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViews.swift; sourceTree = "<group>"; };
 		174AF49B2B447D0700450D07 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
-		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		17CF9FBC2B4DC757000DD09C /* HMHHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHHomeView.swift; sourceTree = "<group>"; };
 		17CF9FC02B4DE2B6000DD09C /* AppUsingTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingTimeModel.swift; sourceTree = "<group>"; };
 		17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingProgressViewCell.swift; sourceTree = "<group>"; };
 		17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalTimeCell.swift; sourceTree = "<group>"; };
 		17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleImageCell.swift; sourceTree = "<group>"; };
 		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
+		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		364923672B4F513600BF7ACA /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
@@ -739,7 +739,7 @@
 		0BA193B72B4D4086007E3F9C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0BA193B82B4D4097007E3F9C /* SignInModel.swift */,
+				0BA193B82B4D4097007E3F9C /* SignUpManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1311,7 +1311,7 @@
 				17CF9FC12B4DE2B6000DD09C /* AppUsingTimeModel.swift in Sources */,
 				3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */,
 				364923822B4FD68000BF7ACA /* APIConstants.swift in Sources */,
-				0BA193B92B4D4097007E3F9C /* SignInModel.swift in Sources */,
+				0BA193B92B4D4097007E3F9C /* SignUpManager.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				17314FB72B4D93D30089A551 /* StoreCollectionViewCell.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,
@@ -1582,8 +1582,8 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "하면함";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1616,8 +1616,8 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "하면함";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

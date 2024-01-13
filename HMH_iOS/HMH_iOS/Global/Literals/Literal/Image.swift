@@ -27,6 +27,7 @@ enum ImageLiterals {
     }
     
     enum myPage {
+        static var icProfil: UIImage { .load(named: "ios_profil_image")}
         static var icBadge: UIImage { .load(named: "ios_badge_ic_disabled")}
         static var icJourney: UIImage { .load(named: "ios_journey_ic")}
         static var icStore: UIImage { .load(named: "ios_store_ic")}

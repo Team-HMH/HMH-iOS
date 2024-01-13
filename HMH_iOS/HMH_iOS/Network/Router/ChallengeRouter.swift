@@ -14,7 +14,7 @@ enum ChallengeRouter {
 }
 
 extension ChallengeRouter: BaseTargetType {
-    private var headers: Parameters {
+    var headers: [String : String]? {
         switch self {
         case .createChallenge:
             return APIConstants.hasTokenHeader

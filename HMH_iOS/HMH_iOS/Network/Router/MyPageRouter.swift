@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum MyPageRouter {
-    case getUserData(data: GetUserDataResponseDTO)
+    case getUserData
 }
 
 extension MyPageRouter: BaseTargetType {
@@ -37,7 +37,7 @@ extension MyPageRouter: BaseTargetType {
     
     var task: Moya.Task {
         switch self {
-        case .getUserData(let data):
+        case .getUserData:
             return .requestPlain
         }
     }

@@ -12,24 +12,20 @@ import SnapKit
 import Then
 
 final class TabBarController: UITabBarController {
-    
-    private let authorizationCenter = AuthorizationCenter.shared
-    
     private let tabBarView = UIView().then {
         $0.backgroundColor = .gray7
         $0.makeCornerRound(radius: 8.adjusted)
         $0.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setTabBar()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        requestAuthorization()
     }
     
     override func viewDidLayoutSubviews() {
@@ -127,19 +123,5 @@ final class TabBarController: UITabBarController {
             }
         }
         selectedIndex = 1 
-    }
-    
-    private func requestAuthorization() {
-        if authorizationCenter.authorizationStatus == .approved {
-            print("ScreenTime 권한 허용 완료")
-        } else {
-            Task {
-                do {
-                    try await authorizationCenter.requestAuthorization(for: .individual)
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-        }
     }
 }

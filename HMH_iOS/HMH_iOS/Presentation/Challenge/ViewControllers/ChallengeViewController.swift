@@ -18,8 +18,13 @@ final class ChallengeViewController: UIViewController {
                                                  isPointImage: true,
                                                  isBackGroundGray: true,
                                                  titleText: StringLiteral.Challenge.NavigationBarTitle)
+
     private let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
     
+
+    private let challengeView = ChallengeView()
+    private var selectedIndex = IndexPath()
+
     
     override func loadView() {
         self.view = challengeView
@@ -33,6 +38,7 @@ final class ChallengeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        setDelegate()
     }
     
     private func setUI(){
@@ -50,4 +56,34 @@ final class ChallengeViewController: UIViewController {
         }
     }
     
+    private func setDelegate() {
+        challengeView.challengeCollectionView.delegate = self
+    }
+}
+
+extension ChallengeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if let selectedIndexPath = collectionView.indexPathsForSelectedItems?.first {
+            if selectedIndexPath == indexPath {
+                return false
+            }
+        }
+        return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if selectedIndex == [] {
+            selectedIndex = [1,0]
+        }
+        if challengeView.isDeleteMode {
+            if let previousSelectedCell = collectionView.cellForItem(at: selectedIndex) as? AppListCollectionViewCell {
+                previousSelectedCell.isSelectedCell = false
+            }
+            if let currentSelectedCell = collectionView.cellForItem(at: indexPath) as? AppListCollectionViewCell {
+                currentSelectedCell.isSelectedCell = true
+                self.selectedIndex = indexPath
+            }
+            
+        }
+    }
 }

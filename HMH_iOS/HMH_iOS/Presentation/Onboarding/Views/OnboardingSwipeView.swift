@@ -59,7 +59,7 @@ final class OnboardingSwipeView: UIView {
     
     private func setConstraints() {
         scrollView.snp.makeConstraints {
-            $0.width.equalToSuperview()
+            $0.width.equalTo(UIScreen.main.bounds.width)
             $0.height.equalTo(380.adjustedHeight)
         }
         
@@ -81,8 +81,8 @@ final class OnboardingSwipeView: UIView {
             
             pageView.snp.makeConstraints {
                 $0.top.equalTo(scrollView.snp.top)
-                $0.size.equalToSuperview()
-                $0.leading.equalTo(scrollView.snp.leading).offset(375.adjusted * CGFloat(i))
+                $0.size.equalTo(scrollView)
+                $0.leading.equalTo(scrollView.snp.leading).offset(375.adjustedWidth * CGFloat(i))
             }
         }
     }
@@ -98,14 +98,14 @@ final class OnboardingSwipeView: UIView {
     
     @objc private func nextPage() {
         currentPage = (currentPage + 1) % 3
-        scrollView.setContentOffset(CGPoint(x: (scrollView.frame.width.adjusted * CGFloat(currentPage)), y: 0), animated: true)
+        scrollView.setContentOffset(CGPoint(x: (UIScreen.main.bounds.width * CGFloat(currentPage)), y: 0), animated: true)
         pageControl.currentPage = currentPage
     }
 }
 
 extension OnboardingSwipeView: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        currentPage = Int(scrollView.contentOffset.x.adjusted / scrollView.frame.width.adjusted)
+        currentPage = Int(scrollView.contentOffset.x.adjustedWidth / UIScreen.main.bounds.width)
         pageControl.currentPage = currentPage
     }
 }

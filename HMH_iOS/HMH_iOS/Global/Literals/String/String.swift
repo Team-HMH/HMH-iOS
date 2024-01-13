@@ -14,6 +14,18 @@ enum StringLiteral {
         static var myPageTitle = "마이페이지"
     }
     
+    enum Home {
+        static var blackHoleFirstStep = "\(UserModel.dummy().userName)님을 위한\n우주가 생성되었어요"
+        static var blackHoleSecondStep = "블랙홀이 다가와요\n도파민의 유혹을 이겨내요"
+        static var blackHoleThridStep = "블랙홀이 가까워졌어요\n스마트폰을 멀리해 볼까요?"
+        static var blackHoleFourthStep = "블랙홀에 빠질 수 있어요\n스마트폰을 내려놓아요"
+        static var blackHoleFifthStep = "지금부터 앱을 사용하면\n챌린지를 실패해요"
+        static var blackHoleFailure = "블랙홀에 빠졌어요\n내일은 목표를 이뤄보아요"
+        
+        static var totalGoalUsingTime = "총 목표 이용 시간"
+        static var remainedTimeUnit = "남음"
+    }
+    
     enum Challenge {
         static var NavigationBarTitle = "나의 챌린지"
         enum Date {
@@ -22,7 +34,8 @@ enum StringLiteral {
         }
         enum AppList {
             static var appListHeaderTitle = "앱 잠금"
-            static var appListHeaderButtonText = "삭제"
+            static var appListDeleteHeaderButtonText = "삭제"
+            static var appListCancelHeaderButtonText = "취소"
         }
         
         enum GoalTime {
@@ -37,6 +50,23 @@ enum StringLiteral {
             static var appAddFooterViewID = "appAddFooter"
         }
     }
+    
+    enum myPage {
+        static var point = "보유 포인트"
+        static var badge = "배지 컬랙션"
+        
+        static var journey = "지금까지의 여정"
+        static var store = "상점"
+        
+        static var TOS = "이용약관"
+        static var privacyPolicy = "개인정보처리방침"
+        
+        static var info = "정보"
+        
+        static var logout = "로그아웃"
+        static var quit = "회원탈퇴"
+    }
+    
     enum AlertButton {
         static let confirm = "확인"
         static let cancel = "취소"
@@ -64,10 +94,20 @@ enum StringLiteral {
     enum OnboardigMain {
         static let timeSurvey = "하루 평균 휴대폰을\n얼마나 사용하나요?"
         static let problemSurvey = "휴대폰을 사용할 때\n어떤 문제를 겪고 있나요?"
+        static let selectPeriod = "챌린지 기간을 선택해 주세요"
+        static let selectTotalTime = "총 목표 이용 시간을\n설정해 주세요"
+        static let approvePermision = "스크린타임 권한 허용이 필요해요"
+        static let appSelect = "중독에서 탈출하고 싶은\n앱을 선택해 주세요"
+        static let signInComplete = "회원가입 완료"
     }
     
     enum OnboardigSub {
         static let problemSurvey = "해당 문항은 최대 2개까지 선택할 수 있어요"
+        static let selectPeriod = "첫 챌린지로 가볍게 도전하기 좋은 7일을 추천해요"
+        static let selectTotalTime = "목표 이용 시간은 최대 6시간까지 설정할 수 있어요"
+        static let approvePermision = "언제든지 설정에서 스크린타임과 알림\n권한을 변경할 수 있어요"
+        static let appSelect = "목표 이용 시간이 지나면 앱이 잠겨요\n선택하고 싶은 앱은 언제든지 추가할 수 있어요"
+        static let signInComplete = "이제 하면함에서 블랙홀 탈출을 위한\n여정을 시작해 볼까요?"
     }
     
     enum TimeSurveySelect {
@@ -82,5 +122,12 @@ enum StringLiteral {
         static let secondSelect = "이용 시간이 스스로 제어되지 않아요"
         static let thirdSelect = "특정 앱에 수시로 접속하게 돼요"
         static let fourthSelect = "중독을 탈출하려고 노력해도 잘 안 돼요"
+    }
+    
+    enum PeriodSelect {
+        static let firstSelect = "7일"
+        static let secondSelect = "14일"
+        static let thirdSelect = "20일"
+        static let fourthSelect = "30일"
     }
 }

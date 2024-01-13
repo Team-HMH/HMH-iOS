@@ -21,7 +21,9 @@ final class ChallengeView: UIView {
     
     private let goalTime: Int = 3
     private var days: Int = 7
-    lazy var appList: [String] = ["Youtude", "Instagram", "Netflex"] {
+    private var appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
+                                       AppModel(appIcon: "", appName: "Youtube", appUseTime: "1시간")]
+    var isDeleteMode: Bool = false {
         didSet {
             challengeCollectionView.reloadData()
         }
@@ -91,16 +93,7 @@ final class ChallengeView: UIView {
     }
     
     @objc private func deleteButtonTapped() {
-        // Perform deletion logic here
-        print("클릭클릭!!")
-        if let selectedIndexPaths = challengeCollectionView.indexPathsForSelectedItems {
-            let indexesToDelete = selectedIndexPaths.filter { $0.section == 1 }
-            for indexPath in indexesToDelete {
-                appList.remove(at: indexPath.item)
-            }
-            challengeCollectionView.deleteItems(at: indexesToDelete)
-            challengeCollectionView.reloadData()
-        }
+        isDeleteMode.toggle()
     }
 }
 
@@ -135,7 +128,17 @@ extension ChallengeView: UICollectionViewDataSource {
                     as? AppListCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.configureCell(appName: appList[indexPath.item], appTime: "1시간")
+            if isDeleteMode {
+                if indexPath.item == 0 {
+                    cell.isSelectedCell = true
+                }
+                else {
+                    cell.isSelectedCell = false
+                }
+            } else {
+                cell.isSelectedCell = false
+            }
+            cell.configureCell(appName: appList[indexPath.item].appName, appTime: appList[indexPath.item].appUseTime)
             return cell
         default:
             return UICollectionViewCell()
@@ -148,7 +151,11 @@ extension ChallengeView: UICollectionViewDataSource {
             else { return UICollectionReusableView() }
             return header
         } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {
-            guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView
+            if let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView {
+                header.deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+                header.isDeleteMode = isDeleteMode
+                return header
+            }
             else { return UICollectionReusableView() }
             header.deleteButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
             return header

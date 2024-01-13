@@ -78,7 +78,6 @@ final class TabBarController: UITabBarController {
         let tabBarHeight: CGFloat = UIScreen.main.isLongerThan812pt ? 52.0.adjusted : 58.0.adjusted
         tabBar.frame.size.height = tabBarHeight + safeAreaHeight
         tabBar.frame.origin.y = view.frame.height - tabBarHeight - safeAreaHeight
-
     }
     
     private func setTabBar() {
@@ -127,6 +126,7 @@ final class TabBarController: UITabBarController {
                 tabBarItem.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -1.adjusted)
             }
         }
+        selectedIndex = 1 
     }
     
     private func requestAuthorization() {

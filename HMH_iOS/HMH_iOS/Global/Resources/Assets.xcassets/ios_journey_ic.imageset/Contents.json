@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "ios_journey_ic.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

@@ -43,7 +43,7 @@ final class LoginViewController: UIViewController {
         swipeView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(108.adjusted)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(480)
+            $0.height.equalTo(480.adjusted)
         }
     }
     

@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import SwiftUI
 
+import Combine
 import SnapKit
 import Then
+import FamilyControls
 
 final class ChallengeView: UIView {
+    
+    private var appAddButtonViewModel: BlockingApplicationModel = BlockingApplicationModel.shared
+    private var cancellables: Set<AnyCancellable> = []
     
     private let goalTime: Int = 3
     private var days: Int = 7
@@ -28,7 +34,8 @@ final class ChallengeView: UIView {
         $0.contentInset = .init(top: 0, left: 0, bottom: 20, right: 0)
     }
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, appAddButtonViewModel: BlockingApplicationModel) {
+        self.appAddButtonViewModel = appAddButtonViewModel
         super.init(frame: frame)
         
         setUI()
@@ -79,6 +86,9 @@ final class ChallengeView: UIView {
     
     func configreCollectionView() {
         challengeCollectionView.dataSource = self
+        challengeCollectionView.allowsMultipleSelection = true
+        self.challengeCollectionView.reloadData()
+        
     }
     
     @objc private func deleteButtonTapped() {

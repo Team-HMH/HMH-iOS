@@ -18,13 +18,20 @@ final class ChallengeViewController: UIViewController {
                                                  isPointImage: true,
                                                  isBackGroundGray: true,
                                                  titleText: StringLiteral.Challenge.NavigationBarTitle)
-    private let challengeView = ChallengeView()
-    private var selectedIndex = IndexPath()
+
+    private let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
     
+    private var selectedIndex = IndexPath()
+
     override func loadView() {
         self.view = challengeView
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        challengeView.configreCollectionView()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()

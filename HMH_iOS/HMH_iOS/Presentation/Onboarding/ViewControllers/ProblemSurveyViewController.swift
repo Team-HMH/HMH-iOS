@@ -87,6 +87,5 @@ extension ProblemSurveyViewController: HMHSelectButtonDelegate {
         } else {
             textArray.append(text)
         }
-        print(textArray)
     }
 }

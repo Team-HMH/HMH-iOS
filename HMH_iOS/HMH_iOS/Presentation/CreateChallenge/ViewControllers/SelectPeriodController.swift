@@ -80,7 +80,6 @@ extension SelectPeriodController: NextViewPushDelegate {
         let nextViewController = SelectTotalTimeController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
         SignUpManager.shared.period = convertAndRemoveLastCharacter(selectPeriod) ?? 0
-        print(SignUpManager.shared.problem)
     }
 }
 

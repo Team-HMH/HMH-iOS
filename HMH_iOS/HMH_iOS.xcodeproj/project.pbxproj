@@ -59,7 +59,6 @@
 		174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4972B447CF100450D07 /* ChanllengeModels.swift */; };
 		174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF4992B447CFB00450D07 /* ChanllengeViews.swift */; };
 		174AF49C2B447D0700450D07 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174AF49B2B447D0700450D07 /* ChallengeViewController.swift */; };
-		364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */; };
 		17CF9FBD2B4DC757000DD09C /* HMHHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FBC2B4DC757000DD09C /* HMHHomeView.swift */; };
 		17CF9FC12B4DE2B6000DD09C /* AppUsingTimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC02B4DE2B6000DD09C /* AppUsingTimeModel.swift */; };
 		17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */; };
@@ -67,6 +66,7 @@
 		17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */; };
 		363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */; };
 		363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 363863BC2B5129F2000FE5E7 /* Lottie */; };
+		364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */; };
 		364923652B4F4FB800BF7ACA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923642B4F4FB800BF7ACA /* Config.swift */; };
 		364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364923672B4F513600BF7ACA /* BaseTargetType.swift */; };
 		3649236A2B4F514A00BF7ACA /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 364923692B4F514A00BF7ACA /* Moya */; };
@@ -146,7 +146,6 @@
 		36E531C92B4C798100B4BBE3 /* MyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531C82B4C798100B4BBE3 /* MyStore.swift */; };
 		36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */; };
 		36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */; };
-		36E531FA2B4DC73100B4BBE3 /* ScreenTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F92B4DC73100B4BBE3 /* ScreenTime.swift */; };
 		36E531FC2B4DCEB300B4BBE3 /* AppSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -263,13 +262,13 @@
 		174AF4972B447CF100450D07 /* ChanllengeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeModels.swift; sourceTree = "<group>"; };
 		174AF4992B447CFB00450D07 /* ChanllengeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanllengeViews.swift; sourceTree = "<group>"; };
 		174AF49B2B447D0700450D07 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
-		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		17CF9FBC2B4DC757000DD09C /* HMHHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHHomeView.swift; sourceTree = "<group>"; };
 		17CF9FC02B4DE2B6000DD09C /* AppUsingTimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingTimeModel.swift; sourceTree = "<group>"; };
 		17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingProgressViewCell.swift; sourceTree = "<group>"; };
 		17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalTimeCell.swift; sourceTree = "<group>"; };
 		17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleImageCell.swift; sourceTree = "<group>"; };
 		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
+		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		364923672B4F513600BF7ACA /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
@@ -343,7 +342,6 @@
 		36E531C82B4C798100B4BBE3 /* MyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStore.swift; sourceTree = "<group>"; };
 		36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectViewController.swift; sourceTree = "<group>"; };
 		36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectView.swift; sourceTree = "<group>"; };
-		36E531F92B4DC73100B4BBE3 /* ScreenTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime.swift; sourceTree = "<group>"; };
 		36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -822,11 +820,9 @@
 			isa = PBXGroup;
 			children = (
 				367B42522B51DFD400B917CD /* AppSelectionViewController.swift */,
-				367B42512B51DFD400B917CD /* ScreenTime.swift */,
 				174AF49B2B447D0700450D07 /* ChallengeViewController.swift */,
 				36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */,
 				36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */,
-				36E531F92B4DC73100B4BBE3 /* ScreenTime.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -982,6 +978,7 @@
 		3666C8782B45F4D900564874 /* AppBlock */ = {
 			isa = PBXGroup;
 			children = (
+				367B42512B51DFD400B917CD /* ScreenTime.swift */,
 				3666C8792B45F4F900564874 /* SelectedBlocker.swift */,
 				3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */,
 			);
@@ -1364,7 +1361,6 @@
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
-				36E531FA2B4DC73100B4BBE3 /* ScreenTime.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,
 				0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */,
 			);

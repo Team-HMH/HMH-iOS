@@ -8,7 +8,7 @@ import Moya
 import UIKit
 
 class NetworkProvider<Provider : TargetType> : MoyaProvider<Provider> {
-    func request<Model : Codable>(target : Provider, instance : Model.Type , viewController: UIViewController, completion : @escaping(Model) -> ()){
+    func request<Model : Codable>(target : Provider, instance : BaseResponse<Model>.Type , viewController: UIViewController, completion : @escaping(BaseResponse<Model>) -> ()){
         self.request(target) { result in
             switch result {
                 /// 서버 통신 성공

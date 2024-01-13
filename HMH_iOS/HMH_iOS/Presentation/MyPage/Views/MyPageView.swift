@@ -54,9 +54,28 @@ final class MyPageView: UIView {
         myPageCollectionView.delegate = self
         myPageCollectionView.dataSource = self
     }
+    
+    private func openWebLink(_ urlString: String) {
+        if let url = URL(string: urlString) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
 }
 
-extension MyPageView: UICollectionViewDelegate {}
+extension MyPageView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 2:
+            if indexPath.item == 0 {
+                openWebLink(StringLiteral.myPage.urlArray[0])
+            } else if indexPath.item == 1 {
+                openWebLink(StringLiteral.myPage.urlArray[1])
+            }
+        default:
+            break
+        }
+    }
+}
 
 extension MyPageView: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {

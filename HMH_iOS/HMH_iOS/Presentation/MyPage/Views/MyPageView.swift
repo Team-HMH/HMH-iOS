@@ -152,7 +152,7 @@ extension MyPageView: UICollectionViewDelegateFlowLayout {
                 guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: UserPointHeaderView.identifier, for: indexPath) as? UserPointHeaderView else {
                     return UICollectionReusableView()
                 }
-                headerView.bindData(model: UserModel.dummy())
+                headerView.getUserDataAPI()
                 return headerView
             }
         case 2:

@@ -65,6 +65,8 @@
 		17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */; };
 		17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */; };
 		360D11082B536746008BE85A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360D11072B536746008BE85A /* Assets.xcassets */; };
+		360D110E2B541DB4008BE85A /* UserDefault+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D110D2B541DB4008BE85A /* UserDefault+.swift */; };
+		360D11102B5443FD008BE85A /* ActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D110F2B5443FD008BE85A /* ActivityReport.swift */; };
 		363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */; };
 		363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 363863BC2B5129F2000FE5E7 /* Lottie */; };
 		364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */; };
@@ -270,6 +272,8 @@
 		17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalTimeCell.swift; sourceTree = "<group>"; };
 		17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleImageCell.swift; sourceTree = "<group>"; };
 		360D11072B536746008BE85A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		360D110D2B541DB4008BE85A /* UserDefault+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+.swift"; sourceTree = "<group>"; };
+		360D110F2B5443FD008BE85A /* ActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityReport.swift; sourceTree = "<group>"; };
 		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
 		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -560,6 +564,7 @@
 				36A3D9BB2B3EBD2D007EA272 /* UIScreen+.swift */,
 				3666C88C2B471B1D00564874 /* UIImage+.swift */,
 				0B17D3F02B51AD4B00CFA3B7 /* UIViewController+.swift */,
+				360D110D2B541DB4008BE85A /* UserDefault+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -977,6 +982,7 @@
 				3666C86C2B45F4B200564874 /* TotalActivityView.swift */,
 				3666C86E2B45F4B200564874 /* Info.plist */,
 				3666C86F2B45F4B200564874 /* DeviceReport.entitlements */,
+				360D110F2B5443FD008BE85A /* ActivityReport.swift */,
 			);
 			path = DeviceReport;
 			sourceTree = "<group>";
@@ -1304,6 +1310,7 @@
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */,
 				0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */,
+				360D110E2B541DB4008BE85A /* UserDefault+.swift in Sources */,
 				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
 				364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */,
 				0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */,
@@ -1386,6 +1393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360D11102B5443FD008BE85A /* ActivityReport.swift in Sources */,
 				3666C86D2B45F4B200564874 /* TotalActivityView.swift in Sources */,
 				3666C8692B45F4B200564874 /* DeviceReport.swift in Sources */,
 				3666C86B2B45F4B200564874 /* TotalActivityReport.swift in Sources */,

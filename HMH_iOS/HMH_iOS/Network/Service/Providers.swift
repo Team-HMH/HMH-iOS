@@ -10,6 +10,7 @@ import Moya
 
 struct Providers {
     static let challengeProvider = NetworkProvider<ChallengeRouter>(withAuth: false)
+    static let myPageProvider = NetworkProvider<MyPageRouter>(withAuth: false)
     static let AuthProvider = NetworkProvider<AuthRouter>(withAuth: false)
 }
 

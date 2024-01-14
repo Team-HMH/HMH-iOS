@@ -22,7 +22,7 @@ enum ImageLiterals {
         static var icMyPageSelected: UIImage { .load(named: "mypageEnabled") }
     }
     
-    enum appUsed {
+    enum Home {
         static var blackholeFail: UIImage { .load(named: "blackhole_fail")}
     }
     
@@ -41,6 +41,7 @@ enum ImageLiterals {
     }
     
     enum myPage {
+        static var icProfil: UIImage { .load(named: "ios_profil_image")}
         static var icBadge: UIImage { .load(named: "ios_badge_ic_disabled")}
         static var icJourney: UIImage { .load(named: "ios_journey_ic")}
         static var icStore: UIImage { .load(named: "ios_store_ic")}
@@ -50,7 +51,16 @@ enum ImageLiterals {
     enum Challenge {
         static var icPlus: UIImage { .load(named: "Minus_XL") }
         static var icChallengeFail: UIImage { .load(named: "challenge_ic_fail") }
-        static var icChallengeSuccess: UIImage { .load(named: "challenge_ic_success")
-        }
+        static var icChallengeSuccess: UIImage { .load(named: "challenge_ic_success") }
+        static var icAddNewChallengeBackground: UIImage { .load(named: "ios_add_new_challenge_img") }
+        static var icSevenDaysChallengeBackground: UIImage { .load(named: "ios_sevenDays_challenge_img") }
+    }
+    
+    enum Alert {
+        static var icChallengeAlert: UIImage { .load(named: "ios_challenge_alert_img") }
+    }
+    
+    enum limitTime {
+        static var icLimitTime: UIImage { .load(named: "ios_limit_time_img") }
     }
 }

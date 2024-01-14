@@ -29,6 +29,7 @@ final class ChallengeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        requestPermision()
         challengeView.configreCollectionView()
     }
 

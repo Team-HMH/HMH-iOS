@@ -69,6 +69,10 @@
 		17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */; };
 		17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */; };
 		17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */; };
+		360D11022B5343C6008BE85A /* requestPermision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11012B5343C6008BE85A /* requestPermision.swift */; };
+		360D11042B53465B008BE85A /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11032B53465B008BE85A /* UIApplication+.swift */; };
+		17CF9FDE2B52F86A000DD09C /* GetUserDataResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */; };
+		17CF9FE02B52FA26000DD09C /* MyPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FDF2B52FA26000DD09C /* MyPageRouter.swift */; };
 		363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */; };
 		363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 363863BC2B5129F2000FE5E7 /* Lottie */; };
 		364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */; };
@@ -151,7 +155,6 @@
 		36E531C92B4C798100B4BBE3 /* MyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531C82B4C798100B4BBE3 /* MyStore.swift */; };
 		36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */; };
 		36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */; };
-		36E531FA2B4DC73100B4BBE3 /* ScreenTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F92B4DC73100B4BBE3 /* ScreenTime.swift */; };
 		36E531FC2B4DCEB300B4BBE3 /* AppSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -278,6 +281,10 @@
 		17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingProgressViewCell.swift; sourceTree = "<group>"; };
 		17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalTimeCell.swift; sourceTree = "<group>"; };
 		17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleImageCell.swift; sourceTree = "<group>"; };
+		360D11012B5343C6008BE85A /* requestPermision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestPermision.swift; sourceTree = "<group>"; };
+		360D11032B53465B008BE85A /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
+		17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataResponseDTO.swift; sourceTree = "<group>"; };
+		17CF9FDF2B52FA26000DD09C /* MyPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageRouter.swift; sourceTree = "<group>"; };
 		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
 		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -353,7 +360,6 @@
 		36E531C82B4C798100B4BBE3 /* MyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStore.swift; sourceTree = "<group>"; };
 		36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectViewController.swift; sourceTree = "<group>"; };
 		36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectView.swift; sourceTree = "<group>"; };
-		36E531F92B4DC73100B4BBE3 /* ScreenTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime.swift; sourceTree = "<group>"; };
 		36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -579,6 +585,7 @@
 				36A3D9BB2B3EBD2D007EA272 /* UIScreen+.swift */,
 				3666C88C2B471B1D00564874 /* UIImage+.swift */,
 				0B17D3F02B51AD4B00CFA3B7 /* UIViewController+.swift */,
+				360D11032B53465B008BE85A /* UIApplication+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -676,6 +683,7 @@
 		0B8A89A32B369DBE00688BA6 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
+				17CF9FDC2B52F7E5000DD09C /* MyPageModel */,
 				0B1AE8192B5319C900CF5154 /* AuthModel */,
 				3649239E2B505F0600BF7ACA /* ChallengeModel */,
 			);
@@ -844,11 +852,9 @@
 			isa = PBXGroup;
 			children = (
 				367B42522B51DFD400B917CD /* AppSelectionViewController.swift */,
-				367B42512B51DFD400B917CD /* ScreenTime.swift */,
 				174AF49B2B447D0700450D07 /* ChallengeViewController.swift */,
 				36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */,
 				36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */,
-				36E531F92B4DC73100B4BBE3 /* ScreenTime.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -922,6 +928,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		17CF9FDC2B52F7E5000DD09C /* MyPageModel */ = {
+			isa = PBXGroup;
+			children = (
+				17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */,
+			);
+			path = MyPageModel;
+			sourceTree = "<group>";
+		};
 		364923962B50547F00BF7ACA /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
@@ -939,6 +953,7 @@
 			isa = PBXGroup;
 			children = (
 				3649239C2B505CED00BF7ACA /* ChallengeRouter.swift */,
+				17CF9FDF2B52FA26000DD09C /* MyPageRouter.swift */,
 				0B1AE8172B53169500CF5154 /* AuthRouter.swift */,
 			);
 			path = Router;
@@ -1005,8 +1020,10 @@
 		3666C8782B45F4D900564874 /* AppBlock */ = {
 			isa = PBXGroup;
 			children = (
+				367B42512B51DFD400B917CD /* ScreenTime.swift */,
 				3666C8792B45F4F900564874 /* SelectedBlocker.swift */,
 				3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */,
+				360D11012B5343C6008BE85A /* requestPermision.swift */,
 			);
 			path = AppBlock;
 			sourceTree = "<group>";
@@ -1310,6 +1327,7 @@
 				174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */,
 				17CF9FBD2B4DC757000DD09C /* HMHHomeView.swift in Sources */,
 				364923932B50397100BF7ACA /* NetworkHelper.swift in Sources */,
+				17CF9FE02B52FA26000DD09C /* MyPageRouter.swift in Sources */,
 				174AF48E2B447B1F00450D07 /* MyPageCells.swift in Sources */,
 				3666C8A52B48644A00564874 /* AppModel.swift in Sources */,
 				174AF4942B447B5500450D07 /* MyPageViewController.swift in Sources */,
@@ -1351,10 +1369,12 @@
 				17314FB32B4D68950089A551 /* UserModel.swift in Sources */,
 				17314F892B49A8B60089A551 /* AlertDelegate.swift in Sources */,
 				17314FAF2B4D3E1C0089A551 /* LogoutAndQuitFooterView.swift in Sources */,
+				17CF9FDE2B52F86A000DD09C /* GetUserDataResponseDTO.swift in Sources */,
 				0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */,
 				3649237D2B4FC9CD00BF7ACA /* NetworkRequest.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
 				0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */,
+				360D11042B53465B008BE85A /* UIApplication+.swift in Sources */,
 				3649239B2B505B2600BF7ACA /* Providers.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
@@ -1366,6 +1386,7 @@
 				17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */,
 				3649239D2B505CED00BF7ACA /* ChallengeRouter.swift in Sources */,
 				364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */,
+				360D11022B5343C6008BE85A /* requestPermision.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
 				17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */,
 				17314F9D2B4C554D0089A551 /* MypageCollectionViewCell.swift in Sources */,
@@ -1392,7 +1413,6 @@
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
-				36E531FA2B4DC73100B4BBE3 /* ScreenTime.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,
 				0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */,
 			);

@@ -82,6 +82,7 @@ final class ApprovePermisionController: OnboardingBaseViewController {
 
 extension ApprovePermisionController: NextViewPushDelegate {
     func didTapButton() {
+        requestAuthNoti()
         requestPermission { isScreenTimeApproved in
             if !self.isApproveNoti {
                 self.view.showToast(message: "알림 권한 설정이 필요해요!", at: 100.adjustedHeight)

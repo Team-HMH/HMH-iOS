@@ -98,6 +98,9 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
             let request = SocialLoginRequestDTO(socialPlatform: "APPLE")
             
             let provider = Providers.AuthProvider
+            provider.request(target: .socialLogin(data: request), instance: SocialLogineResponseDTO.self, viewController: self) { data in
+                data.token
+            }
             provider.request(.socialLogin(data: request)) { result in
                 switch result {
                 case .success(let response):
@@ -106,6 +109,8 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
                         self.navigationController?.pushViewController(nextViewController, animated: false)
                     } else if response.statusCode == 200 {
                         self.setRootViewController(TabBarController())
+                        print(response.data, "🚨")
+//                        UserManager.shared.updateToken(response.data., response.data)
                     }
                 case .failure(let error):
                     print("error")

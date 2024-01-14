@@ -12,7 +12,7 @@ struct APIConstants{
     static let contentType = "Content-Type"
     static let applicationJSON = "application/json"
     static let auth = "Authorization"
-    static let accessToken = "Bearer " // TO-DO: AccessToken
+    static let accessToken = UserManager.shared.getAccessToken
     static let appleAccessToken = UserManager.shared.getAppleToken
     static let OS = "OS"
     static let iOS = "iOS"

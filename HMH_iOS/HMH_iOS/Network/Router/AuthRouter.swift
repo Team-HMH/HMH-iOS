@@ -11,7 +11,7 @@ import Moya
 
 enum AuthRouter {
     case socialLogin(data: SocialLoginRequestDTO)
-    case signUP(data: SignUpRequestDTO)
+    case signUp(data: SignUpRequestDTO)
 }
 
 extension AuthRouter: BaseTargetType {
@@ -19,7 +19,7 @@ extension AuthRouter: BaseTargetType {
         switch self {
         case .socialLogin:
             return APIConstants.hasSocialTokenHeader
-        case .signUP:
+        case .signUp:
             return APIConstants.hasTokenHeader
         }
     }
@@ -29,7 +29,7 @@ extension AuthRouter: BaseTargetType {
         switch self {
         case .socialLogin:
             return "user/login"
-        case .signUP:
+        case .signUp:
             return "user/signup"
             
         }
@@ -39,7 +39,7 @@ extension AuthRouter: BaseTargetType {
         switch self {
         case .socialLogin:
             return .post
-        case .signUP:
+        case .signUp:
             return .post
         }
     }
@@ -48,7 +48,7 @@ extension AuthRouter: BaseTargetType {
         switch self {
         case .socialLogin(let data):
             return .requestJSONEncodable(data)
-        case .signUP(let data):
+        case .signUp(let data):
             return .requestJSONEncodable(data)
         }
     }

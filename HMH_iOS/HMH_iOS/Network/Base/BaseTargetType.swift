@@ -22,10 +22,6 @@ extension BaseTargetType {
         return baseURL
     }
     
-    var headers: Parameters? {
-        return APIConstants.hasTokenHeader
-    }
-    
     var sampleData: Data {
         return Data()
     }

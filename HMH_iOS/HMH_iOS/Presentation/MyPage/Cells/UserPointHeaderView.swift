@@ -14,6 +14,8 @@ final class UserPointHeaderView: UICollectionReusableView {
     
     static let identifier = "UserPointHeaderView"
     
+    private let provider = Providers.myPageProvider
+    
     private let userStackView = UIStackView().then {
         $0.axis = .horizontal
         $0.spacing = 15.adjusted
@@ -148,16 +150,19 @@ final class UserPointHeaderView: UICollectionReusableView {
     }
     
     private func configureView() {
+        getUserDataAPI()
         self.backgroundColor = .background
     }
 }
 
 extension UserPointHeaderView {
-    func bindData(model: UserModel) {
-        let numberFormatter: NumberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        let userPoint: String = numberFormatter.string(for: model.point) ?? "0"
-        self.userLabel.text = model.userName
-        self.countPointLabel.text = "\(userPoint)"
+    func getUserDataAPI() {
+        provider.request(target: .getUserData,
+                         instance: BaseResponse<GetUserDataResponseDTO>.self,
+                         viewController: MyPageViewController()) { data in
+            guard let data = data.data else { return }
+            self.userLabel.text = data.name
+            self.countPointLabel.text = "\(data.point)"
+        }
     }
 }

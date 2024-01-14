@@ -33,6 +33,7 @@ final class ApprovePermisionController: OnboardingBaseViewController {
     private func setTimeSurvey() {
         view.backgroundColor = .background
         step = 5
+        nextButton.updateStatus(isEnabled: true)
     }
     
     private func configureSurveyView() {

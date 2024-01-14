@@ -157,7 +157,9 @@ final class UserPointHeaderView: UICollectionReusableView {
 
 extension UserPointHeaderView {
     func getUserDataAPI() {
-        provider.request(target: .getUserData, instance: BaseResponse<GetUserDataResponseDTO>.self, viewController: MyPageViewController() ) { data in
+        provider.request(target: .getUserData,
+                         instance: BaseResponse<GetUserDataResponseDTO>.self,
+                         viewController: MyPageViewController()) { data in
             guard let data = data.data else { return }
             self.userLabel.text = data.name
             self.countPointLabel.text = "\(data.point)"

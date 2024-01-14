@@ -14,7 +14,7 @@ enum MyPageRouter {
 }
 
 extension MyPageRouter: BaseTargetType {
-    private var headers: Parameters {
+    var headers: Parameters? {
         switch self {
         case .getUserData:
             return APIConstants.hasTokenHeader

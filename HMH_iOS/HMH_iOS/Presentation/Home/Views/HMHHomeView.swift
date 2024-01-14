@@ -11,6 +11,18 @@ import SnapKit
 import Then
 
 final class HMHHomeView: UIView {
+    
+    var totalAppUsingTimeData: TotalAppUsingTimeDataModel = .init(
+        onboardingTotalGoalTime: 7200000,
+        totalAppUsingTime: 1790000,
+        progressValue: 0.99,
+        isFailed: false) {
+            didSet {
+                self.homeCollectionView.reloadSections([1, 0])
+            }
+        }
+    
+    
     let homeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .clear
     }
@@ -22,6 +34,12 @@ final class HMHHomeView: UIView {
         configureView()
         setRegister()
         configreCollectionView()
+        
+        // 영상 로딩을 위한 애니메이션 코드
+        //            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+        //                self.totalAppUsingTimeData.progressValue += 0.01
+        //                self.totalAppUsingTimeData.isFailed = true
+        //            }
     }
     
     required init?(coder: NSCoder) {
@@ -85,34 +103,54 @@ extension HMHHomeView: UICollectionViewDataSource {
         guard let myGoalTimeCell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: MyGoalTimeCell.identifier, for: indexPath) as? MyGoalTimeCell else { return UICollectionViewCell() }
         guard let appUsingProgressViewCell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: AppUsingProgressViewCell.identifier, for: indexPath) as? AppUsingProgressViewCell else { return UICollectionViewCell() }
         
-        myGoalTimeCell.bindData(data: appUsingTimeModel)
+        myGoalTimeCell.bindData(data: totalAppUsingTimeData)
         self.progressPrecent = Double(myGoalTimeCell.progress)
         
         switch indexPath.section {
         case 0:
-            if progressPrecent < 0.24 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icMyPage,
-                                                 text: StringLiteral.Home.blackHoleFirstStep)
-            } else if progressPrecent < 0.49 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icChallengeSelected,
-                                                 text: StringLiteral.Home.blackHoleSecondStep)
-            } else if progressPrecent < 0.74 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icChallenge,
-                                                 text: StringLiteral.Home.blackHoleThridStep)
-            } else if progressPrecent < 0.99 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icHomeSelected,
-                                                 text: StringLiteral.Home.blackHoleFourthStep)
+            if totalAppUsingTimeData.isFailed {
+                blackholeImageCell.configureCell(
+                    image: blackHoleModel[BlackHoleDataType.fail.rawValue].image,
+                    videoUrl: blackHoleModel[BlackHoleDataType.fail.rawValue].videoItem,
+                    text: blackHoleModel[BlackHoleDataType.fail.rawValue].text
+                )
             } else {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icMyPageSelected,
-                                                 text: StringLiteral.Home.blackHoleFifthStep)
+                if totalAppUsingTimeData.progressValue < 0.25 && totalAppUsingTimeData.progressValue > 0 {
+                    blackholeImageCell.configureCell(
+                        image: blackHoleModel[BlackHoleDataType.firstStep.rawValue].image,
+                        videoUrl: blackHoleModel[BlackHoleDataType.firstStep.rawValue].videoItem,
+                        text: blackHoleModel[BlackHoleDataType.firstStep.rawValue].text)
+                } else if totalAppUsingTimeData.progressValue < 0.5 && totalAppUsingTimeData.progressValue > 0.24 {
+                    blackholeImageCell.configureCell(
+                        image: blackHoleModel[BlackHoleDataType.secondStep.rawValue].image,
+                        videoUrl: blackHoleModel[BlackHoleDataType.secondStep.rawValue].videoItem,
+                        text: blackHoleModel[BlackHoleDataType.secondStep.rawValue].text)
+                } else if totalAppUsingTimeData.progressValue < 0.75 && totalAppUsingTimeData.progressValue > 0.49 {
+                    blackholeImageCell.configureCell(
+                        image: blackHoleModel[BlackHoleDataType.thirdStep.rawValue].image,
+                        videoUrl: blackHoleModel[BlackHoleDataType.thirdStep.rawValue].videoItem,
+                        text: blackHoleModel[BlackHoleDataType.thirdStep.rawValue].text)
+                } else if totalAppUsingTimeData.progressValue < 1.0 && totalAppUsingTimeData.progressValue > 0.74 {
+                    blackholeImageCell.configureCell(
+                        image: blackHoleModel[BlackHoleDataType.fourthStep.rawValue].image,
+                        videoUrl: blackHoleModel[BlackHoleDataType.fourthStep.rawValue].videoItem,
+                        text: blackHoleModel[BlackHoleDataType.fourthStep.rawValue].text)
+                } else {
+                    blackholeImageCell.configureCell(
+                        image: blackHoleModel[BlackHoleDataType.fifthStep.rawValue].image,
+                        videoUrl: blackHoleModel[BlackHoleDataType.fifthStep.rawValue].videoItem,
+                        text: blackHoleModel[BlackHoleDataType.fifthStep.rawValue].text)
+                }
             }
             return blackholeImageCell
+            
         case 1:
             return myGoalTimeCell
             
         case 2:
             appUsingProgressViewCell.bindData(data: appUsingTimeModel[indexPath.row])
             return appUsingProgressViewCell
+            
         default:
             return UICollectionViewCell()
         }

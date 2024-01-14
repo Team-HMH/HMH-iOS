@@ -13,9 +13,7 @@ let authorizationCenter = AuthorizationCenter.shared
 let userNotiCenter = UNUserNotificationCenter.current()
 
 private func requestAuthorization() {
-    if authorizationCenter.authorizationStatus == .approved {
-        
-    } else {
+    if !(authorizationCenter.authorizationStatus == .approved) {
         UIApplication.topViewController()?.view.showToast(message: "스크린타임 권한 설정이 필요해요!", at: 100)
         Task {
             do {

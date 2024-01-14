@@ -9,12 +9,5 @@ import Foundation
 
 struct SignUpResponseDTO: Codable {
     let userId: Int
-    let accessToken: String
-    let refreshToken: String
-    
-    enum CodingKeys: String, CodingKey {
-        case userId = "userId"
-        case accessToken = "accessToken"
-        case refreshToken = "refreshToken"
-    }
+    let token: Token
 }

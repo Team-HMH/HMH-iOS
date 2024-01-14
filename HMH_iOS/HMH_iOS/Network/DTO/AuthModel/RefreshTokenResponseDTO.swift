@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct RefreshTokebResponseDTO: Codable {
+    let token: Token
+}

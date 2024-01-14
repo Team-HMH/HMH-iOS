@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ios_limit_time_img.png",
+      "filename" : "img_ios_limit.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ios_limit_time_img@2x.png",
+      "filename" : "img_ios_limit@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ios_limit_time_img@3x.png",
+      "filename" : "img_ios_limit@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

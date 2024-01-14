@@ -18,6 +18,8 @@
 		0B1AE8182B53169500CF5154 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE8172B53169500CF5154 /* AuthRouter.swift */; };
 		0B1AE81B2B531A3E00CF5154 /* SocialLoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE81A2B531A3E00CF5154 /* SocialLoginRequestDTO.swift */; };
 		0B1AE81D2B531A6C00CF5154 /* SocialLoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE81C2B531A6C00CF5154 /* SocialLoginResponseDTO.swift */; };
+		0B1AE81F2B53ABB700CF5154 /* SignUpRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE81E2B53ABB700CF5154 /* SignUpRequestDTO.swift */; };
+		0B1AE8212B53ABC400CF5154 /* SignUpResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE8202B53ABC400CF5154 /* SignUpResponseDTO.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
 		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
@@ -223,6 +225,8 @@
 		0B1AE8172B53169500CF5154 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		0B1AE81A2B531A3E00CF5154 /* SocialLoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginRequestDTO.swift; sourceTree = "<group>"; };
 		0B1AE81C2B531A6C00CF5154 /* SocialLoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginResponseDTO.swift; sourceTree = "<group>"; };
+		0B1AE81E2B53ABB700CF5154 /* SignUpRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestDTO.swift; sourceTree = "<group>"; };
+		0B1AE8202B53ABC400CF5154 /* SignUpResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseDTO.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
 		0B50F9C72B369813000C5046 /* HMH_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMH_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -437,6 +441,8 @@
 			children = (
 				0B1AE81A2B531A3E00CF5154 /* SocialLoginRequestDTO.swift */,
 				0B1AE81C2B531A6C00CF5154 /* SocialLoginResponseDTO.swift */,
+				0B1AE81E2B53ABB700CF5154 /* SignUpRequestDTO.swift */,
+				0B1AE8202B53ABC400CF5154 /* SignUpResponseDTO.swift */,
 			);
 			path = AuthModel;
 			sourceTree = "<group>";
@@ -1297,6 +1303,7 @@
 				17314F9B2B4C485B0089A551 /* UserPointHeaderView.swift in Sources */,
 				364923862B4FDCBD00BF7ACA /* NetworkProvider.swift in Sources */,
 				364923702B4F524D00BF7ACA /* MoyaLoggerPlugin.swift in Sources */,
+				0B1AE81F2B53ABB700CF5154 /* SignUpRequestDTO.swift in Sources */,
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				0B17D3F12B51AD4B00CFA3B7 /* UIViewController+.swift in Sources */,
 				174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */,
@@ -1318,6 +1325,7 @@
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */,
 				0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */,
+				0B1AE8212B53ABC400CF5154 /* SignUpResponseDTO.swift in Sources */,
 				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
 				364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */,
 				0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */,

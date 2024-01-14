@@ -12,6 +12,7 @@ import Then
 
 final class SelectPeriodController: OnboardingBaseViewController {
     private let surveyView = SurveyView(firstButtonType: .solitary, secondButtonType: .solitary, thirdButtonType: .disabled, fourthButtonType: .disabled)
+    private var selectPeriod = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,17 +66,26 @@ final class SelectPeriodController: OnboardingBaseViewController {
         surveyView.thirdButton.delegate = self
         surveyView.fourthButton.delegate = self
     }
+    
+    func convertAndRemoveLastCharacter(_ input: String) -> Int? {
+        guard let intValue = Int(String(input.dropLast())) else {
+            return nil
+        }
+        return intValue
+    }
 }
 
 extension SelectPeriodController: NextViewPushDelegate {
     func didTapButton() {
         let nextViewController = SelectTotalTimeController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
+        SignUpManager.shared.period = convertAndRemoveLastCharacter(selectPeriod) ?? 0
     }
 }
 
 extension SelectPeriodController: HMHSelectButtonDelegate {
-    func updateAvailability(isEnabled: Bool) {
+    func updateAvailability(isEnabled: Bool, text: String) {
         nextButton.updateStatus(isEnabled: isEnabled)
+        selectPeriod = text
     }
 }

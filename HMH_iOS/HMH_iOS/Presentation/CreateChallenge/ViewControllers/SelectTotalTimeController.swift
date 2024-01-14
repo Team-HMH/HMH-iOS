@@ -11,6 +11,7 @@ import SnapKit
 import Then
 
 final class SelectTotalTimeController: OnboardingBaseViewController {
+    private var totalTime = 0
     private let pickerView = HMHTimePickerView(type: .totalTime)
     private let titleLabel = UILabel().then {
         $0.textColor = .gray2
@@ -74,12 +75,14 @@ extension SelectTotalTimeController: NextViewPushDelegate {
     func didTapButton() {
         let nextViewController = ApprovePermisionController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
+        SignUpManager.shared.goalTime = totalTime
     }
 }
 
 extension SelectTotalTimeController: TimePickerDelegate {
-    func updateAvailability() {
+    func updateAvailability(selectedValue: Int) {
         nextButton.updateStatus(isEnabled: true)
+        totalTime = selectedValue
     }
 }
 

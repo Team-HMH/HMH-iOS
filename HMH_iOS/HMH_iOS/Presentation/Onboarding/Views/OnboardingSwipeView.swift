@@ -72,7 +72,7 @@ final class OnboardingSwipeView: UIView {
     private func setImageView() {
         for i in 0..<3 {
             let pageView = UIImageView().then {
-                $0.image = [ImageLiterals.TabBar.icHome, ImageLiterals.TabBar.icChallenge, ImageLiterals.TabBar.icChallengeSelected][i]
+                $0.image = [ImageLiterals.Login.onboarigFirst, ImageLiterals.Login.onboarigSecond, ImageLiterals.Login.onboarigThird][i]
                 $0.translatesAutoresizingMaskIntoConstraints = false
                 $0.contentMode = .scaleAspectFit
             }
@@ -88,7 +88,7 @@ final class OnboardingSwipeView: UIView {
     }
     
     private func startAutoScroll() {
-        timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(nextPage), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector: #selector(nextPage), userInfo: nil, repeats: true)
     }
     
     private func stopAutoScroll() {

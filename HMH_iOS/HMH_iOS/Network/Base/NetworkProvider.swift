@@ -26,7 +26,7 @@ class NetworkProvider<Provider : TargetType> : MoyaProvider<Provider> {
                         if let data = data.data {
                             UserManager.shared.updateToken(data.token.accessToken, data.token.accessToken)
                         }
-                        print(data.status, "🚨")}
+                    }
                 } else {
                     print("🚨 Client Error")
                 }

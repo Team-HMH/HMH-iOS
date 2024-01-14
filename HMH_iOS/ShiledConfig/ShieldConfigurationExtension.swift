@@ -30,7 +30,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
                 color: .white
             )
             let CUSTOM_SUBTITLE = ShieldConfiguration.Label(
-                text: "이제 \(tokenName)을(를) 사용할 수 없어요\n※ 알림이 오지 않는다면 설정에서 푸시 알림 권한을 허용해 주세요",
+                text: "이제 \(tokenName)을(를) 사용할 수 없어요\n\n※ 알림이 오지 않는다면 설정에서 푸시 알림 권한을 허용해 주세요",
                 color: UIColor(red: 0.55, green: 0.55, blue: 0.62, alpha: 1)
             )
             let CUSTOM_PRIMARY_BUTTON_LABEL = ShieldConfiguration.Label(

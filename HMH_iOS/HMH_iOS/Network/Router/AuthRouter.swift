@@ -1,43 +1,43 @@
 //
-//  ChallengeRouter.swift
+//  AuthRouter.swift
 //  HMH_iOS
 //
-//  Created by 지희의 MAC on 1/12/24.
+//  Created by Seonwoo Kim on 1/14/24.
 //
 
 import Foundation
 
 import Moya
 
-enum ChallengeRouter {
-    case createChallenge(data: CreateChallengeRequestDTO)
+enum AuthRouter {
+    case socialLogin(data: SocialLoginRequestDTO)
 }
 
-extension ChallengeRouter: BaseTargetType {
+extension AuthRouter: BaseTargetType {
     var headers: [String : String]? {
         switch self {
-        case .createChallenge:
-            return APIConstants.hasTokenHeader
+        case .socialLogin:
+            return APIConstants.hasSocialTokenHeader
         }
     }
     
     var path: String {
         switch self {
-        case .createChallenge:
-            return "challenge"
+        case .socialLogin:
+            return "user/login"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .createChallenge:
+        case .socialLogin:
             return .post
         }
     }
     
     var task: Moya.Task {
         switch self {
-        case .createChallenge(let data):
+        case .socialLogin(let data):
             return .requestJSONEncodable(data)
         }
     }

@@ -13,12 +13,20 @@ class NetworkProvider<Provider : TargetType> : MoyaProvider<Provider> {
             switch result {
                 /// 서버 통신 성공
             case .success(let response):
-                if (200..<300).contains(response.statusCode) {
+                if (200..<410).contains(response.statusCode) {
                     if let decodeData = try? JSONDecoder().decode(instance, from: response.data) {
                         completion(decodeData)
                     } else{
                         print("🚨 decoding Error 발생")
                     }
+                } else if response.statusCode == 401 {
+                    let provider = Providers.AuthProvider
+                    
+                    provider.request(target: .tokenRefresh, instance: BaseResponse<RefreshTokebResponseDTO>.self, viewController: LoginViewController()) { data in
+                        if let data = data.data {
+                            UserManager.shared.updateToken(data.token.accessToken, data.token.accessToken)
+                        }
+                        print(data.status, "🚨")}
                 } else {
                     print("🚨 Client Error")
                 }

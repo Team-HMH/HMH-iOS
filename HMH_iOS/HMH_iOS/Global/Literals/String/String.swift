@@ -104,7 +104,7 @@ enum StringLiteral {
         static let problemSurvey = "휴대폰을 사용할 때\n어떤 문제를 겪고 있나요?"
         static let selectPeriod = "챌린지 기간을 선택해 주세요"
         static let selectTotalTime = "총 목표 이용 시간을\n설정해 주세요"
-        static let approvePermision = "스크린타임 권한 허용이 필요해요"
+        static let approvePermision = "스크린타임과 푸시 알림\n권한 허용이 필요해요"
         static let appSelect = "중독에서 탈출하고 싶은\n앱을 선택해 주세요"
         static let signInComplete = "회원가입 완료"
     }

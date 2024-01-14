@@ -10,6 +10,11 @@ import UIKit
 final class HomeViewController: UIViewController {
     private let navigationBar = HMHNavigationBar(leftItem: .logo, isBackButton: false, isTitleLabel: false, isPointImage: false, isBackGroundGray: false, titleText: "")
     private let homeView = HMHHomeView()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        requestPermision()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

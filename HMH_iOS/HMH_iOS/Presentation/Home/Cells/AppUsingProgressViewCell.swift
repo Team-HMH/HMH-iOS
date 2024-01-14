@@ -123,13 +123,6 @@ final class AppUsingProgressViewCell: UICollectionViewCell {
         }
     }
     
-    func convertMillisecondsToHoursAndMinutes(milliseconds: Int) -> (hours: Int, minutes: Int) {
-        let totalMinutes = milliseconds / (1000 * 60)
-        let hours = totalMinutes / 60
-        let remainingMinutes = totalMinutes % 60
-        return (hours, remainingMinutes)
-    }
-    
     func updateProgressBar(data: AppUsingTimeModel) {
         if data.appGoalTime != 0 {
             let progress = Float(data.usedTime) / Float(data.appGoalTime)

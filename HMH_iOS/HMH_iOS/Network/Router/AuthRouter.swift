@@ -27,7 +27,6 @@ extension AuthRouter: BaseTargetType {
         }
     }
     
-    
     var path: String {
         switch self {
         case .socialLogin:

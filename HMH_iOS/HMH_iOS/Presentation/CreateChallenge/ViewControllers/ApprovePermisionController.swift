@@ -12,6 +12,9 @@ import Then
 import FamilyControls
 
 final class ApprovePermisionController: OnboardingBaseViewController {
+    private let onboarding = Onboarding(averageUseTime: SignUpManager.shared.averageUseTime, problem: SignUpManager.shared.problem)
+    private let challenge = Challenge(period: SignUpManager.shared.period, goalTime: SignUpManager.shared.goalTime, apps: SignUpManager.shared.appCode)
+    
     private let authorizationCenter = AuthorizationCenter.shared
     private let userNotiCenter = UNUserNotificationCenter.current()
     private var isApproveScreenTime = false
@@ -24,7 +27,6 @@ final class ApprovePermisionController: OnboardingBaseViewController {
         nextButton.updateStatus(isEnabled: true)
         setTimeSurvey()
     }
-    
     
     private func setDelegate() {
         self.delegate = self
@@ -98,6 +100,23 @@ extension ApprovePermisionController: NextViewPushDelegate {
             } else if isScreenTimeApproved == false {
                 self.view.showToast(message: "스크린타임 설정이 필요해요!", at: 100.adjustedHeight)
             }
+        }
+        let nextViewController = AppSelectViewController()
+        self.navigationController?.pushViewController(nextViewController, animated: false)
+        let request = SignUpRequestDTO(socialPlatform: "APPLE", name: UserManager.shared.getUserName, onboarding: onboarding, challenge: challenge)
+        print(request.onboarding.averageUseTime)
+        let provider = Providers.AuthProvider
+        provider.request(target: .signUp(data: request), instance: BaseResponse<SignUpResponseDTO>.self, viewController: self) { data in
+            if data.status == 403 {
+                let nextViewController = TimeSurveyViewController()
+                self.navigationController?.pushViewController(nextViewController, animated: false)
+            } else if data.status == 200 {
+                self.setRootViewController(TabBarController())
+                guard let data = data.data else { return }
+                UserManager.shared.updateToken(data.token.accessToken, data.token.refreshToken)
+                UserManager.shared.updateUserId(data.userId)
+            }
+            guard let data = data.data else { return }
         }
     }
 }

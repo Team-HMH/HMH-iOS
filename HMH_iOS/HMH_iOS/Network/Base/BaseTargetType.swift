@@ -10,10 +10,10 @@ import Moya
 
 protocol BaseTargetType: TargetType {}
 
-typealias Parameters = [String: String]
+
 
 extension BaseTargetType {
-    
+    typealias Parameters = [String: String]
     var baseURL: URL {
         guard let baseURL = URL(string: Config.baseURL) else {
             print("🚨🚨BASEURL ERROR🚨🚨")

@@ -94,21 +94,19 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
                 UserManager.shared.updateAppleToken(identifyTokenString)
                 UserManager.shared.updateUserIdentifier(userIdentifier)
             }
-            
             let request = SocialLoginRequestDTO(socialPlatform: "APPLE")
             
             let provider = Providers.AuthProvider
-            provider.request(.socialLogin(data: request)) { result in
-                switch result {
-                case .success(let response):
-                    if response.statusCode == 403 {
-                        let nextViewController = TimeSurveyViewController()
-                        self.navigationController?.pushViewController(nextViewController, animated: false)
-                    } else if response.statusCode == 200 {
-                        self.setRootViewController(TabBarController())
-                    }
-                case .failure(let error):
-                    print("error")
+            
+            provider.request(target: .socialLogin(data: request), instance: BaseResponse<SocialLogineResponseDTO>.self, viewController: LoginViewController()) { data in
+                if data.status == 403 {
+                    let nextViewController = TimeSurveyViewController()
+                    self.navigationController?.pushViewController(nextViewController, animated: false)
+                } else if data.status == 200 {
+                    self.setRootViewController(TabBarController())
+                    guard let data = data.data else { return }
+                    UserManager.shared.updateToken(data.token.accessToken, data.token.refreshToken)
+                    UserManager.shared.updateUserId(data.userId)
                 }
             }
         default:

@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 import FamilyControls
+import DeviceActivity
 
 //class AppAddButtonViewModel: ObservableObject {
 //    @Published var newSerlection: FamilyActivitySelection
@@ -20,6 +21,7 @@ import FamilyControls
 struct AppAddButtonView: View {
     
     @EnvironmentObject var model: BlockingApplicationModel
+    var appGroupData: [String] = []
     @State var isPresented = false
     
     var body: some View {
@@ -32,8 +34,14 @@ struct AppAddButtonView: View {
             }
             .frame(width: 335, height: 68)
             .familyActivityPicker(isPresented: $isPresented, selection: $model.newSelection)
-            .onChange(of: isPresented) { oldValue, newValue in
+            .onChange(of: isPresented)  { oldValue, newValue in
                 if newValue == false {
+                    let app = model.selectedApps.forEach {
+                        print($0.bundleIdentifier?.utf8)
+                    }
+                    let appTokens: () = model.selectedAppsTokens.forEach {
+                        print($0)
+                    }
                     let mainViewController = TabBarController()
                     let navigationController = UINavigationController(rootViewController: mainViewController)
                     let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
@@ -47,6 +55,10 @@ struct AppAddButtonView: View {
             
         }
         .background(Color(.clear))
+    }
+    
+    func storeMonitor() {
+        
     }
 }
 

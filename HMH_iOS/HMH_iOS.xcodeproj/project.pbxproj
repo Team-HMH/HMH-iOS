@@ -170,6 +170,7 @@
 		36F298462B55965700C1C903 /* GetChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298452B55965700C1C903 /* GetChallengeResponseDTO.swift */; };
 		36F298482B55974200C1C903 /* HomeChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298472B55974200C1C903 /* HomeChallengeResponseDTO.swift */; };
 		36F2984A2B55977900C1C903 /* AddAppResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298492B55977900C1C903 /* AddAppResponseDTO.swift */; };
+		36F2984E2B5599F500C1C903 /* EmptyResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2984D2B5599F500C1C903 /* EmptyResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -389,6 +390,7 @@
 		36F298452B55965700C1C903 /* GetChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeResponseDTO.swift; sourceTree = "<group>"; };
 		36F298472B55974200C1C903 /* HomeChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChallengeResponseDTO.swift; sourceTree = "<group>"; };
 		36F298492B55977900C1C903 /* AddAppResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppResponseDTO.swift; sourceTree = "<group>"; };
+		36F2984D2B5599F500C1C903 /* EmptyResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1003,6 +1005,7 @@
 				36F298452B55965700C1C903 /* GetChallengeResponseDTO.swift */,
 				36F298472B55974200C1C903 /* HomeChallengeResponseDTO.swift */,
 				36F298492B55977900C1C903 /* AddAppResponseDTO.swift */,
+				36F2984D2B5599F500C1C903 /* EmptyResponseDTO.swift */,
 			);
 			path = ChallengeModel;
 			sourceTree = "<group>";
@@ -1459,6 +1462,7 @@
 				3666C88B2B471B0D00564874 /* String.swift in Sources */,
 				17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */,
 				3666C89B2B48516500564874 /* ChallengeView.swift in Sources */,
+				36F2984E2B5599F500C1C903 /* EmptyResponseDTO.swift in Sources */,
 				36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */,
 				367B42542B51DFD400B917CD /* AppSelectionViewController.swift in Sources */,
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,

@@ -20,6 +20,8 @@ class NetworkProvider<Provider : TargetType> : MoyaProvider<Provider> {
                         print("🚨 decoding Error 발생")
                     }
                 } else if response.statusCode == 401 {
+                    print("🚨 401 Error")
+
                     let provider = Providers.AuthProvider
                     
                     provider.request(target: .tokenRefresh, instance: BaseResponse<RefreshTokebResponseDTO>.self, viewController: LoginViewController()) { data in

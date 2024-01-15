@@ -25,7 +25,7 @@ final class AuthInterceptor: RequestInterceptor {
     }
     
     func retry(_ request: Request, for session: Session, dueTo error: Error, completion: @escaping (RetryResult) -> Void) {
-        print("retry")
+        print("-------🔧retry 시작🔧-------")
         guard
             let statusCode = request.response?.statusCode,
             request.retryCount < retryLimit
@@ -34,22 +34,27 @@ final class AuthInterceptor: RequestInterceptor {
             return completion(.doNotRetry)
         }
         
-        guard let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401
-        else {
+        if let statusCode = request.response?.statusCode,
+           statusCode == 401,
+           request.retryCount < retryLimit {
+            let provider = Providers.AuthProvider
+            provider.request(target: .tokenRefresh, instance: BaseResponse<RefreshTokebResponseDTO>.self) { result in
+                if result.status == 200 {
+                    if let data = result.data {
+                        UserManager.shared.updateToken(data.token.accessToken, data.token.refreshToken)
+                    }
+                    print("🪄토큰 재발급에 성공했습니다🪄")
+                    completion(.retry)
+                } else if statusCode == 401 {
+                    // 로그아웃 처리 필요
+                }
+            }
+        } else {
+            if request.retryCount > retryLimit {
+                print("🚨재시도 횟수가 너무 많습니다🚨")
+            }
             completion(.doNotRetryWithError(error))
             return
-        }
-        let provider = Providers.AuthProvider
-        provider.request(target: .tokenRefresh, instance: BaseResponse<RefreshTokebResponseDTO>.self) { result in
-            if result.status == 200 {
-                if let data = result.data {
-                    UserManager.shared.updateToken(data.token.accessToken, data.token.refreshToken)
-                }
-                print("🪄토큰 재발급에 성공했습니다🪄")
-                completion(.retry)
-            } else if statusCode == 401 {
-                // 로그아웃 처리 필요
-            }
         }
     }
 }

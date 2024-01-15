@@ -13,6 +13,8 @@ enum AuthRouter {
     case socialLogin(data: SocialLoginRequestDTO)
     case signUp(data: SignUpRequestDTO)
     case tokenRefresh
+    case revoke
+    case logout
 }
 
 extension AuthRouter: BaseTargetType {
@@ -21,9 +23,13 @@ extension AuthRouter: BaseTargetType {
         case .socialLogin:
             return APIConstants.hasSocialTokenHeader
         case .signUp:
-            return APIConstants.hasTokenHeader
+            return APIConstants.hasSocialTokenHeader
         case .tokenRefresh:
             return APIConstants.hasRefreshTokenHeader
+        case .revoke:
+            return APIConstants.hasTokenHeader
+        case .logout:
+            return APIConstants.hasTokenHeader
         }
     }
     
@@ -35,6 +41,10 @@ extension AuthRouter: BaseTargetType {
             return "user/signup"
         case .tokenRefresh:
             return "user/reissue"
+        case .revoke:
+            return "user"
+        case .logout:
+            return "user/logout"
         }
     }
     
@@ -46,6 +56,10 @@ extension AuthRouter: BaseTargetType {
             return .post
         case .tokenRefresh:
             return .post
+        case .revoke:
+            return .delete
+        case .logout:
+            return .post
         }
     }
     
@@ -56,6 +70,10 @@ extension AuthRouter: BaseTargetType {
         case .signUp(let data):
             return .requestJSONEncodable(data)
         case .tokenRefresh:
+            return .requestPlain
+        case .revoke:
+            return .requestPlain
+        case .logout:
             return .requestPlain
         }
     }

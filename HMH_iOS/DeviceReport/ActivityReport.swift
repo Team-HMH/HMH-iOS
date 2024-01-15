@@ -5,8 +5,6 @@
 //  Created by 지희의 MAC on 1/15/24.
 //
 
-import Foundation
-
 // MARK: - Device Activity Report 관련 데이터 모델이 정의되어 있는 파일입니다.
 import Foundation
 import ManagedSettings

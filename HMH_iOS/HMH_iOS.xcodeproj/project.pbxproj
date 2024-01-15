@@ -168,6 +168,9 @@
 		36F298402B558A8C00C1C903 /* AddAppRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2983F2B558A8C00C1C903 /* AddAppRequestDTO.swift */; };
 		36F298422B558A9C00C1C903 /* DeleteAppRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298412B558A9C00C1C903 /* DeleteAppRequestDTO.swift */; };
 		36F298442B558ABC00C1C903 /* MidnightRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298432B558ABC00C1C903 /* MidnightRequestDTO.swift */; };
+		36F298462B55965700C1C903 /* GetChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298452B55965700C1C903 /* GetChallengeResponseDTO.swift */; };
+		36F298482B55974200C1C903 /* HomeChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298472B55974200C1C903 /* HomeChallengeResponseDTO.swift */; };
+		36F2984A2B55977900C1C903 /* AddAppResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298492B55977900C1C903 /* AddAppResponseDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -385,6 +388,9 @@
 		36F2983F2B558A8C00C1C903 /* AddAppRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppRequestDTO.swift; sourceTree = "<group>"; };
 		36F298412B558A9C00C1C903 /* DeleteAppRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAppRequestDTO.swift; sourceTree = "<group>"; };
 		36F298432B558ABC00C1C903 /* MidnightRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidnightRequestDTO.swift; sourceTree = "<group>"; };
+		36F298452B55965700C1C903 /* GetChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetChallengeResponseDTO.swift; sourceTree = "<group>"; };
+		36F298472B55974200C1C903 /* HomeChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeChallengeResponseDTO.swift; sourceTree = "<group>"; };
+		36F298492B55977900C1C903 /* AddAppResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppResponseDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -997,6 +1003,9 @@
 				36F2983F2B558A8C00C1C903 /* AddAppRequestDTO.swift */,
 				36F298412B558A9C00C1C903 /* DeleteAppRequestDTO.swift */,
 				36F298432B558ABC00C1C903 /* MidnightRequestDTO.swift */,
+				36F298452B55965700C1C903 /* GetChallengeResponseDTO.swift */,
+				36F298472B55974200C1C903 /* HomeChallengeResponseDTO.swift */,
+				36F298492B55977900C1C903 /* AddAppResponseDTO.swift */,
 			);
 			path = ChallengeModel;
 			sourceTree = "<group>";
@@ -1346,6 +1355,7 @@
 				3666C8A12B485CC800564874 /* TitleCollectionReusableView.swift in Sources */,
 				36E05FE42B487911005B633E /* GrayBackgroundView.swift in Sources */,
 				364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */,
+				36F2984A2B55977900C1C903 /* AddAppResponseDTO.swift in Sources */,
 				0B50F9CF2B369813000C5046 /* HomeViewController.swift in Sources */,
 				0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */,
 				0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */,
@@ -1362,6 +1372,7 @@
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				0B17D3F12B51AD4B00CFA3B7 /* UIViewController+.swift in Sources */,
 				174AF4902B447B3C00450D07 /* MyPageModels.swift in Sources */,
+				36F298482B55974200C1C903 /* HomeChallengeResponseDTO.swift in Sources */,
 				174AF4982B447CF100450D07 /* ChanllengeModels.swift in Sources */,
 				17CF9FBD2B4DC757000DD09C /* HMHHomeView.swift in Sources */,
 				364923932B50397100BF7ACA /* NetworkHelper.swift in Sources */,
@@ -1444,6 +1455,7 @@
 				0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */,
 				36A3D9BA2B3EBC65007EA272 /* UIButton+.swift in Sources */,
 				3666C88F2B471C5800564874 /* TabBarController.swift in Sources */,
+				36F298462B55965700C1C903 /* GetChallengeResponseDTO.swift in Sources */,
 				36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */,
 				36E531C92B4C798100B4BBE3 /* MyStore.swift in Sources */,
 				36E05FE62B48825A005B633E /* AppCollectionReusableView.swift in Sources */,

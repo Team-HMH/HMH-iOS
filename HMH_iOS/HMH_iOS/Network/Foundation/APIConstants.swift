@@ -27,4 +27,7 @@ extension APIConstants{
                                        auth : accessToken]
     static let hasRefreshTokenHeader = [contentType: applicationJSON,
                                        auth : refreshToken]
+    static let signUpHeader = [contentType: applicationJSON,
+                                       auth : appleAccessToken,
+                                        OS: iOS,]
 }

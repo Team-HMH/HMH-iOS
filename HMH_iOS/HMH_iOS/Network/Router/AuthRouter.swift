@@ -23,7 +23,7 @@ extension AuthRouter: BaseTargetType {
         case .socialLogin:
             return APIConstants.hasSocialTokenHeader
         case .signUp:
-            return APIConstants.hasSocialTokenHeader
+            return APIConstants.signUpHeader
         case .tokenRefresh:
             return APIConstants.hasRefreshTokenHeader
         case .revoke:

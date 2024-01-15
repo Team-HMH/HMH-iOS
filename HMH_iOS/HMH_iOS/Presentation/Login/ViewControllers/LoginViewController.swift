@@ -84,27 +84,30 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
             let userIdentifier = appleIDCredential.user
             let fullName = appleIDCredential.fullName
             
-            if  let authorizationCode = appleIDCredential.authorizationCode,
-                let identityToken = appleIDCredential.identityToken,
-                let authCodeString = String(data: authorizationCode, encoding: .utf8),
+            if  let identityToken = appleIDCredential.identityToken,
                 let identifyTokenString = String(data: identityToken, encoding: .utf8) {
                 if let unwrappedFullName = fullName, let givenName = unwrappedFullName.givenName, let familyName = unwrappedFullName.familyName {
                     UserManager.shared.updateUserName(givenName, familyName)
                 } else {
                     print("fullName이 없거나 givenName 또는 familyName이 없습니다.")
                 }
+                UserManager.shared.updateAppleToken(identifyTokenString)
                 UserManager.shared.updateUserIdentifier(userIdentifier)
             }
+            let request = SocialLoginRequestDTO(socialPlatform: "APPLE")
             
-            // 로그인이 성공 한다면
-            // 소셜 로그인 API 쏘기 403 -> 온보딩 뷰로 이동
-            // 회원 가입이 필요한지 아닌지 확인, userId가 있는지 없는지 판별
-            // 유저 메니저와 signInModel에 해당 값 저장
-            if (UserManager.shared.appleUserIdentifier != nil) {
-                setRootViewController(TabBarController())
-            } else {
-                let nextViewController = TimeSurveyViewController()
-                self.navigationController?.pushViewController(nextViewController, animated: false)
+            let provider = Providers.AuthProvider
+            
+            provider.request(target: .socialLogin(data: request), instance: BaseResponse<SocialLogineResponseDTO>.self, viewController: LoginViewController()) { data in
+                if data.status == 403 {
+                    let nextViewController = TimeSurveyViewController()
+                    self.navigationController?.pushViewController(nextViewController, animated: false)
+                } else if data.status == 200 {
+                    self.setRootViewController(TabBarController())
+                    guard let data = data.data else { return }
+                    UserManager.shared.updateToken(data.token.accessToken, data.token.refreshToken)
+                    UserManager.shared.updateUserId(data.userId)
+                }
             }
         default:
             break
@@ -112,7 +115,6 @@ extension LoginViewController: ASAuthorizationControllerDelegate, ASAuthorizatio
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        // 로그인 실패(유저의 취소도 포함)
         print("login failed - \(error.localizedDescription)")
     }
 }

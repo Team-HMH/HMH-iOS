@@ -38,7 +38,6 @@ final class SplashViewController: UIViewController {
     }
     
     private func setSplashView() {
-        print("👍", UserManager.shared.getAppleToken)
         view.backgroundColor = .background
         let provider = Providers.AuthProvider
         provider.request(target: .tokenRefresh, instance: BaseResponse<RefreshTokebResponseDTO>.self, viewController: LoginViewController()) { data in

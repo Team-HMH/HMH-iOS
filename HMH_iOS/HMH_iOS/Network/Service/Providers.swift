@@ -9,12 +9,12 @@ import Foundation
 import Moya
 
 struct Providers {
-    static let challengeProvider = NetworkProvider<ChallengeRouter>(withAuth: false)
-    static let myPageProvider = NetworkProvider<MyPageRouter>(withAuth: false)
+    static let challengeProvider = NetworkProvider<ChallengeRouter>(withAuth: true)
+    static let myPageProvider = NetworkProvider<MyPageRouter>(withAuth: true)
     static let AuthProvider = NetworkProvider<AuthRouter>(withAuth: false)
 }
 
-extension NetworkProvider {
+extension MoyaProvider {
     convenience init(withAuth: Bool) {
         if withAuth {
             self.init(session: Session(interceptor: AuthInterceptor.shared),

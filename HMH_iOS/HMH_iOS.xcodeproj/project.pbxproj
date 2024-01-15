@@ -72,6 +72,9 @@
 		17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */; };
 		17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */; };
 		17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */; };
+		360D11082B536746008BE85A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360D11072B536746008BE85A /* Assets.xcassets */; };
+		360D110E2B541DB4008BE85A /* UserDefault+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D110D2B541DB4008BE85A /* UserDefault+.swift */; };
+		360D11102B5443FD008BE85A /* ActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D110F2B5443FD008BE85A /* ActivityReport.swift */; };
 		17CF9FDE2B52F86A000DD09C /* GetUserDataResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */; };
 		17CF9FE02B52FA26000DD09C /* MyPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FDF2B52FA26000DD09C /* MyPageRouter.swift */; };
 		360D11022B5343C6008BE85A /* requestPermision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11012B5343C6008BE85A /* requestPermision.swift */; };
@@ -95,6 +98,8 @@
 		364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */; };
 		364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E702B4BC9780015729C /* AppAddButtonView.swift */; };
 		364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */; };
+		365AF6672B54547800BAC51F /* HMHMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */; };
+		36610E3C2B5463280044F1CA /* HMHPushAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36610E3B2B5463280044F1CA /* HMHPushAlert.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
 		3666C8552B45F47600564874 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3666C8542B45F47600564874 /* DeviceActivity.framework */; };
 		3666C8582B45F47600564874 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */; };
@@ -287,6 +292,9 @@
 		17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingProgressViewCell.swift; sourceTree = "<group>"; };
 		17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalTimeCell.swift; sourceTree = "<group>"; };
 		17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleImageCell.swift; sourceTree = "<group>"; };
+		360D11072B536746008BE85A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		360D110D2B541DB4008BE85A /* UserDefault+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+.swift"; sourceTree = "<group>"; };
+		360D110F2B5443FD008BE85A /* ActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityReport.swift; sourceTree = "<group>"; };
 		17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataResponseDTO.swift; sourceTree = "<group>"; };
 		17CF9FDF2B52FA26000DD09C /* MyPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageRouter.swift; sourceTree = "<group>"; };
 		360D11012B5343C6008BE85A /* requestPermision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestPermision.swift; sourceTree = "<group>"; };
@@ -309,6 +317,8 @@
 		3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeRequestDTO.swift; sourceTree = "<group>"; };
 		364C4E702B4BC9780015729C /* AppAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddButtonView.swift; sourceTree = "<group>"; };
 		364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddCollectionReusableView.swift; sourceTree = "<group>"; };
+		365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHMonitorExtension.swift; sourceTree = "<group>"; };
+		36610E3B2B5463280044F1CA /* HMHPushAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHPushAlert.swift; sourceTree = "<group>"; };
 		3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHAppSelectButtonView.swift; sourceTree = "<group>"; };
 		3666C8522B45F47600564874 /* DeviceMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3666C8542B45F47600564874 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
@@ -594,6 +604,7 @@
 				36A3D9BB2B3EBD2D007EA272 /* UIScreen+.swift */,
 				3666C88C2B471B1D00564874 /* UIImage+.swift */,
 				0B17D3F02B51AD4B00CFA3B7 /* UIViewController+.swift */,
+				360D110D2B541DB4008BE85A /* UserDefault+.swift */,
 				360D11032B53465B008BE85A /* UIApplication+.swift */,
 			);
 			path = Extension;
@@ -822,6 +833,7 @@
 				17314F822B486BEC0089A551 /* AlertViewController.swift */,
 				17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */,
 				17314F862B49853C0089A551 /* HMHQuitAlert.swift */,
+				36610E3B2B5463280044F1CA /* HMHPushAlert.swift */,
 			);
 			path = CustomAlert;
 			sourceTree = "<group>";
@@ -1010,6 +1022,7 @@
 				3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */,
 				3666C8592B45F47600564874 /* Info.plist */,
 				3666C85A2B45F47600564874 /* DeviceMonitor.entitlements */,
+				365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */,
 			);
 			path = DeviceMonitor;
 			sourceTree = "<group>";
@@ -1022,6 +1035,7 @@
 				3666C86C2B45F4B200564874 /* TotalActivityView.swift */,
 				3666C86E2B45F4B200564874 /* Info.plist */,
 				3666C86F2B45F4B200564874 /* DeviceReport.entitlements */,
+				360D110F2B5443FD008BE85A /* ActivityReport.swift */,
 			);
 			path = DeviceReport;
 			sourceTree = "<group>";
@@ -1081,6 +1095,7 @@
 				36E531BD2B4C78A900B4BBE3 /* ShieldConfigurationExtension.swift */,
 				36E531BF2B4C78A900B4BBE3 /* Info.plist */,
 				36E531C02B4C78A900B4BBE3 /* ShiledConfig.entitlements */,
+				360D11072B536746008BE85A /* Assets.xcassets */,
 			);
 			path = ShiledConfig;
 			sourceTree = "<group>";
@@ -1305,6 +1320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360D11082B536746008BE85A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1323,6 +1339,7 @@
 				0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */,
 				0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */,
 				3666C89F2B485C8F00564874 /* DateCollectionViewCell.swift in Sources */,
+				36610E3C2B5463280044F1CA /* HMHPushAlert.swift in Sources */,
 				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
 				0B17D3ED2B5108D200CFA3B7 /* UserDefaultWrapper.swift in Sources */,
 				0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */,
@@ -1352,6 +1369,7 @@
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */,
 				0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */,
+				360D110E2B541DB4008BE85A /* UserDefault+.swift in Sources */,
 				0B1AE8212B53ABC400CF5154 /* SignUpResponseDTO.swift in Sources */,
 				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
 				364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */,
@@ -1434,6 +1452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365AF6672B54547800BAC51F /* HMHMonitorExtension.swift in Sources */,
 				3666C8582B45F47600564874 /* DeviceActivityMonitorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1442,6 +1461,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360D11102B5443FD008BE85A /* ActivityReport.swift in Sources */,
 				3666C86D2B45F4B200564874 /* TotalActivityView.swift in Sources */,
 				3666C8692B45F4B200564874 /* DeviceReport.swift in Sources */,
 				3666C86B2B45F4B200564874 /* TotalActivityReport.swift in Sources */,

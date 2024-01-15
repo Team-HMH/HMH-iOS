@@ -75,7 +75,6 @@
 		17CF9FDE2B52F86A000DD09C /* GetUserDataResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */; };
 		17CF9FE02B52FA26000DD09C /* MyPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FDF2B52FA26000DD09C /* MyPageRouter.swift */; };
 		360D11022B5343C6008BE85A /* requestPermision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11012B5343C6008BE85A /* requestPermision.swift */; };
-		360D11042B53465B008BE85A /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11032B53465B008BE85A /* UIApplication+.swift */; };
 		360D11082B536746008BE85A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360D11072B536746008BE85A /* Assets.xcassets */; };
 		360D110E2B541DB4008BE85A /* UserDefault+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D110D2B541DB4008BE85A /* UserDefault+.swift */; };
 		360D11102B5443FD008BE85A /* ActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D110F2B5443FD008BE85A /* ActivityReport.swift */; };
@@ -302,7 +301,6 @@
 		17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataResponseDTO.swift; sourceTree = "<group>"; };
 		17CF9FDF2B52FA26000DD09C /* MyPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageRouter.swift; sourceTree = "<group>"; };
 		360D11012B5343C6008BE85A /* requestPermision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestPermision.swift; sourceTree = "<group>"; };
-		360D11032B53465B008BE85A /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		360D11072B536746008BE85A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		360D110D2B541DB4008BE85A /* UserDefault+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+.swift"; sourceTree = "<group>"; };
 		360D110F2B5443FD008BE85A /* ActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityReport.swift; sourceTree = "<group>"; };
@@ -620,7 +618,6 @@
 				3666C88C2B471B1D00564874 /* UIImage+.swift */,
 				0B17D3F02B51AD4B00CFA3B7 /* UIViewController+.swift */,
 				360D110D2B541DB4008BE85A /* UserDefault+.swift */,
-				360D11032B53465B008BE85A /* UIApplication+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1427,7 +1424,6 @@
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
 				0BB0AE522B55065300C647AE /* LogoutResponseDTO.swift in Sources */,
 				0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */,
-				360D11042B53465B008BE85A /* UIApplication+.swift in Sources */,
 				36F298422B558A9C00C1C903 /* DeleteAppRequestDTO.swift in Sources */,
 				3649239B2B505B2600BF7ACA /* Providers.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,

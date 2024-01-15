@@ -36,7 +36,7 @@ class ShieldActionExtension: ShieldActionDelegate {
                 /// 액션에 대한 응답을 지연시키며 뷰를 갱신합니다.
                 let dailyStore = ManagedSettingsStore()
                 //  dailyStore.clearAllSettings()
-                requestSendNoti(seconds: 1)
+                requestSendNoti(seconds: 1, title: "")
                 completionHandler(.defer)
             @unknown default:
                 fatalError()
@@ -70,11 +70,11 @@ class ShieldActionExtension: ShieldActionDelegate {
                 fatalError()
             }
         }
-    func requestSendNoti(seconds: Double) {
+    func requestSendNoti(seconds: Double, title: String) {
         let notiContent = UNMutableNotificationContent()
         notiContent.title = "하면함"
         notiContent.body = "이용 시간을 연장해주세요"
-        notiContent.userInfo = ["targetScene": "splash"] // 푸시 받을때 오는 데이터
+        notiContent.userInfo = ["AppName": title] // 푸시 받을때 오는 데이터
         
         // 알림이 trigger되는 시간 설정
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: seconds, repeats: false)

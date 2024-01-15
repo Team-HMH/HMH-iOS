@@ -83,6 +83,21 @@ final class AlertViewController: UIViewController {
 
 extension AlertViewController: AlertDelegate {
     func enabledButtonTapped() {
+        let provider = Providers.AuthProvider
+        if alertType == .HMHQuitALert {
+            provider.request(target: .revoke, instance: BaseResponse<RevokeResponseDTO>.self, viewController: self) { data in
+                print("revoke!!!!!!")
+                UserManager.shared.clearData()
+            }
+        } else {
+            let provider = Providers.AuthProvider
+            
+            provider.request(target: .logout, instance: BaseResponse<LogoutResponseDTO>.self, viewController: self) { data in
+                print("logout!!!!!!")
+                UserManager.shared.clearAll()
+            }
+        }
+
         dismiss(animated: false) {
             let loginViewController = LoginViewController()
             
@@ -94,7 +109,6 @@ extension AlertViewController: AlertDelegate {
             }
         }
     }
-    
     
     func alertDismissTapped() {
         dismiss(animated: false) {

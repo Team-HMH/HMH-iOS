@@ -40,6 +40,8 @@
 		0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */; };
 		0BA193B92B4D4097007E3F9C /* SignUpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B82B4D4097007E3F9C /* SignUpManager.swift */; };
 		0BB0AE502B54580D00C647AE /* RefreshTokenResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0AE4F2B54580D00C647AE /* RefreshTokenResponseDTO.swift */; };
+		0BB0AE522B55065300C647AE /* LogoutResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0AE512B55065300C647AE /* LogoutResponseDTO.swift */; };
+		0BB0AE542B55068200C647AE /* RevokeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0AE532B55068200C647AE /* RevokeResponseDTO.swift */; };
 		0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */; };
 		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
 		0BD98DB92B4D671600E35188 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD98DB82B4D671600E35188 /* SplashViewController.swift */; };
@@ -253,6 +255,8 @@
 		0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSurveyViewController.swift; sourceTree = "<group>"; };
 		0BA193B82B4D4097007E3F9C /* SignUpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpManager.swift; sourceTree = "<group>"; };
 		0BB0AE4F2B54580D00C647AE /* RefreshTokenResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenResponseDTO.swift; sourceTree = "<group>"; };
+		0BB0AE512B55065300C647AE /* LogoutResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponseDTO.swift; sourceTree = "<group>"; };
+		0BB0AE532B55068200C647AE /* RevokeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevokeResponseDTO.swift; sourceTree = "<group>"; };
 		0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressView.swift; sourceTree = "<group>"; };
 		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
 		0BD98DB82B4D671600E35188 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -452,6 +456,8 @@
 				0B1AE81E2B53ABB700CF5154 /* SignUpRequestDTO.swift */,
 				0B1AE8202B53ABC400CF5154 /* SignUpResponseDTO.swift */,
 				0BB0AE4F2B54580D00C647AE /* RefreshTokenResponseDTO.swift */,
+				0BB0AE512B55065300C647AE /* LogoutResponseDTO.swift */,
+				0BB0AE532B55068200C647AE /* RevokeResponseDTO.swift */,
 			);
 			path = AuthModel;
 			sourceTree = "<group>";
@@ -1377,6 +1383,7 @@
 				0B78174E2B4BD96D0078E925 /* OnboardingBaseViewControllers.swift in Sources */,
 				3649237D2B4FC9CD00BF7ACA /* NetworkRequest.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
+				0BB0AE522B55065300C647AE /* LogoutResponseDTO.swift in Sources */,
 				0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */,
 				360D11042B53465B008BE85A /* UIApplication+.swift in Sources */,
 				3649239B2B505B2600BF7ACA /* Providers.swift in Sources */,
@@ -1392,6 +1399,7 @@
 				364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */,
 				360D11022B5343C6008BE85A /* requestPermision.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
+				0BB0AE542B55068200C647AE /* RevokeResponseDTO.swift in Sources */,
 				17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */,
 				17314F9D2B4C554D0089A551 /* MypageCollectionViewCell.swift in Sources */,
 				17314F972B4C42130089A551 /* MyPageView.swift in Sources */,

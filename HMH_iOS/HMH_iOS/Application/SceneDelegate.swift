@@ -43,12 +43,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             DispatchQueue.main.async{
                 if UserManager.shared.hasAccessToken {
-                    let provider = Providers.AuthProvider
-                    provider.request(target: .tokenRefresh, instance: BaseResponse<RefreshTokebResponseDTO>.self, viewController: LoginViewController()) { data in
-                        if let data = data.data {
-                            UserManager.shared.updateToken(data.token.accessToken, data.token.accessToken)
-                        }
-                    }
                     showTabBarViewController()
                 } else {
                     showLoginViewController()

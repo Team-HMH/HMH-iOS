@@ -27,15 +27,15 @@ var appUsingTimeModel: [AppUsingTimeModel] = [
     .init(appGoalTime: 7200000,
           usingAppIcon: ImageLiterals.TabBar.icHomeSelected,
           usingAppName: "Instagram",
-          usedTime: 3200000),
+          usedTime: 3600000),
     
-        .init(appGoalTime: 2700000,
+        .init(appGoalTime: 7200000,
               usingAppIcon: ImageLiterals.TabBar.icChallengeSelected,
               usingAppName: "melon",
-              usedTime: 1500000),
+              usedTime: 1800000),
     
-        .init(appGoalTime: 9000000,
+        .init(appGoalTime: 7200000,
               usingAppIcon: ImageLiterals.TabBar.icMyPageSelected,
               usingAppName: "Netflix",
-              usedTime: 7900000),
+              usedTime: 3600000),
 ]

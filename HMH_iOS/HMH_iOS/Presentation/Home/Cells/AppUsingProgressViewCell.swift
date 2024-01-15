@@ -153,12 +153,14 @@ final class AppUsingProgressViewCell: UICollectionViewCell {
         
         if convertedTime.hours == 0 {
             appRemainedTimeLabel.text = "\(convertedTime.minutes)분"
+        } else if convertedTime.minutes == 0 {
+            appRemainedTimeLabel.text = "\(convertedTime.hours)시간"
         } else {
             appRemainedTimeLabel.text = "\(convertedTime.hours)시간 \(convertedTime.minutes)분"
         }
         
         if data.usedTime >= data.appGoalTime {
-            appRemainedTimeLabel.text = "남은 시간 없음"
+            appRemainedTimeLabel.text = "0분"
         }
     }
 }

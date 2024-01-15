@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class SelectPeriodController: OnboardingBaseViewController {
+final class OnboardingPeriodController: OnboardingBaseViewController {
     private let surveyView = SurveyView(firstButtonType: .solitary, secondButtonType: .solitary, thirdButtonType: .disabled, fourthButtonType: .disabled)
     private var selectPeriod = ""
     
@@ -75,15 +75,15 @@ final class SelectPeriodController: OnboardingBaseViewController {
     }
 }
 
-extension SelectPeriodController: NextViewPushDelegate {
+extension OnboardingPeriodController: NextViewPushDelegate {
     func didTapButton() {
-        let nextViewController = SelectTotalTimeController()
+        let nextViewController = OnboardingTotalTimeController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
         SignUpManager.shared.period = convertAndRemoveLastCharacter(selectPeriod) ?? 0
     }
 }
 
-extension SelectPeriodController: HMHSelectButtonDelegate {
+extension OnboardingPeriodController: HMHSelectButtonDelegate {
     func updateAvailability(isEnabled: Bool, text: String) {
         nextButton.updateStatus(isEnabled: isEnabled)
         selectPeriod = text

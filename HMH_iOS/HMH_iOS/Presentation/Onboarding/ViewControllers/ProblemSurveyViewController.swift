@@ -73,7 +73,7 @@ final class ProblemSurveyViewController: OnboardingBaseViewController {
 
 extension ProblemSurveyViewController: NextViewPushDelegate {
     func didTapButton() {
-        let nextViewController = SelectPeriodController()
+        let nextViewController = OnboardingPeriodController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
         SignUpManager.shared.problem = textArray
     }

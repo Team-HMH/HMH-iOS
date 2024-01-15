@@ -1,8 +1,8 @@
 //
-//  SelectTotalTimeController.swift
+//  CreateTotalTimeController.swift
 //  HMH_iOS
 //
-//  Created by Seonwoo Kim on 1/10/24.
+//  Created by Seonwoo Kim on 1/15/24.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class SelectTotalTimeController: OnboardingBaseViewController {
+final class CreateTotalTimeController: OnboardingBaseViewController {
     private var totalTime = 0
     private let pickerView = HMHTimePickerView(type: .totalTime)
     private let titleLabel = UILabel().then {
@@ -60,29 +60,29 @@ final class SelectTotalTimeController: OnboardingBaseViewController {
     
     private func setTimeSurvey() {
         view.backgroundColor = .background
-        step = 4
+        progressBar.isHidden = true
     }
     
     private func configureSurveyView() {
-        nextButtonText = StringLiteral.OnboardingButton.next
+        nextButtonText = StringLiteral.OnboardingButton.complete
         nextButton.setButtonText(buttonTitle: nextButtonText)
         mainTitleText = StringLiteral.OnboardigMain.selectTotalTime
         subTitleText = StringLiteral.OnboardigSub.selectTotalTime
     }
 }
 
-extension SelectTotalTimeController: NextViewPushDelegate {
+extension CreateTotalTimeController: NextViewPushDelegate {
     func didTapButton() {
-        let nextViewController = ApprovePermisionController()
-        self.navigationController?.pushViewController(nextViewController, animated: false)
+        setRootViewController(TabBarController())
         SignUpManager.shared.goalTime = totalTime
     }
 }
 
-extension SelectTotalTimeController: TimePickerDelegate {
+extension CreateTotalTimeController: TimePickerDelegate {
     func updateAvailability(selectedValue: Int) {
         nextButton.updateStatus(isEnabled: true)
         totalTime = selectedValue
     }
 }
+
 

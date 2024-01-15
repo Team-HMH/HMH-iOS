@@ -10,6 +10,7 @@ import UIKit
 enum AlertType {
     case HMHLogoutAlert
     case HMHQuitALert
+    case HMHPushALert
 }
 
 final class AlertViewController: UIViewController {
@@ -18,11 +19,14 @@ final class AlertViewController: UIViewController {
     
     private let logoutAlert = HMHLogoutAlert()
     private let quitAlert = HMHQuitAlert()
+    private let pushAlert = HMHPushAlert()
+    
+    var appName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black.withAlphaComponent(0.7)
-        
+        pushAlert.setAppName(appName: appName)
         setDelegate()
         setAlertType()
         setUI()
@@ -34,7 +38,7 @@ final class AlertViewController: UIViewController {
     }
     
     private func setHierarchy() {
-        view.addSubviews(logoutAlert, quitAlert)
+        view.addSubviews(logoutAlert, quitAlert, pushAlert)
     }
     
     private func setConstraint() {
@@ -49,27 +53,38 @@ final class AlertViewController: UIViewController {
             $0.height.equalTo(203.adjusted)
             $0.width.equalTo(293.adjusted)
         }
+        
+        pushAlert.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.height.equalTo(222.adjusted)
+            $0.width.equalTo(293.adjusted)
+        }
     }
     
     private func setAlertType() {
         switch alertType {
         case .HMHLogoutAlert:
-            setAlertView(logout: true, quit: false)
+            setAlertView(logout: true, quit: false, push: false)
         case .HMHQuitALert:
-            setAlertView(logout: false, quit: true)
+            setAlertView(logout: false, quit: true, push: false)
+        case .HMHPushALert:
+            setAlertView(logout: false, quit: false, push: true)
         default:
             break
         }
     }
     
-    private func setAlertView(logout: Bool, quit: Bool) {
+    private func setAlertView(logout: Bool, quit: Bool, push: Bool) {
         logoutAlert.isHidden = !logout
         quitAlert.isHidden = !quit
+        pushAlert.isHidden = !push
+        
     }
     
     func setDelegate() {
         logoutAlert.delegate = self
         quitAlert.delegate = self
+        pushAlert.delegate = self
     }
     
     func emptyActions() {
@@ -85,7 +100,6 @@ extension AlertViewController: AlertDelegate {
     func enabledButtonTapped() {
         dismiss(animated: false) {
             let loginViewController = LoginViewController()
-            
             if let window = UIApplication.shared.windows.first {
                 let navigationController = UINavigationController(rootViewController: loginViewController)
                 navigationController.isNavigationBarHidden = true

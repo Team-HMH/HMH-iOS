@@ -39,6 +39,13 @@ final class SplashViewController: UIViewController {
     
     private func setSplashView() {
         view.backgroundColor = .background
+        let provider = Providers.AuthProvider
+        provider.request(target: .tokenRefresh, instance: BaseResponse<RefreshTokebResponseDTO>.self, viewController: LoginViewController()) { data in
+            if let data = data.data {
+                UserManager.shared.updateToken(data.token.accessToken, data.token.accessToken)
+                print("token",data.token.accessToken,data.token.accessToken)
+            }
+        }
     }
 }
 

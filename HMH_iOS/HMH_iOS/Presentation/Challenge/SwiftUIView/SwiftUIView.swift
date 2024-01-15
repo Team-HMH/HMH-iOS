@@ -13,7 +13,6 @@ struct SwiftUIView: View {
     
     var body: some View {
         FamilyActivityPicker(selection: $model.newSelection)
-        
     }
 }
 

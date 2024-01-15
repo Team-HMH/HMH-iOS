@@ -9,8 +9,11 @@ import Foundation
 
 struct TotalAppUsingTimeDataModel {
     var onboardingTotalGoalTime: Float
-    var totalAppUsingTime: Float
-    var progressValue: Float
+    var totalAppRemainedTime: Float
     var isFailed: Bool
-}
+    
+    static func calculateTotalUsageTime(data: [AppUsingTimeModel]) -> Int {
+        return data.reduce(0) { $0 + Int($1.usedTime) }
+    }
 
+}

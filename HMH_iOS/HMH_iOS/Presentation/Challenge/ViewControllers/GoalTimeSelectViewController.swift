@@ -33,7 +33,10 @@ final class GoalTimeSelectViewController: OnboardingBaseViewController {
     }
     
     override func onTapButton() {
-        self.navigationController?.popToRootViewController(animated: false)
+        let rootViewController = TabBarController()
+        rootViewController.selectedIndex = 0
+        self.setRootViewController(rootViewController)
+        
     }
     
 }

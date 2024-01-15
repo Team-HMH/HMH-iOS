@@ -165,6 +165,9 @@
 		36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */; };
 		36E531FC2B4DCEB300B4BBE3 /* AppSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */; };
 		36F2983E2B55766300C1C903 /* OnboardingGoalTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2983D2B55766300C1C903 /* OnboardingGoalTimeViewController.swift */; };
+		36F298402B558A8C00C1C903 /* AddAppRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2983F2B558A8C00C1C903 /* AddAppRequestDTO.swift */; };
+		36F298422B558A9C00C1C903 /* DeleteAppRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298412B558A9C00C1C903 /* DeleteAppRequestDTO.swift */; };
+		36F298442B558ABC00C1C903 /* MidnightRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298432B558ABC00C1C903 /* MidnightRequestDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -379,6 +382,9 @@
 		36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectView.swift; sourceTree = "<group>"; };
 		36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectionViewController.swift; sourceTree = "<group>"; };
 		36F2983D2B55766300C1C903 /* OnboardingGoalTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingGoalTimeViewController.swift; sourceTree = "<group>"; };
+		36F2983F2B558A8C00C1C903 /* AddAppRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAppRequestDTO.swift; sourceTree = "<group>"; };
+		36F298412B558A9C00C1C903 /* DeleteAppRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAppRequestDTO.swift; sourceTree = "<group>"; };
+		36F298432B558ABC00C1C903 /* MidnightRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidnightRequestDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -988,6 +994,9 @@
 			children = (
 				3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */,
 				363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */,
+				36F2983F2B558A8C00C1C903 /* AddAppRequestDTO.swift */,
+				36F298412B558A9C00C1C903 /* DeleteAppRequestDTO.swift */,
+				36F298432B558ABC00C1C903 /* MidnightRequestDTO.swift */,
 			);
 			path = ChallengeModel;
 			sourceTree = "<group>";
@@ -1369,6 +1378,7 @@
 				3666C8892B47110800564874 /* HMHTimePickerView.swift in Sources */,
 				0B1AE81B2B531A3E00CF5154 /* SocialLoginRequestDTO.swift in Sources */,
 				0B000CE92B4D9D6E00AEC582 /* SelectPeriodController.swift in Sources */,
+				36F298442B558ABC00C1C903 /* MidnightRequestDTO.swift in Sources */,
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */,
 				0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */,
@@ -1407,8 +1417,10 @@
 				0BB0AE522B55065300C647AE /* LogoutResponseDTO.swift in Sources */,
 				0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */,
 				360D11042B53465B008BE85A /* UIApplication+.swift in Sources */,
+				36F298422B558A9C00C1C903 /* DeleteAppRequestDTO.swift in Sources */,
 				3649239B2B505B2600BF7ACA /* Providers.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
+				36F298402B558A8C00C1C903 /* AddAppRequestDTO.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
 				0B7817502B4BD9F10078E925 /* OnboardingButton.swift in Sources */,
 				36F2983E2B55766300C1C903 /* OnboardingGoalTimeViewController.swift in Sources */,

@@ -23,7 +23,7 @@ final class MyGoalTimeCell: UICollectionViewCell {
     }
     private let goalTimeLabel = UILabel().then {
         $0.font = .iosTitle2Semibold24
-        $0.text = "3시간"
+        $0.text = "4시간"
         $0.textColor = .whiteText
     }
     private let usableLabel = UILabel().then {
@@ -32,7 +32,7 @@ final class MyGoalTimeCell: UICollectionViewCell {
     }
     private let remainTimeLabel = UILabel().then {
         $0.font = .iosDetail4Medium12
-        $0.text = "남음"
+        $0.text = StringLiteral.Home.remainedTimeUnit
         $0.textColor = .gray1
     }
     lazy var totalProgressBar = UIProgressView().then {
@@ -86,54 +86,26 @@ final class MyGoalTimeCell: UICollectionViewCell {
         }
     }
     
-    var totalTime: Int = 21600000
-    
-    func bindData(data: [AppUsingTimeModel]) {
-        self.usableLabel.text = "\(convertMillisecondsToHoursAndMinutes(milliseconds: calculateTotalUsageTime(data: data)))분"
-        finalTimeConvert(data: data)
-        updateTotalUsageTime(data: data)
+    func bindData(data: TotalAppUsingTimeDataModel) {
+        let remindTime = convertMillisecondsToHoursAndMinutes(milliseconds: Int(data.onboardingTotalGoalTime) - Int(data.totalAppRemainedTime))
+        if remindTime.hours == 0 {
+            usableLabel.text = "\(remindTime.minutes)분"
+        } else if remindTime.minutes == 0 {
+            usableLabel.text = "\(remindTime.hours)시간"
+        } else {
+            usableLabel.text = "\(remindTime.hours)시간 \(remindTime.minutes)분"
+        }
+        
+        if data.totalAppRemainedTime >= data.onboardingTotalGoalTime {
+            usableLabel.text = "0분"
+        }
+        
+        let progress = Float(data.totalAppRemainedTime) / Float(data.onboardingTotalGoalTime)
+        self.progress = progress
         
         totalProgressBar.setProgress(0, animated: false)
-        let progress = Float(self.calculateTotalUsageTime(data: data)) / Float(self.totalTime)
-        self.progress = progress
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.totalProgressBar.setProgress(progress, animated: true)
-        }
-    }
-    
-    func calculateTotalUsageTime(data: [AppUsingTimeModel]) -> Int {
-        return data.reduce(0) { $0 + Int($1.usedTime) }
-    }
-    
-    func convertMillisecondsToHoursAndMinutes(milliseconds: Int) -> (hours: Int, minutes: Int) {
-        let totalMinutes = milliseconds / (1000 * 60)
-        let hours = totalMinutes / 60
-        let remainingMinutes = totalMinutes % 60
-        return (hours, remainingMinutes)
-    }
-    
-    func updateTotalUsageTime(data: [AppUsingTimeModel]) {
-        let totalProgress = Float(calculateTotalUsageTime(data: data)) / Float(totalTime)
-        DispatchQueue.main.async {
-            self.totalProgressBar.progress = totalProgress
-            if self.calculateTotalUsageTime(data: data) >= self.totalTime {
-                self.totalProgressBar.progress = 1
-            }
-        }
-    }
-    
-    func finalTimeConvert(data: [AppUsingTimeModel]) {
-        let finalTime = max(0, Int(totalTime) - Int(calculateTotalUsageTime(data: data)))
-        let convertedTime = convertMillisecondsToHoursAndMinutes(milliseconds: finalTime)
-
-        if convertedTime.hours == 0 && convertedTime.minutes == 0 {
-            usableLabel.text = "남은 시간 없음"
-        } else if convertedTime.hours == 0 {
-            usableLabel.text = "\(convertedTime.minutes)분"
-        } else if convertedTime.minutes == 0 {
-            usableLabel.text = "\(convertedTime.hours)시간"
-        } else {
-            usableLabel.text = "\(convertedTime.hours)시간 \(convertedTime.minutes)분"
         }
     }
 }

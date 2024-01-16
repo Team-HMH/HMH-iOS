@@ -14,7 +14,6 @@ let userNotiCenter = UNUserNotificationCenter.current()
 
 private func requestAuthorization() {
     if !(authorizationCenter.authorizationStatus == .approved) {
-        UIApplication.topViewController()?.view.showToast(message: "스크린타임 권한 설정이 필요해요!", at: 100)
         Task {
             do {
                 try await authorizationCenter.requestAuthorization(for: .individual)
@@ -28,7 +27,6 @@ private func requestAuthorization() {
 func requestAuthNoti() {
     userNotiCenter.requestAuthorization(options: [.alert, .badge, .sound], completionHandler: { didAllow, error in
         if !didAllow {
-            UIApplication.topViewController()?.view.showToast(message: "푸시 알림 설정이 필요해요!", at: 100)
         }
     })
 }

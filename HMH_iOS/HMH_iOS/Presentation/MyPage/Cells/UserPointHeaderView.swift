@@ -22,8 +22,8 @@ final class UserPointHeaderView: UICollectionReusableView {
         $0.alignment = .center
     }
     
-    private let userprofilView = UIView().then {
-        $0.backgroundColor = .gray6
+    private let userprofilImageView = UIImageView().then {
+        $0.image = ImageLiterals.myPage.icProfil
         $0.makeCornerRound(radius: 27)
     }
     
@@ -105,7 +105,7 @@ final class UserPointHeaderView: UICollectionReusableView {
     
     func setHierarchy() {
         self.addSubviews(userStackView, pointBadgeView)
-        userStackView.addArrangeSubViews([userprofilView, userLabel])
+        userStackView.addArrangeSubViews([userprofilImageView, userLabel])
         pointBadgeView.addSubviews(myPointButtonStackView, lineView, myBadgeButtonStackView)
         myPointButtonStackView.addArrangeSubViews([myPointLabel, pointStackView])
         pointStackView.addArrangeSubViews([countPointLabel, pointLabel])
@@ -119,7 +119,7 @@ final class UserPointHeaderView: UICollectionReusableView {
             $0.leading.equalToSuperview().inset(20.adjustedHeight)
         }
         
-        userprofilView.snp.makeConstraints {
+        userprofilImageView.snp.makeConstraints {
             $0.size.equalTo(54.adjusted)
         }
         

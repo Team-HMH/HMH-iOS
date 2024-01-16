@@ -12,8 +12,6 @@
 		0B000CED2B4D9DA800AEC582 /* ApprovePermisionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */; };
 		0B000CF12B4DA30F00AEC582 /* AppSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */; };
 		0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */; };
-		0B0859F82B55752E00A1EFBC /* ChallengePopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0859F72B55752E00A1EFBC /* ChallengePopUpController.swift */; };
-		0B0859FB2B55773F00A1EFBC /* CreateChallengeAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0859FA2B55773F00A1EFBC /* CreateChallengeAlert.swift */; };
 		0B17D3EB2B5104E000CFA3B7 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17D3EA2B5104E000CFA3B7 /* UserManager.swift */; };
 		0B17D3ED2B5108D200CFA3B7 /* UserDefaultWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17D3EC2B5108D200CFA3B7 /* UserDefaultWrapper.swift */; };
 		0B17D3F12B51AD4B00CFA3B7 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B17D3F02B51AD4B00CFA3B7 /* UIViewController+.swift */; };
@@ -227,8 +225,6 @@
 		0B000CEC2B4D9DA800AEC582 /* ApprovePermisionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovePermisionController.swift; sourceTree = "<group>"; };
 		0B000CF02B4DA30F00AEC582 /* AppSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectViewController.swift; sourceTree = "<group>"; };
 		0B00353F2B43D64D00DA140C /* HMHNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHNavigationBar.swift; sourceTree = "<group>"; };
-		0B0859F72B55752E00A1EFBC /* ChallengePopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengePopUpController.swift; sourceTree = "<group>"; };
-		0B0859FA2B55773F00A1EFBC /* CreateChallengeAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeAlert.swift; sourceTree = "<group>"; };
 		0B17D3EA2B5104E000CFA3B7 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		0B17D3EC2B5108D200CFA3B7 /* UserDefaultWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapper.swift; sourceTree = "<group>"; };
 		0B17D3F02B51AD4B00CFA3B7 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
@@ -437,7 +433,6 @@
 			children = (
 				0BB0AE552B55366300C647AE /* CreateTotalTimeController.swift */,
 				0BB0AE572B55367C00C647AE /* CreatePeriodController.swift */,
-				0B0859F72B55752E00A1EFBC /* ChallengePopUpController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -445,7 +440,6 @@
 		0B0859F92B55769500A1EFBC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0B0859FA2B55773F00A1EFBC /* CreateChallengeAlert.swift */,
 				0B47C8702B5648FE00B1AEEE /* ChallengeAlert.swift */,
 			);
 			path = Views;
@@ -1363,7 +1357,6 @@
 				0B1AE8212B53ABC400CF5154 /* SignUpResponseDTO.swift in Sources */,
 				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
 				364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */,
-				0B0859F82B55752E00A1EFBC /* ChallengePopUpController.swift in Sources */,
 				0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */,
 				0B000CED2B4D9DA800AEC582 /* ApprovePermisionController.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
@@ -1426,7 +1419,6 @@
 				17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */,
 				3666C89B2B48516500564874 /* ChallengeView.swift in Sources */,
 				36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */,
-				0B0859FB2B55773F00A1EFBC /* CreateChallengeAlert.swift in Sources */,
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				36E531FC2B4DCEB300B4BBE3 /* AppSelectionViewController.swift in Sources */,
 				364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */,

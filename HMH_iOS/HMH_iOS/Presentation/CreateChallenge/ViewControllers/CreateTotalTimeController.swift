@@ -44,7 +44,7 @@ final class CreateTotalTimeController: OnboardingBaseViewController {
     private func setConstraints() {
         titleLabel.snp.makeConstraints {
             $0.top.equalTo(progressBar.snp.bottom).offset(281.adjusted)
-            $0.leading.equalTo(pickerView.snp.trailing).inset(-2.adjusted)
+            $0.leading.equalTo(pickerView.snp.trailing).offset(-2.adjusted)
         }
         
         pickerView.snp.makeConstraints {

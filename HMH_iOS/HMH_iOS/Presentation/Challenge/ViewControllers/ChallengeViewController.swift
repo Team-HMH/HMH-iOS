@@ -12,6 +12,12 @@ import Then
 
 final class ChallengeViewController: UIViewController {
     
+    var isCreatedChallenge = false
+    func updateChallengeStatus(isCreatedChallenge: Bool) {
+        self.isCreatedChallenge = isCreatedChallenge
+        configureTabBar(isCreatedChallenge: isCreatedChallenge)
+    }
+    
     private let navigationBar = HMHNavigationBar(leftItem: .normal,
                                                  isBackButton: false,
                                                  isTitleLabel: true,
@@ -31,6 +37,7 @@ final class ChallengeViewController: UIViewController {
         super.viewWillAppear(animated)
         requestPermision()
         challengeView.configreCollectionView()
+        configureTabBar(isCreatedChallenge: isCreatedChallenge)
     }
 
     override func viewDidLoad() {
@@ -51,6 +58,15 @@ final class ChallengeViewController: UIViewController {
     private func setConstraints() {
         navigationBar.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
+        }
+    }
+    
+    func configureTabBar(isCreatedChallenge: Bool) {
+        if isCreatedChallenge {
+            let alertController = AlertViewController()
+            alertController.setAlertType(.Challenge)
+            alertController.modalPresentationStyle = .overFullScreen
+            self.present(alertController, animated: false, completion: nil)
         }
     }
     

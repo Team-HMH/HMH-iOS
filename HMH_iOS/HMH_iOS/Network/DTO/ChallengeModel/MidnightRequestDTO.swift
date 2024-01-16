@@ -8,5 +8,5 @@
 import Foundation
 
 struct MidnightRequestDTO: Codable {
-    let apps: [App]
+    let apps: [Apps]
 }

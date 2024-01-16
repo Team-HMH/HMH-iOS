@@ -10,4 +10,5 @@ import Foundation
 protocol AlertDelegate: AnyObject {
     func enabledButtonTapped()
     func alertDismissTapped()
+    func confirmButtonTapped()
 }

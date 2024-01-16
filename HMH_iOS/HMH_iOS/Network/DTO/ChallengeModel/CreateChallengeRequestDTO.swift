@@ -9,10 +9,4 @@ import Foundation
 
 struct CreateChallengeRequestDTO: Codable {
     let period, goalTime: Int
-    let apps: [App]
-}
-
-struct App: Codable {
-    let appCode: String
-    let appGoalTime: Int
 }

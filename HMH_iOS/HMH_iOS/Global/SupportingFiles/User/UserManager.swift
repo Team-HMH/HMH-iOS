@@ -24,9 +24,9 @@ final class UserManager {
     var getRefreshToken: String { return self.refreshToken ?? "" }
     var getAppleToken: String { return self.appleToken ?? "" }
     var getUserIdentifier: String { return self.appleUserIdentifier ?? "" }
-    var getUserName: String { return self.familyName ?? "" }
+    var getFamilyName: String { return self.familyName ?? "" }
     var getGivenName: String { return self.givenName ?? "" }
-    var getFullName: String { return self.fullName ?? "" }
+    var getFullName: String { return self.fullName ?? "여행자" }
     var getUserId: Int { return self.userId ?? 0}
     
     var haveFullName: Bool {

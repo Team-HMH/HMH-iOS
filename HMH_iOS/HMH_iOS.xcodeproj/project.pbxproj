@@ -18,6 +18,8 @@
 		0B1AE8182B53169500CF5154 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE8172B53169500CF5154 /* AuthRouter.swift */; };
 		0B1AE81B2B531A3E00CF5154 /* SocialLoginRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE81A2B531A3E00CF5154 /* SocialLoginRequestDTO.swift */; };
 		0B1AE81D2B531A6C00CF5154 /* SocialLoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE81C2B531A6C00CF5154 /* SocialLoginResponseDTO.swift */; };
+		0B1AE81F2B53ABB700CF5154 /* SignUpRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE81E2B53ABB700CF5154 /* SignUpRequestDTO.swift */; };
+		0B1AE8212B53ABC400CF5154 /* SignUpResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1AE8202B53ABC400CF5154 /* SignUpResponseDTO.swift */; };
 		0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D3A2B443BE90023CCFA /* Image.swift */; };
 		0B2C2D412B4572240023CCFA /* HMHSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */; };
 		0B50F9CB2B369813000C5046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50F9CA2B369813000C5046 /* AppDelegate.swift */; };
@@ -37,6 +39,9 @@
 		0BA193B42B4D089C007E3F9C /* TimeSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */; };
 		0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */; };
 		0BA193B92B4D4097007E3F9C /* SignUpManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA193B82B4D4097007E3F9C /* SignUpManager.swift */; };
+		0BB0AE502B54580D00C647AE /* RefreshTokenResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0AE4F2B54580D00C647AE /* RefreshTokenResponseDTO.swift */; };
+		0BB0AE522B55065300C647AE /* LogoutResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0AE512B55065300C647AE /* LogoutResponseDTO.swift */; };
+		0BB0AE542B55068200C647AE /* RevokeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB0AE532B55068200C647AE /* RevokeResponseDTO.swift */; };
 		0BC0EBD22B493B6B003EF5D4 /* OnboardingProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */; };
 		0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */; };
 		0BD98DB92B4D671600E35188 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD98DB82B4D671600E35188 /* SplashViewController.swift */; };
@@ -67,6 +72,9 @@
 		17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */; };
 		17CF9FCF2B4F1A91000DD09C /* MyGoalTimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */; };
 		17CF9FD12B4F31C0000DD09C /* BlackHoleImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */; };
+		360D11082B536746008BE85A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360D11072B536746008BE85A /* Assets.xcassets */; };
+		360D110E2B541DB4008BE85A /* UserDefault+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D110D2B541DB4008BE85A /* UserDefault+.swift */; };
+		360D11102B5443FD008BE85A /* ActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D110F2B5443FD008BE85A /* ActivityReport.swift */; };
 		17CF9FDE2B52F86A000DD09C /* GetUserDataResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */; };
 		17CF9FE02B52FA26000DD09C /* MyPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FDF2B52FA26000DD09C /* MyPageRouter.swift */; };
 		17CF9FF12B53C5F7000DD09C /* VideoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FF02B53C5F7000DD09C /* VideoHandler.swift */; };
@@ -79,6 +87,8 @@
 		17CFA0002B53D236000DD09C /* TotalAppUsingTimeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FFF2B53D236000DD09C /* TotalAppUsingTimeDataModel.swift */; };
 		17CFA0022B541F9C000DD09C /* HomeViewTotalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFA0012B541F9C000DD09C /* HomeViewTotalDataModel.swift */; };
 		17CFA0042B545B60000DD09C /* TimeCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFA0032B545B60000DD09C /* TimeCalculate.swift */; };
+		360D11022B5343C6008BE85A /* requestPermision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11012B5343C6008BE85A /* requestPermision.swift */; };
+		360D11042B53465B008BE85A /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11032B53465B008BE85A /* UIApplication+.swift */; };
 		363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */; };
 		363863BD2B5129F2000FE5E7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 363863BC2B5129F2000FE5E7 /* Lottie */; };
 		364923602B4ED47000BF7ACA /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */; };
@@ -98,6 +108,8 @@
 		364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */; };
 		364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E702B4BC9780015729C /* AppAddButtonView.swift */; };
 		364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */; };
+		365AF6672B54547800BAC51F /* HMHMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */; };
+		36610E3C2B5463280044F1CA /* HMHPushAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36610E3B2B5463280044F1CA /* HMHPushAlert.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
 		3666C8552B45F47600564874 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3666C8542B45F47600564874 /* DeviceActivity.framework */; };
 		3666C8582B45F47600564874 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */; };
@@ -161,7 +173,6 @@
 		36E531C92B4C798100B4BBE3 /* MyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531C82B4C798100B4BBE3 /* MyStore.swift */; };
 		36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */; };
 		36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */; };
-		36E531FA2B4DC73100B4BBE3 /* ScreenTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F92B4DC73100B4BBE3 /* ScreenTime.swift */; };
 		36E531FC2B4DCEB300B4BBE3 /* AppSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -235,6 +246,8 @@
 		0B1AE8172B53169500CF5154 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		0B1AE81A2B531A3E00CF5154 /* SocialLoginRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginRequestDTO.swift; sourceTree = "<group>"; };
 		0B1AE81C2B531A6C00CF5154 /* SocialLoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginResponseDTO.swift; sourceTree = "<group>"; };
+		0B1AE81E2B53ABB700CF5154 /* SignUpRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestDTO.swift; sourceTree = "<group>"; };
+		0B1AE8202B53ABC400CF5154 /* SignUpResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResponseDTO.swift; sourceTree = "<group>"; };
 		0B2C2D3A2B443BE90023CCFA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		0B2C2D402B4572240023CCFA /* HMHSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHSelectButton.swift; sourceTree = "<group>"; };
 		0B50F9C72B369813000C5046 /* HMH_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMH_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +269,9 @@
 		0BA193B32B4D089C007E3F9C /* TimeSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSurveyViewController.swift; sourceTree = "<group>"; };
 		0BA193B52B4D08B7007E3F9C /* ProblemSurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemSurveyViewController.swift; sourceTree = "<group>"; };
 		0BA193B82B4D4097007E3F9C /* SignUpManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpManager.swift; sourceTree = "<group>"; };
+		0BB0AE4F2B54580D00C647AE /* RefreshTokenResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshTokenResponseDTO.swift; sourceTree = "<group>"; };
+		0BB0AE512B55065300C647AE /* LogoutResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponseDTO.swift; sourceTree = "<group>"; };
+		0BB0AE532B55068200C647AE /* RevokeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevokeResponseDTO.swift; sourceTree = "<group>"; };
 		0BC0EBD12B493B6B003EF5D4 /* OnboardingProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingProgressView.swift; sourceTree = "<group>"; };
 		0BC0EBD32B494459003EF5D4 /* OnboardingSwipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSwipeView.swift; sourceTree = "<group>"; };
 		0BD98DB82B4D671600E35188 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -286,6 +302,9 @@
 		17CF9FC82B4EE964000DD09C /* AppUsingProgressViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUsingProgressViewCell.swift; sourceTree = "<group>"; };
 		17CF9FCE2B4F1A91000DD09C /* MyGoalTimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGoalTimeCell.swift; sourceTree = "<group>"; };
 		17CF9FD02B4F31C0000DD09C /* BlackHoleImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackHoleImageCell.swift; sourceTree = "<group>"; };
+		360D11072B536746008BE85A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		360D110D2B541DB4008BE85A /* UserDefault+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+.swift"; sourceTree = "<group>"; };
+		360D110F2B5443FD008BE85A /* ActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityReport.swift; sourceTree = "<group>"; };
 		17CF9FDD2B52F86A000DD09C /* GetUserDataResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataResponseDTO.swift; sourceTree = "<group>"; };
 		17CF9FDF2B52FA26000DD09C /* MyPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageRouter.swift; sourceTree = "<group>"; };
 		17CF9FF02B53C5F7000DD09C /* VideoHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoHandler.swift; sourceTree = "<group>"; };
@@ -298,6 +317,8 @@
 		17CF9FFF2B53D236000DD09C /* TotalAppUsingTimeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAppUsingTimeDataModel.swift; sourceTree = "<group>"; };
 		17CFA0012B541F9C000DD09C /* HomeViewTotalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTotalDataModel.swift; sourceTree = "<group>"; };
 		17CFA0032B545B60000DD09C /* TimeCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculate.swift; sourceTree = "<group>"; };
+		360D11012B5343C6008BE85A /* requestPermision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestPermision.swift; sourceTree = "<group>"; };
+		360D11032B53465B008BE85A /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
 		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -316,6 +337,8 @@
 		3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeRequestDTO.swift; sourceTree = "<group>"; };
 		364C4E702B4BC9780015729C /* AppAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddButtonView.swift; sourceTree = "<group>"; };
 		364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddCollectionReusableView.swift; sourceTree = "<group>"; };
+		365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHMonitorExtension.swift; sourceTree = "<group>"; };
+		36610E3B2B5463280044F1CA /* HMHPushAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHPushAlert.swift; sourceTree = "<group>"; };
 		3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHAppSelectButtonView.swift; sourceTree = "<group>"; };
 		3666C8522B45F47600564874 /* DeviceMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3666C8542B45F47600564874 /* DeviceActivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DeviceActivity.framework; path = System/Library/Frameworks/DeviceActivity.framework; sourceTree = SDKROOT; };
@@ -373,7 +396,6 @@
 		36E531C82B4C798100B4BBE3 /* MyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStore.swift; sourceTree = "<group>"; };
 		36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectViewController.swift; sourceTree = "<group>"; };
 		36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectView.swift; sourceTree = "<group>"; };
-		36E531F92B4DC73100B4BBE3 /* ScreenTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTime.swift; sourceTree = "<group>"; };
 		36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -461,6 +483,11 @@
 			children = (
 				0B1AE81A2B531A3E00CF5154 /* SocialLoginRequestDTO.swift */,
 				0B1AE81C2B531A6C00CF5154 /* SocialLoginResponseDTO.swift */,
+				0B1AE81E2B53ABB700CF5154 /* SignUpRequestDTO.swift */,
+				0B1AE8202B53ABC400CF5154 /* SignUpResponseDTO.swift */,
+				0BB0AE4F2B54580D00C647AE /* RefreshTokenResponseDTO.swift */,
+				0BB0AE512B55065300C647AE /* LogoutResponseDTO.swift */,
+				0BB0AE532B55068200C647AE /* RevokeResponseDTO.swift */,
 			);
 			path = AuthModel;
 			sourceTree = "<group>";
@@ -599,6 +626,8 @@
 				3666C88C2B471B1D00564874 /* UIImage+.swift */,
 				0B17D3F02B51AD4B00CFA3B7 /* UIViewController+.swift */,
 				17CFA0032B545B60000DD09C /* TimeCalculate.swift */,
+				360D110D2B541DB4008BE85A /* UserDefault+.swift */,
+				360D11032B53465B008BE85A /* UIApplication+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -831,6 +860,7 @@
 				17314F822B486BEC0089A551 /* AlertViewController.swift */,
 				17314F842B497FDE0089A551 /* HMHLogoutAlert.swift */,
 				17314F862B49853C0089A551 /* HMHQuitAlert.swift */,
+				36610E3B2B5463280044F1CA /* HMHPushAlert.swift */,
 			);
 			path = CustomAlert;
 			sourceTree = "<group>";
@@ -870,11 +900,9 @@
 			isa = PBXGroup;
 			children = (
 				367B42522B51DFD400B917CD /* AppSelectionViewController.swift */,
-				367B42512B51DFD400B917CD /* ScreenTime.swift */,
 				174AF49B2B447D0700450D07 /* ChallengeViewController.swift */,
 				36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */,
 				36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */,
-				36E531F92B4DC73100B4BBE3 /* ScreenTime.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1040,6 +1068,7 @@
 				3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */,
 				3666C8592B45F47600564874 /* Info.plist */,
 				3666C85A2B45F47600564874 /* DeviceMonitor.entitlements */,
+				365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */,
 			);
 			path = DeviceMonitor;
 			sourceTree = "<group>";
@@ -1052,6 +1081,7 @@
 				3666C86C2B45F4B200564874 /* TotalActivityView.swift */,
 				3666C86E2B45F4B200564874 /* Info.plist */,
 				3666C86F2B45F4B200564874 /* DeviceReport.entitlements */,
+				360D110F2B5443FD008BE85A /* ActivityReport.swift */,
 			);
 			path = DeviceReport;
 			sourceTree = "<group>";
@@ -1059,8 +1089,10 @@
 		3666C8782B45F4D900564874 /* AppBlock */ = {
 			isa = PBXGroup;
 			children = (
+				367B42512B51DFD400B917CD /* ScreenTime.swift */,
 				3666C8792B45F4F900564874 /* SelectedBlocker.swift */,
 				3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */,
+				360D11012B5343C6008BE85A /* requestPermision.swift */,
 			);
 			path = AppBlock;
 			sourceTree = "<group>";
@@ -1109,6 +1141,7 @@
 				36E531BD2B4C78A900B4BBE3 /* ShieldConfigurationExtension.swift */,
 				36E531BF2B4C78A900B4BBE3 /* Info.plist */,
 				36E531C02B4C78A900B4BBE3 /* ShiledConfig.entitlements */,
+				360D11072B536746008BE85A /* Assets.xcassets */,
 			);
 			path = ShiledConfig;
 			sourceTree = "<group>";
@@ -1337,6 +1370,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360D11082B536746008BE85A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1355,12 +1389,14 @@
 				0B8A89BC2B369F2D00688BA6 /* UIView+.swift in Sources */,
 				0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */,
 				3666C89F2B485C8F00564874 /* DateCollectionViewCell.swift in Sources */,
+				36610E3C2B5463280044F1CA /* HMHPushAlert.swift in Sources */,
 				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
 				0B17D3ED2B5108D200CFA3B7 /* UserDefaultWrapper.swift in Sources */,
 				0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */,
 				17314F9B2B4C485B0089A551 /* UserPointHeaderView.swift in Sources */,
 				364923862B4FDCBD00BF7ACA /* NetworkProvider.swift in Sources */,
 				364923702B4F524D00BF7ACA /* MoyaLoggerPlugin.swift in Sources */,
+				0B1AE81F2B53ABB700CF5154 /* SignUpRequestDTO.swift in Sources */,
 				36A3D9C02B409CBD007EA272 /* Font.swift in Sources */,
 				17CF9FF12B53C5F7000DD09C /* VideoHandler.swift in Sources */,
 				0B17D3F12B51AD4B00CFA3B7 /* UIViewController+.swift in Sources */,
@@ -1385,6 +1421,8 @@
 				174AF49A2B447CFB00450D07 /* ChanllengeViews.swift in Sources */,
 				17CF9FC92B4EE964000DD09C /* AppUsingProgressViewCell.swift in Sources */,
 				0B000CEB2B4D9D9100AEC582 /* SelectTotalTimeController.swift in Sources */,
+				360D110E2B541DB4008BE85A /* UserDefault+.swift in Sources */,
+				0B1AE8212B53ABC400CF5154 /* SignUpResponseDTO.swift in Sources */,
 				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
 				364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */,
 				0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */,
@@ -1394,6 +1432,7 @@
 				367B42532B51DFD400B917CD /* ScreenTime.swift in Sources */,
 				0B1AE8182B53169500CF5154 /* AuthRouter.swift in Sources */,
 				17314F852B497FDE0089A551 /* HMHLogoutAlert.swift in Sources */,
+				0BB0AE502B54580D00C647AE /* RefreshTokenResponseDTO.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
 				17CF9FC12B4DE2B6000DD09C /* AppUsingTimeModel.swift in Sources */,
 				3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */,
@@ -1416,7 +1455,9 @@
 				3649237D2B4FC9CD00BF7ACA /* NetworkRequest.swift in Sources */,
 				17CFA0002B53D236000DD09C /* TotalAppUsingTimeDataModel.swift in Sources */,
 				0B8A89B12B369E4C00688BA6 /* HomeView.swift in Sources */,
+				0BB0AE522B55065300C647AE /* LogoutResponseDTO.swift in Sources */,
 				0BFD2FB42B4EE71900C6327F /* SignInCompleteViewController.swift in Sources */,
+				360D11042B53465B008BE85A /* UIApplication+.swift in Sources */,
 				3649239B2B505B2600BF7ACA /* Providers.swift in Sources */,
 				36A3D9B62B3EBBF7007EA272 /* Adjust+.swift in Sources */,
 				36A3D9BC2B3EBD2D007EA272 /* UIScreen+.swift in Sources */,
@@ -1429,7 +1470,9 @@
 				3649239D2B505CED00BF7ACA /* ChallengeRouter.swift in Sources */,
 				364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */,
 				17CFA0022B541F9C000DD09C /* HomeViewTotalDataModel.swift in Sources */,
+				360D11022B5343C6008BE85A /* requestPermision.swift in Sources */,
 				174AF4962B447CE700450D07 /* ChanllengeCells.swift in Sources */,
+				0BB0AE542B55068200C647AE /* RevokeResponseDTO.swift in Sources */,
 				17314F832B486BEC0089A551 /* AlertViewController.swift in Sources */,
 				17314F9D2B4C554D0089A551 /* MypageCollectionViewCell.swift in Sources */,
 				17314F972B4C42130089A551 /* MyPageView.swift in Sources */,
@@ -1456,7 +1499,6 @@
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */,
 				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
-				36E531FA2B4DC73100B4BBE3 /* ScreenTime.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,
 				0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */,
 			);
@@ -1466,6 +1508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365AF6672B54547800BAC51F /* HMHMonitorExtension.swift in Sources */,
 				3666C8582B45F47600564874 /* DeviceActivityMonitorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1474,6 +1517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360D11102B5443FD008BE85A /* ActivityReport.swift in Sources */,
 				3666C86D2B45F4B200564874 /* TotalActivityView.swift in Sources */,
 				3666C8692B45F4B200564874 /* DeviceReport.swift in Sources */,
 				3666C86B2B45F4B200564874 /* TotalActivityReport.swift in Sources */,

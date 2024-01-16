@@ -12,6 +12,5 @@ struct CreateChallengeResponseDTO: Codable {
 
     enum CodingKeys: String, CodingKey {
         case challengeID = "challengeId"
-        
     }
 }

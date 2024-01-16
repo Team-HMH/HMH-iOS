@@ -1,16 +1,16 @@
+![Frame 1](https://github.com/Team-HMH/HMH-iOS/assets/68178395/0d8863be-0dbe-4251-a732-67b7a0f79afa)
 # 🚀 하면함
+
+
 > ### 스마트폰 중독 탈출, 너도 하면함!
 #### 디지털 디톡스 서비스 ‘하면함’은
 챌린지와 특정 앱 스크린타임 제한 기능을 이용해 건강한 디지털 습관을 형성해주는 서비스입니다.
 
 ## 🍎 HMH-iOS Team
-![아요햄](https://github.com/Team-HMH/HMH-iOS/assets/68178395/3a51e265-723b-48a1-b91a-baed208f73e4)
-
 | 👑 이지희 | 김선우 | 김보연 |
 | :--------: | :--------: | :--------: |
-|<img src ="https://github.com/Team-HMH/HMH-iOS/assets/68178395/e606e81f-1630-46b7-9c71-11f57590e9d7" width = "200px"/> | <img src = "https://github.com/Team-HMH/HMH-iOS/assets/68178395/5e4be2af-2d9d-4719-ba2d-055d33ecb5de" width = "200px"/> | <img src="https://github.com/Team-HMH/HMH-iOS/assets/68178395/d0ccdb03-e737-4d51-9999-50c63d155e79" width = "200px"/> |
+|<img src ="https://github.com/Team-HMH/HMH-iOS/assets/68178395/02238ee4-ca94-498c-90c7-a3c1e81d1d5b" width = "200px"/> | <img src = "https://github.com/Team-HMH/HMH-iOS/assets/68178395/98fd130d-23d1-409f-8709-e76d22ff7712" width = "200px"/> | <img src="https://github.com/Team-HMH/HMH-iOS/assets/68178395/a001eade-2e3e-45b6-80eb-c7be3ebafc98" width = "200px"/> |
 | [Zoe0929](https://github.com/Zoe0929) | [Seon Woo Kim](https://github.com/kim-seonwoo) | [boyeon](https://github.com/boyeon0119) |
-
 
 ## 💻 프로젝트 기술 스택
 ### 개발스택 (Development Stack)

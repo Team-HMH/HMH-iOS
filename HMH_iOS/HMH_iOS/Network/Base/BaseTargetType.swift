@@ -10,6 +10,7 @@ import Moya
 
 protocol BaseTargetType: TargetType {}
 
+
 extension BaseTargetType {
     typealias Parameters = [String: String]
     var baseURL: URL {
@@ -24,4 +25,7 @@ extension BaseTargetType {
         return Data()
     }
     
+    var validationType: ValidationType {
+        return .successCodes
+    }
 }

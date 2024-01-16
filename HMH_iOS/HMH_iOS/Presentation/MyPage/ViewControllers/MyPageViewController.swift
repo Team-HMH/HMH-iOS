@@ -10,6 +10,11 @@ import UIKit
 final class MyPageViewController: UIViewController {
     private let navigationBar = HMHNavigationBar(leftItem: .normal, isBackButton: false, isTitleLabel: true, isPointImage: false, isBackGroundGray: false, titleText: "마이페이지")
     private let myPageView = MyPageView()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        requestPermision()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -27,6 +27,21 @@ struct HMHAppSelectButtonView: View {
                     .background(Color(uiColor: .bluePurpleButton))
             }
             .familyActivityPicker(isPresented: $isPresented, selection: $model.newSelection)
+            .onChange(of: isPresented) { oldValue, newValue in
+                if !isPresented {
+                    let appTokens: () = model.selectedAppsTokens.forEach {
+                        print($0)
+                    }
+                    let mainViewController = AppSelectViewController()
+                    let navigationController = UINavigationController(rootViewController: mainViewController)
+                    let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+                    guard let delegate = sceneDelegate else {
+                        return
+                    }
+                    delegate.window?.rootViewController = navigationController
+                    navigationController.pushViewController(OnboardingGoalTimeViewController(), animated: true)
+                }
+            }
         }
     }
     

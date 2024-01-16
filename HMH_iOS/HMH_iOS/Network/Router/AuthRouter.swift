@@ -77,4 +77,19 @@ extension AuthRouter: BaseTargetType {
             return .requestPlain
         }
     }
+    
+    var validationType: ValidationType {
+        switch self {
+        case .socialLogin(data:_) :
+            return .none
+        case .signUp(data:_):
+            return .successCodes
+        case .tokenRefresh:
+            return .successCodes
+        case .revoke:
+            return .successCodes
+        case .logout:
+            return .successCodes
+        }
+    }
 }

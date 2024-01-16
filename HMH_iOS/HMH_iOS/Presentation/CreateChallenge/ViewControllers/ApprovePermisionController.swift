@@ -12,9 +12,6 @@ import Then
 import FamilyControls
 
 final class ApprovePermisionController: OnboardingBaseViewController {
-    private let onboarding = Onboarding(averageUseTime: SignUpManager.shared.averageUseTime, problem: SignUpManager.shared.problem)
-    private let challenge = Challenge(period: SignUpManager.shared.period, goalTime: SignUpManager.shared.goalTime, apps: SignUpManager.shared.appCode)
-    
     private let authorizationCenter = AuthorizationCenter.shared
     private let userNotiCenter = UNUserNotificationCenter.current()
     private var isApproveScreenTime = false
@@ -103,17 +100,5 @@ extension ApprovePermisionController: NextViewPushDelegate {
         }
         let nextViewController = AppSelectViewController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
-        let request = SignUpRequestDTO(socialPlatform: "APPLE", name: UserManager.shared.getFullName, onboarding: onboarding, challenge: challenge)
-
-        let provider = Providers.AuthProvider
-        provider.request(target: .signUp(data: request), instance: BaseResponse<SignUpResponseDTO>.self, viewController: self) { data in
-            if data.status == 201 {
-                self.setRootViewController(TabBarController())
-                guard let data = data.data else { return }
-                UserManager.shared.updateToken(data.token.accessToken, data.token.refreshToken)
-                UserManager.shared.updateUserId(data.userId)
-            }
-            guard let data = data.data else { return }
-        }
     }
 }

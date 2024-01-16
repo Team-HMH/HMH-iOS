@@ -33,7 +33,6 @@ class VideoHandler: NSObject {
         }
     }
     
-    
     func playVideo() {
         self.avPlayer?.play()
     }
@@ -46,5 +45,4 @@ class VideoHandler: NSObject {
         self.avPlayer?.pause()
         self.avPlayer?.replaceCurrentItem(with: nil)
     }
-    
 }

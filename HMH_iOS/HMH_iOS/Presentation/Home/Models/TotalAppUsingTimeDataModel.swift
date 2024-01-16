@@ -15,5 +15,4 @@ struct TotalAppUsingTimeDataModel {
     static func calculateTotalUsageTime(data: [AppUsingTimeModel]) -> Int {
         return data.reduce(0) { $0 + Int($1.usedTime) }
     }
-
 }

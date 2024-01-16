@@ -14,6 +14,7 @@ enum MyPageRouter {
 }
 
 extension MyPageRouter: BaseTargetType {
+
     var headers: [String : String]? {
         switch self {
         case .getUserData:

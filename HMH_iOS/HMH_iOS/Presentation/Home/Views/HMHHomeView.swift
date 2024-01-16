@@ -14,8 +14,7 @@ final class HMHHomeView: UIView {
     let homeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .clear
     }
-    var progressPrecent: Double = 0
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUI()
@@ -56,68 +55,10 @@ final class HMHHomeView: UIView {
     private func configreCollectionView() {
         homeCollectionView.showsVerticalScrollIndicator = false
         homeCollectionView.delegate = self
-        homeCollectionView.dataSource = self
     }
 }
 
 extension HMHHomeView: UICollectionViewDelegate {}
-
-extension HMHHomeView: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 1
-        case 2:
-            return appUsingTimeModel.count
-        default:
-            return 1
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let blackholeImageCell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: BlackHoleImageCell.identifier, for: indexPath) as? BlackHoleImageCell else { return UICollectionViewCell() }
-        guard let myGoalTimeCell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: MyGoalTimeCell.identifier, for: indexPath) as? MyGoalTimeCell else { return UICollectionViewCell() }
-        guard let appUsingProgressViewCell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: AppUsingProgressViewCell.identifier, for: indexPath) as? AppUsingProgressViewCell else { return UICollectionViewCell() }
-        
-        myGoalTimeCell.bindData(data: appUsingTimeModel)
-        self.progressPrecent = Double(myGoalTimeCell.progress)
-        
-        switch indexPath.section {
-        case 0:
-            if progressPrecent < 0.24 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icMyPage,
-                                                 text: StringLiteral.Home.blackHoleFirstStep)
-            } else if progressPrecent < 0.49 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icChallengeSelected,
-                                                 text: StringLiteral.Home.blackHoleSecondStep)
-            } else if progressPrecent < 0.74 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icChallenge,
-                                                 text: StringLiteral.Home.blackHoleThridStep)
-            } else if progressPrecent < 0.99 {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icHomeSelected,
-                                                 text: StringLiteral.Home.blackHoleFourthStep)
-            } else {
-                blackholeImageCell.configureCell(image: ImageLiterals.TabBar.icMyPageSelected,
-                                                 text: StringLiteral.Home.blackHoleFifthStep)
-            }
-            return blackholeImageCell
-        case 1:
-            return myGoalTimeCell
-            
-        case 2:
-            appUsingProgressViewCell.bindData(data: appUsingTimeModel[indexPath.row])
-            return appUsingProgressViewCell
-        default:
-            return UICollectionViewCell()
-        }
-    }
-}
 
 extension HMHHomeView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

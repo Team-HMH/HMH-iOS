@@ -84,10 +84,12 @@ enum StringLiteral {
     enum AlertTitle {
         static let logout = "HMH을 로그아웃 하실 건가요?"
         static let quit = "HMH을 탈퇴 하실 건가요?"
+        static let challenge = "새로운 챌린지 생성 완료"
     }
     
     enum AlertDescription {
         static let quit = "회원탈퇴 후 유저의 정보는 30일 동안 임시보관 후 영구 삭제됩니다."
+        static let challenge = "블랙홀 탈출을 위한\n새로운 여정을 시작해 보아요"
     }
     
     enum OnboardingButton {

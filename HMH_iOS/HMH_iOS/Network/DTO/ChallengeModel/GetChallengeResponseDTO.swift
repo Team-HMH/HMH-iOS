@@ -12,5 +12,5 @@ struct GetChallengeResponseDTO: Codable {
     let statuses: [String]
     let todayIndex: Int
     let goalTime: Int
-    let apps: [App]
+    let apps: [Apps]
 }

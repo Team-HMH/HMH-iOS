@@ -8,5 +8,5 @@
 import Foundation
 
 struct HomeChallengeResponseDTO: Codable {
-    let apps: [App]
+    let apps: [Apps]
 }

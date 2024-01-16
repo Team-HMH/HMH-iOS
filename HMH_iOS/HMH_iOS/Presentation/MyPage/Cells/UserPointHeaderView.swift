@@ -150,7 +150,6 @@ final class UserPointHeaderView: UICollectionReusableView {
     }
     
     private func configureView() {
-        getUserDataAPI()
         self.backgroundColor = .background
     }
 }

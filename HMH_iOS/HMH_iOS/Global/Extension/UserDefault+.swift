@@ -7,6 +7,9 @@
 
 import Foundation
 
-public extension UserDefaults {
-    static let shared = UserDefaults(suiteName: "group.HMH")!
+extension UserDefaults {
+    static var shared: UserDefaults {
+        let appGroupId = "group.HMH"
+        return UserDefaults(suiteName: appGroupId)!
+    }
 }

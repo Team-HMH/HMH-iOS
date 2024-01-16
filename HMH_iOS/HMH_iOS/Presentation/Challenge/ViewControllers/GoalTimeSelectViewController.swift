@@ -12,8 +12,10 @@ import SnapKit
 import Then
 
 final class GoalTimeSelectViewController: OnboardingBaseViewController {
-    
+
     private let goalTimeView = GoalTimeSelectView()
+    private var specificTime: Int = 0
+    private var specificMinute: Int = 0
     
     override func loadView() {
         self.view = goalTimeView
@@ -21,7 +23,10 @@ final class GoalTimeSelectViewController: OnboardingBaseViewController {
     
     override func viewDidLoad() {
         configureViewController()
-        
+        self.delegate = self
+        goalTimeView.hourPicker.totalTimePickerDelegate = self
+        goalTimeView.minPicker.totalTimePickerDelegate = self
+
         super.viewDidLoad()
     }
     
@@ -35,5 +40,26 @@ final class GoalTimeSelectViewController: OnboardingBaseViewController {
     override func onTapButton() {
         self.navigationController?.popToRootViewController(animated: false)
     }
-    
 }
+
+extension GoalTimeSelectViewController: TimePickerDelegate {
+    func updateAvailability(selectedValue: Int, type: HMHTimePickerView.TimePickerType) {
+        if type == .specificTime {
+            self.specificTime = selectedValue
+            
+        } else if type == .specificMinute {
+            self.specificMinute = selectedValue
+        }
+        nextButton.updateStatus(isEnabled: true)
+        //변환 함수 실행
+        print(specificTime, specificMinute, "시간 분 😂")
+    }
+}
+
+extension GoalTimeSelectViewController: NextViewPushDelegate {
+    func didTapButton() {
+        let nextViewController = ApprovePermisionController()
+        self.navigationController?.pushViewController(nextViewController, animated: false)
+    }
+}
+

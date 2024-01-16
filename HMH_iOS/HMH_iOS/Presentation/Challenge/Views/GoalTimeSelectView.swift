@@ -14,13 +14,13 @@ import FamilyControls
 class GoalTimeSelectView: UIView {
     
     var screenTime = ScreenTime.shared
-    private let hourPicker = HMHTimePickerView(type: .specificTime)
+    let hourPicker = HMHTimePickerView(type: .specificTime)
     private let hourLabel = UILabel().then {
         $0.text = StringLiteral.Challenge.Time.timeLabel
         $0.font = .iosText2Medium20
         $0.textColor = .gray2
     }
-    private let minPicker = HMHTimePickerView(type: .specificMinute)
+    let minPicker = HMHTimePickerView(type: .specificMinute)
     private let minLable = UILabel().then {
         $0.text = StringLiteral.Challenge.Time.minLabel
         $0.font = .iosText2Medium20

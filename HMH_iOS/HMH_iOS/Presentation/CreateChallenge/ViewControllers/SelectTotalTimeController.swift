@@ -80,7 +80,7 @@ extension SelectTotalTimeController: NextViewPushDelegate {
 }
 
 extension SelectTotalTimeController: TimePickerDelegate {
-    func updateAvailability(selectedValue: Int) {
+    func updateAvailability(selectedValue: Int, type: HMHTimePickerView.TimePickerType) {
         nextButton.updateStatus(isEnabled: true)
         totalTime = selectedValue
     }

@@ -22,12 +22,9 @@ final class GoalTimeSelectViewController: OnboardingBaseViewController {
     }
     
     override func viewDidLoad() {
-        configureViewController()
-        self.delegate = self
-        goalTimeView.hourPicker.totalTimePickerDelegate = self
-        goalTimeView.minPicker.totalTimePickerDelegate = self
-
         super.viewDidLoad()
+        configureViewController()
+        setDelegate()
     }
     
     private func configureViewController() {
@@ -35,6 +32,12 @@ final class GoalTimeSelectViewController: OnboardingBaseViewController {
         subTitleText = StringLiteral.Challenge.GoalTime.subTitleText
         nextButton.setTitle("완료", for: .normal)
         step = 6
+    }
+    
+    private func setDelegate() {
+        self.delegate = self
+        goalTimeView.hourPicker.totalTimePickerDelegate = self
+        goalTimeView.minPicker.totalTimePickerDelegate = self
     }
     
     override func onTapButton() {
@@ -54,8 +57,9 @@ extension GoalTimeSelectViewController: TimePickerDelegate {
             self.specificMinute = selectedValue
         }
         nextButton.updateStatus(isEnabled: true)
-        //변환 함수 실행
-        print(specificTime, specificMinute, "시간 분 😂")
+        let convertedTime = convertHoursAndMinutesToMilliseconds(hours: specificTime, minutes: specificMinute)
+        SignUpManager.shared.goalTime = convertedTime
+        print(convertedTime)
     }
 }
 

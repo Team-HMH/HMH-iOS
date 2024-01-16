@@ -78,8 +78,10 @@ final class SelectPeriodController: OnboardingBaseViewController {
 extension SelectPeriodController: NextViewPushDelegate {
     func didTapButton() {
         let nextViewController = SelectTotalTimeController()
+        let periodAmount: Int = convertAndRemoveLastCharacter(selectPeriod) ?? 0
         self.navigationController?.pushViewController(nextViewController, animated: false)
-        SignUpManager.shared.period = convertAndRemoveLastCharacter(selectPeriod) ?? 0
+        SignUpManager.shared.period = convertHoursAndMinutesToMilliseconds(hours: periodAmount, minutes: 0)
+        print(SignUpManager.shared.period)
     }
 }
 

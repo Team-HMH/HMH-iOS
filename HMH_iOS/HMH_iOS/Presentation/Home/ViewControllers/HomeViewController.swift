@@ -63,8 +63,9 @@ final class HomeViewController: UIViewController {
     private func LoadTodayChallenge() {
         provider.request(target: .getdailyChallenge, instance: BaseResponse<EmptyResponseDTO>.self, viewController: self) { result in
             print(result.status)
-                                                                                                                           
-                                                                                                                           }
+        }
+    }
+    
     private func configreCollectionView() {
         homeView.homeCollectionView.dataSource = self
     }

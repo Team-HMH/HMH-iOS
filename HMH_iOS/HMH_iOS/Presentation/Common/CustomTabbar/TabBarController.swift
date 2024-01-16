@@ -12,6 +12,12 @@ import SnapKit
 import Then
 
 final class TabBarController: UITabBarController {
+    var selectedIndexNumber: Int = 1 {
+        didSet {
+            setTabBar()
+        }
+    }
+    
     private let tabBarView = UIView().then {
         $0.backgroundColor = .gray7
         $0.makeCornerRound(radius: 8.adjusted)
@@ -75,8 +81,10 @@ final class TabBarController: UITabBarController {
         tabBar.frame.size.height = tabBarHeight + safeAreaHeight
         tabBar.frame.origin.y = view.frame.height - tabBarHeight - safeAreaHeight
     }
-    
+
     private func setTabBar() {
+        self.selectedIndex = selectedIndexNumber
+
         let challenge = makeTabBar(
             viewController: ChallengeViewController(),
             title: StringLiteral.TabBar.challengeTitle,
@@ -122,6 +130,5 @@ final class TabBarController: UITabBarController {
                 tabBarItem.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -1.adjusted)
             }
         }
-        selectedIndex = 1 
     }
 }

@@ -12,17 +12,22 @@ import Then
 
 final class ChallengeViewController: UIViewController {
     
+    var isCreatedChallenge = false
+    func updateChallengeStatus(isCreatedChallenge: Bool) {
+        self.isCreatedChallenge = isCreatedChallenge
+        configureTabBar(isCreatedChallenge: isCreatedChallenge)
+    }
     private let navigationBar = HMHNavigationBar(leftItem: .normal,
                                                  isBackButton: false,
                                                  isTitleLabel: true,
                                                  isPointImage: true,
                                                  isBackGroundGray: true,
                                                  titleText: StringLiteral.Challenge.NavigationBarTitle)
-
+    
     private let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
     
     private var selectedIndex = IndexPath()
-
+    
     override func loadView() {
         self.view = challengeView
     }
@@ -31,8 +36,9 @@ final class ChallengeViewController: UIViewController {
         super.viewWillAppear(animated)
         requestPermision()
         challengeView.configreCollectionView()
+        configureTabBar(isCreatedChallenge: isCreatedChallenge)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -82,6 +88,15 @@ extension ChallengeViewController: UICollectionViewDelegate {
                 self.selectedIndex = indexPath
             }
             
+        }
+    }
+    
+    func configureTabBar(isCreatedChallenge: Bool) {
+        if isCreatedChallenge {
+            let alertController = AlertViewController()
+            alertController.setAlertType(.Challenge)
+            alertController.modalPresentationStyle = .overFullScreen
+            self.present(alertController, animated: false, completion: nil)
         }
     }
 }

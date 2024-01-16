@@ -18,6 +18,7 @@ final class CreateTotalTimeController: OnboardingBaseViewController {
         $0.font = .iosText2Medium20
         $0.text = "시간"
     }
+    private var isCreated = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,8 +74,16 @@ final class CreateTotalTimeController: OnboardingBaseViewController {
 
 extension CreateTotalTimeController: NextViewPushDelegate {
     func didTapButton() {
-        setRootViewController(TabBarController())
-        SignUpManager.shared.goalTime = totalTime
+        let provider = Providers.challengeProvider
+        let challenge = CreateChallengeRequestDTO(period: SignUpManager.shared.period, goalTime:  SignUpManager.shared.goalTime)
+        provider.request(target: .createChallenge(data: challenge), instance: BaseResponse<CreateChallengeResponseDTO>.self, viewController: self) { data in
+            self.isCreated = true
+        }
+        let tabBarController = TabBarController()
+        let challengeController = ChallengeViewController()
+        challengeController.isCreatedChallenge = true
+        tabBarController.selectedIndexNumber = 0
+        setRootViewController(challengeController)
     }
 }
 

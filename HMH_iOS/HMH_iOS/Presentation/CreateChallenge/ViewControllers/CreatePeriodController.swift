@@ -77,12 +77,6 @@ final class CreatePeriodController: OnboardingBaseViewController {
 
 extension CreatePeriodController: NextViewPushDelegate {
     func didTapButton() {
-        let provider = Providers.challengeProvider
-        let challenge = CreateChallengeRequestDTO(period: SignUpManager.shared.period, goalTime:  SignUpManager.shared.goalTime)
-        provider.request(target: .createChallenge(data: challenge), instance: BaseResponse<CreateChallengeResponseDTO>.self, viewController: self) { data in
-            print(data.data?.challengeID)
-        }
-            
             let nextViewController = CreateTotalTimeController()
             self.navigationController?.pushViewController(nextViewController, animated: false)
             SignUpManager.shared.period = convertAndRemoveLastCharacter(selectPeriod) ?? 0

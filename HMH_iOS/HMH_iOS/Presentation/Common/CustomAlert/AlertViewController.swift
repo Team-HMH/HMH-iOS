@@ -10,6 +10,7 @@ import UIKit
 enum AlertType {
     case HMHLogoutAlert
     case HMHQuitALert
+    case Challenge
 }
 
 final class AlertViewController: UIViewController {
@@ -18,7 +19,8 @@ final class AlertViewController: UIViewController {
     
     private let logoutAlert = HMHLogoutAlert()
     private let quitAlert = HMHQuitAlert()
-    
+    private let challengeAlert = ChallengeAlert()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black.withAlphaComponent(0.7)
@@ -34,7 +36,7 @@ final class AlertViewController: UIViewController {
     }
     
     private func setHierarchy() {
-        view.addSubviews(logoutAlert, quitAlert)
+        view.addSubviews(logoutAlert, quitAlert, challengeAlert)
     }
     
     private func setConstraint() {
@@ -49,27 +51,37 @@ final class AlertViewController: UIViewController {
             $0.height.equalTo(203.adjusted)
             $0.width.equalTo(293.adjusted)
         }
+        
+        challengeAlert.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.height.equalTo(344.adjusted)
+            $0.width.equalTo(293.adjusted)
+        }
     }
     
     private func setAlertType() {
         switch alertType {
         case .HMHLogoutAlert:
-            setAlertView(logout: true, quit: false)
+            setAlertView(logout: true, quit: false, challenge: false)
         case .HMHQuitALert:
-            setAlertView(logout: false, quit: true)
+            setAlertView(logout: false, quit: true, challenge: false)
+        case .Challenge:
+            setAlertView(logout: false, quit: true, challenge: true)
         default:
             break
         }
     }
     
-    private func setAlertView(logout: Bool, quit: Bool) {
+    private func setAlertView(logout: Bool, quit: Bool, challenge:Bool) {
         logoutAlert.isHidden = !logout
         quitAlert.isHidden = !quit
+        challengeAlert.isHidden = !challenge
     }
     
     func setDelegate() {
         logoutAlert.delegate = self
         quitAlert.delegate = self
+        challengeAlert.delegate = self
     }
     
     func emptyActions() {
@@ -82,6 +94,10 @@ final class AlertViewController: UIViewController {
 }
 
 extension AlertViewController: AlertDelegate {
+    func confirmButtonTapped() {
+        setRootViewController(TabBarController())
+    }
+    
     func enabledButtonTapped() {
         dismiss(animated: false) {
             let loginViewController = LoginViewController()

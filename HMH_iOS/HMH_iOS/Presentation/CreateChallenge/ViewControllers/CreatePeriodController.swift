@@ -44,6 +44,10 @@ final class CreatePeriodController: OnboardingBaseViewController {
 
     private func setDelegate() {
         self.delegate = self
+        surveyView.firstButton.delegate = self
+        surveyView.secondButton.delegate = self
+        surveyView.thirdButton.delegate = self
+        surveyView.fourthButton.delegate = self
     }
 
     private func setTimeSurvey() {
@@ -60,11 +64,6 @@ final class CreatePeriodController: OnboardingBaseViewController {
         surveyView.secondButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.secondSelect)
         surveyView.thirdButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.thirdSelect)
         surveyView.fourthButton.setButtonText(buttonTitle: StringLiteral.PeriodSelect.fourthSelect)
-
-        surveyView.firstButton.delegate = self
-        surveyView.secondButton.delegate = self
-        surveyView.thirdButton.delegate = self
-        surveyView.fourthButton.delegate = self
     }
 
     func convertAndRemoveLastCharacter(_ input: String) -> Int? {

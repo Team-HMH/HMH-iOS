@@ -6,17 +6,20 @@
 //
 
 import UIKit
+import AVFoundation
 
 import SnapKit
 import Then
+
 
 final class BlackHoleImageCell: UICollectionViewCell {
     
     static let identifier = "BlackHoleImageCell"
     
-    private let blackHoleImageView = UIImageView().then {
-        $0.alpha = 0.1
-    }
+    private var videoHandler = VideoHandler()
+    private let blackHoleImageView = UIImageView()
+    private lazy var blackHoleVideoView = VideoView(videoHandler: videoHandler)
+    
     private let homeBlackHoleStateLabel = UILabel().then {
         $0.font = .iosTitle3Semibold22
         $0.textColor = .whiteText
@@ -38,11 +41,16 @@ final class BlackHoleImageCell: UICollectionViewCell {
     }
     
     private func setHierarchy() {
-        self.addSubviews(blackHoleImageView, homeBlackHoleStateLabel)
+        self.addSubviews(blackHoleImageView, blackHoleVideoView, homeBlackHoleStateLabel)
     }
     
     private func setConstraints() {
         blackHoleImageView.snp.makeConstraints {
+            $0.top.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(blackHoleImageView.snp.width)
+        }
+        
+        blackHoleVideoView.snp.makeConstraints {
             $0.top.horizontalEdges.equalToSuperview()
             $0.height.equalTo(blackHoleImageView.snp.width)
         }
@@ -53,10 +61,28 @@ final class BlackHoleImageCell: UICollectionViewCell {
         }
     }
     
-    func configureCell (image: UIImage, text: String){
-        blackHoleImageView.image = image
+    func configureCell (image: UIImage? = nil,
+                        videoUrl: URL?,
+                        text: String){
         homeBlackHoleStateLabel.text = text
         homeBlackHoleStateLabel.setTextWithLineHeight(text: text, lineHeight: 33.adjusted)
         homeBlackHoleStateLabel.textAlignment = .left
+        
+        DispatchQueue.main.async {
+            if let image {
+                self.blackHoleImageView.isHidden = false
+                self.blackHoleVideoView.isHidden = true
+                self.blackHoleImageView.image = image
+            } else {
+                self.blackHoleVideoView.isHidden = false
+                self.blackHoleImageView.isHidden = true
+            }
+            if let videoUrl {
+                self.blackHoleVideoView.isHidden = false
+                self.videoHandler.bindVideoItem(videoURL: videoUrl)
+            } else {
+                self.blackHoleVideoView.isHidden = true
+            }
+        }
     }
 }

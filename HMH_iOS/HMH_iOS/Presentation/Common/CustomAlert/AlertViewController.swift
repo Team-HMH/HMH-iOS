@@ -110,8 +110,7 @@ extension AlertViewController: AlertDelegate {
             }
         }
     }
-    
-    
+
     func alertDismissTapped() {
         dismiss(animated: false) {
             (self.okAction ?? self.emptyActions)()

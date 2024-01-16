@@ -17,6 +17,7 @@ import UIKit
 class ShieldActionExtension: ShieldActionDelegate {
     
     let userNotiCenter = UNUserNotificationCenter.current()
+    let userDefaults = UserDefaults(suiteName: "group.HMH")
     // MARK: ApplicationToken으로 설정 된 앱에서 버튼 클릭 시 동작을 설정합니다.
     /// handle 메서드의 인자인 ShieldAction은 두 가지 case로 나누어집니다.
     ///  - .primaryButtonPressed : ShieldConfiguration의 primaryButtonLabel에 해당됩니다.
@@ -35,8 +36,10 @@ class ShieldActionExtension: ShieldActionDelegate {
             case .secondaryButtonPressed:
                 /// 액션에 대한 응답을 지연시키며 뷰를 갱신합니다.
                 let dailyStore = ManagedSettingsStore()
-                //  dailyStore.clearAllSettings()
-                requestSendNoti(seconds: 1, title: "")
+                if let appTitle = userDefaults?.string(forKey: "appTitle") {
+                    requestSendNoti(seconds: 1, title: appTitle)
+                    completionHandler(.defer)
+                }
                 completionHandler(.defer)
             @unknown default:
                 fatalError()

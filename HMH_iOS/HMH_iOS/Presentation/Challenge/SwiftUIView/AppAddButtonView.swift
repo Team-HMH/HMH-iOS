@@ -9,6 +9,7 @@ import SwiftUI
 import UIKit
 import FamilyControls
 import DeviceActivity
+import ShiledConfig
 
 //class AppAddButtonViewModel: ObservableObject {
 //    @Published var newSerlection: FamilyActivitySelection
@@ -21,7 +22,10 @@ import DeviceActivity
 struct AppAddButtonView: View {
     
     @EnvironmentObject var model: BlockingApplicationModel
+  //  var appTokens: [String]
     var appGroupData: [String] = []
+    let userDefaults = UserDefaults(suiteName: "group.HMH")
+    @AppStorage("appTitle") var appTitle: String = ""
     @State var isPresented = false
     
     var body: some View {
@@ -35,13 +39,12 @@ struct AppAddButtonView: View {
             .frame(width: 335, height: 68)
             .familyActivityPicker(isPresented: $isPresented, selection: $model.newSelection)
             .onChange(of: isPresented)  { oldValue, newValue in
+                if let applicationToken = model.newSelection
+                    .applicationTokens.first {
+                    let label = Label(applicationToken)
+                }
                 if newValue == false {
-                    let app = model.selectedApps.forEach {
-                        print($0.bundleIdentifier?.utf8)
-                    }
-                    let appTokens: () = model.selectedAppsTokens.forEach {
-                        print($0)
-                    }
+                    
                     let mainViewController = TabBarController()
                     let navigationController = UINavigationController(rootViewController: mainViewController)
                     let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate

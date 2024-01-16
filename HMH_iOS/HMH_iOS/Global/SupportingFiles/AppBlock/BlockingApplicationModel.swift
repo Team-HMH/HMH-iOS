@@ -7,17 +7,19 @@
 
 import SwiftUI
 import FamilyControls
+import ShiledConfig
 import ManagedSettings
 
 final class BlockingApplicationModel: ObservableObject {
     static let shared = BlockingApplicationModel()
     @Published var newSelection: FamilyActivitySelection = .init()
+    @AppStorage("bundle", store: UserDefaults(suiteName: "group.HMH"))
+    var appBundleId = ""
     
     @Published private(set) var appList: [String] = []
     var onModelUpdate: (() -> Void)?
     
     private func updateAppList() {
-        appList = selectedApps.compactMap { $0.localizedDisplayName }
         onModelUpdate?()
     }
     
@@ -30,8 +32,20 @@ final class BlockingApplicationModel: ObservableObject {
         newSelection.applicationTokens
     }
     
-    var selectedApps: Set<Application> {
-        newSelection.applications
+    var selectedApps: [ApplicationToken: String] {
+        var appsDictionary: [ApplicationToken: String] = [:]
+        
+        for token in selectedAppsTokens {
+            let localizedDisplayName = localizedDisplayNameForToken(token)
+            appsDictionary[token] = localizedDisplayName
+            print(appBundleId)
+        }
+        
+        return appsDictionary
+    }
+    
+    private func localizedDisplayNameForToken(_ token: ApplicationToken) -> String {
+        return ""
     }
     
 }

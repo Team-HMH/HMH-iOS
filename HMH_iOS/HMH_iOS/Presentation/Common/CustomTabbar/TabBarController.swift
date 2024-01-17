@@ -32,6 +32,7 @@ final class TabBarController: UITabBarController {
         super.viewDidLoad()
         setUI()
         setTabBar()
+        self.selectedIndex = selectedIndexNumber
     }
     
     override func viewDidLayoutSubviews() {

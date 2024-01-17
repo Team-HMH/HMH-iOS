@@ -17,6 +17,7 @@ final class ChallengeView: UIView {
     
     private var appAddButtonViewModel: BlockingApplicationModel = BlockingApplicationModel.shared
     private var cancellables: Set<AnyCancellable> = []
+    var isChallengeComplete: Bool = true
     
     private let goalTime: Int = 3
     private var days: Int = 7
@@ -101,6 +102,7 @@ extension ChallengeView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section{
         case 0:
+            if isChallengeComplete { return 0 }
             return days
         case 1:
             return appList.count
@@ -148,6 +150,7 @@ extension ChallengeView: UICollectionViewDataSource {
         if kind == StringLiteral.Challenge.Idetifier.titleHeaderViewId {
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView
             else { return UICollectionReusableView() }
+            header.button.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
             return header
         } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {
             if let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView {
@@ -164,6 +167,14 @@ extension ChallengeView: UICollectionViewDataSource {
             return UICollectionReusableView()
         }
     }
+    
+    @objc
+    func onTapButton() {
+        if let challengeViewController = self.getChallengeViewController() {
+            challengeViewController.onTabButton()
+        }
+    }
+
 }
 
 
@@ -179,7 +190,7 @@ extension ChallengeView {
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                                       heightDimension: .estimated(63))
+                                           heightDimension: .estimated(63))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                                repeatingSubitem: item,
                                                                count: 7)
@@ -187,13 +198,14 @@ extension ChallengeView {
                 group.contentInsets = .init(top: 0, leading: groupInset, bottom: 0, trailing: groupInset)
                 group.interItemSpacing = .fixed(7)
                 
+                
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .groupPagingCentered
                 section.interGroupSpacing = 19
                 section.contentInsets = .init(top: 0, leading: 0, bottom: 35, trailing:0)
                 
+                let headerHeight = isChallengeComplete ? 275 : 145
                 
-                let headerHeight = UIScreen().isLongerThan812pt ? 145 : 165
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(CGFloat(headerHeight)))
                 
                 let headerElement = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerSize,
@@ -246,5 +258,18 @@ extension ChallengeView {
                         forDecorationViewOfKind: StringLiteral.Challenge.Idetifier.backgroundViewId)
         
         return layout
+    }
+}
+
+extension ChallengeView {
+    func getChallengeViewController() -> ChallengeViewController? {
+        var responder: UIResponder? = self
+        while let nextResponder = responder?.next {
+            if let viewController = nextResponder as? ChallengeViewController {
+                return viewController
+            }
+            responder = nextResponder
+        }
+        return nil
     }
 }

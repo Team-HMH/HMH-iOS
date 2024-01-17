@@ -28,10 +28,6 @@ final class ChallengeViewController: UIViewController {
     private let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
     
     private var selectedIndex = IndexPath()
-
-    override func loadView() {
-        self.view = challengeView
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -52,12 +48,17 @@ final class ChallengeViewController: UIViewController {
     }
     
     private func setViewHierarchy() {
-        view.addSubviews(navigationBar)
+        view.addSubviews(navigationBar, challengeView)
     }
     
     private func setConstraints() {
         navigationBar.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
+        }
+        
+        challengeView.snp.makeConstraints {
+            $0.top.equalTo(navigationBar.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
     
@@ -73,7 +74,13 @@ final class ChallengeViewController: UIViewController {
     private func setDelegate() {
         challengeView.challengeCollectionView.delegate = self
     }
+    
+    func onTabButton() {
+        let nextViewController = ApprovePermisionController()
+        self.navigationController?.pushViewController(nextViewController, animated: false)
+    }
 }
+
 
 extension ChallengeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {

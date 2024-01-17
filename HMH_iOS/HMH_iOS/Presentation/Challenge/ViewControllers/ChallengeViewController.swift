@@ -57,7 +57,7 @@ final class ChallengeViewController: UIViewController {
         }
         
         challengeView.snp.makeConstraints {
-            $0.top.equalTo(navigationBar.snp.bottom)
+            $0.top.equalTo(navigationBar.snp.bottom)                 
             $0.leading.trailing.bottom.equalToSuperview()
         }
     }

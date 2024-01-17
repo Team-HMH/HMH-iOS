@@ -17,7 +17,7 @@ final class ChallengeView: UIView {
     
     private var appAddButtonViewModel: BlockingApplicationModel = BlockingApplicationModel.shared
     private var cancellables: Set<AnyCancellable> = []
-    var isChallengeComplete: Bool = false
+    var isChallengeComplete: Bool = true
     
     private let goalTime: Int = 3
     private var days: Int = 7
@@ -122,7 +122,7 @@ extension ChallengeView: UICollectionViewDataSource {
                     as? DateCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.configureCell(date: "\(1 + indexPath.item)")
+            cell.configureCell(date: "\(1 + indexPath.item)", image: ImageLiterals.Challenge.icUnselected)
             return cell
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppListCollectionViewCell.identifer, for: indexPath)
@@ -204,7 +204,7 @@ extension ChallengeView {
                 section.interGroupSpacing = 19
                 section.contentInsets = .init(top: 0, leading: 0, bottom: 35, trailing:0)
                 
-                let headerHeight = isChallengeComplete ? 275.adjustedHeight : 145.adjustedHeight
+                let headerHeight = isChallengeComplete ? 263.adjustedHeight: 100.adjustedHeight
                 
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(CGFloat(headerHeight)))
                 

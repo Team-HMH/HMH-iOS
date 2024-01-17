@@ -66,6 +66,7 @@ extension OnboardingGoalTimeViewController: NextViewPushDelegate {
                 UserManager.shared.updateToken(data.token.accessToken, data.token.refreshToken)
                 UserManager.shared.updateUserId(data.userId)
             } else {
+                self.setRootViewController(LoginViewController())
                 self.view.showToast(message: "Oops, 저희와 함께 우주로 가실 수 없습니다.", at: 100)
             }
         }

@@ -35,7 +35,7 @@ final class HMHQuitAlert: UIView {
         $0.spacing = 7
     }
     
-    private let cancelButton = CustomAlertButton(buttonType: .disabled, buttonText: StringLiteral.AlertButton.close)
+    private let cancelButton = CustomAlertButton(buttonType: .disabled, buttonText: StringLiteral.AlertButton.quit)
     private let confirmButton = CustomAlertButton(buttonType: .enabled, buttonText: StringLiteral.AlertButton.confirm)
     
     override init(frame: CGRect) {

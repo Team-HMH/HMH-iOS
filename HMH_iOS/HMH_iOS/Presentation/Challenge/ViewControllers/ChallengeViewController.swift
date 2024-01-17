@@ -76,7 +76,7 @@ final class ChallengeViewController: UIViewController {
     }
     
     func onTabButton() {
-        let nextViewController = ApprovePermisionController()
+        let nextViewController = CreatePeriodController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
     }
 }

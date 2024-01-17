@@ -174,7 +174,7 @@ extension ChallengeView: UICollectionViewDataSource {
             challengeViewController.onTabButton()
         }
     }
-
+    
 }
 
 
@@ -190,7 +190,7 @@ extension ChallengeView {
                 let item = NSCollectionLayoutItem(layoutSize: itemSize)
                 
                 let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                           heightDimension: .estimated(63))
+                                                       heightDimension: .estimated(63))
                 let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
                                                                repeatingSubitem: item,
                                                                count: 7)
@@ -204,7 +204,7 @@ extension ChallengeView {
                 section.interGroupSpacing = 19
                 section.contentInsets = .init(top: 0, leading: 0, bottom: 35, trailing:0)
                 
-                let headerHeight = isChallengeComplete ? 275 : 145
+                let headerHeight = isChallengeComplete ? 275.adjustedHeight : 145.adjustedHeight
                 
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(CGFloat(headerHeight)))
                 

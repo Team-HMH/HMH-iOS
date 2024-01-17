@@ -66,7 +66,6 @@ final class TitleCollectionReusableView: UICollectionReusableView {
             
             button.snp.makeConstraints {
                 $0.width.equalTo(336.adjustedWidth)
-                $0.height.equalTo(54.adjustedHeight)
                 $0.leading.equalToSuperview().offset(20.adjustedWidth)
                 $0.bottom.equalToSuperview().offset(12.adjusted)
             }

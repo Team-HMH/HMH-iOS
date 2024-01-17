@@ -93,4 +93,3 @@ extension CreateTotalTimeController: TimePickerDelegate {
         totalTime = selectedValue
     }
 }
-

@@ -10,15 +10,11 @@ import UIKit
 import SnapKit
 import Then
 
-protocol CreateChallengePushDelegate: AnyObject {
-    func didTapButton()
-}
 
 final class TitleCollectionReusableView: UICollectionReusableView {
-    weak var delegate: NextViewPushDelegate?
     static let identifier = "TitleCollectionReusableView"
     
-    private var isCompleted: Bool = false
+    private var isCompleted: Bool = true
     var isButtonTapped = false
     
     let button = OnboardingButton(buttonStatus: .enabled)
@@ -97,10 +93,5 @@ final class TitleCollectionReusableView: UICollectionReusableView {
             
         }
         isButtonTapped.toggle()
-    }
-    
-    @objc
-    func onTapButton() {
-        self.delegate?.didTapButton()
     }
 }

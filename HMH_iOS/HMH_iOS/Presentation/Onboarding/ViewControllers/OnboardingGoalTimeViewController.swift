@@ -21,9 +21,8 @@ final class OnboardingGoalTimeViewController: OnboardingBaseViewController {
     }
     
     override func viewDidLoad() {
-        configureViewController()
-        
         super.viewDidLoad()
+        configureViewController()
     }
     
     private func configureViewController() {

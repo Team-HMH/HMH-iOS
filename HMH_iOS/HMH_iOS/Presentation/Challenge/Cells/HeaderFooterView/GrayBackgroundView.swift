@@ -21,7 +21,7 @@ final class GrayBackgroundView: UICollectionReusableView {
     var backgroundType: BackgroundImage?
     
     private lazy var backgroundImageView = UIImageView().then {
-        backgroundType = .sevenDays
+        backgroundType = .completed
         switch backgroundType {
         case .sevenDays:
             $0.image = ImageLiterals.Challenge.icSevenDaysChallengeBackground
@@ -56,7 +56,7 @@ final class GrayBackgroundView: UICollectionReusableView {
         grayBackgroundView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalToSuperview().inset(12)
-            $0.top.equalToSuperview().offset(-200)
+            $0.top.equalToSuperview()
         }
         
         backgroundImageView.snp.makeConstraints {

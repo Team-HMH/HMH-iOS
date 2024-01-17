@@ -67,8 +67,8 @@ final class TitleCollectionReusableView: UICollectionReusableView {
             }
         } else {
             titleLabel.snp.makeConstraints {
+                $0.top.equalToSuperview().offset(30.adjusted)
                 $0.leading.equalToSuperview().offset(29.adjustedWidth)
-                $0.bottom.equalToSuperview().inset(26.adjusted)
             }
             
             subTitleLabel.snp.makeConstraints {

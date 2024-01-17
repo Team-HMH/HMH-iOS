@@ -27,11 +27,11 @@ enum StringLiteral {
     }
     
     enum Challenge {
-        static var NavigationBarTitle = "나의 챌린지"
+        static var NavigationBarTitle = "챌린지"
         enum Date {
             static var dateHeaderTitle = "3시간"
             static var createHeaderTitle = "새로운 여정을 위한\n챌린지를 생성해 주세요"
-            static var dateHeaderSubTitle = "목표 이용시간"
+            static var dateHeaderSubTitle = "총 목표 사용 시간"
             static var challengeButton = "챌린지 생성하기"
         }
         enum AppList {
@@ -66,7 +66,7 @@ enum StringLiteral {
         static var store = "상점"
         
         static var TOS = "이용약관"
-        static var privacyPolicy = "개인정보처리방침"
+        static var privacyPolicy = "개인정보 처리방침"
         
         static var info = "정보"
         
@@ -79,20 +79,21 @@ enum StringLiteral {
     
     enum AlertButton {
         static let confirm = "확인"
+        static let quit = "탈퇴"
         static let cancel = "취소"
         static let close = "닫기"
     }
     
     enum AlertTitle {
-        static let logout = "HMH을 로그아웃 하실 건가요?"
-        static let quit = "HMH을 탈퇴 하실 건가요?"
-        static let push = "을(를)\n계속 사용하시겠어요?"
+        static let logout = "하면함을 로그아웃 하시겠어요?"
+        static let quit = "정말 하면함을 탈퇴 하시겠어요?"
+        static let push = "을(를)\n삭제하시겠어요?"
         static let challenge = "새로운 챌린지 생성 완료"
     }
     
     enum AlertDescription {
-        static let quit = "회원탈퇴 후 유저의 정보는 30일 동안 임시보관 후 영구 삭제됩니다."
-        static let push = "사용 시간을 연장하면\n챌린지를 실패해요"
+        static let quit = "회원탈퇴 후 유저 정보는 30일 동안\n임시보관되며, 이후 영구 삭제됩니다"
+        static let push = "집계되고 있던 앱의 사용 시간은\n총 사용 시간에서도 차감돼요"
         static let challenge = "블랙홀 탈출을 위한\n새로운 여정을 시작해 보아요"
     }
     

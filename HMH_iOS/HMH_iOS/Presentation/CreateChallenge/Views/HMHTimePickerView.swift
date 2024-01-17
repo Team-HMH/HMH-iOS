@@ -78,7 +78,6 @@ extension HMHTimePickerView: UIPickerViewDelegate {
         isChanged = true
         selectedValue = Int(timeList[row]) ?? 0
         self.totalTimePickerDelegate?.updateAvailability(selectedValue: selectedValue, type: type)
-
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {

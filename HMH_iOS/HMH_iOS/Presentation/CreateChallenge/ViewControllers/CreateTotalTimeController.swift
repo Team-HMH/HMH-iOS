@@ -91,7 +91,6 @@ extension CreateTotalTimeController: TimePickerDelegate {
     func updateAvailability(selectedValue: Int, type: HMHTimePickerView.TimePickerType) {
         nextButton.updateStatus(isEnabled: true)
         totalTime = selectedValue
-
     }
 }
 

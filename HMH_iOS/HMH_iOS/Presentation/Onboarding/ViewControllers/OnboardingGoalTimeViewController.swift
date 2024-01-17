@@ -23,12 +23,9 @@ final class OnboardingGoalTimeViewController: OnboardingBaseViewController {
     }
     
     override func viewDidLoad() {
-        configureViewController()
-        self.delegate = self
-        goalTimeView.hourPicker.totalTimePickerDelegate = self
-        goalTimeView.minPicker.totalTimePickerDelegate = self
-
         super.viewDidLoad()
+        configureViewController()
+        setDelegate()
     }
     
     private func configureViewController() {
@@ -37,18 +34,22 @@ final class OnboardingGoalTimeViewController: OnboardingBaseViewController {
         nextButton.setTitle("완료", for: .normal)
         step = 6
     }
+    
+    private func setDelegate() {
+        self.delegate = self
+        goalTimeView.hourPicker.totalTimePickerDelegate = self
+        goalTimeView.minPicker.totalTimePickerDelegate = self
+    }
 }
 
 extension OnboardingGoalTimeViewController: TimePickerDelegate {
     func updateAvailability(selectedValue: Int, type: HMHTimePickerView.TimePickerType) {
         if type == .specificTime {
             self.specificTime = selectedValue
-            
         } else if type == .specificMinute {
             self.specificMinute = selectedValue
         }
         nextButton.updateStatus(isEnabled: true)
-        //signupmanager appcode 부분 저장
         print(convertHoursAndMinutesToMilliseconds(hours: specificTime, minutes: specificMinute), "시간 분 😂")
     }
 }

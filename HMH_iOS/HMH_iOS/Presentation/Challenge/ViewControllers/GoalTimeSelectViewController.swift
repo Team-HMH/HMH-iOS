@@ -44,7 +44,6 @@ final class GoalTimeSelectViewController: OnboardingBaseViewController {
         let rootViewController = TabBarController()
         rootViewController.selectedIndex = 0
         self.setRootViewController(rootViewController)
-        
     }
 }
 
@@ -59,7 +58,6 @@ extension GoalTimeSelectViewController: TimePickerDelegate {
         nextButton.updateStatus(isEnabled: true)
         let convertedTime = convertHoursAndMinutesToMilliseconds(hours: specificTime, minutes: specificMinute)
         SignUpManager.shared.goalTime = convertedTime
-        print(convertedTime)
     }
 }
 

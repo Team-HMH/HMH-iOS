@@ -15,6 +15,8 @@ final class OnboardingGoalTimeViewController: OnboardingBaseViewController {
     private let onboarding = Onboarding(averageUseTime: SignUpManager.shared.averageUseTime, problem: SignUpManager.shared.problem)
     private let challenge = Challenge(period: SignUpManager.shared.period, goalTime: SignUpManager.shared.goalTime, apps: SignUpManager.shared.appCode)
     private let goalTimeView = GoalTimeSelectView()
+    private var specificTime: Int = 0
+    private var specificMinute: Int = 0
     
     override func loadView() {
         self.view = goalTimeView
@@ -23,18 +25,38 @@ final class OnboardingGoalTimeViewController: OnboardingBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViewController()
+        setDelegate()
     }
     
     private func configureViewController() {
         mainTitleText = StringLiteral.Challenge.GoalTime.titleText
         subTitleText = StringLiteral.Challenge.GoalTime.subTitleText
         nextButton.setTitle("완료", for: .normal)
-        nextButton.updateStatus(isEnabled: true)
         step = 6
     }
     
-    override func onTapButton() {
-        let request = SignUpRequestDTO(socialPlatform: "APPLE", name: UserManager.shared.getFullName, onboarding: onboarding, challenge: challenge)
+    private func setDelegate() {
+        self.delegate = self
+        goalTimeView.hourPicker.totalTimePickerDelegate = self
+        goalTimeView.minPicker.totalTimePickerDelegate = self
+    }
+}
+
+extension OnboardingGoalTimeViewController: TimePickerDelegate {
+    func updateAvailability(selectedValue: Int, type: HMHTimePickerView.TimePickerType) {
+        if type == .specificTime {
+            self.specificTime = selectedValue
+        } else if type == .specificMinute {
+            self.specificMinute = selectedValue
+        }
+        nextButton.updateStatus(isEnabled: true)
+        print(convertHoursAndMinutesToMilliseconds(hours: specificTime, minutes: specificMinute), "시간 분 😂")
+    }
+}
+
+extension OnboardingGoalTimeViewController: NextViewPushDelegate {
+    func didTapButton() {
+        let request = SignUpRequestDTO(socialPlatform: "APPLE", name: UserManager.shared.fullNameValue, onboarding: onboarding, challenge: challenge)
         
         let provider = Providers.AuthProvider
         provider.request(target: .signUp(data: request), instance: BaseResponse<SignUpResponseDTO>.self, viewController: self) { data in
@@ -48,5 +70,4 @@ final class OnboardingGoalTimeViewController: OnboardingBaseViewController {
             }
         }
     }
-    
 }

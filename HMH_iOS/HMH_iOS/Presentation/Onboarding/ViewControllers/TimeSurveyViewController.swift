@@ -68,13 +68,11 @@ final class TimeSurveyViewController: OnboardingBaseViewController {
 }
 
 extension TimeSurveyViewController: NextViewPushDelegate {
-    
     func didTapButton() {
         let nextViewController = ProblemSurveyViewController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
         SignUpManager.shared.averageUseTime = selectedText
     }
-    
 }
 
 extension TimeSurveyViewController: HMHSelectButtonDelegate {

@@ -1,5 +1,5 @@
 //
-//  TotalTimePickerView.swift
+//  HMHTimePickerView.swift
 //  HMH_iOS
 //
 //  Created by Seonwoo Kim on 1/4/24.
@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 protocol TimePickerDelegate: AnyObject {
-    func updateAvailability(selectedValue: Int)
+    func updateAvailability(selectedValue: Int, type: HMHTimePickerView.TimePickerType)
 }
 
 final class HMHTimePickerView: UIPickerView {
@@ -77,7 +77,7 @@ extension HMHTimePickerView: UIPickerViewDelegate {
         self.reloadComponent(component)
         isChanged = true
         selectedValue = Int(timeList[row]) ?? 0
-        self.totalTimePickerDelegate?.updateAvailability(selectedValue: selectedValue)
+        self.totalTimePickerDelegate?.updateAvailability(selectedValue: selectedValue, type: type)
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {

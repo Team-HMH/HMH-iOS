@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func sceneDidBecomeActive(_ scene: UIScene) {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
-        appleIDProvider.getCredentialState(forUserID: UserManager.shared.getUserIdentifier) { (credentialState, error) in
+        appleIDProvider.getCredentialState(forUserID: UserManager.shared.userIdentifierValue) { (credentialState, error) in
             switch credentialState {
             case .authorized:
                 print("authorized")

@@ -13,3 +13,9 @@ func convertMillisecondsToHoursAndMinutes(milliseconds: Int) -> (hours: Int, min
     let remainingMinutes = totalMinutes % 60
     return (hours, remainingMinutes)
 }
+
+func convertHoursAndMinutesToMilliseconds(hours: Int, minutes: Int) -> Int {
+    let totalMinutes = hours * 60 + minutes
+    let totalMilliseconds = totalMinutes * 60 * 1000
+    return totalMilliseconds
+}

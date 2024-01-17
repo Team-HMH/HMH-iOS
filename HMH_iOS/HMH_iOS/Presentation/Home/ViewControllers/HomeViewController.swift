@@ -8,7 +8,7 @@
 import UIKit
 
 final class HomeViewController: UIViewController {
-    private let navigationBar = HMHNavigationBar(leftItem: .logo, isBackButton: false, isTitleLabel: false, isPointImage: false, isBackGroundGray: false, titleText: "")
+     
     private let homeView = HMHHomeView()
     let provider = Providers.challengeProvider
     
@@ -46,16 +46,13 @@ final class HomeViewController: UIViewController {
     }
     
     private func setHierarchy() {
-        view.addSubviews(navigationBar, homeView)
+        view.addSubview(homeView)
     }
     
     private func setConstraints() {
-        navigationBar.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
-        }
         
         homeView.snp.makeConstraints {
-            $0.top.equalTo(navigationBar.snp.bottom)
+            $0.top.equalToSuperview()
             $0.bottom.horizontalEdges.equalToSuperview()
         }
     }

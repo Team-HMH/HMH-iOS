@@ -20,7 +20,7 @@ class DateCollectionViewCell: UICollectionViewCell {
     }
     
     private let imageView = UIImageView().then {
-        $0.backgroundColor = .background
+        $0.image = ImageLiterals.Challenge.icUnselected
         $0.makeCornerRound(radius: 8.adjusted)
     }
     
@@ -38,7 +38,7 @@ class DateCollectionViewCell: UICollectionViewCell {
     }
     
     private func setHierarchy() {
-        contentView.addSubviews(dateLabel, imageView)
+        contentView.addSubviews(imageView, dateLabel)
     }
     
     private func setConstraints() {

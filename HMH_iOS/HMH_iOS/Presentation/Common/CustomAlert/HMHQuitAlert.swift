@@ -35,8 +35,8 @@ final class HMHQuitAlert: UIView {
         $0.spacing = 7
     }
     
-    private let cancelButton = CustomAlertButton(buttonType: .disabled, buttonText: StringLiteral.AlertButton.quit)
-    private let confirmButton = CustomAlertButton(buttonType: .enabled, buttonText: StringLiteral.AlertButton.confirm)
+    private let quitButton = CustomAlertButton(buttonType: .disabled, buttonText: StringLiteral.AlertButton.quit)
+    private let cancelButton = CustomAlertButton(buttonType: .enabled, buttonText: StringLiteral.AlertButton.cancel)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,7 +55,7 @@ final class HMHQuitAlert: UIView {
     
     private func setHierarchy() {
         self.addSubviews(titleLabel, descriptionLabel, buttonStackView)
-        buttonStackView.addArrangeSubViews([cancelButton, confirmButton])
+        buttonStackView.addArrangeSubViews([quitButton, cancelButton])
     }
     
     private func setConstraints() {
@@ -76,8 +76,8 @@ final class HMHQuitAlert: UIView {
     }
     
     private func setAddTarget() {
-        cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
-        confirmButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
+        quitButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
     }
     
     private func configureView() {
@@ -88,10 +88,10 @@ final class HMHQuitAlert: UIView {
     }
     
     @objc func cancelButtonTapped() {
-        delegate?.alertDismissTapped()
+        delegate?.enabledButtonTapped()
     }
     
     @objc func confirmButtonTapped() {
-        delegate?.enabledButtonTapped()
+        delegate?.alertDismissTapped()
     }
 }

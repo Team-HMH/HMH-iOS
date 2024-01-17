@@ -76,13 +76,14 @@ extension SelectTotalTimeController: NextViewPushDelegate {
         let nextViewController = ApprovePermisionController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
         SignUpManager.shared.goalTime = totalTime
+        print(totalTime)
     }
 }
 
 extension SelectTotalTimeController: TimePickerDelegate {
-    func updateAvailability(selectedValue: Int) {
+    func updateAvailability(selectedValue: Int, type: HMHTimePickerView.TimePickerType) {
         nextButton.updateStatus(isEnabled: true)
-        totalTime = selectedValue
+        totalTime = convertHoursAndMinutesToMilliseconds(hours: selectedValue, minutes: 0)
     }
 }
 

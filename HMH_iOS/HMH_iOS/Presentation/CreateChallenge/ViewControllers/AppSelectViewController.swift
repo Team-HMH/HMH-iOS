@@ -24,7 +24,6 @@ final class AppSelectViewController: OnboardingBaseViewController {
     }()
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         setUI()
         configureAppSelectView()

@@ -20,14 +20,14 @@ final class UserManager {
     @UserDefaultWrapper<Int>(key: "userId") private(set) var userId
     
     var hasAccessToken: Bool { return self.accessToken != nil }
-    var getAccessToken: String { return self.accessToken ?? "" }
-    var getRefreshToken: String { return self.refreshToken ?? "" }
-    var getAppleToken: String { return self.appleToken ?? "" }
-    var getUserIdentifier: String { return self.appleUserIdentifier ?? "" }
-    var getFamilyName: String { return self.familyName ?? "" }
-    var getGivenName: String { return self.givenName ?? "" }
-    var getFullName: String { return self.fullName ?? "여행자" }
-    var getUserId: Int { return self.userId ?? 0}
+    var accessTokenValue: String { return self.accessToken ?? "" }
+    var refreshTokenValue: String { return self.refreshToken ?? "" }
+    var appleTokenValue: String { return self.appleToken ?? "" }
+    var userIdentifierValue: String { return self.appleUserIdentifier ?? "" }
+    var familyNameValue: String { return self.familyName ?? "" }
+    var givenNameValue: String { return self.givenName ?? "" }
+    var fullNameValue: String { return self.fullName ?? "여행자" }
+    var userIdValue: Int { return self.userId ?? 0}
     
     var haveFullName: Bool {
         if fullName == "" {

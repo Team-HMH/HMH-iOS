@@ -24,7 +24,7 @@ final class ChallengeViewController: UIViewController {
                                                  isPointImage: true,
                                                  isBackGroundGray: true,
                                                  titleText: StringLiteral.Challenge.NavigationBarTitle)
-
+    
     private let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
     
     private var selectedIndex = IndexPath()
@@ -35,7 +35,7 @@ final class ChallengeViewController: UIViewController {
         challengeView.configreCollectionView()
         configureTabBar(isCreatedChallenge: isCreatedChallenge)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()

@@ -17,7 +17,7 @@ final class ChallengeView: UIView {
     
     private var appAddButtonViewModel: BlockingApplicationModel = BlockingApplicationModel.shared
     private var cancellables: Set<AnyCancellable> = []
-    var isChallengeComplete: Bool = true
+    var isChallengeComplete: Bool = false
     
     private let goalTime: Int = 3
     private var days: Int = 7

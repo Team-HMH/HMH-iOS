@@ -18,7 +18,7 @@ final class TitleCollectionReusableView: UICollectionReusableView {
     weak var delegate: NextViewPushDelegate?
     static let identifier = "TitleCollectionReusableView"
     
-    private var isCompleted: Bool = true
+    private var isCompleted: Bool = false
     var isButtonTapped = false
     
     let button = OnboardingButton(buttonStatus: .enabled)

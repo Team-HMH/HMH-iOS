@@ -30,7 +30,9 @@ enum StringLiteral {
         static var NavigationBarTitle = "나의 챌린지"
         enum Date {
             static var dateHeaderTitle = "3시간"
+            static var createHeaderTitle = "새로운 여정을 위한\n챌린지를 생성해 주세요"
             static var dateHeaderSubTitle = "목표 이용시간"
+            static var challengeButton = "챌린지 생성하기"
         }
         enum AppList {
             static var appListHeaderTitle = "앱 잠금"

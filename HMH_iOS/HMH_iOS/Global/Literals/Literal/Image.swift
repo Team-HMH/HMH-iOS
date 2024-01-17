@@ -54,6 +54,7 @@ enum ImageLiterals {
         static var icChallengeSuccess: UIImage { .load(named: "challenge_ic_success") }
         static var icAddNewChallengeBackground: UIImage { .load(named: "ios_add_new_challenge_img") }
         static var icSevenDaysChallengeBackground: UIImage { .load(named: "ios_sevenDays_challenge_img") }
+        static var icFourteenDaysChallengeBackground: UIImage { .load(named: "img_ios_14") }
     }
     
     enum Alert {

@@ -11,23 +11,20 @@ import FamilyControls
 import DeviceActivity
 import ShiledConfig
 
-//class AppAddButtonViewModel: ObservableObject {
-//    @Published var newSerlection: FamilyActivitySelection
-//
-//    init(newSelection: FamilyActivitySelection) {
-//        self.newSelection = newSelection
-//    }
-//}
-
 struct AppAddButtonView: View {
+    let userDefaults = UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS")
+    @AppStorage("selectedApps", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS"))
+        var shieldedApps = FamilyActivitySelection()
     
     @EnvironmentObject var model: BlockingApplicationModel
-  //  var appTokens: [String]
-    var appGroupData: [String] = []
-    let userDefaults = UserDefaults(suiteName: "group.HMH")
-    @AppStorage("appTitle") var appTitle: String = ""
     @State var isPresented = false
+    @StateObject var blocker = SelectedBlocker()
     
+    // Used to encode codable to UserDefaults
+    private let encoder = PropertyListEncoder()
+    
+    // Used to decode codable from UserDefaults
+    private let decoder = PropertyListDecoder()
     var body: some View {
         ZStack {
             Color(uiColor: .clear)
@@ -39,12 +36,10 @@ struct AppAddButtonView: View {
             .frame(width: 335, height: 68)
             .familyActivityPicker(isPresented: $isPresented, selection: $model.newSelection)
             .onChange(of: isPresented)  { oldValue, newValue in
-                if let applicationToken = model.newSelection
-                    .applicationTokens.first {
-                    let label = Label(applicationToken)
-                }
                 if newValue == false {
-                    
+                    ScreenTime.shared.selectedApps = model.newSelection
+                    blocker.$shieldedApps
+                    shieldedApps = model.newSelection
                     let mainViewController = TabBarController()
                     let navigationController = UINavigationController(rootViewController: mainViewController)
                     let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
@@ -58,10 +53,6 @@ struct AppAddButtonView: View {
             
         }
         .background(Color(.clear))
-    }
-    
-    func storeMonitor() {
-        
     }
 }
 

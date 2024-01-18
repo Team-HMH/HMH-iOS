@@ -79,8 +79,8 @@ final class HMHDeleteAlert: UIView {
     }
     
     private func setAddTarget() {
-        cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
-        confirmButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+        confirmButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
     }
     
     private func configureView() {
@@ -98,8 +98,8 @@ final class HMHDeleteAlert: UIView {
         delegate?.alertDismissTapped()
     }
     
-    @objc func confirmButtonTapped() {
-        delegate?.alertDismissTapped()
+    @objc func deleteButtonTapped() {
+        delegate?.deleteButtonTapped()
     }
 }
 

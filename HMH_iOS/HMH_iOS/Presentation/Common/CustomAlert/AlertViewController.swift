@@ -120,6 +120,13 @@ final class AlertViewController: UIViewController {
 }
 
 extension AlertViewController: AlertDelegate {
+    func deleteButtonTapped() {
+        let challengeController = ChallengeViewController()
+        challengeController.deleteTap()
+        dismiss(animated: false) {
+            (self.okAction ?? self.emptyActions)()
+        }
+    }
     func confirmButtonTapped() {
         setRootViewController(TabBarController())
     }
@@ -139,7 +146,7 @@ extension AlertViewController: AlertDelegate {
                 UserManager.shared.clearAll()
             }
         }
-
+        
         dismiss(animated: false) {
             let loginViewController = LoginViewController()
             if let window = UIApplication.shared.windows.first {
@@ -157,3 +164,4 @@ extension AlertViewController: AlertDelegate {
         }
     }
 }
+

@@ -87,7 +87,7 @@ enum StringLiteral {
     enum AlertTitle {
         static let logout = "하면함을 로그아웃 하시겠어요?"
         static let quit = "정말 하면함을 탈퇴 하시겠어요?"
-        static let push = "을(를)\n삭제하시겠어요?"
+        static let push = "정말 앱 시간을\n연장 하시겠어요?"
         static let challenge = "새로운 챌린지 생성 완료"
     }
     

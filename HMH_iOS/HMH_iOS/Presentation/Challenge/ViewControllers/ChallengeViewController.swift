@@ -25,7 +25,7 @@ final class ChallengeViewController: UIViewController {
                                                  isBackGroundGray: true,
                                                  titleText: StringLiteral.Challenge.NavigationBarTitle)
     
-    private let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
+    let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
     
     private var selectedIndex = IndexPath()
     
@@ -68,7 +68,7 @@ final class ChallengeViewController: UIViewController {
             alertController.setAlertType(.Challenge)
             alertController.modalPresentationStyle = .overFullScreen
             self.present(alertController, animated: false, completion: nil)
-        }
+        } 
     }
     
     private func setDelegate() {
@@ -103,8 +103,13 @@ extension ChallengeViewController: UICollectionViewDelegate {
             if let currentSelectedCell = collectionView.cellForItem(at: indexPath) as? AppListCollectionViewCell {
                 currentSelectedCell.isSelectedCell = true
                 self.selectedIndex = indexPath
+                let alertController = AlertViewController()
+                alertController.setAlertType(.delete)
+                alertController.modalPresentationStyle = .overFullScreen
+                self.present(alertController, animated: false, completion: nil)
             }
             
         }
     }
 }
+

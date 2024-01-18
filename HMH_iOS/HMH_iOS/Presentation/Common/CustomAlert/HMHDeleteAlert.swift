@@ -19,6 +19,7 @@ final class HMHDeleteAlert: UIView {
         $0.font = .iosText5Medium16
         $0.textAlignment = .center
         $0.numberOfLines = 2
+        $0.text = "정말 인스타그램" + StringLiteral.AlertTitle.delete
     }
     
     private let descriptionLabel = UILabel().then {
@@ -62,10 +63,10 @@ final class HMHDeleteAlert: UIView {
     
     private func setConstraints() {
         titleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(33.adjusted)
+            $0.top.equalToSuperview().inset(35.adjusted)
             $0.horizontalEdges.equalToSuperview()
         }
-        
+
         descriptionLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(10.adjusted)
             $0.centerX.equalToSuperview()

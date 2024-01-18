@@ -86,6 +86,10 @@ final class TitleCollectionReusableView: UICollectionReusableView {
         }
     }
     
+    func configureTitle(hour: Int) {
+        self.titleLabel.text = "\(hour)시간"
+    }
+    
     @objc func deleteButtonDidTapped() {
         if isButtonTapped {
             

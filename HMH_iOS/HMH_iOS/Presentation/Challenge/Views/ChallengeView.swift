@@ -41,6 +41,7 @@ final class ChallengeView: UIView {
         self.appAddButtonViewModel = appAddButtonViewModel
         super.init(frame: frame)
         
+        loadChallenge()
         setUI()
         setRegister()
         configureView()
@@ -137,7 +138,19 @@ extension ChallengeView: UICollectionViewDataSource {
                     as? DateCollectionViewCell else {
                 return UICollectionViewCell()
             }
-            cell.configureCell(date: "\(1 + indexPath.item)", image: ImageLiterals.Challenge.icUnselected)
+            
+            var image = ImageLiterals.Challenge.icUnselected
+            
+            switch dailyStatus[indexPath.item]{
+            case "UNEARNED": 
+                image = ImageLiterals.Challenge.icChallengeSuccess
+            case "FAILURE":
+                image = ImageLiterals.Challenge.icChallengeFail
+            default:
+                image = ImageLiterals.Challenge.icUnselected
+            }
+            cell.configureCell(date: "\(1 + indexPath.item)", image: image)
+            
             return cell
         case 1:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AppListCollectionViewCell.identifer, for: indexPath)
@@ -154,7 +167,10 @@ extension ChallengeView: UICollectionViewDataSource {
             } else {
                 cell.isSelectedCell = false
             }
-            cell.configureCell(appName: appList[indexPath.item].appName, appTime: appList[indexPath.item].appUseTime)
+            let appGoalHour = convertMillisecondsToHoursAndMinutes(milliseconds: appList[indexPath.item].goalTime).hours
+            let appGoalMin = convertMillisecondsToHoursAndMinutes(milliseconds: appList[indexPath.item].goalTime).minutes
+            let appTimeString = appGoalMin<0 ? "\(appGoalHour)시" : "\(appGoalHour)시 \(appGoalMin)분"
+            cell.configureCell(appName: "인스타그램", appTime: "\(appGoalHour)시")
             return cell
         default:
             return UICollectionViewCell()
@@ -165,6 +181,7 @@ extension ChallengeView: UICollectionViewDataSource {
         if kind == StringLiteral.Challenge.Idetifier.titleHeaderViewId {
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView
             else { return UICollectionReusableView() }
+            header.configureTitle(hour: goalTimeHour)
             header.button.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
             return header
         } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {

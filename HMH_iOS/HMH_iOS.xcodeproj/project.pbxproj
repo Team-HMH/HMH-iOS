@@ -110,7 +110,6 @@
 		364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */; };
 		364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E702B4BC9780015729C /* AppAddButtonView.swift */; };
 		364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */; };
-		365AF6672B54547800BAC51F /* HMHMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */; };
 		36610E3C2B5463280044F1CA /* HMHPushAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36610E3B2B5463280044F1CA /* HMHPushAlert.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
 		3666C8552B45F47600564874 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3666C8542B45F47600564874 /* DeviceActivity.framework */; };
@@ -349,7 +348,6 @@
 		3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeRequestDTO.swift; sourceTree = "<group>"; };
 		364C4E702B4BC9780015729C /* AppAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddButtonView.swift; sourceTree = "<group>"; };
 		364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddCollectionReusableView.swift; sourceTree = "<group>"; };
-		365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHMonitorExtension.swift; sourceTree = "<group>"; };
 		36610E3B2B5463280044F1CA /* HMHPushAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHPushAlert.swift; sourceTree = "<group>"; };
 		3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHAppSelectButtonView.swift; sourceTree = "<group>"; };
 		3666C8522B45F47600564874 /* DeviceMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1097,7 +1095,6 @@
 				3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */,
 				3666C8592B45F47600564874 /* Info.plist */,
 				3666C85A2B45F47600564874 /* DeviceMonitor.entitlements */,
-				365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */,
 			);
 			path = DeviceMonitor;
 			sourceTree = "<group>";
@@ -1548,7 +1545,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				365AF6672B54547800BAC51F /* HMHMonitorExtension.swift in Sources */,
+				36953BEC2B5930C300EA21E3 /* SelectedBlocker.swift in Sources */,
 				3666C8582B45F47600564874 /* DeviceActivityMonitorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

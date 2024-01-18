@@ -24,6 +24,11 @@ final class ChallengeView: UIView {
     private var appList: [Apps] = []
     private var dailyStatus: [String] = []
     private var todayIndex = 0
+    private var isCompleted = false {
+        didSet {
+            challengeCollectionView.reloadData()
+        }
+    }
     
     var isDeleteMode: Bool = false {
         didSet {
@@ -104,6 +109,7 @@ final class ChallengeView: UIView {
                 self.appList = data.apps
                 self.dailyStatus = data.statuses
                 self.todayIndex = data.goalTime
+                self.isCompleted = self.todayIndex < 0 ? true : false
             }
         }
     }
@@ -142,7 +148,7 @@ extension ChallengeView: UICollectionViewDataSource {
             var image = ImageLiterals.Challenge.icUnselected
             
             switch dailyStatus[indexPath.item]{
-            case "UNEARNED": 
+            case "UNEARNED":
                 image = ImageLiterals.Challenge.icChallengeSuccess
             case "FAILURE":
                 image = ImageLiterals.Challenge.icChallengeFail
@@ -181,8 +187,13 @@ extension ChallengeView: UICollectionViewDataSource {
         if kind == StringLiteral.Challenge.Idetifier.titleHeaderViewId {
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView
             else { return UICollectionReusableView() }
-            header.configureTitle(hour: goalTimeHour)
-            header.button.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
+            
+            header.isCompleted = isCompleted
+            if isCompleted {
+                header.button.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
+            } else {
+                header.configureTitle(hour: goalTimeHour)
+            }
             return header
         } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {
             if let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView {

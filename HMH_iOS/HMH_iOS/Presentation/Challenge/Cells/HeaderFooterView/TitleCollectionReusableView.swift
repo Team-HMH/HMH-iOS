@@ -14,10 +14,16 @@ import Then
 final class TitleCollectionReusableView: UICollectionReusableView {
     static let identifier = "TitleCollectionReusableView"
     
-    private var isCompleted: Bool = true
+    var isCompleted: Bool = true {
+        didSet {
+            setUI()
+            configureTitle()
+        }
+    }
     var isButtonTapped = false
     
     let button = OnboardingButton(buttonStatus: .enabled)
+    
     private let subTitleLabel = UILabel().then {
         $0.text = StringLiteral.Challenge.Date.dateHeaderSubTitle
         $0.font = .iosText5Medium16

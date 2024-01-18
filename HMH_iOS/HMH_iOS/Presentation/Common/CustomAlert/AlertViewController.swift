@@ -108,6 +108,18 @@ final class AlertViewController: UIViewController {
 }
 
 extension AlertViewController: AlertDelegate {
+    func deleteButtonTapped() {
+        let provider = Providers.challengeProvider
+        let data = DeleteAppRequestDTO(appCode: "#25350")
+        provider.request(target: .deleteApp(data: data), instance: BaseResponse<EmptyResponseDTO>.self, viewController: self) { data in
+        }
+        
+        let challengeController = ChallengeViewController()
+        challengeController.deleteTap()
+        dismiss(animated: false) {
+            (self.okAction ?? self.emptyActions)()
+        }
+    }
     func confirmButtonTapped() {
         setRootViewController(TabBarController())
     }

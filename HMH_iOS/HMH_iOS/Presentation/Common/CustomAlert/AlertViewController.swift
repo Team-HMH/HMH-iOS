@@ -6,17 +6,19 @@
 //
 
 import UIKit
+import ManagedSettings
 
 enum AlertType {
     case HMHLogoutAlert
-    case HMHQuitALert
-    case HMHPushALert
-    case Challenge
+    case HMHQuitAlert
+    case HMHPushAlert
+    case HMHChallengeAlert
 }
 
 final class AlertViewController: UIViewController {
     var alertType: AlertType?
     var okAction: (() -> Void)?
+    let store = ManagedSettingsStore(named: .default)
     
     private let logoutAlert = HMHLogoutAlert()
     private let quitAlert = HMHQuitAlert()
@@ -73,11 +75,11 @@ final class AlertViewController: UIViewController {
         switch alertType {
         case .HMHLogoutAlert:
             setAlertView(logout: true, quit: false, push: false, challenge: false)
-        case .HMHQuitALert:
+        case .HMHQuitAlert:
             setAlertView(logout: false, quit: true, push: false, challenge: false)
-        case .HMHPushALert:
+        case .HMHPushAlert:
             setAlertView(logout: false, quit: false, push: true, challenge: false)
-        case .Challenge:
+        case .HMHChallengeAlert:
             setAlertView(logout: false, quit: false, push: false, challenge: true)
         default:
             break
@@ -114,32 +116,33 @@ extension AlertViewController: AlertDelegate {
     
     func enabledButtonTapped() {
         let provider = Providers.AuthProvider
-        if alertType == .HMHQuitALert {
+        if alertType == .HMHQuitAlert {
             provider.request(target: .revoke, instance: BaseResponse<RevokeResponseDTO>.self, viewController: self) { data in
-                print("revoke!!!!!!")
                 UserManager.shared.clearData()
             }
-        } else {
+            
+            dismiss(animated: false) {
+                self.setRootViewController(LoginViewController())
+            }
+        } else if alertType == .HMHLogoutAlert {
             let provider = Providers.AuthProvider
             
             provider.request(target: .logout, instance: BaseResponse<LogoutResponseDTO>.self, viewController: self) { data in
-                print("logout!!!!!!")
                 UserManager.shared.clearAll()
             }
-        }
-
-        dismiss(animated: false) {
-            let loginViewController = LoginViewController()
-            if let window = UIApplication.shared.windows.first {
-                let navigationController = UINavigationController(rootViewController: loginViewController)
-                navigationController.isNavigationBarHidden = true
-                window.rootViewController = navigationController
-                window.makeKeyAndVisible()
+            
+            dismiss(animated: false) {
+                self.setRootViewController(LoginViewController())
             }
         }
+        
     }
     
+    
     func alertDismissTapped() {
+        if alertType == .HMHPushAlert {
+            store.shield.applicationCategories = ShieldSettings.ActivityCategoryPolicy.none
+        }
         dismiss(animated: false) {
             (self.okAction ?? self.emptyActions)()
         }

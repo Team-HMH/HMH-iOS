@@ -100,7 +100,7 @@ final class LogoutAndQuitFooterView: UICollectionReusableView {
                 responder = responder?.next
                 if let viewController = responder as? UIViewController {
                     let alertController = AlertViewController()
-                    alertController.setAlertType(.HMHQuitALert)
+                    alertController.setAlertType(.HMHQuitAlert)
                     alertController.modalPresentationStyle = .overFullScreen
                     viewController.present(alertController, animated: false, completion: nil)
                     break

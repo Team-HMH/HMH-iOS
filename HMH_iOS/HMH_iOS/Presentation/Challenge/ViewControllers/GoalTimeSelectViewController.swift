@@ -14,7 +14,7 @@ import Then
 
 final class GoalTimeSelectViewController: OnboardingBaseViewController {
     
-    @AppStorage("bundle", store: UserDefaults(suiteName: "group.HMH"))
+    @AppStorage("bundle", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS"))
     var appBundleId = ""
     
     
@@ -50,38 +50,28 @@ final class GoalTimeSelectViewController: OnboardingBaseViewController {
     
     override func onTapButton() {
         addApp()
-        let selectedBlocker = SelectedBlocker()
-        selectedBlocker.block { result in
-            switch result {
-            case .success():
-                
-                print("⏳차단성공")
-            case .failure(let error):
-                print("error:\(error)")
-            }
-        }
+//        let selectedBlocker = SelectedBlocker()
+//        selectedBlocker.block { result in
+//            switch result {
+//            case .success():
+//                
+//                print("⏳차단성공")
+//            case .failure(let error):
+//                print("error:\(error)")
+//            }
+//        }
+        ScreenTime.shared.handleStartDeviceActivityMonitoring(interval: 10)
+        
         let rootViewController = TabBarController()
         rootViewController.selectedIndex = 0
         self.setRootViewController(rootViewController)
     }
     
     private func addApp() {
-        parsingAppToken()
         let request = AddAppRequestDTO(apps: [Apps(appCode: "", goalTime: 790000)])
-        let provider = Providers.challengeProvider
-        provider.request(target: .addApp(data: request), instance: BaseResponse<EmptyResponseDTO>.self,
-                         completion: {_ in }) // 서버통신 처리
-    }
-    
-    
-    private func parsingAppToken() {
-        model.newSelection.applicationTokens.forEach {
-            print($0)
-            
-            if let encoded = try? JSONEncoder().encode(model.newSelection) {
-                UserDefaults.standard.set(encoded, forKey: "bundle")
-            }
-        }
+//        let provider = Providers.challengeProvider
+//        provider.request(target: .addApp(data: request), instance: BaseResponse<EmptyResponseDTO>.self,
+//                         completion: {_ in }) // 서버통신 처리
     }
     
 }

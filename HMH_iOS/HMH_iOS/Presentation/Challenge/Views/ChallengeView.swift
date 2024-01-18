@@ -19,10 +19,12 @@ final class ChallengeView: UIView {
     private var cancellables: Set<AnyCancellable> = []
     var isChallengeComplete: Bool = true
     
-    private let goalTime: Int = 3
+    private var goalTimeHour: Int = 3
     private var days: Int = 7
-    private var appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
-                                       AppModel(appIcon: "", appName: "Youtube", appUseTime: "1시간")]
+    private var appList: [Apps] = []
+    private var dailyStatus: [String] = []
+    private var todayIndex = 0
+    
     var isDeleteMode: Bool = false {
         didSet {
             challengeCollectionView.reloadData()
@@ -90,6 +92,19 @@ final class ChallengeView: UIView {
         challengeCollectionView.allowsMultipleSelection = true
         self.challengeCollectionView.reloadData()
         
+    }
+    
+    func loadChallenge() {
+        let provider = Providers.challengeProvider
+        provider.request(target: .getChallenge, instance: BaseResponse<GetChallengeResponseDTO>.self) { response  in
+            if let data = response.data {
+                self.days = data.period
+                self.goalTimeHour = convertMillisecondsToHoursAndMinutes(milliseconds: data.goalTime).hours
+                self.appList = data.apps
+                self.dailyStatus = data.statuses
+                self.todayIndex = data.goalTime
+            }
+        }
     }
     
     @objc private func deleteButtonTapped() {

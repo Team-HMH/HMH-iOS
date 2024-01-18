@@ -9,9 +9,12 @@ import Foundation
 import SwiftUI
 import ManagedSettings
 import DeviceActivity
-import DeviceMonitor
+import FamilyControls
 
-struct SelectedBlocker {
+class SelectedBlocker: ObservableObject {
+    
+    @AppStorage ("selectedApps", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS"))
+    var shieldedApps = FamilyActivitySelection()
     
     let store = ManagedSettingsStore()
     let model = BlockingApplicationModel.shared
@@ -31,7 +34,7 @@ struct SelectedBlocker {
             repeats: true
         )
         
-        store.shield.applications = selectedAppTokens
+        store.shield.applications = shieldedApps.applicationTokens
         do {
             try deviceActivityCenter.startMonitoring(DeviceActivityName.once, during: blockSchedule)
             

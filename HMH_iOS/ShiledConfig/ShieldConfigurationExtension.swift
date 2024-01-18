@@ -11,6 +11,7 @@
 import ManagedSettings
 import ManagedSettingsUI
 import UIKit
+import SwiftUI
 // Override the functions below to customize the shields used in various situations.
 // The system provides a default appearance for any methods that your subclass doesn't override.
 // Make sure that your class name matches the NSExtensionPrincipalClass in your Info.plist.
@@ -23,7 +24,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
     ///  * ShieldConfiguration init 이외에 ShieldView의 커스터마이징은 제한됩니다.
     ///  * 더 많은 정보는 아래 링크를 확인하세요.
     ///  https://developer.apple.com/documentation/managedsettingsui/shieldconfiguration
-    let userDefaults = UserDefaults(suiteName: "group.HMH")
+    @AppStorage("tokenName", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS")) var tokenName = ""
     
     private func setShieldConfig(
         _ tokenName: String,
@@ -69,8 +70,6 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
                 primaryButtonBackgroundColor: CUSTOM_PRIAMRY_BUTTON_BACKGROUND,
                 secondaryButtonLabel: CUSTOM_SECONDARY_BUTTON_LABEL
             )
-            userDefaults?.set(tokenName, forKey: "appTitle")
-            userDefaults?.synchronize()
             
             return hasSecondaryButton ? TWO_BUTTON_SHIELD_CONFIG : ONE_BUTTON_SHIELD_CONFIG
         }
@@ -81,6 +80,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
         guard let displayName = application.localizedDisplayName else {
             return setShieldConfig("확인불가 앱")
         }
+        
         return setShieldConfig(displayName, hasSecondaryButton: true)
     }
     
@@ -93,6 +93,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
                   let categoryName = category.localizedDisplayName else {
                 return setShieldConfig("확인불가 앱")
             }
+            tokenName = displayName
             return setShieldConfig(categoryName + " " + displayName, hasSecondaryButton: true)
         }
     
@@ -102,6 +103,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
         guard let displayName = webDomain.domain else {
             return setShieldConfig("확인불가 웹 도메인")
         }
+        tokenName = displayName
         return setShieldConfig(displayName)
     }
     
@@ -114,6 +116,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
                   let categoryName = category.localizedDisplayName else {
                 return setShieldConfig("확인불가 웹 도메인")
             }
+            tokenName = displayName
             return setShieldConfig(categoryName + " " + displayName)
         }
 }

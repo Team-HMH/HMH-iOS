@@ -61,6 +61,7 @@ final class TitleCollectionReusableView: UICollectionReusableView {
     
     private func setConstraints() {
         if backgroundType == .completed  {
+            button.isHidden = false
             titleLabel.snp.makeConstraints {
                 $0.leading.equalToSuperview().offset(20.adjustedWidth)
                 $0.top.equalToSuperview().offset(17.adjusted)
@@ -72,6 +73,7 @@ final class TitleCollectionReusableView: UICollectionReusableView {
                 $0.bottom.equalToSuperview().offset(12.adjusted)
             }
         } else {
+            button.isHidden = true
             titleLabel.snp.makeConstraints {
                 $0.top.equalToSuperview().offset(30.adjusted)
                 $0.leading.equalToSuperview().offset(29.adjustedWidth)

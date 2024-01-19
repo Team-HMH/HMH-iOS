@@ -23,7 +23,7 @@ enum StringLiteral {
         static var blackHoleFailure = "블랙홀에 빠졌어요\n내일은 목표를 이뤄보아요"
         
         static var totalGoalUsingTime = "총 목표 이용 시간"
-        static var remainedTimeUnit = "남음"
+        static var remainedTimeUnit = "사용"
     }
     
     enum Challenge {

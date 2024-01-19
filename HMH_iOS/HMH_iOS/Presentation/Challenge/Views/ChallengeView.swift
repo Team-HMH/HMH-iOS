@@ -166,7 +166,7 @@ extension ChallengeView: UICollectionViewDataSource {
             let appGoalHour = convertMillisecondsToHoursAndMinutes(milliseconds: appList[indexPath.item].goalTime).hours
             let appGoalMin = convertMillisecondsToHoursAndMinutes(milliseconds: appList[indexPath.item].goalTime).minutes
             let appTimeString = appGoalMin<0 ? "\(appGoalHour)시" : "\(appGoalHour)시 \(appGoalMin)분"
-            cell.configureCell(appName: "인스타그램", appTime: "\(appGoalHour)시")
+            cell.configureCell(appName: "인스타그램", appTime: appTimeString)
             return cell
         default:
             return UICollectionViewCell()
@@ -177,8 +177,9 @@ extension ChallengeView: UICollectionViewDataSource {
         if kind == StringLiteral.Challenge.Idetifier.titleHeaderViewId {
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView
             else { return UICollectionReusableView() }
-            let time = convertHoursAndMinutesToMilliseconds(hours: 3, minutes: 0)
-            header.configureTitle(hour: time)
+            
+            let goalTime =  convertMillisecondsToHoursAndMinutes(milliseconds: goalTimeHour).hours
+            header.configureTitle(hour: goalTime)
             header.backgroundType = challengeType
             header.button.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
             return header

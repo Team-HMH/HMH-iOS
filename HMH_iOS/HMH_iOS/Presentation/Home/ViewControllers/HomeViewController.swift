@@ -11,10 +11,15 @@ final class HomeViewController: UIViewController {
      
     private let homeView = HMHHomeView()
     let provider = Providers.challengeProvider
+    var app: [App] = [] {
+        didSet{
+            homeView.homeCollectionView.reloadData()
+        }
+    }
     
     var totalAppUsingTimeData: TotalAppUsingTimeDataModel = .init(
-        onboardingTotalGoalTime: 7200000,
-        totalAppRemainedTime: Float(TotalAppUsingTimeDataModel.calculateTotalUsageTime(data: appUsingTimeModel)),
+        onboardingTotalGoalTime: 0,
+        totalAppRemainedTime: 0,
         isFailed: false) {
             didSet {
                 homeView.homeCollectionView.reloadSections([1, 0])
@@ -25,18 +30,18 @@ final class HomeViewController: UIViewController {
         super.viewWillAppear(animated)
         requestPermision()
         LoadTodayChallenge()
+        getDummyDataAPI()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         configreCollectionView()
-        
-//        // 영상 로딩을 위한 애니메이션 코드
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            self.totalAppUsingTimeData.progressValue += 0.01
-            self.totalAppUsingTimeData.isFailed = true
-        }
+////        // 영상 로딩을 위한 애니메이션 코드
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+////            self.totalAppUsingTimeData.progressValue += 0.01
+//            self.totalAppUsingTimeData.isFailed = true
+//        }
     }
     
     
@@ -80,7 +85,7 @@ extension HomeViewController: UICollectionViewDataSource {
         case 1:
             return 1
         case 2:
-            return appUsingTimeModel.count
+            return app.count
         default:
             return 1
         }
@@ -91,7 +96,7 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let myGoalTimeCell = homeView.homeCollectionView.dequeueReusableCell(withReuseIdentifier: MyGoalTimeCell.identifier, for: indexPath) as? MyGoalTimeCell else { return UICollectionViewCell() }
         guard let appUsingProgressViewCell = homeView.homeCollectionView.dequeueReusableCell(withReuseIdentifier: AppUsingProgressViewCell.identifier, for: indexPath) as? AppUsingProgressViewCell else { return UICollectionViewCell() }
         
-        myGoalTimeCell.bindData(data: totalAppUsingTimeData)
+//        myGoalTimeCell.bindData(data: App)
         
         switch indexPath.section {
         case 0:
@@ -132,14 +137,26 @@ extension HomeViewController: UICollectionViewDataSource {
             return blackholeImageCell
             
         case 1:
+            myGoalTimeCell.LoadTodayChallenge()
             return myGoalTimeCell
             
         case 2:
-            appUsingProgressViewCell.bindData(data: appUsingTimeModel[indexPath.row])
+            appUsingProgressViewCell.bindData(data: app[indexPath.item])
             return appUsingProgressViewCell
             
         default:
             return UICollectionViewCell()
+        }
+    }
+}
+
+extension HomeViewController {
+    func getDummyDataAPI() {
+        provider.request(target: .getDummyData,
+                         instance: BaseResponse<GetDummyResponseDTO>.self,
+                         viewController: HomeViewController()) { data in
+            guard let data = data.data else { return }
+            self.app = data.apps
         }
     }
 }

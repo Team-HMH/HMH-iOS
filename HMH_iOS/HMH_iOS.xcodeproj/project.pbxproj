@@ -89,6 +89,7 @@
 		17CFA0042B545B60000DD09C /* TimeCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFA0032B545B60000DD09C /* TimeCalculate.swift */; };
 		17CFA00A2B58687F000DD09C /* GetHomeChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFA0092B58687F000DD09C /* GetHomeChallengeResponseDTO.swift */; };
 		17E518CA2B5964C300F7B294 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 17E518C92B5964C300F7B294 /* Kingfisher */; };
+		17E518CC2B597F2400F7B294 /* GetDummyResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E518CB2B597F2400F7B294 /* GetDummyResponseDTO.swift */; };
 		360D11022B5343C6008BE85A /* requestPermision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11012B5343C6008BE85A /* requestPermision.swift */; };
 		360D11082B536746008BE85A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360D11072B536746008BE85A /* Assets.xcassets */; };
 		360D110E2B541DB4008BE85A /* UserDefault+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D110D2B541DB4008BE85A /* UserDefault+.swift */; };
@@ -330,6 +331,7 @@
 		17CFA0012B541F9C000DD09C /* HomeViewTotalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTotalDataModel.swift; sourceTree = "<group>"; };
 		17CFA0032B545B60000DD09C /* TimeCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculate.swift; sourceTree = "<group>"; };
 		17CFA0092B58687F000DD09C /* GetHomeChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeChallengeResponseDTO.swift; sourceTree = "<group>"; };
+		17E518CB2B597F2400F7B294 /* GetDummyResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDummyResponseDTO.swift; sourceTree = "<group>"; };
 		360D11012B5343C6008BE85A /* requestPermision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestPermision.swift; sourceTree = "<group>"; };
 		360D11072B536746008BE85A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		360D110D2B541DB4008BE85A /* UserDefault+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+.swift"; sourceTree = "<group>"; };
@@ -1065,6 +1067,7 @@
 				36F298472B55974200C1C903 /* HomeChallengeResponseDTO.swift */,
 				36F298492B55977900C1C903 /* AddAppResponseDTO.swift */,
 				36F2984D2B5599F500C1C903 /* EmptyResponseDTO.swift */,
+				17E518CB2B597F2400F7B294 /* GetDummyResponseDTO.swift */,
 			);
 			path = ChallengeModel;
 			sourceTree = "<group>";
@@ -1508,6 +1511,7 @@
 				0B7817502B4BD9F10078E925 /* OnboardingButton.swift in Sources */,
 				36F2983E2B55766300C1C903 /* OnboardingGoalTimeViewController.swift in Sources */,
 				364923792B4FC8E800BF7ACA /* BaseModel.swift in Sources */,
+				17E518CC2B597F2400F7B294 /* GetDummyResponseDTO.swift in Sources */,
 				364923722B4F527200BF7ACA /* NetworkResult.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,

@@ -13,14 +13,16 @@ import Then
 final class AppUsingProgressViewCell: UICollectionViewCell {
     
     static let identifier = "AppUsingProgressViewCell"
+    let provider = Providers.challengeProvider
+    var app: [App] = []
     
     private let appStackView = UIStackView().then {
         $0.axis = .horizontal
         $0.spacing = 9
         $0.alignment = .center
     }
+    
     private let appIconImageView = UIImageView().then {
-        $0.backgroundColor = .whiteBtn
         $0.makeCornerRound(radius: 6.adjusted)
     }
     private let appLabelStackView = UIStackView().then {
@@ -107,18 +109,36 @@ final class AppUsingProgressViewCell: UICollectionViewCell {
         }
     }
     
-    func bindData(data: AppUsingTimeModel) {
-        self.appGoalTimeLabel.text = "\(HourOrMinuteConvert(data: data))시간"
-        self.appRemainedTimeLabel.text = "\(finalTimeConvert(data: data))분"
-        self.appNameLabel.text = data.usingAppName
-        self.appIconImageView.image = data.usingAppIcon
-        updateProgressBar(data: data)
-        HourOrMinuteConvert(data: data)
-        finalTimeConvert(data: data)
+    func bindData(data: App) {
+        let convertedGoalTime = convertMillisecondsToHoursAndMinutes(milliseconds: data.goalTime)
+        if convertedGoalTime.hours == 0 {
+            self.appGoalTimeLabel.text = "\(convertedGoalTime.minutes)분"
+        } else if convertedGoalTime.minutes == 0 {
+            self.appGoalTimeLabel.text = "\(convertedGoalTime.hours)시간"
+        } else {
+            self.appGoalTimeLabel.text = "\(convertedGoalTime.hours)시간 \(convertedGoalTime.minutes)분"
+        }
         
+        let appRemainedTime = max(0, Int(data.goalTime) - Int(data.usageTime))
+        let convertedTime = convertMillisecondsToHoursAndMinutes(milliseconds: appRemainedTime)
+        
+        if convertedTime.hours == 0 {
+            appRemainedTimeLabel.text = "\(convertedTime.minutes)분"
+        } else if convertedTime.minutes == 0 {
+            appRemainedTimeLabel.text = "\(convertedTime.hours)시간"
+        } else {
+            appRemainedTimeLabel.text = "\(convertedTime.hours)시간 \(convertedTime.minutes)분"
+        }
+        
+        if data.usageTime >= data.goalTime {
+            appRemainedTimeLabel.text = "0분"
+        }
+        
+        self.appNameLabel.text = data.appName
+        self.appIconImageView.kfSetImage(url: data.appImageURL)
         appProgressBar.setProgress(0, animated: false)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-            let progress = Float(data.usedTime) / Float(data.appGoalTime)
+            let progress = Float(data.usageTime) / Float(data.goalTime)
             self.appProgressBar.setProgress(progress, animated: true)
         }
     }
@@ -133,34 +153,6 @@ final class AppUsingProgressViewCell: UICollectionViewCell {
         
         if data.usedTime >= data.appGoalTime {
             appProgressBar.progress = 1
-        }
-    }
-    
-    func HourOrMinuteConvert(data: AppUsingTimeModel) {
-        let convertedGoalTime = convertMillisecondsToHoursAndMinutes(milliseconds: data.appGoalTime)
-        if convertedGoalTime.hours == 0 {
-            self.appGoalTimeLabel.text = "\(convertedGoalTime.minutes)분"
-        } else if convertedGoalTime.minutes == 0 {
-            self.appGoalTimeLabel.text = "\(convertedGoalTime.hours)시간"
-        } else {
-            self.appGoalTimeLabel.text = "\(convertedGoalTime.hours)시간 \(convertedGoalTime.minutes)분"
-        }
-    }
-    
-    func finalTimeConvert(data: AppUsingTimeModel) {
-        let appRemainedTime = max(0, Int(data.appGoalTime) - Int(data.usedTime))
-        let convertedTime = convertMillisecondsToHoursAndMinutes(milliseconds: appRemainedTime)
-        
-        if convertedTime.hours == 0 {
-            appRemainedTimeLabel.text = "\(convertedTime.minutes)분"
-        } else if convertedTime.minutes == 0 {
-            appRemainedTimeLabel.text = "\(convertedTime.hours)시간"
-        } else {
-            appRemainedTimeLabel.text = "\(convertedTime.hours)시간 \(convertedTime.minutes)분"
-        }
-        
-        if data.usedTime >= data.appGoalTime {
-            appRemainedTimeLabel.text = "0분"
         }
     }
 }

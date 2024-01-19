@@ -51,6 +51,7 @@ final class ChallengeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadChallenge()
+        loadDummyData()
         challengeView.configreCollectionView()
         setUI()
         setDelegate()
@@ -113,7 +114,6 @@ final class ChallengeViewController: UIViewController {
 
                 self.challengeView.days = data.period
                 self.challengeView.goalTimeHour = data.goalTime
-                self.challengeView.appList = data.apps
                 self.challengeView.dailyStatus = data.statuses
                 if data.todayIndex == -1 {
                     self.challengeView.challengeType = .completed
@@ -125,8 +125,15 @@ final class ChallengeViewController: UIViewController {
             }
             self.challengeView.challengeCollectionView.reloadData()
         }
-        
-        
+    }
+    
+    func loadDummyData() {
+        let provider = Providers.challengeProvider
+        provider.request(target: .getDummyData, instance: BaseResponse<GetDummyResponseDTO>.self) { result in
+            if let data = result.data {
+                self.challengeView.appList = data.apps
+            }
+        }
     }
 }
 

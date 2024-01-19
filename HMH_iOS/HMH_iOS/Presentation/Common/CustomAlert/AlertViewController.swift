@@ -13,7 +13,7 @@ enum AlertType {
     case HMHQuitAlert
     case HMHPushAlert
     case HMHChallengeAlert
-    case delete
+    case HMHDeleteName
 }
 
 final class AlertViewController: UIViewController {
@@ -83,13 +83,13 @@ final class AlertViewController: UIViewController {
         switch alertType {
         case .HMHLogoutAlert:
             setAlertView(logout: true, quit: false, push: false, challenge: false, delete: false)
-        case .HMHQuitALert:
+        case .HMHQuitAlert:
             setAlertView(logout: false, quit: true, push: false, challenge: false, delete: false)
-        case .HMHPushALert:
+        case .HMHPushAlert:
             setAlertView(logout: false, quit: false, push: true, challenge: false, delete: false)
-        case .Challenge:
+        case .HMHChallengeAlert:
             setAlertView(logout: false, quit: false, push: false, challenge: true, delete: false)
-        case .delete:
+        case .HMHDeleteName:
             setAlertView(logout: false, quit: false, push: false, challenge: false, delete: true)
         default:
             break

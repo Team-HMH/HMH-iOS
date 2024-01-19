@@ -11,8 +11,8 @@ import SnapKit
 import Then
 
 final class ChallengeViewController: UIViewController {
-    
     var isCreatedChallenge = false
+    var decodedIndex: Int = 0
     func updateChallengeStatus(isCreatedChallenge: Bool) {
         self.isCreatedChallenge = isCreatedChallenge
         configureTabBar(isCreatedChallenge: isCreatedChallenge)
@@ -25,9 +25,9 @@ final class ChallengeViewController: UIViewController {
                                                  isBackGroundGray: true,
                                                  titleText: StringLiteral.Challenge.NavigationBarTitle)
     
-    private let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
+    let challengeView = ChallengeView(frame: .zero, appAddButtonViewModel: BlockingApplicationModel.shared)
     
-    private var selectedIndex = IndexPath()
+    var selectedIndex = IndexPath()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -68,7 +68,7 @@ final class ChallengeViewController: UIViewController {
             alertController.setAlertType(.Challenge)
             alertController.modalPresentationStyle = .overFullScreen
             self.present(alertController, animated: false, completion: nil)
-        }
+        } 
     }
     
     private func setDelegate() {
@@ -78,6 +78,10 @@ final class ChallengeViewController: UIViewController {
     func onTabButton() {
         let nextViewController = CreatePeriodController()
         self.navigationController?.pushViewController(nextViewController, animated: false)
+    }
+    
+    func deleteTap() {
+        challengeView.deleteCell()
     }
 }
 
@@ -93,6 +97,8 @@ extension ChallengeViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.decodedIndex = indexPath.item
+        print(decodedIndex)
         if selectedIndex == [] {
             selectedIndex = [1,0]
         }
@@ -102,9 +108,13 @@ extension ChallengeViewController: UICollectionViewDelegate {
             }
             if let currentSelectedCell = collectionView.cellForItem(at: indexPath) as? AppListCollectionViewCell {
                 currentSelectedCell.isSelectedCell = true
+
                 self.selectedIndex = indexPath
+                let alertController = AlertViewController()
+                alertController.setAlertType(.delete)
+                alertController.modalPresentationStyle = .overFullScreen
+                self.present(alertController, animated: false, completion: nil)
             }
-            
         }
     }
 }

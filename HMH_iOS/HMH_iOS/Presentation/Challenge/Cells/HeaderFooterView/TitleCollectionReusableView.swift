@@ -85,13 +85,4 @@ final class TitleCollectionReusableView: UICollectionReusableView {
             button.setButtonText(buttonTitle: StringLiteral.Challenge.Date.challengeButton)
         }
     }
-    
-    @objc func deleteButtonDidTapped() {
-        if isButtonTapped {
-            
-        } else {
-            
-        }
-        isButtonTapped.toggle()
-    }
 }

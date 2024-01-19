@@ -44,7 +44,7 @@ final class HMHTimePickerView: UIPickerView {
     private func configureList() {
         switch type {
         case .totalTime:
-            timeList = ["1", "2", "3", "4", "5", "6"]
+            timeList = ["2", "3", "4", "5", "6"]
             
         case .specificTime:
             timeList = ["0", "1"]

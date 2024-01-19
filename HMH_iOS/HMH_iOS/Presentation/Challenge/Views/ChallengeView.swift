@@ -14,14 +14,13 @@ import Then
 import FamilyControls
 
 final class ChallengeView: UIView {
-    
     private var appAddButtonViewModel: BlockingApplicationModel = BlockingApplicationModel.shared
     private var cancellables: Set<AnyCancellable> = []
     var isChallengeComplete: Bool = true
     
     private let goalTime: Int = 3
     private var days: Int = 7
-    private var appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
+    var appList: [AppModel] = [AppModel(appIcon: "", appName: "Instagram", appUseTime: "1시간 20분"),
                                        AppModel(appIcon: "", appName: "Youtube", appUseTime: "1시간")]
     var isDeleteMode: Bool = false {
         didSet {
@@ -95,6 +94,11 @@ final class ChallengeView: UIView {
     @objc private func deleteButtonTapped() {
         isDeleteMode.toggle()
     }
+    
+    func deleteCell() {
+        print("tap")
+    }
+
 }
 
 extension ChallengeView: UICollectionViewDataSource {
@@ -273,3 +277,4 @@ extension ChallengeView {
         return nil
     }
 }
+	

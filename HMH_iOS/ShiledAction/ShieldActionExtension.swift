@@ -18,7 +18,7 @@ import SwiftUI
 class ShieldActionExtension: ShieldActionDelegate {
     
     let userNotiCenter = UNUserNotificationCenter.current()
-    @AppStorage("tokenName", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS")) var tokenName = "앱"
+    @AppStorage("tokenName", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group")) var tokenName = "앱"
     
     
     // MARK: ApplicationToken으로 설정 된 앱에서 버튼 클릭 시 동작을 설정합니다.

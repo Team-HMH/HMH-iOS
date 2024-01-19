@@ -13,7 +13,7 @@ import FamilyControls
 
 class SelectedBlocker: ObservableObject {
     
-    @AppStorage ("selectedApps", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS"))
+    @AppStorage ("selectedApps", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group"))
     var shieldedApps = FamilyActivitySelection()
     
     let store = ManagedSettingsStore()

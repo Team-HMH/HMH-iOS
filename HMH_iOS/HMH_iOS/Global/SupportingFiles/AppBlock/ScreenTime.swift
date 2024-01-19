@@ -21,15 +21,22 @@ class ScreenTime: ObservableObject {
         didSet {
             parsedApps = selectedApps.rawValue
             print(selectedApps)
-            handleStartDeviceActivityMonitoring(interval: 10)
+            handleStartDeviceActivityMonitoring(interval: 50)
         }
     }
     
     let store = ManagedSettingsStore()
     let deviceActivityCenter = DeviceActivityCenter()
     
-    @AppStorage("parsedApps", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS"))
-    var parsedApps = ""
+    @AppStorage("parsedApps", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group"))
+    var parsedApps = "하이"
+    var hashValue: [Int] = []
+    
+    func saveHashValue() {
+        selectedApps.applicationTokens.forEach {
+            hashValue.append($0.hashValue)
+        }
+    }
     
     func handleResetSelection() {
         selectedApps = FamilyActivitySelection()
@@ -70,7 +77,7 @@ class ScreenTime: ObservableObject {
     }
     
     func handleSetBlockApplication() {
-//        store.shield.applications = selectedApps.applicationTokens.isEmpty ? nil : selectedApps.applicationTokens
+        store.shield.applications = selectedApps.applicationTokens.isEmpty ? nil : selectedApps.applicationTokens
         print(selectedApps.applicationTokens)
 //        store.shield.applicationCategories = selectedApps.categoryTokens.isEmpty ? nil
 //        : ShieldSettings.ActivityCategoryPolicy.specific(selectedApps.categoryTokens)

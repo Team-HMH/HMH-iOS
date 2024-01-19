@@ -17,8 +17,10 @@ import FamilyControls
 // Make sure that your class name matches the NSExtensionPrincipalClass in your Info.plist.
 class DeviceActivityMonitorExtension: DeviceActivityMonitor {
     
-    @AppStorage("selectedApps", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS"))
-        var shieldedApps = FamilyActivitySelection()
+    @AppStorage("selectedApps", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group"))
+    var shieldedApps = FamilyActivitySelection()
+    @AppStorage("parsedApps", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group"))
+    var selectedApps = ""
     
     let store = ManagedSettingsStore()
     let userNotiCenter = UNUserNotificationCenter.current()
@@ -29,18 +31,14 @@ class DeviceActivityMonitorExtension: DeviceActivityMonitor {
     
     override func intervalDidEnd(for activity: DeviceActivityName) {
         super.intervalDidEnd(for: activity)
-        ScreenTime.shared.handleResetSelection()
     }
     
     //threshold에 도착하면 행동한다
     override func eventDidReachThreshold(_ event: DeviceActivityEvent.Name, activity: DeviceActivityName) {
-        super.eventDidReachThreshold(event, activity: activity)
-        let selectedApps = UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS")?.string(forKey: "parsedApps")
-        if let selectedApps = selectedApps {
-            let blockedSelection = FamilyActivitySelection(rawValue: selectedApps)
-            print(selectedApps)
-            store.shield.applications = blockedSelection?.applicationTokens
-        }
+        let blockedSelection = FamilyActivitySelection(rawValue: selectedApps)
+        print(selectedApps)
+        store.shield.applications = blockedSelection?.applicationTokens
+        store.shield.applications = shieldedApps.applicationTokens
         ScreenTime.shared.handleSetBlockApplication()
         let notiContent = UNMutableNotificationContent()
         notiContent.title = "하면함"

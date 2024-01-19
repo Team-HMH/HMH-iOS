@@ -13,7 +13,7 @@ import ShiledConfig
 
 struct AppAddButtonView: View {
     let userDefaults = UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS")
-    @AppStorage("selectedApps", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS"))
+    @AppStorage("selectedApps", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group"))
         var shieldedApps = FamilyActivitySelection()
     
     @EnvironmentObject var model: BlockingApplicationModel
@@ -38,8 +38,9 @@ struct AppAddButtonView: View {
             .onChange(of: isPresented)  { oldValue, newValue in
                 if newValue == false {
                     ScreenTime.shared.selectedApps = model.newSelection
-                    blocker.$shieldedApps
                     shieldedApps = model.newSelection
+                    ScreenTime.shared.saveHashValue()
+                    
                     let mainViewController = TabBarController()
                     let navigationController = UINavigationController(rootViewController: mainViewController)
                     let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate

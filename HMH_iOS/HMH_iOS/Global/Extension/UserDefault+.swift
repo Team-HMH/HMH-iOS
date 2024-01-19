@@ -9,7 +9,7 @@ import Foundation
 
 extension UserDefaults {
     static var shared: UserDefaults {
-        let appGroupId = "group.65NSM72327.HMH-iOS.HMH-iOS"
+        let appGroupId = "group.65NSM7Z327.com.HMH.group"
         return UserDefaults(suiteName: appGroupId)!
     }
 }

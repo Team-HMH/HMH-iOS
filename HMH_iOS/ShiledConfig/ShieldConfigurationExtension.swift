@@ -24,7 +24,7 @@ class ShieldConfigurationExtension: ShieldConfigurationDataSource {
     ///  * ShieldConfiguration init 이외에 ShieldView의 커스터마이징은 제한됩니다.
     ///  * 더 많은 정보는 아래 링크를 확인하세요.
     ///  https://developer.apple.com/documentation/managedsettingsui/shieldconfiguration
-    @AppStorage("tokenName", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS")) var tokenName = ""
+    @AppStorage("tokenName", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group")) var tokenName = ""
     
     private func setShieldConfig(
         _ tokenName: String,

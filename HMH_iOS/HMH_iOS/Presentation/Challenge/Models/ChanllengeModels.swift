@@ -6,3 +6,22 @@
 //
 
 import Foundation
+
+enum ChallengeType {
+    case sevenDays
+    case fourteenDays
+    case completed
+}
+
+final class ChallengeManager {
+    static let shared = ChallengeManager()
+    private init() {
+        self.type = .completed
+    }
+    var type: ChallengeType
+    
+    func updateType(_ type: ChallengeType) {
+        self.type = type
+    }
+}
+

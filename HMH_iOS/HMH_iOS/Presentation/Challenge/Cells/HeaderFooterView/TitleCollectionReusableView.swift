@@ -14,7 +14,7 @@ import Then
 final class TitleCollectionReusableView: UICollectionReusableView {
     static let identifier = "TitleCollectionReusableView"
     
-    var backgroundType: ChallengeType = .sevenDays {
+    var backgroundType: ChallengeType = ChallengeManager.shared.type {
         didSet {
             configureTitle()
             setUI()
@@ -60,7 +60,7 @@ final class TitleCollectionReusableView: UICollectionReusableView {
     }
     
     private func setConstraints() {
-        if backgroundType == .completed  {
+        if ChallengeManager.shared.type == .completed  {
             button.isHidden = false
             titleLabel.snp.makeConstraints {
                 $0.leading.equalToSuperview().offset(20.adjustedWidth)
@@ -87,7 +87,7 @@ final class TitleCollectionReusableView: UICollectionReusableView {
     }
     
     private func configureTitle() {
-        if backgroundType == .completed {
+        if ChallengeManager.shared.type == .completed {
             titleLabel.setTextWithLineHeightLeft(text: StringLiteral.Challenge.Date.createHeaderTitle, lineHeight: 33)
             titleLabel.font = .iosTitle3Semibold22
             button.setButtonText(buttonTitle: StringLiteral.Challenge.Date.challengeButton)

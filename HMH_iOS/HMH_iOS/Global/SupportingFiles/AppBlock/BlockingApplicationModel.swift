@@ -12,12 +12,10 @@ import ManagedSettings
 final class BlockingApplicationModel: ObservableObject {
     static let shared = BlockingApplicationModel()
     @Published var newSelection: FamilyActivitySelection = .init()
-    
     @Published private(set) var appList: [String] = []
     var onModelUpdate: (() -> Void)?
     
     private func updateAppList() {
-        appList = selectedApps.compactMap { $0.localizedDisplayName }
         onModelUpdate?()
     }
     
@@ -29,9 +27,4 @@ final class BlockingApplicationModel: ObservableObject {
     var selectedAppsTokens: Set<ApplicationToken> {
         newSelection.applicationTokens
     }
-    
-    var selectedApps: Set<Application> {
-        newSelection.applications
-    }
-    
 }

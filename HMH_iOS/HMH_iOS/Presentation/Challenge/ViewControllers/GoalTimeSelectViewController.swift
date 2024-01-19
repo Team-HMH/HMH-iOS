@@ -14,13 +14,10 @@ import Then
 
 final class GoalTimeSelectViewController: OnboardingBaseViewController {
     
-    @AppStorage("bundle", store: UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS"))
-    var appBundleId = ""
-    
-    
     private let goalTimeView = GoalTimeSelectView()
     private var specificTime: Int = 0
     private var specificMinute: Int = 0
+    private var convertedTime: Int = 0
     private let model = BlockingApplicationModel.shared
     private var apps: [Apps] = []
     
@@ -48,30 +45,20 @@ final class GoalTimeSelectViewController: OnboardingBaseViewController {
         goalTimeView.minPicker.totalTimePickerDelegate = self
     }
     
-    override func onTapButton() {
-        addApp()
-//        let selectedBlocker = SelectedBlocker()
-//        selectedBlocker.block { result in
-//            switch result {
-//            case .success():
-//                
-//                print("⏳차단성공")
-//            case .failure(let error):
-//                print("error:\(error)")
-//            }
-//        }
-        ScreenTime.shared.handleStartDeviceActivityMonitoring(interval: 10)
-        
-        let rootViewController = TabBarController()
-        rootViewController.selectedIndex = 0
-        self.setRootViewController(rootViewController)
-    }
-    
     private func addApp() {
-        let request = AddAppRequestDTO(apps: [Apps(appCode: "", goalTime: 790000)])
-//        let provider = Providers.challengeProvider
-//        provider.request(target: .addApp(data: request), instance: BaseResponse<EmptyResponseDTO>.self,
-//                         completion: {_ in }) // 서버통신 처리
+        ScreenTime.shared.hashValue.forEach {
+            apps.append(Apps(appCode: "\($0)", goalTime: convertedTime))
+        }
+        
+        var request: AddAppRequestDTO = .init(apps: apps)
+        
+        let provider = Providers.challengeProvider
+        provider.request(target: .addApp(data: request), instance: BaseResponse<EmptyResponseDTO>.self,
+                         completion: {_ in
+            
+        }) // to-do
+        
+        ScreenTime.shared.handleStartDeviceActivityMonitoring(interval: convertedTime)
     }
     
 }
@@ -86,14 +73,18 @@ extension GoalTimeSelectViewController: TimePickerDelegate {
         }
         nextButton.updateStatus(isEnabled: true)
         let convertedTime = convertHoursAndMinutesToMilliseconds(hours: specificTime, minutes: specificMinute)
-        SignUpManager.shared.goalTime = convertedTime
+        self.convertedTime = convertedTime
     }
 }
 
 extension GoalTimeSelectViewController: NextViewPushDelegate {
     func didTapButton() {
-        let nextViewController = ApprovePermisionController()
-        self.navigationController?.pushViewController(nextViewController, animated: false)
+        addApp()
+        ScreenTime.shared.handleStartDeviceActivityMonitoring(interval: 10)
+        
+        let rootViewController = TabBarController()
+        rootViewController.selectedIndex = 0
+        self.setRootViewController(rootViewController)
     }
 }
 

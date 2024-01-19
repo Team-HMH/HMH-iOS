@@ -117,8 +117,11 @@ final class MyGoalTimeCell: UICollectionViewCell {
             usableLabel.text = "0분"
         }
         
-        let progress = Float(totalUsedTime) / Float(goalTime)
-        totalProgressBar.setProgress(progress, animated: false)
+        totalProgressBar.setProgress(0, animated: false)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            let progress = Float(totalUsedTime) / Float(self.goalTime)
+            self.totalProgressBar.setProgress(progress, animated: true)
+        }
     }
     
     func HourOrMinuteConvert(data: GetHomeChallengeResponseDTO) -> String {

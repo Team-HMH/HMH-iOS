@@ -147,7 +147,7 @@ extension ChallengeView: UICollectionViewDataSource {
             
             var image = ImageLiterals.Challenge.icUnselected
             
-            switch dailyStatus[indexPath.row]{ // 여기다 가차!!!!!!!!!!!!!!!!!!
+            switch dailyStatus[indexPath.row]{
             case "UNEARNED":
                 image = ImageLiterals.Challenge.icChallengeSuccess
             case "FAILURE", "EARNED":

@@ -1,6 +1,6 @@
 ![Frame 1](https://github.com/Team-HMH/HMH-iOS/assets/68178395/0d8863be-0dbe-4251-a732-67b7a0f79afa)
 # 🚀 하면함
-
+![Instagram post - 14](https://github.com/Team-HMH/HMH-iOS/assets/68178395/95948669-7b32-4a16-9840-602a8b30f10d)
 
 > ### 스마트폰 중독 탈출, 너도 하면함!
 #### 디지털 디톡스 서비스 ‘하면함’은
@@ -75,7 +75,10 @@ feat - 각자 사용하는 브랜치
 ├───├───├───── LaunchScreen
 ├── Network
 │   ├── Base
-│   ├── DataModel
+│   ├── Foundation
+│   ├── Router
+│   ├── DTO
+│   |     ├── SceneModel
 │   ├── Service
 ├── Presentation 
 │   ├── Common
@@ -84,12 +87,18 @@ feat - 각자 사용하는 브랜치
 │   │   ├── ViewControllers
 │   │   ├── Views
 │   │   ├── Models
-├───├───├── Cells
+├───├───├── Cells"
+|
+extension - DeviceMonitor, DeviceReport, ShieldAction, ShieldConfig
 ```
 
 
 ## 🖥️ HMH Swift Style Guide
 [🚀 HMH Swift Style Guide 바로가기](https://github.com/Team-HMH/HMH-iOS/wiki/%F0%9F%9A%80-HMH-Swift-Style-Guide)
+
+## 시스템 구성
+![Slide 16_9 - 6](https://github.com/Team-HMH/HMH-iOS/assets/68178395/975d1008-df0d-4e40-a6fd-1e3782ded527)
+
 
 
 ## 📚 Library
@@ -98,4 +107,5 @@ feat - 각자 사용하는 브랜치
 | Snapkit | codeBase의 autoLayout을 돕는 라이브러리 |
 | Then | codeBase로 UIComponent를 선언할 시 간소화하기 위해 사용 |
 | KingFisher | 서버 통신의 이미지를 가져오기 위한 라이브러리 |
-| KakaoSDK | (추후) 카카오 소셜 로그인시 사용 |
+| Moya | 서버 통신, 네트워크 계층을 위한 라이브러리 |
+

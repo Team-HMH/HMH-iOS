@@ -7,6 +7,7 @@
 
 import ManagedSettings
 import UIKit
+import SwiftUI
 
 // Override the functions below to customize the shield actions used in various situations.
 // The system provides a default response for any functions that your subclass doesn't override.
@@ -17,6 +18,9 @@ import UIKit
 class ShieldActionExtension: ShieldActionDelegate {
     
     let userNotiCenter = UNUserNotificationCenter.current()
+    @AppStorage("tokenName", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group")) var tokenName = "앱"
+    
+    
     // MARK: ApplicationToken으로 설정 된 앱에서 버튼 클릭 시 동작을 설정합니다.
     /// handle 메서드의 인자인 ShieldAction은 두 가지 case로 나누어집니다.
     ///  - .primaryButtonPressed : ShieldConfiguration의 primaryButtonLabel에 해당됩니다.
@@ -34,8 +38,7 @@ class ShieldActionExtension: ShieldActionDelegate {
                 completionHandler(.close)
             case .secondaryButtonPressed:
                 /// 액션에 대한 응답을 지연시키며 뷰를 갱신합니다.
-                let dailyStore = ManagedSettingsStore()
-                //  dailyStore.clearAllSettings()
+               // let dailyStore = ManagedSettingsStore()
                 requestSendNoti(seconds: 1, title: "")
                 completionHandler(.defer)
             @unknown default:
@@ -49,7 +52,17 @@ class ShieldActionExtension: ShieldActionDelegate {
         for webDomain: WebDomainToken,
         completionHandler: @escaping (ShieldActionResponse) -> Void) {
             // Handle the action as needed.
-            completionHandler(.close)
+            switch action {
+            case .primaryButtonPressed:
+                /// 시스템이 현재 어플리케이션이나 웹 브라우저를 닫도록 합니다.
+                completionHandler(.close)
+            case .secondaryButtonPressed:
+                /// 액션에 대한 응답을 지연시키며 뷰를 갱신합니다.
+                requestSendNoti(seconds: 1, title: tokenName)
+                completionHandler(.defer)
+            @unknown default:
+                fatalError()
+            }
         }
     
     // MARK: ActivityCategoryToken으로 설정 된 웹에서 버튼 클릭 시 동작을 설정합니다.
@@ -59,13 +72,15 @@ class ShieldActionExtension: ShieldActionDelegate {
         action: ShieldAction,
         for category: ActivityCategoryToken,
         completionHandler: @escaping (ShieldActionResponse) -> Void) {
+            // Handle the action as needed.
             switch action {
             case .primaryButtonPressed:
                 /// 시스템이 현재 어플리케이션이나 웹 브라우저를 닫도록 합니다.
                 completionHandler(.close)
             case .secondaryButtonPressed:
-                /// 추가 동작이 없으며 뷰를 갱신하지 않습니다.
-                completionHandler(.none)
+                /// 액션에 대한 응답을 지연시키며 뷰를 갱신합니다.
+                requestSendNoti(seconds: 1, title: "")
+                completionHandler(.defer)
             @unknown default:
                 fatalError()
             }

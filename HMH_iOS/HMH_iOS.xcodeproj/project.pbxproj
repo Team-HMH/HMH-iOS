@@ -88,6 +88,14 @@
 		17CFA0002B53D236000DD09C /* TotalAppUsingTimeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF9FFF2B53D236000DD09C /* TotalAppUsingTimeDataModel.swift */; };
 		17CFA0022B541F9C000DD09C /* HomeViewTotalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFA0012B541F9C000DD09C /* HomeViewTotalDataModel.swift */; };
 		17CFA0042B545B60000DD09C /* TimeCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFA0032B545B60000DD09C /* TimeCalculate.swift */; };
+		17CFA00A2B58687F000DD09C /* GetHomeChallengeResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CFA0092B58687F000DD09C /* GetHomeChallengeResponseDTO.swift */; };
+		17E518CA2B5964C300F7B294 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 17E518C92B5964C300F7B294 /* Kingfisher */; };
+		17E518CC2B597F2400F7B294 /* GetDummyResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E518CB2B597F2400F7B294 /* GetDummyResponseDTO.swift */; };
+		360242FC2B597FE7007C6579 /* DeviceReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8682B45F4B200564874 /* DeviceReport.swift */; };
+		360243012B599B24007C6579 /* BlockingApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */; };
+		3602431C2B59A639007C6579 /* ScreenTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B42512B51DFD400B917CD /* ScreenTime.swift */; };
+		3602431D2B59A642007C6579 /* SelectedBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8792B45F4F900564874 /* SelectedBlocker.swift */; };
+		3602431E2B59A64E007C6579 /* BlockingApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */; };
 		360D11022B5343C6008BE85A /* requestPermision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D11012B5343C6008BE85A /* requestPermision.swift */; };
 		360D11082B536746008BE85A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360D11072B536746008BE85A /* Assets.xcassets */; };
 		360D110E2B541DB4008BE85A /* UserDefault+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360D110D2B541DB4008BE85A /* UserDefault+.swift */; };
@@ -111,18 +119,14 @@
 		364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */; };
 		364C4E712B4BC9780015729C /* AppAddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E702B4BC9780015729C /* AppAddButtonView.swift */; };
 		364C4E732B4BF27C0015729C /* AppAddCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */; };
-		365AF6672B54547800BAC51F /* HMHMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */; };
 		36610E3C2B5463280044F1CA /* HMHPushAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36610E3B2B5463280044F1CA /* HMHPushAlert.swift */; };
 		3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */; };
 		3666C8552B45F47600564874 /* DeviceActivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3666C8542B45F47600564874 /* DeviceActivity.framework */; };
 		3666C8582B45F47600564874 /* DeviceActivityMonitorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */; };
 		3666C85D2B45F47600564874 /* DeviceMonitor.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 3666C8522B45F47600564874 /* DeviceMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3666C8692B45F4B200564874 /* DeviceReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8682B45F4B200564874 /* DeviceReport.swift */; };
 		3666C86B2B45F4B200564874 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C86A2B45F4B200564874 /* TotalActivityReport.swift */; };
 		3666C86D2B45F4B200564874 /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C86C2B45F4B200564874 /* TotalActivityView.swift */; };
 		3666C8722B45F4B200564874 /* DeviceReport.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = 3666C8662B45F4B200564874 /* DeviceReport.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8792B45F4F900564874 /* SelectedBlocker.swift */; };
-		3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C87B2B45F50F00564874 /* BlockingApplicationModel.swift */; };
 		3666C8892B47110800564874 /* HMHTimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8872B47110800564874 /* HMHTimePickerView.swift */; };
 		3666C88B2B471B0D00564874 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88A2B471B0D00564874 /* String.swift */; };
 		3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C88C2B471B1D00564874 /* UIImage+.swift */; };
@@ -134,6 +138,7 @@
 		3666C8A52B48644A00564874 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8A42B48644A00564874 /* AppModel.swift */; };
 		367B42532B51DFD400B917CD /* ScreenTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B42512B51DFD400B917CD /* ScreenTime.swift */; };
 		367B42542B51DFD400B917CD /* AppSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 367B42522B51DFD400B917CD /* AppSelectionViewController.swift */; };
+		36953BEC2B5930C300EA21E3 /* SelectedBlocker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3666C8792B45F4F900564874 /* SelectedBlocker.swift */; };
 		36A3D8942B3AB57B007EA272 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8932B3AB57B007EA272 /* SnapKit */; };
 		36A3D8992B3AB58A007EA272 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D8982B3AB58A007EA272 /* Then */; };
 		36A3D89C2B3AB5A1007EA272 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 36A3D89B2B3AB5A1007EA272 /* KakaoSDK */; };
@@ -173,7 +178,6 @@
 		36E531BB2B4C78A900B4BBE3 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E531BA2B4C78A900B4BBE3 /* ManagedSettingsUI.framework */; };
 		36E531BE2B4C78A900B4BBE3 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531BD2B4C78A900B4BBE3 /* ShieldConfigurationExtension.swift */; };
 		36E531C32B4C78A900B4BBE3 /* ShiledConfig.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 36E531B82B4C78A900B4BBE3 /* ShiledConfig.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		36E531C92B4C798100B4BBE3 /* MyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531C82B4C798100B4BBE3 /* MyStore.swift */; };
 		36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */; };
 		36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */; };
 		36F2983E2B55766300C1C903 /* OnboardingGoalTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2983D2B55766300C1C903 /* OnboardingGoalTimeViewController.swift */; };
@@ -328,11 +332,18 @@
 		17CF9FFF2B53D236000DD09C /* TotalAppUsingTimeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalAppUsingTimeDataModel.swift; sourceTree = "<group>"; };
 		17CFA0012B541F9C000DD09C /* HomeViewTotalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTotalDataModel.swift; sourceTree = "<group>"; };
 		17CFA0032B545B60000DD09C /* TimeCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculate.swift; sourceTree = "<group>"; };
+		17CFA0092B58687F000DD09C /* GetHomeChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeChallengeResponseDTO.swift; sourceTree = "<group>"; };
+		17E518CB2B597F2400F7B294 /* GetDummyResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDummyResponseDTO.swift; sourceTree = "<group>"; };
 		360D11012B5343C6008BE85A /* requestPermision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestPermision.swift; sourceTree = "<group>"; };
 		360D11072B536746008BE85A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		360D110D2B541DB4008BE85A /* UserDefault+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+.swift"; sourceTree = "<group>"; };
 		360D110F2B5443FD008BE85A /* ActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityReport.swift; sourceTree = "<group>"; };
 		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
+		363ADDE82B5A45B8008D11E9 /* HMH_iOSDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HMH_iOSDebug.entitlements; sourceTree = "<group>"; };
+		363ADDE92B5A45CD008D11E9 /* DeviceMonitorDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceMonitorDebug.entitlements; sourceTree = "<group>"; };
+		363ADDEA2B5A45D5008D11E9 /* DeviceReportDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceReportDebug.entitlements; sourceTree = "<group>"; };
+		363ADDEB2B5A45DC008D11E9 /* ShiledActionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiledActionDebug.entitlements; sourceTree = "<group>"; };
+		363ADDEC2B5A45E6008D11E9 /* ShiledConfigDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiledConfigDebug.entitlements; sourceTree = "<group>"; };
 		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -350,7 +361,6 @@
 		3649239F2B505F2000BF7ACA /* CreateChallengeRequestDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeRequestDTO.swift; sourceTree = "<group>"; };
 		364C4E702B4BC9780015729C /* AppAddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddButtonView.swift; sourceTree = "<group>"; };
 		364C4E722B4BF27C0015729C /* AppAddCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAddCollectionReusableView.swift; sourceTree = "<group>"; };
-		365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHMonitorExtension.swift; sourceTree = "<group>"; };
 		36610E3B2B5463280044F1CA /* HMHPushAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHPushAlert.swift; sourceTree = "<group>"; };
 		3666C84C2B45F41300564874 /* HMHAppSelectButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMHAppSelectButtonView.swift; sourceTree = "<group>"; };
 		3666C8522B45F47600564874 /* DeviceMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DeviceMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -406,7 +416,6 @@
 		36E531BD2B4C78A900B4BBE3 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
 		36E531BF2B4C78A900B4BBE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		36E531C02B4C78A900B4BBE3 /* ShiledConfig.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiledConfig.entitlements; sourceTree = "<group>"; };
-		36E531C82B4C798100B4BBE3 /* MyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStore.swift; sourceTree = "<group>"; };
 		36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectViewController.swift; sourceTree = "<group>"; };
 		36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTimeSelectView.swift; sourceTree = "<group>"; };
 		36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSelectionViewController.swift; sourceTree = "<group>"; };
@@ -439,6 +448,7 @@
 				36A3D8A02B3AB5A1007EA272 /* KakaoSDKCert in Frameworks */,
 				36A3D8B02B3AB5A1007EA272 /* KakaoSDKTemplate in Frameworks */,
 				36A3D89E2B3AB5A1007EA272 /* KakaoSDKAuth in Frameworks */,
+				17E518CA2B5964C300F7B294 /* Kingfisher in Frameworks */,
 				36A3D8A82B3AB5A1007EA272 /* KakaoSDKFriendCore in Frameworks */,
 				36A3D8A22B3AB5A1007EA272 /* KakaoSDKCertCore in Frameworks */,
 			);
@@ -565,6 +575,7 @@
 		0B50F9C92B369813000C5046 /* HMH_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				363ADDE82B5A45B8008D11E9 /* HMH_iOSDebug.entitlements */,
 				364923612B4F4E7D00BF7ACA /* Config.xcconfig */,
 				3666C8772B45F4C600564874 /* HMH_iOS.entitlements */,
 				0B50F9D82B369815000C5046 /* Info.plist */,
@@ -675,7 +686,6 @@
 		0B8A89982B369CF800688BA6 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				36E531C72B4C795400B4BBE3 /* AppGroup */,
 				0B17D3E92B5104B900CFA3B7 /* User */,
 				3666C8782B45F4D900564874 /* AppBlock */,
 				0B8A89992B369D0B00688BA6 /* Base */,
@@ -1059,9 +1069,11 @@
 				36F298412B558A9C00C1C903 /* DeleteAppRequestDTO.swift */,
 				36F298432B558ABC00C1C903 /* MidnightRequestDTO.swift */,
 				36F298452B55965700C1C903 /* GetChallengeResponseDTO.swift */,
+				17CFA0092B58687F000DD09C /* GetHomeChallengeResponseDTO.swift */,
 				36F298472B55974200C1C903 /* HomeChallengeResponseDTO.swift */,
 				36F298492B55977900C1C903 /* AddAppResponseDTO.swift */,
 				36F2984D2B5599F500C1C903 /* EmptyResponseDTO.swift */,
+				17E518CB2B597F2400F7B294 /* GetDummyResponseDTO.swift */,
 			);
 			path = ChallengeModel;
 			sourceTree = "<group>";
@@ -1096,10 +1108,10 @@
 		3666C8562B45F47600564874 /* DeviceMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				363ADDE92B5A45CD008D11E9 /* DeviceMonitorDebug.entitlements */,
 				3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */,
 				3666C8592B45F47600564874 /* Info.plist */,
 				3666C85A2B45F47600564874 /* DeviceMonitor.entitlements */,
-				365AF6662B54547800BAC51F /* HMHMonitorExtension.swift */,
 			);
 			path = DeviceMonitor;
 			sourceTree = "<group>";
@@ -1107,6 +1119,7 @@
 		3666C8672B45F4B200564874 /* DeviceReport */ = {
 			isa = PBXGroup;
 			children = (
+				363ADDEA2B5A45D5008D11E9 /* DeviceReportDebug.entitlements */,
 				3666C8682B45F4B200564874 /* DeviceReport.swift */,
 				3666C86A2B45F4B200564874 /* TotalActivityReport.swift */,
 				3666C86C2B45F4B200564874 /* TotalActivityView.swift */,
@@ -1160,6 +1173,7 @@
 		36E531A92B4C789300B4BBE3 /* ShiledAction */ = {
 			isa = PBXGroup;
 			children = (
+				363ADDEB2B5A45DC008D11E9 /* ShiledActionDebug.entitlements */,
 				36E531AA2B4C789300B4BBE3 /* ShieldActionExtension.swift */,
 				36E531AC2B4C789300B4BBE3 /* Info.plist */,
 				36E531AD2B4C789300B4BBE3 /* ShiledAction.entitlements */,
@@ -1170,20 +1184,13 @@
 		36E531BC2B4C78A900B4BBE3 /* ShiledConfig */ = {
 			isa = PBXGroup;
 			children = (
+				363ADDEC2B5A45E6008D11E9 /* ShiledConfigDebug.entitlements */,
 				36E531BD2B4C78A900B4BBE3 /* ShieldConfigurationExtension.swift */,
 				36E531BF2B4C78A900B4BBE3 /* Info.plist */,
 				36E531C02B4C78A900B4BBE3 /* ShiledConfig.entitlements */,
 				360D11072B536746008BE85A /* Assets.xcassets */,
 			);
 			path = ShiledConfig;
-			sourceTree = "<group>";
-		};
-		36E531C72B4C795400B4BBE3 /* AppGroup */ = {
-			isa = PBXGroup;
-			children = (
-				36E531C82B4C798100B4BBE3 /* MyStore.swift */,
-			);
-			path = AppGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1225,6 +1232,7 @@
 				36A3D8B12B3AB5A1007EA272 /* KakaoSDKUser */,
 				364923692B4F514A00BF7ACA /* Moya */,
 				363863BC2B5129F2000FE5E7 /* Lottie */,
+				17E518C92B5964C300F7B294 /* Kingfisher */,
 			);
 			productName = HMH_iOS;
 			productReference = 0B50F9C72B369813000C5046 /* HMH_iOS.app */;
@@ -1340,6 +1348,7 @@
 				36A3D89A2B3AB5A1007EA272 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				364923662B4F510E00BF7ACA /* XCRemoteSwiftPackageReference "Moya" */,
 				363863BB2B5129F1000FE5E7 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				17E518C82B5964C300F7B294 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 0B50F9C82B369813000C5046 /* Products */;
 			projectDirPath = "";
@@ -1423,7 +1432,6 @@
 				0B8A89AF2B369E4300688BA6 /* HomeModel.swift in Sources */,
 				3666C89F2B485C8F00564874 /* DateCollectionViewCell.swift in Sources */,
 				36610E3C2B5463280044F1CA /* HMHPushAlert.swift in Sources */,
-				3666C87A2B45F4F900564874 /* SelectedBlocker.swift in Sources */,
 				0B17D3ED2B5108D200CFA3B7 /* UserDefaultWrapper.swift in Sources */,
 				0BC0EBD42B494459003EF5D4 /* OnboardingSwipeView.swift in Sources */,
 				17314F9B2B4C485B0089A551 /* UserPointHeaderView.swift in Sources */,
@@ -1463,6 +1471,7 @@
 				17314F872B49853C0089A551 /* HMHQuitAlert.swift in Sources */,
 				364923A02B505F2000BF7ACA /* CreateChallengeRequestDTO.swift in Sources */,
 				0BA193B62B4D08B7007E3F9C /* ProblemSurveyViewController.swift in Sources */,
+				17CFA00A2B58687F000DD09C /* GetHomeChallengeResponseDTO.swift in Sources */,
 				0B000CED2B4D9DA800AEC582 /* ApprovePermisionController.swift in Sources */,
 				0B2C2D3B2B443BE90023CCFA /* Image.swift in Sources */,
 				17CFA0042B545B60000DD09C /* TimeCalculate.swift in Sources */,
@@ -1472,11 +1481,13 @@
 				0BB0AE502B54580D00C647AE /* RefreshTokenResponseDTO.swift in Sources */,
 				3666C84D2B45F41300564874 /* HMHAppSelectButtonView.swift in Sources */,
 				17CF9FC12B4DE2B6000DD09C /* AppUsingTimeModel.swift in Sources */,
+				3602431D2B59A642007C6579 /* SelectedBlocker.swift in Sources */,
 				3666C8A32B4861A200564874 /* AppListCollectionViewCell.swift in Sources */,
 				364923822B4FD68000BF7ACA /* APIConstants.swift in Sources */,
 				0BA193B92B4D4097007E3F9C /* SignUpManager.swift in Sources */,
 				0B8A89AD2B369E3B00688BA6 /* HomeCell.swift in Sources */,
 				17314FB72B4D93D30089A551 /* StoreCollectionViewCell.swift in Sources */,
+				3602431E2B59A64E007C6579 /* BlockingApplicationModel.swift in Sources */,
 				174AF4922B447B4600450D07 /* MyPageViews.swift in Sources */,
 				364923992B505A3A00BF7ACA /* AuthInterceptor.swift in Sources */,
 				36A3D9BE2B409BCC007EA272 /* Color.swift in Sources */,
@@ -1503,6 +1514,7 @@
 				0B7817502B4BD9F10078E925 /* OnboardingButton.swift in Sources */,
 				36F2983E2B55766300C1C903 /* OnboardingGoalTimeViewController.swift in Sources */,
 				364923792B4FC8E800BF7ACA /* BaseModel.swift in Sources */,
+				17E518CC2B597F2400F7B294 /* GetDummyResponseDTO.swift in Sources */,
 				364923722B4F527200BF7ACA /* NetworkResult.swift in Sources */,
 				0B50F9CD2B369813000C5046 /* SceneDelegate.swift in Sources */,
 				36A3D9B42B3EBBED007EA272 /* UIStackView+.swift in Sources */,
@@ -1526,7 +1538,6 @@
 				36F298462B55965700C1C903 /* GetChallengeResponseDTO.swift in Sources */,
 				36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */,
 				0B47C8752B56A87A00B1AEEE /* CreateTotalTimeController.swift in Sources */,
-				36E531C92B4C798100B4BBE3 /* MyStore.swift in Sources */,
 				36E05FE62B48825A005B633E /* AppCollectionReusableView.swift in Sources */,
 				0B1AE81D2B531A6C00CF5154 /* SocialLoginResponseDTO.swift in Sources */,
 				3666C88B2B471B0D00564874 /* String.swift in Sources */,
@@ -1539,7 +1550,6 @@
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */,
 				363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */,
-				3666C87C2B45F50F00564874 /* BlockingApplicationModel.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,
 				0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */,
 			);
@@ -1549,7 +1559,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				365AF6672B54547800BAC51F /* HMHMonitorExtension.swift in Sources */,
+				36953BEC2B5930C300EA21E3 /* SelectedBlocker.swift in Sources */,
+				360243012B599B24007C6579 /* BlockingApplicationModel.swift in Sources */,
+				3602431C2B59A639007C6579 /* ScreenTime.swift in Sources */,
 				3666C8582B45F47600564874 /* DeviceActivityMonitorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1559,8 +1571,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				360D11102B5443FD008BE85A /* ActivityReport.swift in Sources */,
+				360242FC2B597FE7007C6579 /* DeviceReport.swift in Sources */,
 				3666C86D2B45F4B200564874 /* TotalActivityView.swift in Sources */,
-				3666C8692B45F4B200564874 /* DeviceReport.swift in Sources */,
 				3666C86B2B45F4B200564874 /* TotalActivityReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1749,7 +1761,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HMH_iOS/HMH_iOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HMH_iOS/HMH_iOSDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1761,6 +1773,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1795,6 +1808,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1814,7 +1828,7 @@
 			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_ENTITLEMENTS = DeviceMonitor/DeviceMonitor.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DeviceMonitor/DeviceMonitorDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1874,7 +1888,7 @@
 			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_ENTITLEMENTS = DeviceReport/DeviceReport.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DeviceReport/DeviceReportDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1933,7 +1947,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_ENTITLEMENTS = ShiledAction/ShiledAction.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ShiledAction/ShiledActionDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1991,10 +2005,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_ENTITLEMENTS = ShiledConfig/ShiledConfig.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ShiledConfig/ShiledConfigDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = ShiledConfig/Assets.xcassets;
 				DEVELOPMENT_TEAM = 65NSM7Z327;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShiledConfig/Info.plist;
@@ -2024,6 +2039,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = ShiledConfig/Assets.xcassets;
 				DEVELOPMENT_TEAM = 65NSM7Z327;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShiledConfig/Info.plist;
@@ -2105,6 +2121,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		17E518C82B5964C300F7B294 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
 		363863BB2B5129F1000FE5E7 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
@@ -2148,6 +2172,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		17E518C92B5964C300F7B294 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 17E518C82B5964C300F7B294 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		363863BC2B5129F2000FE5E7 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 363863BB2B5129F1000FE5E7 /* XCRemoteSwiftPackageReference "lottie-spm" */;

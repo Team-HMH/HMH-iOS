@@ -15,37 +15,34 @@ class ScreenTime: ObservableObject {
     
     static let shared = ScreenTime()
     private init() {}
-//    static func createdShared(hours: Binding<Int>, minutes: Binding<Int>, seconds: Binding<Int>){
-//            shared = ScreenTime(hours: hours, minute: minutes, seconds: seconds)
-//        }
-    
-//    let hourComponents = Calendar.current.dateComponents([.hour], from: Date())
-//    let curHour = hourComponents
-//    let minuteComponents = Calendar.current.dateComponents([.minute], from: Date())
-//    let curMins = minuteComponents
-//    let secondsComponents = Calendar.current.dateComponents([.second], from: Date())
-//    let curSec = secondsComponents
 
-
-    @AppStorage("selectedApps", store: UserDefaults(suiteName: "group.HMH"))
     var selectedApps = FamilyActivitySelection()
     {
         didSet {
-            handleSetBlockApplication()
+            parsedApps = selectedApps.rawValue
+            print(selectedApps)
+            handleStartDeviceActivityMonitoring(interval: 50)
         }
     }
-    @AppStorage("testInt", store: UserDefaults(suiteName: "group.HMH"))
-
-    var testInt = 0
+    
     let store = ManagedSettingsStore()
     let deviceActivityCenter = DeviceActivityCenter()
+    
+    @AppStorage("parsedApps", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group"))
+    var parsedApps = "하이"
+    var hashValue: [Int] = []
+    
+    func saveHashValue() {
+        selectedApps.applicationTokens.forEach {
+            hashValue.append($0.hashValue)
+        }
+    }
     
     func handleResetSelection() {
         selectedApps = FamilyActivitySelection()
     }
     
     func handleStartDeviceActivityMonitoring(includeUsageThreshold: Bool = true, interval: Int) {
-        
         //datacomponent타입을 써야함
         let dateComponents = Calendar.current.dateComponents([.hour, .minute, .second], from: Date())
         
@@ -53,11 +50,9 @@ class ScreenTime: ObservableObject {
         let schedule = DeviceActivitySchedule(
             intervalStart: DateComponents(hour: dateComponents.hour, minute: dateComponents.minute, second: dateComponents.second),
             intervalEnd: DateComponents(hour: 23, minute: 59, second: 59),
-            repeats: false
-            
-
+            repeats: false,
             //warning Time 설정해야 알람
-            //warningTime: DateComponents(minute: 1)
+            warningTime: DateComponents(minute: 1)
         )
          //새 이벤트 생성
         let event = DeviceActivityEvent(
@@ -65,7 +60,6 @@ class ScreenTime: ObservableObject {
             categories: selectedApps.categoryTokens,
             webDomains: selectedApps.webDomainTokens,
             //threshold - 이 시간이 되면 특정한 event가 발생 deviceactivitymonitor에 eventdidreachthreshold
-
             threshold: DateComponents(second: interval)
             )
         
@@ -74,25 +68,26 @@ class ScreenTime: ObservableObject {
             try ScreenTime.shared.deviceActivityCenter.startMonitoring(
                 .once,
                 during: schedule,
-                events: includeUsageThreshold ? [.monitoring: event] : [:]
+                events: [.monitoring: event]
             )
+            print("📺📺모니터링 시작📺📺")
         } catch {
             print("Unexpected error: \(error).")
         }
     }
     
     func handleSetBlockApplication() {
-//        store.shield.applications = selectedApps.applicationTokens.isEmpty ? nil : selectedApps.applicationTokens
-        store.shield.applicationCategories = selectedApps.categoryTokens.isEmpty
-        ? .all()
-        : ShieldSettings.ActivityCategoryPolicy.specific(selectedApps.categoryTokens)
-        //store.shield.applicationCategories = ShieldSettings.ActivityCategoryPolicy.all()
+        store.shield.applications = selectedApps.applicationTokens.isEmpty ? nil : selectedApps.applicationTokens
+        print(selectedApps.applicationTokens)
+//        store.shield.applicationCategories = selectedApps.categoryTokens.isEmpty ? nil
+//        : ShieldSettings.ActivityCategoryPolicy.specific(selectedApps.categoryTokens)
+        store.shield.applicationCategories = ShieldSettings.ActivityCategoryPolicy.all()
     }
+    
     func stopDeviceMonitoring(){
         ScreenTime.shared.deviceActivityCenter.stopMonitoring()
     }
     
-
 }
 
 //MARK: FamilyActivitySelection Parser

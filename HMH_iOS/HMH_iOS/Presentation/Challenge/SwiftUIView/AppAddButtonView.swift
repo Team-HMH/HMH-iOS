@@ -9,21 +9,22 @@ import SwiftUI
 import UIKit
 import FamilyControls
 import DeviceActivity
-
-//class AppAddButtonViewModel: ObservableObject {
-//    @Published var newSerlection: FamilyActivitySelection
-//
-//    init(newSelection: FamilyActivitySelection) {
-//        self.newSelection = newSelection
-//    }
-//}
+import ShiledConfig
 
 struct AppAddButtonView: View {
+    let userDefaults = UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS")
+    @AppStorage("selectedApps", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group"))
+        var shieldedApps = FamilyActivitySelection()
     
     @EnvironmentObject var model: BlockingApplicationModel
-    var appGroupData: [String] = []
     @State var isPresented = false
+    @StateObject var blocker = SelectedBlocker()
     
+    // Used to encode codable to UserDefaults
+    private let encoder = PropertyListEncoder()
+    
+    // Used to decode codable from UserDefaults
+    private let decoder = PropertyListDecoder()
     var body: some View {
         ZStack {
             Color(uiColor: .clear)
@@ -36,29 +37,25 @@ struct AppAddButtonView: View {
             .familyActivityPicker(isPresented: $isPresented, selection: $model.newSelection)
             .onChange(of: isPresented)  { oldValue, newValue in
                 if newValue == false {
-                    let app = model.selectedApps.forEach {
-                        print($0.bundleIdentifier?.utf8)
+                    if !model.newSelection.applicationTokens.isEmpty {
+                        ScreenTime.shared.selectedApps = model.newSelection
+                        shieldedApps = model.newSelection
+                        ScreenTime.shared.saveHashValue()
+                        
+                        let mainViewController = TabBarController()
+                        let navigationController = UINavigationController(rootViewController: mainViewController)
+                        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+                        guard let delegate = sceneDelegate else {
+                            return
+                        }
+                        delegate.window?.rootViewController = navigationController
+                        navigationController.pushViewController(GoalTimeSelectViewController(), animated: true)
                     }
-                    let appTokens: () = model.selectedAppsTokens.forEach {
-                        print($0)
-                    }
-                    let mainViewController = TabBarController()
-                    let navigationController = UINavigationController(rootViewController: mainViewController)
-                    let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
-                    guard let delegate = sceneDelegate else {
-                        return
-                    }
-                    delegate.window?.rootViewController = navigationController
-                    navigationController.pushViewController(GoalTimeSelectViewController(), animated: true)
                 }
             }
             
         }
         .background(Color(.clear))
-    }
-    
-    func storeMonitor() {
-        
     }
 }
 

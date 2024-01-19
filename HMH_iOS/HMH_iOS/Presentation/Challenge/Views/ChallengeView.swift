@@ -33,6 +33,12 @@ final class ChallengeView: UIView {
         }
     }
     
+    private var token = BlockingApplicationModel.shared.selectedAppsTokens {
+        didSet {
+            challengeCollectionView.reloadData()
+        }
+    }
+    
     lazy var challengeCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.backgroundColor = .background
         $0.collectionViewLayout = createLayout()
@@ -121,7 +127,7 @@ extension ChallengeView: UICollectionViewDataSource {
             if challengeType == .completed { return 0 }
             return days
         case 1:
-            return appList.count
+            return token.count
         default:
             return 0
         }

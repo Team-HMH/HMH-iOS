@@ -8,7 +8,7 @@
 import Foundation
 
 struct HomeViewTotalDataModel {
-    let blackHoleCellData: BlackHoleVideoDataModel
-    let totalAppUsingTimeData: TotalAppUsingTimeDataModel
-    let appUsingTimeModel: AppUsingTimeModel
+    var blackHoleCellData: BlackHoleVideoDataModel
+    var totalAppUsingTimeData: TotalAppUsingTimeDataModel
+    var appUsingTimeData: AppUsingTimeModel
 }

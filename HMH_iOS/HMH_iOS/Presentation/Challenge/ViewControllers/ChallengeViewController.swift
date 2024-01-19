@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 import SnapKit
 import Then
+import FamilyControls
+import DeviceActivity
 
 final class ChallengeViewController: UIViewController {
     var isCreatedChallenge = false
@@ -17,6 +20,15 @@ final class ChallengeViewController: UIViewController {
         self.isCreatedChallenge = isCreatedChallenge
         configureTabBar(isCreatedChallenge: isCreatedChallenge)
     }
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    // Used to encode codable to UserDefaults
+    private let encoder = PropertyListEncoder()
+    
+    // Used to decode codable from UserDefaults
+    private let decoder = PropertyListDecoder()
+    private let model = BlockingApplicationModel.shared
     
     private let navigationBar = HMHNavigationBar(leftItem: .normal,
                                                  isBackButton: false,
@@ -67,7 +79,7 @@ final class ChallengeViewController: UIViewController {
     func configureTabBar(isCreatedChallenge: Bool) {
         if isCreatedChallenge {
             let alertController = AlertViewController()
-            alertController.setAlertType(.Challenge)
+            alertController.setAlertType(.HMHChallengeAlert)
             alertController.modalPresentationStyle = .overFullScreen
             self.present(alertController, animated: false, completion: nil)
         } 
@@ -75,6 +87,7 @@ final class ChallengeViewController: UIViewController {
     
     private func setDelegate() {
         challengeView.challengeCollectionView.delegate = self
+        
     }
     
     func onTabButton() {

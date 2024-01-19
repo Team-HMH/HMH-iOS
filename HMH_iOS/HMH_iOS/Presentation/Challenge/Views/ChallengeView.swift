@@ -7,31 +7,21 @@
 
 import UIKit
 import SwiftUI
-    
-import Combine
+
 import SnapKit
 import Then
 import FamilyControls
 
 final class ChallengeView: UIView {
     private var appAddButtonViewModel: BlockingApplicationModel = BlockingApplicationModel.shared
-    private var cancellables: Set<AnyCancellable> = []
-    private var challengeType: ChallengeType  = .completed {
-        didSet{
-            challengeCollectionView.reloadData()
-        }
-    }
+    var challengeType: ChallengeType  = .completed
     
-    private var goalTimeHour: Int = 3
-    private var days: Int = 7
-    private var appList: [Apps] = []
-    private var dailyStatus: [String] = []
-    private var todayIndex = 0
-    private var isCompleted = false {
-        didSet {
-            challengeCollectionView.reloadData()
-        }
-    }
+    var goalTimeHour: Int = 3
+    var days: Int = 7
+    var appList: [Apps] = []
+    var dailyStatus: [String] = []
+    var todayIndex = 0
+    var isCompleted = false 
     
     var isDeleteMode: Bool = false {
         didSet {
@@ -49,7 +39,6 @@ final class ChallengeView: UIView {
         self.appAddButtonViewModel = appAddButtonViewModel
         super.init(frame: frame)
         
-        loadChallenge()
         setUI()
         setRegister()
         configureView()
@@ -103,23 +92,16 @@ final class ChallengeView: UIView {
         
     }
     
-    func loadChallenge() {
-        let provider = Providers.challengeProvider
-        provider.request(target: .getChallenge, instance: BaseResponse<GetChallengeResponseDTO>.self) { response  in
-            if let data = response.data {
-                self.days = data.period
-                self.goalTimeHour = convertMillisecondsToHoursAndMinutes(milliseconds: data.goalTime).hours
-                self.appList = data.apps
-                self.dailyStatus = data.statuses
-                self.todayIndex = data.goalTime
-                self.isCompleted = self.todayIndex < 0 ? true : false
-            }
-        }
-    }
-    
     @objc private func deleteButtonTapped() {
         isDeleteMode.toggle()
     }
+    
+    @objc func onTapButton() {
+        if let challengeViewController = self.getChallengeViewController() {
+            challengeViewController.onTabButton()
+        }
+    }
+    
     
     func deleteCell() {
         print("tap")
@@ -155,7 +137,7 @@ extension ChallengeView: UICollectionViewDataSource {
             
             var image = ImageLiterals.Challenge.icUnselected
             
-            switch dailyStatus[indexPath.item]{
+            switch dailyStatus[indexPath.row]{ // 여기다 가차!!!!!!!!!!!!!!!!!!
             case "UNEARNED":
                 image = ImageLiterals.Challenge.icChallengeSuccess
             case "FAILURE":
@@ -195,13 +177,10 @@ extension ChallengeView: UICollectionViewDataSource {
         if kind == StringLiteral.Challenge.Idetifier.titleHeaderViewId {
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.titleHeaderViewId, withReuseIdentifier: TitleCollectionReusableView.identifier, for: indexPath) as? TitleCollectionReusableView
             else { return UICollectionReusableView() }
-            
-            header.isCompleted = isCompleted
-            if isCompleted {
-                header.button.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
-            } else {
-                header.configureTitle(hour: goalTimeHour)
-            }
+            let time = convertHoursAndMinutesToMilliseconds(hours: 3, minutes: 0)
+            header.configureTitle(hour: time)
+            header.backgroundType = challengeType
+            header.button.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
             return header
         } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {
             if let header = collectionView.dequeueReusableSupplementaryView(ofKind: StringLiteral.Challenge.Idetifier.appListHeaderViewId, withReuseIdentifier: AppCollectionReusableView.identifier, for: indexPath) as? AppCollectionReusableView {
@@ -218,14 +197,6 @@ extension ChallengeView: UICollectionViewDataSource {
             return UICollectionReusableView()
         }
     }
-    
-    @objc
-    func onTapButton() {
-        if let challengeViewController = self.getChallengeViewController() {
-            challengeViewController.onTabButton()
-        }
-    }
-    
 }
 
 
@@ -255,7 +226,8 @@ extension ChallengeView {
                 section.interGroupSpacing = 16
                 section.contentInsets = .init(top: 0, leading: 0, bottom: 35, trailing:0)
                 
-                let headerHeight =                switch challengeType {
+                let headerHeight =                
+                switch challengeType {
                 case .sevenDays:
                     115.adjusted
                 case .fourteenDays:
@@ -277,6 +249,8 @@ extension ChallengeView {
                 
                 let layout = UICollectionViewCompositionalLayout(section: section)
                 layout.register(GrayBackgroundView.self, forDecorationViewOfKind: StringLiteral.Challenge.Idetifier.backgroundViewId)
+                
+                GrayBackgroundView.backgroundType = self.challengeType
                 
                 section.orthogonalScrollingBehavior = .none
                 
@@ -332,4 +306,3 @@ extension ChallengeView {
         return nil
     }
 }
-	

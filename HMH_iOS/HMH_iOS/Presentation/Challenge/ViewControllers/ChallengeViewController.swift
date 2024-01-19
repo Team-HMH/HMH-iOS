@@ -31,13 +31,15 @@ final class ChallengeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         requestPermision()
-        challengeView.configreCollectionView()
         configureTabBar(isCreatedChallenge: isCreatedChallenge)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadChallenge()
+        challengeView.configreCollectionView()
         setUI()
         setDelegate()
     }
@@ -83,6 +85,27 @@ final class ChallengeViewController: UIViewController {
     func deleteTap() {
         challengeView.deleteCell()
     }
+    
+    func loadChallenge() {
+        let provider = Providers.challengeProvider
+        provider.request(target: .getChallenge, instance: BaseResponse<GetChallengeResponseDTO>.self) { data in
+            if let data = data.data {
+                self.challengeView.days = data.period
+                self.challengeView.goalTimeHour = data.goalTime
+                self.challengeView.appList = data.apps
+                if data.todayIndex == -1 {
+                    self.challengeView.challengeType = .completed
+                } else if data.period == 7 {
+                    self.challengeView.challengeType = .sevenDays
+                } else if data.period == 14  {
+                    self.challengeView.challengeType = .fourteenDays
+                }
+            }
+            self.challengeView.challengeCollectionView.reloadData()
+        }
+        
+        
+    }
 }
 
 
@@ -99,8 +122,9 @@ extension ChallengeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.decodedIndex = indexPath.item
         print(decodedIndex)
-        if selectedIndex == [] {
-            selectedIndex = [1,0]
+
+        if selectedIndex.isEmpty {
+            selectedIndex = indexPath
         }
         if challengeView.isDeleteMode {
             if let previousSelectedCell = collectionView.cellForItem(at: selectedIndex) as? AppListCollectionViewCell {

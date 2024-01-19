@@ -42,11 +42,12 @@ final class HomeViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         configreCollectionView()
-////        // 영상 로딩을 위한 애니메이션 코드
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-////            self.totalAppUsingTimeData.progressValue += 0.01
-//            self.totalAppUsingTimeData.isFailed = true
-//        }
+//        
+//        //        // 영상 로딩을 위한 애니메이션 코드
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//                    self.totalAppUsingTimeData.totalAppRemainedTime += 0.4
+////                    self.totalAppUsingTimeData.isFailed = true
+//                }
     }
     
     

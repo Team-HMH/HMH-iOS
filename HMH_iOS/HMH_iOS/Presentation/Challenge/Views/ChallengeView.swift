@@ -22,7 +22,11 @@ final class ChallengeView: UIView {
     
     var goalTimeHour: Int = 3
     var days: Int = 0
-    var appList: [Apps] = []
+    var appList: [App] = [] {
+        didSet {
+            challengeCollectionView.reloadData()
+        }
+    }
     var dailyStatus: [String] = []
     var todayIndex = 0
     var isCompleted = false 
@@ -127,7 +131,7 @@ extension ChallengeView: UICollectionViewDataSource {
             if ChallengeManager.shared.type == .completed { return 0 }
             return days
         case 1:
-            return token.count
+            return appList.count
         default:
             return 0
         }
@@ -173,10 +177,12 @@ extension ChallengeView: UICollectionViewDataSource {
             } else {
                 cell.isSelectedCell = false
             }
-            let appGoalHour = convertMillisecondsToHoursAndMinutes(milliseconds: appList[indexPath.item].goalTime).hours
-            let appGoalMin = convertMillisecondsToHoursAndMinutes(milliseconds: appList[indexPath.item].goalTime).minutes
+            let appGoalHour = convertMillisecondsToHoursAndMinutes(milliseconds: appList[indexPath.item].usageTime).hours
+            let appGoalMin = convertMillisecondsToHoursAndMinutes(milliseconds: appList[indexPath.item].usageTime).minutes
             let appTimeString = appGoalHour<=0 ? "\(appGoalMin)분" : "\(appGoalHour)시간 \(appGoalMin)분"
-            cell.configureCell(appName: "인스타그램", appTime: appTimeString)
+            print(appTimeString)
+            cell.configureCell(appName: appList[indexPath.item].appName, appTime: appTimeString)
+            cell.appImageView.kfSetImage(url: appList[indexPath.item].appImageURL)
             return cell
         default:
             return UICollectionViewCell()

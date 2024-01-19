@@ -117,8 +117,4 @@ extension ChallengeViewController: UICollectionViewDelegate {
             }
         }
     }
-
 }
-
-
-

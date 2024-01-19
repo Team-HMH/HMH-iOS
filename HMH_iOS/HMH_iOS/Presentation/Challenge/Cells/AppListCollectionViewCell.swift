@@ -23,7 +23,7 @@ final class AppListCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    private let appImageView = UIImageView().then {
+    var appImageView = UIImageView().then {
         $0.backgroundColor = .blue
         $0.makeCornerRound(radius: 8.adjusted)
     }
@@ -92,9 +92,8 @@ final class AppListCollectionViewCell: UICollectionViewCell {
         contentView.makeCornerRound(radius: 6.adjusted)
     }
     
-    func configureCell(appName: String, appIconImage: UIImage = UIImage(), appTime: String){
+    func configureCell(appName: String, appTime: String){
         self.appNameLabel.text = appName
-        self.appImageView.image = appIconImage
         self.timeLabel.text = appTime
     }
 }

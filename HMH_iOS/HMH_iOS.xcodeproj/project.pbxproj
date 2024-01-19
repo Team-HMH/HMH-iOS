@@ -180,7 +180,6 @@
 		36E531C32B4C78A900B4BBE3 /* ShiledConfig.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 36E531B82B4C78A900B4BBE3 /* ShiledConfig.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F12B4D249700B4BBE3 /* GoalTimeSelectViewController.swift */; };
 		36E531F42B4D24CF00B4BBE3 /* GoalTimeSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531F32B4D24CF00B4BBE3 /* GoalTimeSelectView.swift */; };
-		36E531FC2B4DCEB300B4BBE3 /* AppSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E531FB2B4DCEB300B4BBE3 /* AppSelectionViewController.swift */; };
 		36F2983E2B55766300C1C903 /* OnboardingGoalTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2983D2B55766300C1C903 /* OnboardingGoalTimeViewController.swift */; };
 		36F298402B558A8C00C1C903 /* AddAppRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F2983F2B558A8C00C1C903 /* AddAppRequestDTO.swift */; };
 		36F298422B558A9C00C1C903 /* DeleteAppRequestDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F298412B558A9C00C1C903 /* DeleteAppRequestDTO.swift */; };
@@ -1315,7 +1314,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					0B50F9C62B369813000C5046 = {
 						CreatedOnToolsVersion = 15.0.1;
@@ -1549,9 +1548,7 @@
 				36E531F22B4D249700B4BBE3 /* GoalTimeSelectViewController.swift in Sources */,
 				367B42542B51DFD400B917CD /* AppSelectionViewController.swift in Sources */,
 				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
-				36E531FC2B4DCEB300B4BBE3 /* AppSelectionViewController.swift in Sources */,
 				364923682B4F513600BF7ACA /* BaseTargetType.swift in Sources */,
-				3666C88D2B471B1D00564874 /* UIImage+.swift in Sources */,
 				363863BA2B50782E000FE5E7 /* CreateChallengeResponseDTO.swift in Sources */,
 				0B0035402B43D64D00DA140C /* HMHNavigationBar.swift in Sources */,
 				0BA193B22B4CE908007E3F9C /* SurveyView.swift in Sources */,
@@ -1840,7 +1837,7 @@
 				INFOPLIST_FILE = DeviceMonitor/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DeviceMonitor;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1870,7 +1867,7 @@
 				INFOPLIST_FILE = DeviceMonitor/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DeviceMonitor;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

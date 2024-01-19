@@ -19,10 +19,10 @@ enum ChallengeType {
 
 final class GrayBackgroundView: UICollectionReusableView {
     
-    private var backgroundType: ChallengeType = .completed
+    static var backgroundType: ChallengeType = .sevenDays 
     
     private lazy var backgroundImageView = UIImageView().then {
-        switch backgroundType {
+        switch GrayBackgroundView.backgroundType {
         case .sevenDays:
             $0.image = ImageLiterals.Challenge.icSevenDaysChallengeBackground
         case .fourteenDays:

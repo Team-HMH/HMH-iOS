@@ -14,10 +14,16 @@ import Then
 final class TitleCollectionReusableView: UICollectionReusableView {
     static let identifier = "TitleCollectionReusableView"
     
-    private var backgroundType: ChallengeType = .completed
+    var backgroundType: ChallengeType = .completed {
+        didSet {
+            configureTitle()
+            setUI()
+        }
+    }
     var isButtonTapped = false
     
     let button = OnboardingButton(buttonStatus: .enabled)
+    
     private let subTitleLabel = UILabel().then {
         $0.text = StringLiteral.Challenge.Date.dateHeaderSubTitle
         $0.font = .iosText5Medium16
@@ -55,6 +61,7 @@ final class TitleCollectionReusableView: UICollectionReusableView {
     
     private func setConstraints() {
         if backgroundType == .completed  {
+            button.isHidden = false
             titleLabel.snp.makeConstraints {
                 $0.leading.equalToSuperview().offset(20.adjustedWidth)
                 $0.top.equalToSuperview().offset(17.adjusted)
@@ -66,6 +73,7 @@ final class TitleCollectionReusableView: UICollectionReusableView {
                 $0.bottom.equalToSuperview().offset(12.adjusted)
             }
         } else {
+            button.isHidden = true
             titleLabel.snp.makeConstraints {
                 $0.top.equalToSuperview().offset(30.adjusted)
                 $0.leading.equalToSuperview().offset(29.adjustedWidth)
@@ -84,5 +92,18 @@ final class TitleCollectionReusableView: UICollectionReusableView {
             titleLabel.font = .iosTitle3Semibold22
             button.setButtonText(buttonTitle: StringLiteral.Challenge.Date.challengeButton)
         }
+    }
+    
+    func configureTitle(hour: Int) {
+        self.titleLabel.text = "\(hour)시간"
+    }
+    
+    @objc func deleteButtonDidTapped() {
+        if isButtonTapped {
+            
+        } else {
+            
+        }
+        isButtonTapped.toggle()
     }
 }

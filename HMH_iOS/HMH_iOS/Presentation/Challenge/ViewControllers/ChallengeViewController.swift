@@ -93,6 +93,7 @@ final class ChallengeViewController: UIViewController {
                 self.challengeView.days = data.period
                 self.challengeView.goalTimeHour = data.goalTime
                 self.challengeView.appList = data.apps
+                self.challengeView.dailyStatus = data.statuses
                 if data.todayIndex == -1 {
                     self.challengeView.challengeType = .completed
                 } else if data.period == 7 {

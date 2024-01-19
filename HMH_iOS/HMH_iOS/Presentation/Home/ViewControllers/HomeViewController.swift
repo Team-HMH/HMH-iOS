@@ -16,6 +16,11 @@ final class HomeViewController: UIViewController {
             homeView.homeCollectionView.reloadData()
         }
     }
+    var data: GetDummyResponseDTO = GetDummyResponseDTO(apps: []) {
+        didSet{
+            homeView.homeCollectionView.reloadData()
+        }
+    }
     
     var totalAppUsingTimeData: TotalAppUsingTimeDataModel = .init(
         onboardingTotalGoalTime: 0,
@@ -95,8 +100,7 @@ extension HomeViewController: UICollectionViewDataSource {
         guard let blackholeImageCell = homeView.homeCollectionView.dequeueReusableCell(withReuseIdentifier: BlackHoleImageCell.identifier, for: indexPath) as? BlackHoleImageCell else { return UICollectionViewCell() }
         guard let myGoalTimeCell = homeView.homeCollectionView.dequeueReusableCell(withReuseIdentifier: MyGoalTimeCell.identifier, for: indexPath) as? MyGoalTimeCell else { return UICollectionViewCell() }
         guard let appUsingProgressViewCell = homeView.homeCollectionView.dequeueReusableCell(withReuseIdentifier: AppUsingProgressViewCell.identifier, for: indexPath) as? AppUsingProgressViewCell else { return UICollectionViewCell() }
-        
-//        myGoalTimeCell.bindData(data: App)
+        myGoalTimeCell.bindData(data: data)
         
         switch indexPath.section {
         case 0:
@@ -157,6 +161,7 @@ extension HomeViewController {
                          viewController: HomeViewController()) { data in
             guard let data = data.data else { return }
             self.app = data.apps
+            self.data = data
         }
     }
 }

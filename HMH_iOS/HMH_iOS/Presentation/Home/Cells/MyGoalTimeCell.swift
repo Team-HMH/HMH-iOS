@@ -15,7 +15,7 @@ final class MyGoalTimeCell: UICollectionViewCell {
     static let identifier = "MyGoalTimeCell"
     let provider = Providers.challengeProvider
     var app: [App] = []
-    
+    var goalTime: Int = 0
     var progress: Float = 0
     
     private let totalGoalTimeLabel = UILabel().then {
@@ -43,6 +43,7 @@ final class MyGoalTimeCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        LoadTodayChallenge()
         setUI()
     }
     
@@ -96,10 +97,10 @@ final class MyGoalTimeCell: UICollectionViewCell {
         return totalUsageTime
     }
     
-    func bindData(data: GetHomeChallengeResponseDTO) {
-        let totalUsedTime = calculateTotalUsageTime(appUsingTimeList: app)
+    func bindData(data: GetDummyResponseDTO) {
+        let totalUsedTime = calculateTotalUsageTime(appUsingTimeList: data.apps)
         
-        let remindTime = convertMillisecondsToHoursAndMinutes(milliseconds: Int(data.goalTime) - Int(totalUsedTime))
+        let remindTime = convertMillisecondsToHoursAndMinutes(milliseconds: Int(totalUsedTime) - Int(self.goalTime))
         
         print("🥺", totalUsedTime)
         print("🥺", remindTime)
@@ -112,17 +113,12 @@ final class MyGoalTimeCell: UICollectionViewCell {
             usableLabel.text = "\(remindTime.hours)시간 \(remindTime.minutes)분"
         }
         
-        if Int(totalUsedTime) >= data.goalTime {
+        if Int(totalUsedTime) <= self.goalTime {
             usableLabel.text = "0분"
         }
         
-        let progress = Float(totalUsedTime) / Float(data.goalTime)
-        self.progress = progress
-        
-        totalProgressBar.setProgress(0, animated: false)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.totalProgressBar.setProgress(progress, animated: true)
-        }
+        let progress = Float(totalUsedTime) / Float(goalTime)
+        totalProgressBar.setProgress(-progress, animated: false)
     }
     
     func HourOrMinuteConvert(data: GetHomeChallengeResponseDTO) -> String {
@@ -140,8 +136,9 @@ final class MyGoalTimeCell: UICollectionViewCell {
 extension MyGoalTimeCell {
     func LoadTodayChallenge() {
         provider.request(target: .getdailyChallenge, instance: BaseResponse<GetHomeChallengeResponseDTO>.self, viewController: HomeViewController()) { [self] data in
-            guard let goalTime = data.data else { return }
-            self.goalTimeLabel.text = "\(HourOrMinuteConvert(data: data.data ?? goalTime))"
+            guard let data = data.data else { return }
+            self.goalTimeLabel.text = "\(HourOrMinuteConvert(data: data))"
+            self.goalTime = data.goalTime
         }
     }
 }

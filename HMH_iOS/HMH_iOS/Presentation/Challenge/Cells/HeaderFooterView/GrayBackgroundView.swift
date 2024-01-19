@@ -10,7 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
-enum BackgroundImage {
+@frozen
+enum ChallengeType {
     case sevenDays
     case fourteenDays
     case completed
@@ -18,18 +19,15 @@ enum BackgroundImage {
 
 final class GrayBackgroundView: UICollectionReusableView {
     
-    var backgroundType: BackgroundImage?
+    private var backgroundType: ChallengeType = .completed
     
     private lazy var backgroundImageView = UIImageView().then {
-        backgroundType = .completed
         switch backgroundType {
         case .sevenDays:
             $0.image = ImageLiterals.Challenge.icSevenDaysChallengeBackground
         case .fourteenDays:
             $0.image = ImageLiterals.Challenge.icFourteenDaysChallengeBackground
         case .completed:
-            $0.image = ImageLiterals.Challenge.icAddNewChallengeBackground
-        case .none:
             $0.image = ImageLiterals.Challenge.icAddNewChallengeBackground
         }
     }
@@ -55,12 +53,13 @@ final class GrayBackgroundView: UICollectionReusableView {
     private func setConstraints() {
         grayBackgroundView.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(12)
-            $0.top.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(-32)
+            $0.top.equalToSuperview().offset(-200)
         }
         
         backgroundImageView.snp.makeConstraints {
-            $0.leading.trailing.bottom.equalTo(grayBackgroundView)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview().offset(-32)
         }
     }
     

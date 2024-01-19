@@ -1,8 +1,8 @@
 //
-//  HMHQuitAlert.swift
+//  HMHDeleteAlert.swift
 //  HMH_iOS
 //
-//  Created by 김보연 on 1/6/24.
+//  Created by Seonwoo Kim on 1/18/24.
 //
 
 import UIKit
@@ -10,22 +10,24 @@ import UIKit
 import SnapKit
 import Then
 
-final class HMHQuitAlert: UIView {
+final class HMHDeleteAlert: UIView {
     weak var delegate: AlertDelegate?
+    var appName: String = ""
     
     private let titleLabel = UILabel().then {
-        $0.text = StringLiteral.AlertTitle.quit
         $0.textColor = .whiteText
         $0.font = .iosText5Medium16
         $0.textAlignment = .center
+        $0.numberOfLines = 2
+        $0.text = "정말 인스타그램" + StringLiteral.AlertTitle.delete
     }
     
     private let descriptionLabel = UILabel().then {
-        $0.text = StringLiteral.AlertDescription.quit
+        $0.text = StringLiteral.AlertDescription.delete
         $0.textColor = .whiteText
         $0.font = .iosDetail1Regular14
         $0.textAlignment = .center
-        $0.setTextWithLineHeight(text: StringLiteral.AlertDescription.quit, lineHeight: 21)
+        $0.setTextWithLineHeight(text: StringLiteral.AlertDescription.delete, lineHeight: 21)
         $0.numberOfLines = .zero
     }
     
@@ -35,8 +37,8 @@ final class HMHQuitAlert: UIView {
         $0.spacing = 7
     }
     
-    private let quitButton = CustomAlertButton(buttonType: .disabled, buttonText: StringLiteral.AlertButton.quit)
-    private let cancelButton = CustomAlertButton(buttonType: .enabled, buttonText: StringLiteral.AlertButton.cancel)
+    private let cancelButton = CustomAlertButton(buttonType: .disabled, buttonText: StringLiteral.AlertButton.confirm)
+    private let confirmButton = CustomAlertButton(buttonType: .enabled, buttonText: StringLiteral.AlertButton.cancel)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,6 +46,7 @@ final class HMHQuitAlert: UIView {
         configureView()
         setUI()
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -55,7 +58,7 @@ final class HMHQuitAlert: UIView {
     
     private func setHierarchy() {
         self.addSubviews(titleLabel, descriptionLabel, buttonStackView)
-        buttonStackView.addArrangeSubViews([quitButton, cancelButton])
+        buttonStackView.addArrangeSubViews([cancelButton, confirmButton])
     }
     
     private func setConstraints() {
@@ -63,10 +66,10 @@ final class HMHQuitAlert: UIView {
             $0.top.equalToSuperview().inset(35.adjusted)
             $0.horizontalEdges.equalToSuperview()
         }
-        
+
         descriptionLabel.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(12.adjusted)
-            $0.horizontalEdges.equalToSuperview().inset(44.adjusted)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(10.adjusted)
+            $0.centerX.equalToSuperview()
         }
         
         buttonStackView.snp.makeConstraints {
@@ -76,8 +79,8 @@ final class HMHQuitAlert: UIView {
     }
     
     private func setAddTarget() {
-        quitButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
-        cancelButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+        confirmButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
     }
     
     private func configureView() {
@@ -87,11 +90,16 @@ final class HMHQuitAlert: UIView {
         }
     }
     
-    @objc func cancelButtonTapped() {
-        delegate?.enabledButtonTapped()
+    func setAppName(appName: String) {
+        self.titleLabel.text = appName + StringLiteral.AlertTitle.delete
     }
     
-    @objc func confirmButtonTapped() {
+    @objc func cancelButtonTapped() {
         delegate?.alertDismissTapped()
     }
+    
+    @objc func deleteButtonTapped() {
+        delegate?.deleteButtonTapped()
+    }
 }
+

@@ -74,8 +74,9 @@ final class CreateTotalTimeController: OnboardingBaseViewController {
 
 extension CreateTotalTimeController: NextViewPushDelegate {
     func didTapButton() {
+        SignUpManager.shared.goalTime = totalTime
         let provider = Providers.challengeProvider
-        let challenge = CreateChallengeRequestDTO(period: SignUpManager.shared.period, goalTime:  SignUpManager.shared.goalTime)
+        let challenge = CreateChallengeRequestDTO(period: SignUpManager.shared.period, goalTime: SignUpManager.shared.goalTime)
         provider.request(target: .createChallenge(data: challenge), instance: BaseResponse<CreateChallengeResponseDTO>.self, viewController: self) { data in
             self.isCreated = true
         }
@@ -90,6 +91,6 @@ extension CreateTotalTimeController: NextViewPushDelegate {
 extension CreateTotalTimeController: TimePickerDelegate {
     func updateAvailability(selectedValue: Int, type: HMHTimePickerView.TimePickerType) {
         nextButton.updateStatus(isEnabled: true)
-        totalTime = selectedValue
+        totalTime = convertHoursAndMinutesToMilliseconds(hours: selectedValue, minutes: 0)
     }
 }

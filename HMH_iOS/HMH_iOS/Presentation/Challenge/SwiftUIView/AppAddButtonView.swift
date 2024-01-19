@@ -37,18 +37,20 @@ struct AppAddButtonView: View {
             .familyActivityPicker(isPresented: $isPresented, selection: $model.newSelection)
             .onChange(of: isPresented)  { oldValue, newValue in
                 if newValue == false {
-                    ScreenTime.shared.selectedApps = model.newSelection
-                    shieldedApps = model.newSelection
-                    ScreenTime.shared.saveHashValue()
-                    
-                    let mainViewController = TabBarController()
-                    let navigationController = UINavigationController(rootViewController: mainViewController)
-                    let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
-                    guard let delegate = sceneDelegate else {
-                        return
+                    if !model.newSelection.applicationTokens.isEmpty {
+                        ScreenTime.shared.selectedApps = model.newSelection
+                        shieldedApps = model.newSelection
+                        ScreenTime.shared.saveHashValue()
+                        
+                        let mainViewController = TabBarController()
+                        let navigationController = UINavigationController(rootViewController: mainViewController)
+                        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+                        guard let delegate = sceneDelegate else {
+                            return
+                        }
+                        delegate.window?.rootViewController = navigationController
+                        navigationController.pushViewController(GoalTimeSelectViewController(), animated: true)
                     }
-                    delegate.window?.rootViewController = navigationController
-                    navigationController.pushViewController(GoalTimeSelectViewController(), animated: true)
                 }
             }
             

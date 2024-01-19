@@ -7,7 +7,7 @@
 
 import UIKit
 import SwiftUI
-
+    
 import Combine
 import SnapKit
 import Then
@@ -16,7 +16,11 @@ import FamilyControls
 final class ChallengeView: UIView {
     private var appAddButtonViewModel: BlockingApplicationModel = BlockingApplicationModel.shared
     private var cancellables: Set<AnyCancellable> = []
-    var isChallengeComplete: Bool = true
+    private var challengeType: ChallengeType  = .completed {
+        didSet{
+            challengeCollectionView.reloadData()
+        }
+    }
     
     private let goalTime: Int = 3
     private var days: Int = 7
@@ -106,7 +110,7 @@ extension ChallengeView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section{
         case 0:
-            if isChallengeComplete { return 0 }
+            if challengeType == .completed { return 0 }
             return days
         case 1:
             return appList.count
@@ -205,10 +209,18 @@ extension ChallengeView {
                 
                 let section = NSCollectionLayoutSection(group: group)
                 section.orthogonalScrollingBehavior = .groupPagingCentered
-                section.interGroupSpacing = 19
+                section.interGroupSpacing = 16
                 section.contentInsets = .init(top: 0, leading: 0, bottom: 35, trailing:0)
                 
-                let headerHeight = isChallengeComplete ? 263.adjustedHeight: 100.adjustedHeight
+                let headerHeight =                switch challengeType {
+                case .sevenDays:
+                    115.adjusted
+                case .fourteenDays:
+                    115.adjusted
+                case .completed:
+                    263.adjusted
+                }
+                
                 
                 let headerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(CGFloat(headerHeight)))
                 

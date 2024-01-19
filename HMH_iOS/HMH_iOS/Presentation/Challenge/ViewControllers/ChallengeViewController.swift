@@ -103,6 +103,14 @@ final class ChallengeViewController: UIViewController {
         let provider = Providers.challengeProvider
         provider.request(target: .getChallenge, instance: BaseResponse<GetChallengeResponseDTO>.self) { data in
             if let data = data.data {
+                if data.todayIndex == -1 {
+                    ChallengeManager.shared.updateType(.completed)
+                } else if data.period == 7 {
+                    ChallengeManager.shared.updateType(.sevenDays)
+                } else {
+                    ChallengeManager.shared.updateType(.fourteenDays)
+                }
+
                 self.challengeView.days = data.period
                 self.challengeView.goalTimeHour = data.goalTime
                 self.challengeView.appList = data.apps

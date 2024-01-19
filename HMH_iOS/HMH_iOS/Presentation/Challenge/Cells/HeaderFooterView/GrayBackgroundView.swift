@@ -10,19 +10,12 @@ import UIKit
 import SnapKit
 import Then
 
-@frozen
-enum ChallengeType {
-    case sevenDays
-    case fourteenDays
-    case completed
-}
-
 final class GrayBackgroundView: UICollectionReusableView {
     
-    static var backgroundType: ChallengeType = .sevenDays 
+    static var backgroundType: ChallengeType = ChallengeManager.shared.type
     
     private lazy var backgroundImageView = UIImageView().then {
-        switch GrayBackgroundView.backgroundType {
+        switch ChallengeManager.shared.type {
         case .sevenDays:
             $0.image = ImageLiterals.Challenge.icSevenDaysChallengeBackground
         case .fourteenDays:

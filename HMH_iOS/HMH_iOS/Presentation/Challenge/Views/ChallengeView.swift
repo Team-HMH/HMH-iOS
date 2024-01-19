@@ -14,7 +14,7 @@ import FamilyControls
 
 final class ChallengeView: UIView {
     private var appAddButtonViewModel: BlockingApplicationModel = BlockingApplicationModel.shared
-    var challengeType: ChallengeType  = .sevenDays {
+    var challengeType: ChallengeType  = ChallengeManager.shared.type {
         didSet {
             challengeCollectionView.reloadData()
         }
@@ -124,7 +124,7 @@ extension ChallengeView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section{
         case 0:
-            if challengeType == .completed { return 0 }
+            if ChallengeManager.shared.type == .completed { return 0 }
             return days
         case 1:
             return token.count
@@ -190,7 +190,7 @@ extension ChallengeView: UICollectionViewDataSource {
             
             let goalTime =  convertMillisecondsToHoursAndMinutes(milliseconds: goalTimeHour).hours
             header.configureTitle(hour: goalTime)
-            header.backgroundType = challengeType
+            header.backgroundType = ChallengeManager.shared.type
             header.button.addTarget(self, action: #selector(onTapButton), for: .touchUpInside)
             return header
         } else if kind == StringLiteral.Challenge.Idetifier.appListHeaderViewId {
@@ -238,7 +238,7 @@ extension ChallengeView {
                 section.contentInsets = .init(top: 0, leading: 0, bottom: 35, trailing:0)
                 
                 let headerHeight =                
-                switch challengeType {
+                switch ChallengeManager.shared.type {
                 case .sevenDays, .fourteenDays:
                     115
                 case .completed:

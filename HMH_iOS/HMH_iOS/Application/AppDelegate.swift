@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let userNotiCenter = UNUserNotificationCenter.current()
         userNotiCenter.delegate = self
-        
         return true
     }
     
@@ -51,8 +50,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     
     func showCustomAlert(appName: String) {
         let pushAertViewController = AlertViewController()
-        pushAertViewController.appName = appName
-        pushAertViewController.alertType = .HMHPushALert
+        pushAertViewController.alertType = .HMHPushAlert
         pushAertViewController.modalPresentationStyle = .overFullScreen
         UIApplication.shared.windows.first?.rootViewController?.present(pushAertViewController, animated: false, completion: nil)
     }

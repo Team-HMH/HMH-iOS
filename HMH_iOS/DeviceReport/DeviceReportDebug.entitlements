@@ -6,7 +6,7 @@
 	<true/>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.65NSM7Z327.HMH-iOS.HMH-iOS</string>
+		<string>group.65NSM7Z327.com.HMH.group</string>
 	</array>
 </dict>
 </plist>

@@ -14,7 +14,7 @@ import Then
 final class TitleCollectionReusableView: UICollectionReusableView {
     static let identifier = "TitleCollectionReusableView"
     
-    private var isCompleted: Bool = true
+    private var backgroundType: ChallengeType = .completed
     var isButtonTapped = false
     
     let button = OnboardingButton(buttonStatus: .enabled)
@@ -46,7 +46,7 @@ final class TitleCollectionReusableView: UICollectionReusableView {
     }
     
     private func setViewHierarchy() {
-        if isCompleted {
+        if backgroundType == .completed {
             self.addSubviews(titleLabel, button)
         } else {
             self.addSubviews(titleLabel, subTitleLabel)
@@ -54,7 +54,7 @@ final class TitleCollectionReusableView: UICollectionReusableView {
     }
     
     private func setConstraints() {
-        if isCompleted {
+        if backgroundType == .completed  {
             titleLabel.snp.makeConstraints {
                 $0.leading.equalToSuperview().offset(20.adjustedWidth)
                 $0.top.equalToSuperview().offset(17.adjusted)
@@ -79,19 +79,10 @@ final class TitleCollectionReusableView: UICollectionReusableView {
     }
     
     private func configureTitle() {
-        if isCompleted{
+        if backgroundType == .completed {
             titleLabel.setTextWithLineHeightLeft(text: StringLiteral.Challenge.Date.createHeaderTitle, lineHeight: 33)
             titleLabel.font = .iosTitle3Semibold22
             button.setButtonText(buttonTitle: StringLiteral.Challenge.Date.challengeButton)
         }
-    }
-    
-    @objc func deleteButtonDidTapped() {
-        if isButtonTapped {
-            
-        } else {
-            
-        }
-        isButtonTapped.toggle()
     }
 }

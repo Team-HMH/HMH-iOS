@@ -87,14 +87,16 @@ enum StringLiteral {
     enum AlertTitle {
         static let logout = "하면함을 로그아웃 하시겠어요?"
         static let quit = "정말 하면함을 탈퇴 하시겠어요?"
-        static let push = "을(를)\n삭제하시겠어요?"
+        static let push = "정말 앱 시간을\n연장 하시겠어요?"
         static let challenge = "새로운 챌린지 생성 완료"
+        static let delete = "을(를)\n삭제하시겠어요?"
     }
     
     enum AlertDescription {
         static let quit = "회원탈퇴 후 유저 정보는 30일 동안\n임시보관되며, 이후 영구 삭제됩니다"
-        static let push = "집계되고 있던 앱의 사용 시간은\n총 사용 시간에서도 차감돼요"
+        static let push = "사용 시간을 연장하면\n챌린지를 실패해요"
         static let challenge = "블랙홀 탈출을 위한\n새로운 여정을 시작해 보아요"
+        static let delete = "집계되고 있던 앱의 사용 시간은\n총 사용 시간에서도 차감돼요"
     }
     
     enum OnboardingButton {

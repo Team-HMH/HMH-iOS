@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import SwiftUI
 
 import SnapKit
 import Then
 
 final class GoalTimeSelectViewController: OnboardingBaseViewController {
-
+    
     private let goalTimeView = GoalTimeSelectView()
     private var specificTime: Int = 0
     private var specificMinute: Int = 0
+    private var convertedTime: Int = 0
+    private let model = BlockingApplicationModel.shared
+    private var apps: [Apps] = []
     
     override func loadView() {
         self.view = goalTimeView
@@ -31,6 +35,7 @@ final class GoalTimeSelectViewController: OnboardingBaseViewController {
         mainTitleText = StringLiteral.Challenge.GoalTime.titleText
         subTitleText = StringLiteral.Challenge.GoalTime.subTitleText
         nextButton.setTitle("완료", for: .normal)
+        nextButton.updateStatus(isEnabled: true)
         step = 6
     }
     
@@ -40,11 +45,22 @@ final class GoalTimeSelectViewController: OnboardingBaseViewController {
         goalTimeView.minPicker.totalTimePickerDelegate = self
     }
     
-    override func onTapButton() {
-        let rootViewController = TabBarController()
-        rootViewController.selectedIndex = 0
-        self.setRootViewController(rootViewController)
+    private func addApp() {
+        ScreenTime.shared.hashValue.forEach {
+            apps.append(Apps(appCode: "\($0)", goalTime: convertedTime))
+        }
+        
+        var request: AddAppRequestDTO = .init(apps: apps)
+        
+        let provider = Providers.challengeProvider
+        provider.request(target: .addApp(data: request), instance: BaseResponse<EmptyResponseDTO>.self,
+                         completion: {_ in
+            
+        }) // to-do
+        
+        ScreenTime.shared.handleStartDeviceActivityMonitoring(interval: convertedTime)
     }
+    
 }
 
 extension GoalTimeSelectViewController: TimePickerDelegate {
@@ -57,14 +73,18 @@ extension GoalTimeSelectViewController: TimePickerDelegate {
         }
         nextButton.updateStatus(isEnabled: true)
         let convertedTime = convertHoursAndMinutesToMilliseconds(hours: specificTime, minutes: specificMinute)
-        SignUpManager.shared.goalTime = convertedTime
+        self.convertedTime = convertedTime
     }
 }
 
 extension GoalTimeSelectViewController: NextViewPushDelegate {
     func didTapButton() {
-        let nextViewController = ApprovePermisionController()
-        self.navigationController?.pushViewController(nextViewController, animated: false)
+        addApp()
+        ScreenTime.shared.handleStartDeviceActivityMonitoring(interval: 10)
+        
+        let rootViewController = TabBarController()
+        rootViewController.selectedIndex = 0
+        self.setRootViewController(rootViewController)
     }
 }
 

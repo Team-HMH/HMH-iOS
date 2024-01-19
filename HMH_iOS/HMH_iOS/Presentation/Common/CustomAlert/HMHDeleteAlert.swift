@@ -1,8 +1,8 @@
 //
-//  HMHPushAlert.swift
+//  HMHDeleteAlert.swift
 //  HMH_iOS
 //
-//  Created by 지희의 MAC on 1/15/24.
+//  Created by Seonwoo Kim on 1/18/24.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class HMHPushAlert: UIView {
+final class HMHDeleteAlert: UIView {
     weak var delegate: AlertDelegate?
     var appName: String = ""
     
@@ -19,14 +19,15 @@ final class HMHPushAlert: UIView {
         $0.font = .iosText5Medium16
         $0.textAlignment = .center
         $0.numberOfLines = 2
+        $0.text = "정말 인스타그램" + StringLiteral.AlertTitle.delete
     }
     
     private let descriptionLabel = UILabel().then {
-        $0.text = StringLiteral.AlertDescription.push
+        $0.text = StringLiteral.AlertDescription.delete
         $0.textColor = .whiteText
         $0.font = .iosDetail1Regular14
         $0.textAlignment = .center
-        $0.setTextWithLineHeight(text: StringLiteral.AlertDescription.push, lineHeight: 21)
+        $0.setTextWithLineHeight(text: StringLiteral.AlertDescription.delete, lineHeight: 21)
         $0.numberOfLines = .zero
     }
     
@@ -65,10 +66,10 @@ final class HMHPushAlert: UIView {
             $0.top.equalToSuperview().inset(35.adjusted)
             $0.horizontalEdges.equalToSuperview()
         }
-        
+
         descriptionLabel.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(12.adjusted)
-            $0.horizontalEdges.equalToSuperview().inset(44.adjusted)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(10.adjusted)
+            $0.centerX.equalToSuperview()
         }
         
         buttonStackView.snp.makeConstraints {
@@ -78,8 +79,8 @@ final class HMHPushAlert: UIView {
     }
     
     private func setAddTarget() {
-        cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
-        confirmButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(deleteButtonTapped), for: .touchUpInside)
+        confirmButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
     }
     
     private func configureView() {
@@ -90,15 +91,15 @@ final class HMHPushAlert: UIView {
     }
     
     func setAppName(appName: String) {
-        self.titleLabel.text = appName + StringLiteral.AlertTitle.push
+        self.titleLabel.text = appName + StringLiteral.AlertTitle.delete
     }
     
     @objc func cancelButtonTapped() {
         delegate?.alertDismissTapped()
     }
     
-    @objc func confirmButtonTapped() {
-        //여기서 연장 / 실패 서버통신
-        delegate?.alertDismissTapped()
+    @objc func deleteButtonTapped() {
+        delegate?.deleteButtonTapped()
     }
 }
+

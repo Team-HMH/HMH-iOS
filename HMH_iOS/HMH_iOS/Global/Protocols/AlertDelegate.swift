@@ -11,4 +11,5 @@ protocol AlertDelegate: AnyObject {
     func enabledButtonTapped()
     func alertDismissTapped()
     func confirmButtonTapped()
+    func deleteButtonTapped()
 }

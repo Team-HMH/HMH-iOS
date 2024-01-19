@@ -14,7 +14,7 @@ import ShiledConfig
 struct AppAddButtonView: View {
     let userDefaults = UserDefaults(suiteName: "group.65NSM72327.HMH-iOS.HMH-iOS")
     @AppStorage("selectedApps", store: UserDefaults(suiteName: "group.65NSM7Z327.com.HMH.group"))
-        var shieldedApps = FamilyActivitySelection()
+    var shieldedApps = FamilyActivitySelection()
     
     @EnvironmentObject var model: BlockingApplicationModel
     @State var isPresented = false
@@ -37,20 +37,18 @@ struct AppAddButtonView: View {
             .familyActivityPicker(isPresented: $isPresented, selection: $model.newSelection)
             .onChange(of: isPresented)  { oldValue, newValue in
                 if newValue == false {
-                    if !model.newSelection.applicationTokens.isEmpty {
-                        ScreenTime.shared.selectedApps = model.newSelection
-                        shieldedApps = model.newSelection
-                        ScreenTime.shared.saveHashValue()
-                        
-                        let mainViewController = TabBarController()
-                        let navigationController = UINavigationController(rootViewController: mainViewController)
-                        let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
-                        guard let delegate = sceneDelegate else {
-                            return
-                        }
-                        delegate.window?.rootViewController = navigationController
-                        navigationController.pushViewController(GoalTimeSelectViewController(), animated: true)
+                    ScreenTime.shared.selectedApps = model.newSelection
+                    shieldedApps = model.newSelection
+                    ScreenTime.shared.saveHashValue()
+                    
+                    let mainViewController = TabBarController()
+                    let navigationController = UINavigationController(rootViewController: mainViewController)
+                    let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
+                    guard let delegate = sceneDelegate else {
+                        return
                     }
+                    delegate.window?.rootViewController = navigationController
+                    navigationController.pushViewController(GoalTimeSelectViewController(), animated: true)
                 }
             }
             

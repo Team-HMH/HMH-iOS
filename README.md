@@ -97,7 +97,8 @@ extension - DeviceMonitor, DeviceReport, ShieldAction, ShieldConfig
 [🚀 HMH Swift Style Guide 바로가기](https://github.com/Team-HMH/HMH-iOS/wiki/%F0%9F%9A%80-HMH-Swift-Style-Guide)
 
 ## 시스템 구성
-![Slide 16_9 - 6](https://github.com/Team-HMH/HMH-iOS/assets/68178395/62873c5f-8d74-4e59-b5ec-4aeccca81e81)
+![Slide 16_9 - 6](https://github.com/Team-HMH/HMH-iOS/assets/68178395/975d1008-df0d-4e40-a6fd-1e3782ded527)
+
 
 
 ## 📚 Library

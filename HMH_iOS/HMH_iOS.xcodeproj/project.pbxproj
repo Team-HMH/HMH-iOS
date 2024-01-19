@@ -333,6 +333,11 @@
 		360D110D2B541DB4008BE85A /* UserDefault+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+.swift"; sourceTree = "<group>"; };
 		360D110F2B5443FD008BE85A /* ActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityReport.swift; sourceTree = "<group>"; };
 		363863B92B50782E000FE5E7 /* CreateChallengeResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeResponseDTO.swift; sourceTree = "<group>"; };
+		363ADDE82B5A45B8008D11E9 /* HMH_iOSDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HMH_iOSDebug.entitlements; sourceTree = "<group>"; };
+		363ADDE92B5A45CD008D11E9 /* DeviceMonitorDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceMonitorDebug.entitlements; sourceTree = "<group>"; };
+		363ADDEA2B5A45D5008D11E9 /* DeviceReportDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeviceReportDebug.entitlements; sourceTree = "<group>"; };
+		363ADDEB2B5A45DC008D11E9 /* ShiledActionDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiledActionDebug.entitlements; sourceTree = "<group>"; };
+		363ADDEC2B5A45E6008D11E9 /* ShiledConfigDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShiledConfigDebug.entitlements; sourceTree = "<group>"; };
 		3649235F2B4ED47000BF7ACA /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		364923612B4F4E7D00BF7ACA /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		364923642B4F4FB800BF7ACA /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -563,6 +568,7 @@
 		0B50F9C92B369813000C5046 /* HMH_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				363ADDE82B5A45B8008D11E9 /* HMH_iOSDebug.entitlements */,
 				364923612B4F4E7D00BF7ACA /* Config.xcconfig */,
 				3666C8772B45F4C600564874 /* HMH_iOS.entitlements */,
 				0B50F9D82B369815000C5046 /* Info.plist */,
@@ -1092,6 +1098,7 @@
 		3666C8562B45F47600564874 /* DeviceMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				363ADDE92B5A45CD008D11E9 /* DeviceMonitorDebug.entitlements */,
 				3666C8572B45F47600564874 /* DeviceActivityMonitorExtension.swift */,
 				3666C8592B45F47600564874 /* Info.plist */,
 				3666C85A2B45F47600564874 /* DeviceMonitor.entitlements */,
@@ -1102,6 +1109,7 @@
 		3666C8672B45F4B200564874 /* DeviceReport */ = {
 			isa = PBXGroup;
 			children = (
+				363ADDEA2B5A45D5008D11E9 /* DeviceReportDebug.entitlements */,
 				3666C8682B45F4B200564874 /* DeviceReport.swift */,
 				3666C86A2B45F4B200564874 /* TotalActivityReport.swift */,
 				3666C86C2B45F4B200564874 /* TotalActivityView.swift */,
@@ -1155,6 +1163,7 @@
 		36E531A92B4C789300B4BBE3 /* ShiledAction */ = {
 			isa = PBXGroup;
 			children = (
+				363ADDEB2B5A45DC008D11E9 /* ShiledActionDebug.entitlements */,
 				36E531AA2B4C789300B4BBE3 /* ShieldActionExtension.swift */,
 				36E531AC2B4C789300B4BBE3 /* Info.plist */,
 				36E531AD2B4C789300B4BBE3 /* ShiledAction.entitlements */,
@@ -1165,6 +1174,7 @@
 		36E531BC2B4C78A900B4BBE3 /* ShiledConfig */ = {
 			isa = PBXGroup;
 			children = (
+				363ADDEC2B5A45E6008D11E9 /* ShiledConfigDebug.entitlements */,
 				36E531BD2B4C78A900B4BBE3 /* ShieldConfigurationExtension.swift */,
 				36E531BF2B4C78A900B4BBE3 /* Info.plist */,
 				36E531C02B4C78A900B4BBE3 /* ShiledConfig.entitlements */,
@@ -1738,7 +1748,7 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HMH_iOS/HMH_iOS.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HMH_iOS/HMH_iOSDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1805,7 +1815,7 @@
 			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_ENTITLEMENTS = DeviceMonitor/DeviceMonitor.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DeviceMonitor/DeviceMonitorDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1865,7 +1875,7 @@
 			baseConfigurationReference = 364923612B4F4E7D00BF7ACA /* Config.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_ENTITLEMENTS = DeviceReport/DeviceReport.entitlements;
+				CODE_SIGN_ENTITLEMENTS = DeviceReport/DeviceReportDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1924,7 +1934,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_ENTITLEMENTS = ShiledAction/ShiledAction.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ShiledAction/ShiledActionDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1982,7 +1992,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				CODE_SIGN_ENTITLEMENTS = ShiledConfig/ShiledConfig.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ShiledConfig/ShiledConfigDebug.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

@@ -18,7 +18,7 @@ enum AlertType {
 final class AlertViewController: UIViewController {
     var alertType: AlertType?
     var okAction: (() -> Void)?
-    let store = ManagedSettingsStore(named: .default)
+    let store = ManagedSettingsStore()
     
     private let logoutAlert = HMHLogoutAlert()
     private let quitAlert = HMHQuitAlert()

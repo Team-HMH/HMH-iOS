@@ -118,7 +118,7 @@ final class MyGoalTimeCell: UICollectionViewCell {
         }
         
         let progress = Float(totalUsedTime) / Float(goalTime)
-        totalProgressBar.setProgress(-progress, animated: false)
+        totalProgressBar.setProgress(progress, animated: false)
     }
     
     func HourOrMinuteConvert(data: GetHomeChallengeResponseDTO) -> String {

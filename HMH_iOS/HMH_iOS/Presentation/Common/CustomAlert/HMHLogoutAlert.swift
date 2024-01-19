@@ -26,8 +26,8 @@ final class HMHLogoutAlert: UIView {
         $0.spacing = 7
     }
     
-    private let cancelButton = CustomAlertButton(buttonType: .disabled, buttonText: StringLiteral.AlertButton.close)
-    private let confirmButton = CustomAlertButton(buttonType: .enabled, buttonText: StringLiteral.AlertButton.confirm)
+    private let confrimButton = CustomAlertButton(buttonType: .disabled, buttonText: StringLiteral.AlertButton.confirm)
+    private let cancelButton = CustomAlertButton(buttonType: .enabled, buttonText: StringLiteral.AlertButton.cancel)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,7 +46,7 @@ final class HMHLogoutAlert: UIView {
     
     private func setHierarchy() {
         self.addSubviews(titleLabel, buttonStackView)
-        buttonStackView.addArrangeSubViews([cancelButton, confirmButton])
+        buttonStackView.addArrangeSubViews([confrimButton, cancelButton])
     }
     
     private func setConstraints() {
@@ -62,8 +62,8 @@ final class HMHLogoutAlert: UIView {
     }
     
     private func setAddTarget() {
-        cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
-        confirmButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
+        confrimButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(confirmButtonTapped), for: .touchUpInside)
     }
     
     private func configureView() {
@@ -74,10 +74,10 @@ final class HMHLogoutAlert: UIView {
     }
     
     @objc func cancelButtonTapped() {
-        delegate?.alertDismissTapped()
+        delegate?.enabledButtonTapped()
     }
     
     @objc func confirmButtonTapped() {
-        delegate?.enabledButtonTapped()
+        delegate?.alertDismissTapped()
     }
 }

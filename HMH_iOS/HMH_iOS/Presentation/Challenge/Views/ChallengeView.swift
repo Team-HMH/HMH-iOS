@@ -14,14 +14,14 @@ import FamilyControls
 
 final class ChallengeView: UIView {
     private var appAddButtonViewModel: BlockingApplicationModel = BlockingApplicationModel.shared
-    var challengeType: ChallengeType  = .completed {
+    var challengeType: ChallengeType  = .sevenDays {
         didSet {
             challengeCollectionView.reloadData()
         }
     }
     
     var goalTimeHour: Int = 3
-    var days: Int = 7
+    var days: Int = 0
     var appList: [Apps] = []
     var dailyStatus: [String] = []
     var todayIndex = 0
@@ -239,12 +239,10 @@ extension ChallengeView {
                 
                 let headerHeight =                
                 switch challengeType {
-                case .sevenDays:
-                    115.adjusted
-                case .fourteenDays:
-                    115.adjusted
+                case .sevenDays, .fourteenDays:
+                    115
                 case .completed:
-                    263.adjusted
+                    263
                 }
                 
                 

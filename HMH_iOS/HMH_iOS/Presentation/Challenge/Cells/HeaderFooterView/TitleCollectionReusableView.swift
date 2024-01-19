@@ -14,7 +14,7 @@ import Then
 final class TitleCollectionReusableView: UICollectionReusableView {
     static let identifier = "TitleCollectionReusableView"
     
-    var backgroundType: ChallengeType = .completed {
+    var backgroundType: ChallengeType = .sevenDays {
         didSet {
             configureTitle()
             setUI()

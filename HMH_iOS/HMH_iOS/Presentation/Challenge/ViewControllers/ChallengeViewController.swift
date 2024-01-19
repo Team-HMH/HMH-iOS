@@ -43,7 +43,7 @@ final class ChallengeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        loadChallenge()
         requestPermision()
         configureTabBar(isCreatedChallenge: isCreatedChallenge)
     }
@@ -149,7 +149,7 @@ extension ChallengeViewController: UICollectionViewDelegate {
 
                 self.selectedIndex = indexPath
                 let alertController = AlertViewController()
-                alertController.setAlertType(.delete)
+                alertController.setAlertType(.HMHDeleteName)
                 alertController.modalPresentationStyle = .overFullScreen
                 self.present(alertController, animated: false, completion: nil)
             }

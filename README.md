@@ -1,5 +1,7 @@
 ![Frame 1](https://github.com/Team-HMH/HMH-iOS/assets/68178395/0d8863be-0dbe-4251-a732-67b7a0f79afa)
 # 🚀 하면함
+[하면함 iOS 노션 보기](https://www.notion.so/msmmx/HMH-iOS-2-0ad81039d0c04d4981f26865cecf7f40?pvs=4)
+
 ![Instagram post - 14](https://github.com/Team-HMH/HMH-iOS/assets/68178395/95948669-7b32-4a16-9840-602a8b30f10d)
 
 > ### 스마트폰 중독 탈출, 너도 하면함!
